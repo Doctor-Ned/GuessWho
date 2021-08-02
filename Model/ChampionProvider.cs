@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using System.Windows;
 using System.Windows.Resources;
@@ -52,6 +53,10 @@ namespace GuessWho.Model {
 
         public static Dictionary<Champion, string> GetAllChampions() {
             return new Dictionary<Champion, string>(Champions);
+        }
+
+        public static IEnumerable<Champion> OrderByChampionName(this IEnumerable<Champion> champions) {
+            return champions.OrderBy(c => c.GetName());
         }
     }
 }

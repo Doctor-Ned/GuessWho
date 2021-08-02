@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
+using System.Windows.Input;
 
 using GuessWho.Model;
 
@@ -21,8 +24,19 @@ namespace GuessWho.ViewModel {
             }
         }
 
+        public ICommand OnLoaded { get; }
+
         public MainViewModel() {
-            foreach (Champion champ in Enum.GetValues(typeof(Champion))) {
+            OnLoaded = new RelayCommand(ExecuteOnLoaded);
+        }
+
+        private void ExecuteOnLoaded() {
+            ReplaceChampions(Enum.GetValues(typeof(Champion)).Cast<Champion>());
+        }
+
+        public void ReplaceChampions(IEnumerable<Champion> champions) {
+            Champions.Clear();
+            foreach (Champion champ in champions.Distinct().OrderByChampionName()) {
                 Champions.Add(champ);
             }
         }

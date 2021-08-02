@@ -7,6 +7,7 @@
         xmlns:local="clr-namespace:GuessWho.View"
         xmlns:controls="clr-namespace:WpfToolkit.Controls;assembly=VirtualizingWrapPanel"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
         TextElement.FontSize="17"
@@ -20,6 +21,11 @@
     <Window.DataContext>
         <vm:MainViewModel/>
     </Window.DataContext>
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding OnLoaded}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
     <Grid>
         <DockPanel>
             <Grid DockPanel.Dock="Right" Width="200">
@@ -51,7 +57,8 @@
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Grid Width="{Binding Path=DataContext.IconSize, ElementName=Window}" Height="{Binding Path=Width, RelativeSource={RelativeSource Self}}">
-                            <Image Source="{Binding Path=., Converter={StaticResource ChampionToImageConverter}}"/>
+                            <Image Source="{Binding Path=., Converter={StaticResource ChampionToImageConverter}}"
+                                   ToolTip="{Binding Path=., Converter={StaticResource ChampionToNameConverter}}"/>
                         </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
