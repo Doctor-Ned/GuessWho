@@ -8,6 +8,7 @@
         <ResourceDictionary>
             <local:ChampionToImageConverter x:Key="ChampionToImageConverter"/>
             <local:ChampionToNameConverter x:Key="ChampionToNameConverter"/>
+            <local:BoolToSettingsIconConverter x:Key="BoolToSettingsIconConverter"/>
             <local:IntToSizeConverter x:Key="IntToSizeConverter"/>
             <ResourceDictionary.MergedDictionaries>
                 <materialDesign:BundledTheme BaseTheme="Dark" PrimaryColor="DeepOrange" SecondaryColor="Orange" />

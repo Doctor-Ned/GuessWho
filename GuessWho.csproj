@@ -92,6 +92,7 @@
     <Compile Include="View\ChampionControl.xaml.cs">
       <DependentUpon>ChampionControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\BoolToSettingsIconConverter.cs" />
     <Compile Include="View\ChampionToNameConverter.cs" />
     <Compile Include="View\IntToSizeConverter.cs" />
     <Compile Include="View\ChampionToImageConverter.cs" />

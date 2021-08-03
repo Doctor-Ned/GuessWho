@@ -12,6 +12,7 @@ namespace GuessWho.ViewModel {
     public class MainViewModel : PropertyChangedWrapper {
         private int _IconSize = 60;
         private bool _ShowTooltips = true;
+        private bool _ShowSettings = false;
 
         public ObservableCollection<Champion> Champions {
             get;
@@ -33,14 +34,29 @@ namespace GuessWho.ViewModel {
             }
         }
 
+        public bool ShowSettings {
+            get { return _ShowSettings; }
+            set {
+                _ShowSettings = value;
+                RaisePropertyChanged();
+            }
+        }
+
         public ICommand OnLoaded { get; }
+
+        public ICommand ToggleSettings { get; }
 
         public MainViewModel() {
             OnLoaded = new RelayCommand(ExecuteOnLoaded);
+            ToggleSettings = new RelayCommand(ExecuteToggleSettings);
         }
 
         private void ExecuteOnLoaded() {
             ReplaceChampions(Enum.GetValues(typeof(Champion)).Cast<Champion>());
+        }
+
+        private void ExecuteToggleSettings() {
+            ShowSettings = !ShowSettings;
         }
 
         public void ReplaceChampions(IEnumerable<Champion> champions) {
