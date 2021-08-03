@@ -23,6 +23,7 @@ namespace GuessWho.Model {
             { Champion.MasterYi, "Master Yi" },
             { Champion.MissFortune, "Miss Fortune" },
             { Champion.MonkeyKing, "Wukong" },
+            { Champion.Nunu, "Nunu & Willump" },
             { Champion.RekSai, "Rek'Sai" },
             { Champion.TahmKench, "Tahm Kench" },
             { Champion.TwistedFate, "Twisted Fate" },
