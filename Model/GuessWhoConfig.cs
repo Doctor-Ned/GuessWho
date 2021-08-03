@@ -2,19 +2,29 @@
 using System.Collections.Generic;
 using System.Linq;
 
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
 namespace GuessWho.Model {
     public class GuessWhoConfig {
         public double WindowWidth { get; set; }
         public double WindowHeight { get; set; }
-        public int IconSize { get; set; }
+        public double CategoryCheckBoxSize { get; set; }
+        public double CategoryFontSize { get; set; }
+        public double SidePanelWidth { get; set; }
+        public double IconSize { get; set; }
         public bool ShowTooltips { get; set; }
+        [JsonProperty(ItemConverterType = typeof(StringEnumConverter))]
         public HashSet<Champion> RejectedChampions { get; set; }
         public List<ChampionCategory> Categories { get; set; }
         public static GuessWhoConfig GetDefaultConfig() {
             GuessWhoConfig config = new GuessWhoConfig {
-                WindowWidth = 705,
-                WindowHeight = 400,
-                IconSize = 60,
+                WindowWidth = 1080.0,
+                WindowHeight = 602.0,
+                CategoryCheckBoxSize = 1.5,
+                CategoryFontSize = 20.0,
+                SidePanelWidth = 220.0,
+                IconSize = 80.0,
                 ShowTooltips = true,
                 RejectedChampions = new HashSet<Champion>(),
                 Categories = new List<ChampionCategory>()

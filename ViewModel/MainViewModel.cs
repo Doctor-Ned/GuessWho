@@ -13,7 +13,10 @@ namespace GuessWho.ViewModel {
     public class MainViewModel : PropertyChangedWrapper {
         private double _WindowWidth;
         private double _WindowHeight;
-        private int _IconSize;
+        private double _CategoryCheckBoxSize;
+        private double _CategoryFontSize;
+        private double _SidePanelWidth = 220.0;
+        private double _IconSize;
         private bool _ShowTooltips;
         private bool _ShowSettings;
 
@@ -46,7 +49,31 @@ namespace GuessWho.ViewModel {
             }
         }
 
-        public int IconSize {
+        public double CategoryCheckBoxSize {
+            get { return _CategoryCheckBoxSize; }
+            set {
+                _CategoryCheckBoxSize = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        public double CategoryFontSize {
+            get { return _CategoryFontSize; }
+            set {
+                _CategoryFontSize = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        public double SidePanelWidth {
+            get { return _SidePanelWidth; }
+            set {
+                _SidePanelWidth = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        public double IconSize {
             get { return _IconSize; }
             set {
                 _IconSize = value;
@@ -112,10 +139,13 @@ namespace GuessWho.ViewModel {
 
         public GuessWhoConfig GetCurrentConfig() {
             return new GuessWhoConfig {
-                IconSize = IconSize,
-                ShowTooltips = ShowTooltips,
                 WindowWidth = WindowWidth,
                 WindowHeight = WindowHeight,
+                CategoryCheckBoxSize = CategoryCheckBoxSize,
+                CategoryFontSize = CategoryFontSize,
+                SidePanelWidth = SidePanelWidth,
+                IconSize = IconSize,
+                ShowTooltips = ShowTooltips,
                 RejectedChampions = RejectedChampions,
                 Categories = Categories.Select(c => new ChampionCategory { CategoryName = c.CategoryName, Champions = c.Champions, IsSelected = c.IsSelected }).ToList()
             };
@@ -134,6 +164,9 @@ namespace GuessWho.ViewModel {
         private void ApplyConfiguration(GuessWhoConfig config) {
             WindowWidth = config.WindowWidth;
             WindowHeight = config.WindowHeight;
+            CategoryCheckBoxSize = config.CategoryCheckBoxSize;
+            CategoryFontSize = config.CategoryFontSize;
+            SidePanelWidth = config.SidePanelWidth;
             IconSize = config.IconSize;
             ShowTooltips = config.ShowTooltips;
             RejectedChampions = config.RejectedChampions;

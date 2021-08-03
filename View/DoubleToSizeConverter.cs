@@ -4,10 +4,10 @@ using System.Windows;
 using System.Windows.Data;
 
 namespace GuessWho.View {
-    public class IntToSizeConverter : IValueConverter {
+    public class DoubleToSizeConverter : IValueConverter {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture) {
-            if (value is int i) {
-                return new Size(i, i);
+            if (value is double d) {
+                return new Size(d, d);
             }
 
             return Size.Empty;

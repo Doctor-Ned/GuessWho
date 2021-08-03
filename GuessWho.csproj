@@ -112,7 +112,7 @@
     <Compile Include="View\InformationControl.xaml.cs">
       <DependentUpon>InformationControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\IntToSizeConverter.cs" />
+    <Compile Include="View\DoubleToSizeConverter.cs" />
     <Compile Include="View\ChampionToImageConverter.cs" />
     <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

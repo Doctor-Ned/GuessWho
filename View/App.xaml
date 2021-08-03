@@ -10,7 +10,7 @@
             <local:ChampionToImageConverter x:Key="ChampionToImageConverter"/>
             <local:ChampionToNameConverter x:Key="ChampionToNameConverter"/>
             <local:BoolToSettingsIconConverter x:Key="BoolToSettingsIconConverter"/>
-            <local:IntToSizeConverter x:Key="IntToSizeConverter"/>
+            <local:DoubleToSizeConverter x:Key="IntToSizeConverter"/>
             <DataTemplate DataType="{x:Type baseVm:DialogInformationViewModel}">
                 <local:InformationControl/>
             </DataTemplate>

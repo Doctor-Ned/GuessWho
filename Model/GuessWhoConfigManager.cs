@@ -22,6 +22,19 @@ namespace GuessWho.Model {
             if (config.WindowHeight <= 0.0) {
                 throw new InvalidDataException($"Window height ({config.WindowHeight}) must be positive!");
             }
+
+            if (config.CategoryCheckBoxSize <= 0.0) {
+                throw new InvalidDataException($"Category check box size ({config.CategoryCheckBoxSize}) must be positive!");
+            }
+            if (config.CategoryFontSize <= 0.0) {
+                throw new InvalidDataException($"Category font size ({config.CategoryFontSize}) must be positive!");
+            }
+            if (config.SidePanelWidth <= 0.0) {
+                throw new InvalidDataException($"Side panel width ({config.SidePanelWidth}) must be positive!");
+            }
+            if (config.IconSize <= 0.0) {
+                throw new InvalidDataException($"Icon size ({config.IconSize}) must be positive!");
+            }
             foreach (ChampionCategory category in config.Categories) {
                 if (string.IsNullOrWhiteSpace(category.CategoryName)) {
                     throw new InvalidDataException("Category name must not be empty!");
