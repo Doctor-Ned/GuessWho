@@ -4,7 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:GuessWho.View"
-             mc:Ignorable="d"
+             xmlns:baseVm="clr-namespace:NedMaterialMVVM.ViewModel;assembly=NedMaterialMVVM"
+             mc:Ignorable="d" d:DataContext="{d:DesignInstance baseVm:DialogTwoButtonViewModel}"
              d:DesignHeight="150" d:DesignWidth="300" MinHeight="150" MinWidth="200">
     <Grid>
         <DockPanel Margin="10">

@@ -97,11 +97,15 @@ namespace GuessWho.ViewModel {
             }
         }
 
+        public bool AnyChampionsRejected {
+            get { return RejectedChampions != null && RejectedChampions.Any(); }
+        }
+
         public ICommand OnLoaded { get; }
         public ICommand OnClosing { get; }
 
         public ICommand ToggleSettings { get; }
-        public ICommand RestoreChampion { get; }
+        public ICommand RestoreChampions { get; }
         public ICommand RejectChampion { get; }
         public ICommand ResetGame { get; }
         public ICommand LoadConfig { get; }
@@ -112,6 +116,8 @@ namespace GuessWho.ViewModel {
 
         private DialogYesNoViewModel DialogYesNoViewModel { get; } = new DialogYesNoViewModel();
 
+        private DialogRejectedChampionsViewModel DialogRejectedChampionsViewModel { get; }
+
         private GuessWhoConfigManager ConfigManager { get; }
         public object DialogIdentifier1 { get; } = 1;
         public object DialogIdentifier2 { get; } = 2;
@@ -120,13 +126,14 @@ namespace GuessWho.ViewModel {
             OnLoaded = new RelayCommand(ExecuteOnLoaded);
             OnClosing = new RelayCommand(ExecuteOnClosing);
             ToggleSettings = new RelayCommand(ExecuteToggleSettings);
-            RestoreChampion = new RelayCommand<Champion>(ExecuteRestoreChampion);
+            RestoreChampions = new RelayCommand(ExecuteRestoreChampions);
             RejectChampion = new RelayCommand<Champion>(ExecuteRejectChampion);
             ResetGame = new RelayCommand(ExecuteResetGame);
             LoadConfig = new RelayCommand(ExecuteLoadConfig);
             SaveConfig = new RelayCommand(ExecuteSaveConfig);
             ResetConfig = new RelayCommand(ExecuteResetConfig);
             ConfigManager = new GuessWhoConfigManager();
+            DialogRejectedChampionsViewModel = new DialogRejectedChampionsViewModel(this);
         }
 
         public void LoadConfiguration() {
@@ -151,14 +158,20 @@ namespace GuessWho.ViewModel {
             };
         }
 
-        public void ExecuteRestoreChampion(Champion champion) {
+        public void RestoreChampion(Champion champion) {
             RejectedChampions.Remove(champion);
             RevalidateChampions();
+            RaisePropertyChanged(nameof(AnyChampionsRejected));
         }
 
-        public void ExecuteRejectChampion(Champion champion) {
+        private void ExecuteRestoreChampions() {
+            DialogRejectedChampionsViewModel.OpenDialog(DialogIdentifier1, RejectedChampions);
+        }
+
+        private void ExecuteRejectChampion(Champion champion) {
             RejectedChampions.Add(champion);
             Champions.Remove(champion);
+            RaisePropertyChanged(nameof(AnyChampionsRejected));
         }
 
         private void ApplyConfiguration(GuessWhoConfig config) {
@@ -170,6 +183,7 @@ namespace GuessWho.ViewModel {
             IconSize = config.IconSize;
             ShowTooltips = config.ShowTooltips;
             RejectedChampions = config.RejectedChampions;
+            RaisePropertyChanged(nameof(AnyChampionsRejected));
             foreach (ChampionCategoryViewModel vm in Categories) {
                 vm.PropertyChanged -= ChampionCategory_PropertyChanged;
             }

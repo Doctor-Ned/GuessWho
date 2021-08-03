@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:GuessWho.View"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:baseVm="clr-namespace:NedMaterialMVVM.ViewModel;assembly=NedMaterialMVVM"
+             xmlns:vm="clr-namespace:GuessWho.ViewModel"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
@@ -16,6 +17,9 @@
             </DataTemplate>
             <DataTemplate DataType="{x:Type baseVm:DialogTwoButtonViewModel}">
                 <local:TwoButtonControl/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:DialogRejectedChampionsViewModel}">
+                <local:RejectedChampionsControl/>
             </DataTemplate>
             <ResourceDictionary.MergedDictionaries>
                 <materialDesign:BundledTheme BaseTheme="Dark" PrimaryColor="DeepOrange" SecondaryColor="Orange" />
