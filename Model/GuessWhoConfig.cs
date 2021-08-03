@@ -48,6 +48,7 @@ namespace GuessWho.Model {
                     Champion.Brand,
                     Champion.Braum,
                     Champion.Chogath,
+                    Champion.Corki,
                     Champion.Darius,
                     Champion.Draven,
                     Champion.DrMundo,
