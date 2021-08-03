@@ -141,12 +141,12 @@
                                               RenderTransformOrigin="0.5,0.5">
                                         <CheckBox.RenderTransform>
                                             <ScaleTransform
-                                                ScaleX="{Binding Path=DataContext.CategoryCheckBoxSize, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}"
-                                                ScaleY="{Binding Path=DataContext.CategoryCheckBoxSize, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}" />
+                                                ScaleX="{Binding Path=DataContext.CategoryCheckBoxSize, ElementName=Window}"
+                                                ScaleY="{Binding Path=DataContext.CategoryCheckBoxSize, ElementName=Window}" />
                                         </CheckBox.RenderTransform>
                                     </CheckBox>
                                     <Label Content="{Binding CategoryName}"
-                                           FontSize="{Binding Path=DataContext.CategoryFontSize, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}" />
+                                           FontSize="{Binding Path=DataContext.CategoryFontSize, ElementName=Window}" />
                                 </StackPanel>
                             </DataTemplate>
                         </ListView.ItemTemplate>
@@ -197,16 +197,21 @@
                     <DataTemplate>
                         <Grid Width="{Binding Path=DataContext.IconSize, ElementName=Window}"
                               Height="{Binding Path=Width, RelativeSource={RelativeSource Self}}">
-                            <Image Source="{Binding Path=., Converter={StaticResource ChampionToImageConverter}}"
-                                   ToolTipService.InitialShowDelay="1000"
-                                   ToolTip="{Binding Path=., Converter={StaticResource ChampionToNameConverter}}"
+                            <Image Source="{Binding Path=Champion, Converter={StaticResource ChampionToImageConverter}}"
+                                   ToolTipService.InitialShowDelay="750"
                                    ToolTipService.Placement="Mouse"
                                    ToolTipService.IsEnabled="{Binding Path=DataContext.ShowTooltips, ElementName=Window}">
+                                <Image.ToolTip>
+                                    <StackPanel Orientation="Vertical">
+                                        <TextBlock FontWeight="Bold" Text="{Binding Path=Champion, Converter={StaticResource ChampionToNameConverter}}"/>
+                                        <TextBlock Text="{Binding Path=Description}"/>
+                                    </StackPanel>
+                                </Image.ToolTip>
                                 <i:Interaction.Triggers>
                                     <i:EventTrigger EventName="MouseLeftButtonDown">
                                         <i:InvokeCommandAction
-                                            Command="{Binding Path=DataContext.RejectChampion, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}"
-                                            CommandParameter="{Binding}" />
+                                            Command="{Binding Path=DataContext.RejectChampion, ElementName=Window}"
+                                            CommandParameter="{Binding Champion}" />
                                     </i:EventTrigger>
                                 </i:Interaction.Triggers>
                             </Image>

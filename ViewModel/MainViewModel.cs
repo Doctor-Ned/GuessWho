@@ -42,7 +42,7 @@ namespace GuessWho.ViewModel {
 
         #region Public properties
 
-        public ObservableCollection<Champion> Champions { get; } = new ObservableCollection<Champion>();
+        public ObservableCollection<ChampionDescription> Champions { get; } = new ObservableCollection<ChampionDescription>();
 
         public ObservableCollection<ChampionCategoryViewModel> Categories { get; } =
             new ObservableCollection<ChampionCategoryViewModel>();
@@ -136,6 +136,8 @@ namespace GuessWho.ViewModel {
 
         #region Private properties
 
+        private Dictionary<Champion, ChampionDescription> AllChampionDescriptions { get; } = new Dictionary<Champion, ChampionDescription>();
+
         private HashSet<Champion> RejectedChampions { get; set; }
 
         private DialogInformationViewModel DialogInformationViewModel { get; } = new DialogInformationViewModel();
@@ -164,7 +166,7 @@ namespace GuessWho.ViewModel {
 
         private void ExecuteRejectChampion(Champion champion) {
             RejectedChampions.Add(champion);
-            Champions.Remove(champion);
+            Champions.Remove(AllChampionDescriptions[champion]);
             RaisePropertyChanged(nameof(AnyChampionsRejected));
         }
 
@@ -278,6 +280,15 @@ namespace GuessWho.ViewModel {
                 Categories.Add(vm);
             }
 
+            AllChampionDescriptions.Clear();
+            foreach (Champion champ in ChampionProvider.AllChampionsAlphabetical) {
+                AllChampionDescriptions.Add(champ,
+                    new ChampionDescription(champ,
+                        string.Join("\n",
+                            Categories.Where(c => c.Champions.Contains(champ)).
+                                    Select(c => c.CategoryName))));
+            }
+
             RevalidateChampions();
         }
 
@@ -294,7 +305,7 @@ namespace GuessWho.ViewModel {
             foreach (Champion champ in ChampionProvider.AllChampionsAlphabetical) {
                 if (!RejectedChampions.Contains(champ) &&
                     !Categories.Any(c => c.Champions.Contains(champ) && !c.IsSelected)) {
-                    Champions.Add(champ);
+                    Champions.Add(AllChampionDescriptions[champ]);
                 }
             }
         }
