@@ -9,7 +9,9 @@ namespace GuessWho.Model {
     public static class ChampionProvider {
         private const string ICON_EXTENSION = "png", ICON_DIRECTORY = "Champions";
 
-        private static Dictionary<Champion, string> Champions { get; } = new Dictionary<Champion, string> {
+        public static Champion[] AllChampionsAlphabetical { get; private set; }
+
+        private static Dictionary<Champion, string> ChampionNameDictionary { get; } = new Dictionary<Champion, string> {
             { Champion.AurelionSol, "Aurelion Sol" },
             { Champion.Chogath, "Cho'Gath" },
             { Champion.DrMundo, "Dr Mundo" },
@@ -29,18 +31,21 @@ namespace GuessWho.Model {
         };
 
         public static void Validate() {
-            foreach (Champion champion in Enum.GetValues(typeof(Champion))) {
+            List<Champion> champions = Enum.GetValues(typeof(Champion)).Cast<Champion>().ToList();
+            foreach (Champion champion in champions) {
                 // fill remaining champion names
-                if (!Champions.ContainsKey(champion)) {
-                    Champions.Add(champion, champion.ToString());
+                if (!ChampionNameDictionary.ContainsKey(champion)) {
+                    ChampionNameDictionary.Add(champion, champion.ToString());
                 }
                 // validate icon files
                 StreamResourceInfo _ = Application.GetResourceStream(champion.GetIconUri());
             }
+
+            AllChampionsAlphabetical = champions.OrderByChampionName().ToArray();
         }
 
         public static string GetName(this Champion champion) {
-            return Champions[champion];
+            return ChampionNameDictionary[champion];
         }
 
         public static Uri GetIconUri(this Champion champion) {
@@ -49,10 +54,6 @@ namespace GuessWho.Model {
 
         public static Uri GetWPFIconUri(this Champion champion) {
             return new Uri($"pack://application:,,,/{Assembly.GetExecutingAssembly().GetName().Name};component/{ICON_DIRECTORY}/{champion}.{ICON_EXTENSION}", UriKind.Absolute);
-        }
-
-        public static Dictionary<Champion, string> GetAllChampions() {
-            return new Dictionary<Champion, string>(Champions);
         }
 
         public static IEnumerable<Champion> OrderByChampionName(this IEnumerable<Champion> champions) {

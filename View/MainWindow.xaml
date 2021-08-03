@@ -16,8 +16,8 @@
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
         mc:Ignorable="d"
-        Title="Zgadnij kto to!" MinHeight="400" MinWidth="600" Height="400" Width="705"
-        x:Name="Window">
+        Title="Zgadnij kto to!" MinHeight="400" MinWidth="600"
+        Height="{Binding WindowHeight, Mode=TwoWay}" Width="{Binding WindowWidth, Mode=TwoWay}" x:Name="Window">
     <Window.DataContext>
         <vm:MainViewModel/>
     </Window.DataContext>
@@ -25,19 +25,52 @@
         <i:EventTrigger EventName="Loaded">
             <i:InvokeCommandAction Command="{Binding OnLoaded}"/>
         </i:EventTrigger>
+        <i:EventTrigger EventName="Closing">
+            <i:InvokeCommandAction Command="{Binding OnClosing}"/>
+        </i:EventTrigger>
     </i:Interaction.Triggers>
+    <Window.Resources>
+        <Style x:Key="MediumIconButton" TargetType="Button" BasedOn="{StaticResource MaterialDesignFloatingActionButton}">
+            <Setter Property="Width" Value="40"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Margin" Value="3"/>
+        </Style>
+        <Style x:Key="BigPackIcon" TargetType="materialDesign:PackIcon">
+            <Setter Property="RenderTransformOrigin" Value="0.5 0.5"/>
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <ScaleTransform ScaleX="1.75" ScaleY="1.75"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
         <DockPanel>
             <Grid DockPanel.Dock="Right" Width="200">
                 <Border BorderThickness="2 0 0 0" BorderBrush="Black"/>
                 <Grid Visibility="{Binding ShowSettings, Converter={StaticResource BooleanToVisibilityConverter}}" VerticalAlignment="Top" HorizontalAlignment="Stretch" Background="#15FFFFFF">
                     <StackPanel Margin="10">
-                        <Label Content="{Binding IconSize}" ContentStringFormat="Rozmiar ikon: {0}" FontSize="13"/>
-                        <Slider Minimum="35" Maximum="125" VerticalAlignment="Center" Value="{Binding IconSize}"/>
+                        <Label Content="{Binding IconSize}" ContentStringFormat="Rozmiar ikon: {0}" FontSize="13" HorizontalAlignment="Left"/>
+                        <Slider Minimum="35" Maximum="125" VerticalAlignment="Center" HorizontalAlignment="Stretch" Value="{Binding IconSize}"/>
                         <Separator Opacity="0.5"/>
-                        <StackPanel Orientation="Horizontal">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                             <Label Content="Pokazuj tooltipy" Margin="0,0,5,0"/>
                             <CheckBox IsChecked="{Binding ShowTooltips}"/>
+                        </StackPanel>
+                        <Separator Opacity="0.5"/>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Button Style="{StaticResource MediumIconButton}" Command="{Binding ResetGame}" ToolTip="Zresetuj grę">
+                                <materialDesign:PackIcon Style="{StaticResource BigPackIcon}" Kind="Restore"/>
+                            </Button>
+                            <Button Style="{StaticResource MediumIconButton}" Command="{Binding LoadConfig}" ToolTip="Wczytaj konfigurację">
+                                <materialDesign:PackIcon Style="{StaticResource BigPackIcon}" Kind="FileDownload"/>
+                            </Button>
+                            <Button Style="{StaticResource MediumIconButton}" Command="{Binding SaveConfig}" ToolTip="Zapisz konfigurację">
+                                <materialDesign:PackIcon Style="{StaticResource BigPackIcon}" Kind="FileUpload"/>
+                            </Button>
+                            <Button Style="{StaticResource MediumIconButton}" Command="{Binding ResetConfig}" ToolTip="Zresetuj konfigurację">
+                                <materialDesign:PackIcon Style="{StaticResource BigPackIcon}" Kind="ContentSaveOff"/>
+                            </Button>
                         </StackPanel>
                     </StackPanel>
                 </Grid>
@@ -49,7 +82,7 @@
             </Grid>
             <ListBox ItemsSource="{Binding Champions}" VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.ScrollUnit="Item"
                          VirtualizingPanel.VirtualizationMode="Recycling" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
-                         Background="Black">
+                         Background="Black" SelectionMode="Single" x:Name="ChampionBox">
                 <ListBox.ItemsPanel>
                     <ItemsPanelTemplate>
                         <controls:VirtualizingWrapPanel ItemSize="{Binding IconSize, Converter={StaticResource IntToSizeConverter}}"/>
@@ -82,11 +115,18 @@
                             <Image Source="{Binding Path=., Converter={StaticResource ChampionToImageConverter}}" ToolTipService.InitialShowDelay="1000"
                                    ToolTip="{Binding Path=., Converter={StaticResource ChampionToNameConverter}}" ToolTipService.Placement="Mouse"
                                    ToolTipService.IsEnabled="{Binding Path=DataContext.ShowTooltips, ElementName=Window}">
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="MouseLeftButtonDown">
+                                        <i:InvokeCommandAction Command="{Binding Path=DataContext.RejectChampion, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}" CommandParameter="{Binding}"/>
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
                             </Image>
                         </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
         </DockPanel>
+        <materialDesign:DialogHost Identifier="{Binding DialogIdentifier1}"/>
+        <materialDesign:DialogHost Identifier="{Binding DialogIdentifier2}"/>
     </Grid>
 </Window>
