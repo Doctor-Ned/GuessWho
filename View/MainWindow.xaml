@@ -10,7 +10,7 @@
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
-        TextElement.FontSize="17"
+        TextElement.FontSize="13"
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
@@ -33,6 +33,11 @@
                 <StackPanel Margin="10">
                     <Label Content="{Binding IconSize}" ContentStringFormat="Rozmiar ikon: {0}" FontSize="13"/>
                     <Slider Minimum="35" Maximum="125" VerticalAlignment="Center" Value="{Binding IconSize}"/>
+                    <Separator Opacity="0.5"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Pokazuj tooltipy" Margin="0,0,5,0"/>
+                        <CheckBox IsChecked="{Binding ShowTooltips}"/>
+                    </StackPanel>
                 </StackPanel>
             </Grid>
             <ListBox ItemsSource="{Binding Champions}" VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.ScrollUnit="Item"
@@ -52,13 +57,25 @@
                                 </ControlTemplate>
                             </Setter.Value>
                         </Setter>
+                        <Setter Property="RenderTransformOrigin" Value="0.5, 0.5"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="RenderTransform">
+                                    <Setter.Value>
+                                        <ScaleTransform ScaleX="1.1" ScaleY="1.1"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </Style.Triggers>
                     </Style>
                 </ListBox.ItemContainerStyle>
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Grid Width="{Binding Path=DataContext.IconSize, ElementName=Window}" Height="{Binding Path=Width, RelativeSource={RelativeSource Self}}">
                             <Image Source="{Binding Path=., Converter={StaticResource ChampionToImageConverter}}" ToolTipService.InitialShowDelay="1000"
-                                   ToolTip="{Binding Path=., Converter={StaticResource ChampionToNameConverter}}" ToolTipService.IsEnabled="True" ToolTipService.Placement="Mouse"/>
+                                   ToolTip="{Binding Path=., Converter={StaticResource ChampionToNameConverter}}" ToolTipService.Placement="Mouse"
+                                   ToolTipService.IsEnabled="{Binding Path=DataContext.ShowTooltips, ElementName=Window}">
+                            </Image>
                         </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>

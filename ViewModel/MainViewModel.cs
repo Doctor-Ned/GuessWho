@@ -11,6 +11,7 @@ using NedMaterialMVVM;
 namespace GuessWho.ViewModel {
     public class MainViewModel : PropertyChangedWrapper {
         private int _IconSize = 60;
+        private bool _ShowTooltips = true;
 
         public ObservableCollection<Champion> Champions {
             get;
@@ -20,6 +21,14 @@ namespace GuessWho.ViewModel {
             get { return _IconSize; }
             set {
                 _IconSize = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        public bool ShowTooltips {
+            get { return _ShowTooltips; }
+            set {
+                _ShowTooltips = value;
                 RaisePropertyChanged();
             }
         }
