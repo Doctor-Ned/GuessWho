@@ -22,7 +22,7 @@
                 <local:RejectedChampionsControl />
             </DataTemplate>
             <ResourceDictionary.MergedDictionaries>
-                <materialDesign:BundledTheme BaseTheme="Dark" PrimaryColor="DeepOrange" SecondaryColor="Orange" />
+                <materialDesign:BundledTheme BaseTheme="Dark" PrimaryColor="DeepPurple" SecondaryColor="DeepPurple" />
                 <ResourceDictionary
                     Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
             </ResourceDictionary.MergedDictionaries>
