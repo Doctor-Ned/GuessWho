@@ -114,6 +114,8 @@ namespace GuessWho.ViewModel {
         public bool AnyChampionsRejected {
             get { return RejectedChampions != null && RejectedChampions.Any(); }
         }
+        public object DialogIdentifier1 { get; } = 1;
+        public object DialogIdentifier2 { get; } = 2;
 
         #endregion
 
@@ -143,8 +145,6 @@ namespace GuessWho.ViewModel {
         private DialogRejectedChampionsViewModel DialogRejectedChampionsViewModel { get; }
 
         private GuessWhoConfigManager ConfigManager { get; }
-        private object DialogIdentifier1 { get; } = 1;
-        private object DialogIdentifier2 { get; } = 2;
 
         #endregion
 
