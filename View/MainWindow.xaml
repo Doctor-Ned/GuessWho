@@ -11,35 +11,36 @@
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
         TextElement.FontSize="13"
-        TextOptions.TextFormattingMode="Ideal" 
-        TextOptions.TextRenderingMode="Auto"        
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
         mc:Ignorable="d"
         Title="Zgadnij kto to!" MinHeight="400" MinWidth="600"
         Height="{Binding WindowHeight, Mode=TwoWay}" Width="{Binding WindowWidth, Mode=TwoWay}" x:Name="Window">
     <Window.DataContext>
-        <vm:MainViewModel/>
+        <vm:MainViewModel />
     </Window.DataContext>
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
-            <i:InvokeCommandAction Command="{Binding OnLoaded}"/>
+            <i:InvokeCommandAction Command="{Binding OnLoaded}" />
         </i:EventTrigger>
         <i:EventTrigger EventName="Closing">
-            <i:InvokeCommandAction Command="{Binding OnClosing}"/>
+            <i:InvokeCommandAction Command="{Binding OnClosing}" />
         </i:EventTrigger>
     </i:Interaction.Triggers>
     <Window.Resources>
-        <Style x:Key="MediumIconButton" TargetType="Button" BasedOn="{StaticResource MaterialDesignFloatingActionButton}">
-            <Setter Property="Width" Value="40"/>
-            <Setter Property="Height" Value="40"/>
-            <Setter Property="Margin" Value="3"/>
+        <Style x:Key="MediumIconButton" TargetType="Button"
+               BasedOn="{StaticResource MaterialDesignFloatingActionButton}">
+            <Setter Property="Width" Value="40" />
+            <Setter Property="Height" Value="40" />
+            <Setter Property="Margin" Value="3" />
         </Style>
         <Style x:Key="BigPackIcon" TargetType="materialDesign:PackIcon">
-            <Setter Property="RenderTransformOrigin" Value="0.5 0.5"/>
+            <Setter Property="RenderTransformOrigin" Value="0.5 0.5" />
             <Setter Property="RenderTransform">
                 <Setter.Value>
-                    <ScaleTransform ScaleX="1.75" ScaleY="1.75"/>
+                    <ScaleTransform ScaleX="1.75" ScaleY="1.75" />
                 </Setter.Value>
             </Setter>
         </Style>
@@ -47,59 +48,81 @@
     <Grid>
         <DockPanel>
             <Grid DockPanel.Dock="Right" Width="{Binding SidePanelWidth}">
-                <Border BorderThickness="2 0 0 0" BorderBrush="Black"/>
+                <Border BorderThickness="2 0 0 0" BorderBrush="Black" />
                 <DockPanel>
-                    <Grid DockPanel.Dock="Top" Visibility="{Binding ShowSettings, Converter={StaticResource BooleanToVisibilityConverter}}" VerticalAlignment="Top" HorizontalAlignment="Stretch" Background="#15FFFFFF">
+                    <Grid DockPanel.Dock="Top"
+                          Visibility="{Binding ShowSettings, Converter={StaticResource BooleanToVisibilityConverter}}"
+                          VerticalAlignment="Top" HorizontalAlignment="Stretch" Background="#15FFFFFF">
                         <StackPanel Margin="10">
-                            <Label Content="{Binding IconSize}" ContentStringFormat="Rozmiar ikon: {0}" FontSize="13" HorizontalAlignment="Left"/>
-                            <Slider Minimum="35" Maximum="125" TickFrequency="1" IsSnapToTickEnabled="True" VerticalAlignment="Center" HorizontalAlignment="Stretch" Value="{Binding IconSize}"/>
-                            <Separator Opacity="0.5"/>
-                            <Label Content="{Binding CategoryCheckBoxSize}" ContentStringFormat="Rozmiar kategorii: {0}" FontSize="13" HorizontalAlignment="Left"/>
-                            <Slider Minimum="1.0" Maximum="2.0" TickFrequency="0.1" IsSnapToTickEnabled="True" VerticalAlignment="Center" HorizontalAlignment="Stretch" Value="{Binding CategoryCheckBoxSize}"/>
-                            <Separator Opacity="0.5"/>
-                            <Label Content="{Binding CategoryFontSize}" ContentStringFormat="Rozmiar czcionki kategorii: {0}" FontSize="13" HorizontalAlignment="Left"/>
-                            <Slider Minimum="5" Maximum="25" TickFrequency="1" IsSnapToTickEnabled="True" VerticalAlignment="Center" HorizontalAlignment="Stretch" Value="{Binding CategoryFontSize}"/>
-                            <Separator Opacity="0.5"/>
-                            <Label Content="{Binding SidePanelWidth}" ContentStringFormat="Szerokość panelu bocznego: {0}" FontSize="13" HorizontalAlignment="Left"/>
+                            <Label Content="{Binding IconSize}" ContentStringFormat="Rozmiar ikon: {0}" FontSize="13"
+                                   HorizontalAlignment="Left" />
+                            <Slider Minimum="35" Maximum="125" TickFrequency="1" IsSnapToTickEnabled="True"
+                                    VerticalAlignment="Center" HorizontalAlignment="Stretch" Value="{Binding IconSize}" />
+                            <Separator Opacity="0.5" />
+                            <Label Content="{Binding CategoryCheckBoxSize}"
+                                   ContentStringFormat="Rozmiar kategorii: {0}" FontSize="13"
+                                   HorizontalAlignment="Left" />
+                            <Slider Minimum="1.0" Maximum="2.0" TickFrequency="0.1" IsSnapToTickEnabled="True"
+                                    VerticalAlignment="Center" HorizontalAlignment="Stretch"
+                                    Value="{Binding CategoryCheckBoxSize}" />
+                            <Separator Opacity="0.5" />
+                            <Label Content="{Binding CategoryFontSize}"
+                                   ContentStringFormat="Rozmiar czcionki kategorii: {0}" FontSize="13"
+                                   HorizontalAlignment="Left" />
+                            <Slider Minimum="5" Maximum="25" TickFrequency="1" IsSnapToTickEnabled="True"
+                                    VerticalAlignment="Center" HorizontalAlignment="Stretch"
+                                    Value="{Binding CategoryFontSize}" />
+                            <Separator Opacity="0.5" />
+                            <Label Content="{Binding SidePanelWidth}"
+                                   ContentStringFormat="Szerokość panelu bocznego: {0}" FontSize="13"
+                                   HorizontalAlignment="Left" />
                             <Slider Minimum="220" Maximum="400" TickFrequency="10" IsSnapToTickEnabled="True"
-                                    VerticalAlignment="Center" HorizontalAlignment="Stretch" Value="{Binding SidePanelWidth}"/>
-                            <Separator Opacity="0.5"/>
+                                    VerticalAlignment="Center" HorizontalAlignment="Stretch"
+                                    Value="{Binding SidePanelWidth}" />
+                            <Separator Opacity="0.5" />
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                                <Label Content="Pokazuj tooltipy" Margin="0,0,5,0"/>
-                                <CheckBox IsChecked="{Binding ShowTooltips}"/>
+                                <Label Content="Pokazuj tooltipy" Margin="0,0,5,0" />
+                                <CheckBox IsChecked="{Binding ShowTooltips}" />
                             </StackPanel>
-                            <Separator Opacity="0.5"/>
+                            <Separator Opacity="0.5" />
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                <Button Style="{StaticResource MediumIconButton}" Command="{Binding ResetGame}" ToolTip="Zresetuj grę">
-                                    <materialDesign:PackIcon Style="{StaticResource BigPackIcon}" Kind="Restore"/>
+                                <Button Style="{StaticResource MediumIconButton}" Command="{Binding ResetGame}"
+                                        ToolTip="Zresetuj grę">
+                                    <materialDesign:PackIcon Style="{StaticResource BigPackIcon}" Kind="Restore" />
                                 </Button>
-                                <Button Style="{StaticResource MediumIconButton}" Command="{Binding LoadConfig}" ToolTip="Wczytaj konfigurację">
-                                    <materialDesign:PackIcon Style="{StaticResource BigPackIcon}" Kind="FileDownload"/>
+                                <Button Style="{StaticResource MediumIconButton}" Command="{Binding LoadConfig}"
+                                        ToolTip="Wczytaj konfigurację">
+                                    <materialDesign:PackIcon Style="{StaticResource BigPackIcon}" Kind="FileDownload" />
                                 </Button>
-                                <Button Style="{StaticResource MediumIconButton}" Command="{Binding SaveConfig}" ToolTip="Zapisz konfigurację">
-                                    <materialDesign:PackIcon Style="{StaticResource BigPackIcon}" Kind="FileUpload"/>
+                                <Button Style="{StaticResource MediumIconButton}" Command="{Binding SaveConfig}"
+                                        ToolTip="Zapisz konfigurację">
+                                    <materialDesign:PackIcon Style="{StaticResource BigPackIcon}" Kind="FileUpload" />
                                 </Button>
-                                <Button Style="{StaticResource MediumIconButton}" Command="{Binding ResetConfig}" ToolTip="Zresetuj konfigurację">
-                                    <materialDesign:PackIcon Style="{StaticResource BigPackIcon}" Kind="ContentSaveOff"/>
+                                <Button Style="{StaticResource MediumIconButton}" Command="{Binding ResetConfig}"
+                                        ToolTip="Zresetuj konfigurację">
+                                    <materialDesign:PackIcon Style="{StaticResource BigPackIcon}" Kind="ContentSaveOff" />
                                 </Button>
                             </StackPanel>
                         </StackPanel>
                     </Grid>
-                    <Button Style="{StaticResource MaterialDesignRaisedAccentButton}" DockPanel.Dock="Bottom" Margin="0,5,0,5" HorizontalAlignment="Center" VerticalAlignment="Center"
-                            Command="{Binding RestoreChampions}" Visibility="{Binding AnyChampionsRejected, Converter={StaticResource BooleanToVisibilityConverter}}">
+                    <Button Style="{StaticResource MaterialDesignRaisedAccentButton}" DockPanel.Dock="Bottom"
+                            Margin="0,5,0,5" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            Command="{Binding RestoreChampions}"
+                            Visibility="{Binding AnyChampionsRejected, Converter={StaticResource BooleanToVisibilityConverter}}">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="AccountArrowLeft" Margin="0,5,5,5" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Center">
+                            <materialDesign:PackIcon Kind="AccountArrowLeft" Margin="0,5,5,5"
+                                                     RenderTransformOrigin="0.5,0.5" VerticalAlignment="Center">
                                 <materialDesign:PackIcon.RenderTransform>
-                                    <ScaleTransform ScaleX="1.3" ScaleY="1.3"/>
+                                    <ScaleTransform ScaleX="1.3" ScaleY="1.3" />
                                 </materialDesign:PackIcon.RenderTransform>
                             </materialDesign:PackIcon>
-                            <TextBlock Text="PRZYWRÓĆ POSTAĆ" VerticalAlignment="Center"/>
+                            <TextBlock Text="PRZYWRÓĆ POSTAĆ" VerticalAlignment="Center" />
                         </StackPanel>
                     </Button>
                     <ListView ItemsSource="{Binding Categories}">
                         <ListView.ItemContainerStyle>
                             <Style TargetType="ListViewItem">
-                                <Setter Property="Margin" Value="3"/>
+                                <Setter Property="Margin" Value="3" />
                                 <Setter Property="Background" Value="Transparent" />
                                 <Setter Property="Template">
                                     <Setter.Value>
@@ -108,37 +131,45 @@
                                         </ControlTemplate>
                                     </Setter.Value>
                                 </Setter>
-                                <Setter Property="Focusable" Value="False"/>
+                                <Setter Property="Focusable" Value="False" />
                             </Style>
                         </ListView.ItemContainerStyle>
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel Margin="5,3,5,3" Orientation="Horizontal">
-                                    <CheckBox Margin="0,0,5,0" IsChecked="{Binding IsSelected}" RenderTransformOrigin="0.5,0.5">
+                                    <CheckBox Margin="0,0,5,0" IsChecked="{Binding IsSelected}"
+                                              RenderTransformOrigin="0.5,0.5">
                                         <CheckBox.RenderTransform>
                                             <ScaleTransform
                                                 ScaleX="{Binding Path=DataContext.CategoryCheckBoxSize, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}"
-                                                ScaleY="{Binding Path=DataContext.CategoryCheckBoxSize, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}"/>
+                                                ScaleY="{Binding Path=DataContext.CategoryCheckBoxSize, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}" />
                                         </CheckBox.RenderTransform>
                                     </CheckBox>
-                                    <Label Content="{Binding CategoryName}" FontSize="{Binding Path=DataContext.CategoryFontSize, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}"/>
+                                    <Label Content="{Binding CategoryName}"
+                                           FontSize="{Binding Path=DataContext.CategoryFontSize, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}" />
                                 </StackPanel>
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>
                 </DockPanel>
-                <Ellipse Width="58" Height="58" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,-20,-20,0" Fill="#70000000"/>
+                <Ellipse Width="58" Height="58" HorizontalAlignment="Right" VerticalAlignment="Top"
+                         Margin="0,-20,-20,0" Fill="#70000000" />
                 <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="25" Height="25"
-                        VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,5,5,0" Command="{Binding ToggleSettings}">
-                    <materialDesign:PackIcon Kind="{Binding ShowSettings, Converter={StaticResource BoolToSettingsIconConverter}}"/>
+                        VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,5,5,0"
+                        Command="{Binding ToggleSettings}">
+                    <materialDesign:PackIcon
+                        Kind="{Binding ShowSettings, Converter={StaticResource BoolToSettingsIconConverter}}" />
                 </Button>
             </Grid>
-            <ListBox ItemsSource="{Binding Champions}" VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.ScrollUnit="Item"
-                         VirtualizingPanel.VirtualizationMode="Recycling" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
-                         Background="Black" SelectionMode="Single" x:Name="ChampionBox">
+            <ListBox ItemsSource="{Binding Champions}" VirtualizingPanel.IsVirtualizing="True"
+                     VirtualizingPanel.ScrollUnit="Item"
+                     VirtualizingPanel.VirtualizationMode="Recycling" VerticalAlignment="Stretch"
+                     HorizontalAlignment="Stretch"
+                     Background="Black" SelectionMode="Single" x:Name="ChampionBox">
                 <ListBox.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <controls:VirtualizingWrapPanel ItemSize="{Binding IconSize, Converter={StaticResource IntToSizeConverter}}"/>
+                        <controls:VirtualizingWrapPanel
+                            ItemSize="{Binding IconSize, Converter={StaticResource IntToSizeConverter}}" />
                     </ItemsPanelTemplate>
                 </ListBox.ItemsPanel>
                 <ListBox.ItemContainerStyle>
@@ -146,16 +177,16 @@
                         <Setter Property="Template">
                             <Setter.Value>
                                 <ControlTemplate TargetType="{x:Type ListBoxItem}">
-                                    <ContentPresenter/>
+                                    <ContentPresenter />
                                 </ControlTemplate>
                             </Setter.Value>
                         </Setter>
-                        <Setter Property="RenderTransformOrigin" Value="0.5, 0.5"/>
+                        <Setter Property="RenderTransformOrigin" Value="0.5, 0.5" />
                         <Style.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="RenderTransform">
                                     <Setter.Value>
-                                        <ScaleTransform ScaleX="1.1" ScaleY="1.1"/>
+                                        <ScaleTransform ScaleX="1.1" ScaleY="1.1" />
                                     </Setter.Value>
                                 </Setter>
                             </Trigger>
@@ -164,13 +195,18 @@
                 </ListBox.ItemContainerStyle>
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <Grid Width="{Binding Path=DataContext.IconSize, ElementName=Window}" Height="{Binding Path=Width, RelativeSource={RelativeSource Self}}">
-                            <Image Source="{Binding Path=., Converter={StaticResource ChampionToImageConverter}}" ToolTipService.InitialShowDelay="1000"
-                                   ToolTip="{Binding Path=., Converter={StaticResource ChampionToNameConverter}}" ToolTipService.Placement="Mouse"
+                        <Grid Width="{Binding Path=DataContext.IconSize, ElementName=Window}"
+                              Height="{Binding Path=Width, RelativeSource={RelativeSource Self}}">
+                            <Image Source="{Binding Path=., Converter={StaticResource ChampionToImageConverter}}"
+                                   ToolTipService.InitialShowDelay="1000"
+                                   ToolTip="{Binding Path=., Converter={StaticResource ChampionToNameConverter}}"
+                                   ToolTipService.Placement="Mouse"
                                    ToolTipService.IsEnabled="{Binding Path=DataContext.ShowTooltips, ElementName=Window}">
                                 <i:Interaction.Triggers>
                                     <i:EventTrigger EventName="MouseLeftButtonDown">
-                                        <i:InvokeCommandAction Command="{Binding Path=DataContext.RejectChampion, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}" CommandParameter="{Binding}"/>
+                                        <i:InvokeCommandAction
+                                            Command="{Binding Path=DataContext.RejectChampion, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}"
+                                            CommandParameter="{Binding}" />
                                     </i:EventTrigger>
                                 </i:Interaction.Triggers>
                             </Image>
@@ -179,7 +215,7 @@
                 </ListBox.ItemTemplate>
             </ListBox>
         </DockPanel>
-        <materialDesign:DialogHost Identifier="{Binding DialogIdentifier1}"/>
-        <materialDesign:DialogHost Identifier="{Binding DialogIdentifier2}"/>
+        <materialDesign:DialogHost Identifier="{Binding DialogIdentifier1}" />
+        <materialDesign:DialogHost Identifier="{Binding DialogIdentifier2}" />
     </Grid>
 </Window>

@@ -27,7 +27,7 @@ namespace GuessWho.Model {
             { Champion.TahmKench, "Tahm Kench" },
             { Champion.TwistedFate, "Twisted Fate" },
             { Champion.Velkoz, "Vel'Koz" },
-            { Champion.XinZhao, "Xin Zhao" },
+            { Champion.XinZhao, "Xin Zhao" }
         };
 
         public static void Validate() {
@@ -37,6 +37,7 @@ namespace GuessWho.Model {
                 if (!ChampionNameDictionary.ContainsKey(champion)) {
                     ChampionNameDictionary.Add(champion, champion.ToString());
                 }
+
                 // validate icon files
                 StreamResourceInfo _ = Application.GetResourceStream(champion.GetIconUri());
             }
@@ -53,7 +54,9 @@ namespace GuessWho.Model {
         }
 
         public static Uri GetWPFIconUri(this Champion champion) {
-            return new Uri($"pack://application:,,,/{Assembly.GetExecutingAssembly().GetName().Name};component/{ICON_DIRECTORY}/{champion}.{ICON_EXTENSION}", UriKind.Absolute);
+            return new Uri(
+                $"pack://application:,,,/{Assembly.GetExecutingAssembly().GetName().Name};component/{ICON_DIRECTORY}/{champion}.{ICON_EXTENSION}",
+                UriKind.Absolute);
         }
 
         public static IEnumerable<Champion> OrderByChampionName(this IEnumerable<Champion> champions) {

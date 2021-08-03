@@ -6,15 +6,15 @@ using GuessWho.Model;
 
 namespace GuessWho.View {
     public partial class ChampionControl : UserControl {
+        public static readonly DependencyProperty ChampionProperty = DependencyProperty.Register
+            (nameof(Champion), typeof(Champion?), typeof(ChampionControl));
+
+        public static readonly DependencyProperty CommandProperty = DependencyProperty.Register
+            (nameof(Command), typeof(ICommand), typeof(ChampionControl));
+
         public ChampionControl() {
             InitializeComponent();
         }
-
-        public static readonly DependencyProperty ChampionProperty = DependencyProperty.Register
-        (nameof(Champion), typeof(Champion?), typeof(ChampionControl));
-
-        public static readonly DependencyProperty CommandProperty = DependencyProperty.Register
-        (nameof(Command), typeof(ICommand), typeof(ChampionControl));
 
         public Champion? Champion {
             get { return (Champion?)GetValue(ChampionProperty); }

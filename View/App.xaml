@@ -8,22 +8,23 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
-            <local:ChampionToImageConverter x:Key="ChampionToImageConverter"/>
-            <local:ChampionToNameConverter x:Key="ChampionToNameConverter"/>
-            <local:BoolToSettingsIconConverter x:Key="BoolToSettingsIconConverter"/>
-            <local:DoubleToSizeConverter x:Key="IntToSizeConverter"/>
+            <local:ChampionToImageConverter x:Key="ChampionToImageConverter" />
+            <local:ChampionToNameConverter x:Key="ChampionToNameConverter" />
+            <local:BoolToSettingsIconConverter x:Key="BoolToSettingsIconConverter" />
+            <local:DoubleToSizeConverter x:Key="IntToSizeConverter" />
             <DataTemplate DataType="{x:Type baseVm:DialogInformationViewModel}">
-                <local:InformationControl/>
+                <local:InformationControl />
             </DataTemplate>
             <DataTemplate DataType="{x:Type baseVm:DialogTwoButtonViewModel}">
-                <local:TwoButtonControl/>
+                <local:TwoButtonControl />
             </DataTemplate>
             <DataTemplate DataType="{x:Type vm:DialogRejectedChampionsViewModel}">
-                <local:RejectedChampionsControl/>
+                <local:RejectedChampionsControl />
             </DataTemplate>
             <ResourceDictionary.MergedDictionaries>
                 <materialDesign:BundledTheme BaseTheme="Dark" PrimaryColor="DeepOrange" SecondaryColor="Orange" />
-                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary
+                    Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

@@ -14,9 +14,12 @@ namespace GuessWho.Model {
         public double SidePanelWidth { get; set; }
         public double IconSize { get; set; }
         public bool ShowTooltips { get; set; }
+
         [JsonProperty(ItemConverterType = typeof(StringEnumConverter))]
         public HashSet<Champion> RejectedChampions { get; set; }
+
         public List<ChampionCategory> Categories { get; set; }
+
         public static GuessWhoConfig GetDefaultConfig() {
             GuessWhoConfig config = new GuessWhoConfig {
                 WindowWidth = 1080.0,
@@ -137,8 +140,8 @@ namespace GuessWho.Model {
                 CategoryName = "Kobieta",
                 IsSelected = true,
                 Champions =
-                    new HashSet<Champion>(Enum.GetValues(typeof(Champion)).Cast<Champion>().
-                        Where(c => !men.Champions.Contains(c)))
+                    new HashSet<Champion>(Enum.GetValues(typeof(Champion)).Cast<Champion>()
+                        .Where(c => !men.Champions.Contains(c)))
             });
             return config;
         }

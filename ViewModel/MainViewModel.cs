@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Windows.Input;
 
@@ -11,27 +12,40 @@ using NedMaterialMVVM.ViewModel;
 
 namespace GuessWho.ViewModel {
     public class MainViewModel : PropertyChangedWrapper {
-        private double _WindowWidth;
-        private double _WindowHeight;
+
+        #region Backing fields
+
         private double _CategoryCheckBoxSize;
         private double _CategoryFontSize;
-        private double _SidePanelWidth = 220.0;
         private double _IconSize;
-        private bool _ShowTooltips;
         private bool _ShowSettings;
+        private bool _ShowTooltips;
+        private double _SidePanelWidth = 220.0;
+        private double _WindowHeight;
+        private double _WindowWidth;
 
-        public ObservableCollection<Champion> Champions {
-            get;
-        } = new ObservableCollection<Champion>();
+        #endregion
 
-        public ObservableCollection<ChampionCategoryViewModel> Categories {
-            get;
-        } = new ObservableCollection<ChampionCategoryViewModel>();
-
-        public HashSet<Champion> RejectedChampions {
-            get;
-            private set;
+        public MainViewModel() {
+            OnLoaded = new RelayCommand(ExecuteOnLoaded);
+            OnClosing = new RelayCommand(ExecuteOnClosing);
+            ToggleSettings = new RelayCommand(ExecuteToggleSettings);
+            RestoreChampions = new RelayCommand(ExecuteRestoreChampions);
+            RejectChampion = new RelayCommand<Champion>(ExecuteRejectChampion);
+            ResetGame = new RelayCommand(ExecuteResetGame);
+            LoadConfig = new RelayCommand(ExecuteLoadConfig);
+            SaveConfig = new RelayCommand(ExecuteSaveConfig);
+            ResetConfig = new RelayCommand(ExecuteResetConfig);
+            ConfigManager = new GuessWhoConfigManager();
+            DialogRejectedChampionsViewModel = new DialogRejectedChampionsViewModel(this);
         }
+
+        #region Public properties
+
+        public ObservableCollection<Champion> Champions { get; } = new ObservableCollection<Champion>();
+
+        public ObservableCollection<ChampionCategoryViewModel> Categories { get; } =
+            new ObservableCollection<ChampionCategoryViewModel>();
 
         public double WindowWidth {
             get { return _WindowWidth; }
@@ -101,6 +115,10 @@ namespace GuessWho.ViewModel {
             get { return RejectedChampions != null && RejectedChampions.Any(); }
         }
 
+        #endregion
+
+        #region Commands
+
         public ICommand OnLoaded { get; }
         public ICommand OnClosing { get; }
 
@@ -112,6 +130,12 @@ namespace GuessWho.ViewModel {
         public ICommand SaveConfig { get; }
         public ICommand ResetConfig { get; }
 
+        #endregion
+
+        #region Private properties
+
+        private HashSet<Champion> RejectedChampions { get; set; }
+
         private DialogInformationViewModel DialogInformationViewModel { get; } = new DialogInformationViewModel();
 
         private DialogYesNoViewModel DialogYesNoViewModel { get; } = new DialogYesNoViewModel();
@@ -119,50 +143,20 @@ namespace GuessWho.ViewModel {
         private DialogRejectedChampionsViewModel DialogRejectedChampionsViewModel { get; }
 
         private GuessWhoConfigManager ConfigManager { get; }
-        public object DialogIdentifier1 { get; } = 1;
-        public object DialogIdentifier2 { get; } = 2;
+        private object DialogIdentifier1 { get; } = 1;
+        private object DialogIdentifier2 { get; } = 2;
 
-        public MainViewModel() {
-            OnLoaded = new RelayCommand(ExecuteOnLoaded);
-            OnClosing = new RelayCommand(ExecuteOnClosing);
-            ToggleSettings = new RelayCommand(ExecuteToggleSettings);
-            RestoreChampions = new RelayCommand(ExecuteRestoreChampions);
-            RejectChampion = new RelayCommand<Champion>(ExecuteRejectChampion);
-            ResetGame = new RelayCommand(ExecuteResetGame);
-            LoadConfig = new RelayCommand(ExecuteLoadConfig);
-            SaveConfig = new RelayCommand(ExecuteSaveConfig);
-            ResetConfig = new RelayCommand(ExecuteResetConfig);
-            ConfigManager = new GuessWhoConfigManager();
-            DialogRejectedChampionsViewModel = new DialogRejectedChampionsViewModel(this);
-        }
-
-        public void LoadConfiguration() {
-            ApplyConfiguration(ConfigManager.ReadConfig());
-        }
-
-        public void WriteConfiguration() {
-            ConfigManager.WriteConfig(GetCurrentConfig());
-        }
-
-        public GuessWhoConfig GetCurrentConfig() {
-            return new GuessWhoConfig {
-                WindowWidth = WindowWidth,
-                WindowHeight = WindowHeight,
-                CategoryCheckBoxSize = CategoryCheckBoxSize,
-                CategoryFontSize = CategoryFontSize,
-                SidePanelWidth = SidePanelWidth,
-                IconSize = IconSize,
-                ShowTooltips = ShowTooltips,
-                RejectedChampions = RejectedChampions,
-                Categories = Categories.Select(c => new ChampionCategory { CategoryName = c.CategoryName, Champions = c.Champions, IsSelected = c.IsSelected }).ToList()
-            };
-        }
+        #endregion
 
         public void RestoreChampion(Champion champion) {
             RejectedChampions.Remove(champion);
             RevalidateChampions();
             RaisePropertyChanged(nameof(AnyChampionsRejected));
         }
+
+        #region Private methods
+
+        #region Command actions
 
         private void ExecuteRestoreChampions() {
             DialogRejectedChampionsViewModel.OpenDialog(DialogIdentifier1, RejectedChampions);
@@ -172,46 +166,6 @@ namespace GuessWho.ViewModel {
             RejectedChampions.Add(champion);
             Champions.Remove(champion);
             RaisePropertyChanged(nameof(AnyChampionsRejected));
-        }
-
-        private void ApplyConfiguration(GuessWhoConfig config) {
-            WindowWidth = config.WindowWidth;
-            WindowHeight = config.WindowHeight;
-            CategoryCheckBoxSize = config.CategoryCheckBoxSize;
-            CategoryFontSize = config.CategoryFontSize;
-            SidePanelWidth = config.SidePanelWidth;
-            IconSize = config.IconSize;
-            ShowTooltips = config.ShowTooltips;
-            RejectedChampions = config.RejectedChampions;
-            RaisePropertyChanged(nameof(AnyChampionsRejected));
-            foreach (ChampionCategoryViewModel vm in Categories) {
-                vm.PropertyChanged -= ChampionCategory_PropertyChanged;
-            }
-            Categories.Clear();
-            foreach (ChampionCategory category in config.Categories) {
-                ChampionCategoryViewModel vm = new ChampionCategoryViewModel(category);
-                vm.PropertyChanged += ChampionCategory_PropertyChanged;
-                Categories.Add(vm);
-            }
-
-            RevalidateChampions();
-        }
-
-        private void ChampionCategory_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e) {
-            switch (e.PropertyName) {
-                case nameof(ChampionCategoryViewModel.IsSelected):
-                    RevalidateChampions();
-                    break;
-            }
-        }
-
-        private void RevalidateChampions() {
-            Champions.Clear();
-            foreach (Champion champ in ChampionProvider.AllChampionsAlphabetical) {
-                if (!RejectedChampions.Contains(champ) && !Categories.Any(c => c.Champions.Contains(champ) && !c.IsSelected)) {
-                    Champions.Add(champ);
-                }
-            }
         }
 
         private void ExecuteOnLoaded() {
@@ -234,6 +188,7 @@ namespace GuessWho.ViewModel {
                 foreach (ChampionCategory category in config.Categories) {
                     category.IsSelected = true;
                 }
+
                 ApplyConfiguration(config);
                 try {
                     WriteConfiguration();
@@ -244,7 +199,8 @@ namespace GuessWho.ViewModel {
         }
 
         private void ExecuteLoadConfig() {
-            ShowYesNoDialog("Zamierzasz wczytać ponownie konfigurację. Wszelkie niezapisane zmiany zostaną utracone!\nNa pewno?",
+            ShowYesNoDialog(
+                "Zamierzasz wczytać ponownie konfigurację. Wszelkie niezapisane zmiany zostaną utracone!\nNa pewno?",
                 () =>
                 {
                     try {
@@ -271,18 +227,87 @@ namespace GuessWho.ViewModel {
                 try {
                     WriteConfiguration();
                 } catch (Exception e) {
-                    ShowInformationDialog($"Konfiguracja została zresetowana, lecz w trakcie zapisu wystąpił błąd!\n{e}");
+                    ShowInformationDialog(
+                        $"Konfiguracja została zresetowana, lecz w trakcie zapisu wystąpił błąd!\n{e}");
                 }
             });
         }
 
-        public void ShowYesNoDialog(string message, Action yesAction = null, Action noAction = null) {
+        #endregion
+
+        private void LoadConfiguration() {
+            ApplyConfiguration(ConfigManager.ReadConfig());
+        }
+
+        private void WriteConfiguration() {
+            ConfigManager.WriteConfig(GetCurrentConfig());
+        }
+
+        private GuessWhoConfig GetCurrentConfig() {
+            return new GuessWhoConfig {
+                WindowWidth = WindowWidth,
+                WindowHeight = WindowHeight,
+                CategoryCheckBoxSize = CategoryCheckBoxSize,
+                CategoryFontSize = CategoryFontSize,
+                SidePanelWidth = SidePanelWidth,
+                IconSize = IconSize,
+                ShowTooltips = ShowTooltips,
+                RejectedChampions = RejectedChampions,
+                Categories = Categories.Select(c => new ChampionCategory { CategoryName = c.CategoryName, Champions = c.Champions, IsSelected = c.IsSelected }).ToList()
+            };
+        }
+
+        private void ApplyConfiguration(GuessWhoConfig config) {
+            WindowWidth = config.WindowWidth;
+            WindowHeight = config.WindowHeight;
+            CategoryCheckBoxSize = config.CategoryCheckBoxSize;
+            CategoryFontSize = config.CategoryFontSize;
+            SidePanelWidth = config.SidePanelWidth;
+            IconSize = config.IconSize;
+            ShowTooltips = config.ShowTooltips;
+            RejectedChampions = config.RejectedChampions;
+            RaisePropertyChanged(nameof(AnyChampionsRejected));
+            foreach (ChampionCategoryViewModel vm in Categories) {
+                vm.PropertyChanged -= ChampionCategory_PropertyChanged;
+            }
+
+            Categories.Clear();
+            foreach (ChampionCategory category in config.Categories) {
+                ChampionCategoryViewModel vm = new ChampionCategoryViewModel(category);
+                vm.PropertyChanged += ChampionCategory_PropertyChanged;
+                Categories.Add(vm);
+            }
+
+            RevalidateChampions();
+        }
+
+        private void ChampionCategory_PropertyChanged(object sender, PropertyChangedEventArgs e) {
+            switch (e.PropertyName) {
+                case nameof(ChampionCategoryViewModel.IsSelected):
+                    RevalidateChampions();
+                    break;
+            }
+        }
+
+        private void RevalidateChampions() {
+            Champions.Clear();
+            foreach (Champion champ in ChampionProvider.AllChampionsAlphabetical) {
+                if (!RejectedChampions.Contains(champ) &&
+                    !Categories.Any(c => c.Champions.Contains(champ) && !c.IsSelected)) {
+                    Champions.Add(champ);
+                }
+            }
+        }
+
+        private void ShowYesNoDialog(string message, Action yesAction = null, Action noAction = null) {
             DialogYesNoViewModel.OpenDialog(DialogIdentifier1, message, yesAction, noAction);
         }
 
-        public void ShowInformationDialog(string message) {
+        private void ShowInformationDialog(string message) {
             DialogInformationViewModel.OpenDialog(DialogIdentifier2, message);
         }
-    }
 
+        #endregion
+
+    }
 }

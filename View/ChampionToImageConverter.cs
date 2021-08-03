@@ -8,18 +8,20 @@ using GuessWho.Model;
 
 namespace GuessWho.View {
     public class ChampionToImageConverter : IValueConverter {
-        private Dictionary<Champion, BitmapImage> ChampionIconDictionary { get; } = new Dictionary<Champion, BitmapImage>();
-
         public ChampionToImageConverter() {
             foreach (Champion champ in Enum.GetValues(typeof(Champion))) {
                 ChampionIconDictionary.Add(champ, new BitmapImage(champ.GetWPFIconUri()));
             }
         }
 
+        private Dictionary<Champion, BitmapImage> ChampionIconDictionary { get; } =
+            new Dictionary<Champion, BitmapImage>();
+
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture) {
             if (value != null && value is Champion champion) {
                 return ChampionIconDictionary[champion];
             }
+
             return null;
         }
 

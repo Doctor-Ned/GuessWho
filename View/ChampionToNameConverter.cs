@@ -10,6 +10,7 @@ namespace GuessWho.View {
             if (value != null && value is Champion champion) {
                 return champion.GetName();
             }
+
             return null;
         }
 

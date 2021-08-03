@@ -10,20 +10,18 @@ using NedMaterialMVVM.ViewModel;
 
 namespace GuessWho.ViewModel {
     public class DialogRejectedChampionsViewModel : DialogBaseViewModel {
-        public ObservableCollection<Champion> RejectedChampions {
-            get;
-        } = new ObservableCollection<Champion>();
-
-        private MainViewModel MainViewModel { get; }
-
-        public ICommand Close { get; }
-        public ICommand RestoreChampion { get; }
-
         public DialogRejectedChampionsViewModel(MainViewModel mainViewModel) {
             MainViewModel = mainViewModel;
             Close = new RelayCommand(ExecuteClose);
             RestoreChampion = new RelayCommand<Champion>(ExecuteRestoreChampion);
         }
+
+        public ObservableCollection<Champion> RejectedChampions { get; } = new ObservableCollection<Champion>();
+
+        private MainViewModel MainViewModel { get; }
+
+        public ICommand Close { get; }
+        public ICommand RestoreChampion { get; }
 
         private void ExecuteClose() {
             CloseDialog();
