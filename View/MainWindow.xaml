@@ -16,7 +16,7 @@
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
         mc:Ignorable="d"
-        Title="Zgadnij kto to!" MinHeight="400" MinWidth="600"
+        Title="Zgadnij Kto To?" MinHeight="400" MinWidth="600"
         Height="{Binding WindowHeight, Mode=TwoWay}" Width="{Binding WindowWidth, Mode=TwoWay}" x:Name="Window">
     <Window.DataContext>
         <vm:MainViewModel />
