@@ -57,8 +57,8 @@
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Grid Width="{Binding Path=DataContext.IconSize, ElementName=Window}" Height="{Binding Path=Width, RelativeSource={RelativeSource Self}}">
-                            <Image Source="{Binding Path=., Converter={StaticResource ChampionToImageConverter}}"
-                                   ToolTip="{Binding Path=., Converter={StaticResource ChampionToNameConverter}}"/>
+                            <Image Source="{Binding Path=., Converter={StaticResource ChampionToImageConverter}}" ToolTipService.InitialShowDelay="1000"
+                                   ToolTip="{Binding Path=., Converter={StaticResource ChampionToNameConverter}}" ToolTipService.IsEnabled="True" ToolTipService.Placement="Mouse"/>
                         </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
