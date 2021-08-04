@@ -52,8 +52,8 @@
     <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\System.Windows.Interactivity.WPF.2.0.20525\lib\net40\Microsoft.Expression.Interactions.dll</HintPath>
     </Reference>
-    <Reference Include="NedMaterialMVVM, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\NedMaterialMVVM.1.0.3\lib\net472\NedMaterialMVVM.dll</HintPath>
+    <Reference Include="NedMaterialMVVM, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\NedMaterialMVVM.1.1.2\lib\net472\NedMaterialMVVM.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -87,20 +87,12 @@
     </ApplicationDefinition>
     <Compile Include="Model\ChampionDescription.cs" />
     <Compile Include="ViewModel\DialogRejectedChampionsViewModel.cs" />
-    <Compile Include="ViewModel\DialogTwoButtonViewModel.cs" />
     <Compile Include="View\RejectedChampionsControl.xaml.cs">
       <DependentUpon>RejectedChampionsControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\TwoButtonControl.xaml.cs">
-      <DependentUpon>TwoButtonControl.xaml</DependentUpon>
     </Compile>
     <Page Include="View\ChampionControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\InformationControl.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -120,9 +112,6 @@
     </Compile>
     <Compile Include="View\BoolToSettingsIconConverter.cs" />
     <Compile Include="View\ChampionToNameConverter.cs" />
-    <Compile Include="View\InformationControl.xaml.cs">
-      <DependentUpon>InformationControl.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\DoubleToSizeConverter.cs" />
     <Compile Include="View\ChampionToImageConverter.cs" />
     <Compile Include="View\MainWindow.xaml.cs">
@@ -132,10 +121,6 @@
     <Page Include="View\RejectedChampionsControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\TwoButtonControl.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>

@@ -36,4 +36,4 @@ The project utilizes the following third-party tools all of which are licensed u
 - [**Material Design In XAML Toolkit**](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit) for an elegant UI
 - [**Json.NET**](https://github.com/JamesNK/Newtonsoft.Json) for config serialization
 - [**VirtualizingWrapPanel**](https://github.com/sbaeumlisberger/VirtualizingWrapPanel) for a nice presentation of champions
-- **NedMaterialMVVM** (my own tool... that I really need to rework) for basic MVVM functionality
+- **NedMaterialMVVM** (my own package) for basic MVVM functionality

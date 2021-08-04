@@ -140,9 +140,14 @@ namespace GuessWho.ViewModel {
 
         private HashSet<Champion> RejectedChampions { get; set; }
 
-        private DialogInformationViewModel DialogInformationViewModel { get; } = new DialogInformationViewModel();
+        private DialogOneButtonViewModel DialogOneButtonViewModel { get; } = new DialogOneButtonViewModel {
+            ButtonText = "OK"
+        };
 
-        private DialogYesNoViewModel DialogYesNoViewModel { get; } = new DialogYesNoViewModel();
+        private DialogTwoButtonViewModel DialogTwoButtonViewModel { get; } = new DialogTwoButtonViewModel {
+            Button1Text = "TAK",
+            Button2Text = "NIE"
+        };
 
         private DialogRejectedChampionsViewModel DialogRejectedChampionsViewModel { get; }
 
@@ -311,11 +316,11 @@ namespace GuessWho.ViewModel {
         }
 
         private void ShowYesNoDialog(string message, Action yesAction = null, Action noAction = null) {
-            DialogYesNoViewModel.OpenDialog(DialogIdentifier1, message, yesAction, noAction);
+            DialogTwoButtonViewModel.OpenDialog(DialogIdentifier1, message, yesAction, noAction);
         }
 
         private void ShowInformationDialog(string message) {
-            DialogInformationViewModel.OpenDialog(DialogIdentifier2, message);
+            DialogOneButtonViewModel.OpenDialog(DialogIdentifier2, message);
         }
 
         #endregion

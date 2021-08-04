@@ -12,12 +12,6 @@
             <local:ChampionToNameConverter x:Key="ChampionToNameConverter" />
             <local:BoolToSettingsIconConverter x:Key="BoolToSettingsIconConverter" />
             <local:DoubleToSizeConverter x:Key="IntToSizeConverter" />
-            <DataTemplate DataType="{x:Type baseVm:DialogInformationViewModel}">
-                <local:InformationControl />
-            </DataTemplate>
-            <DataTemplate DataType="{x:Type baseVm:DialogTwoButtonViewModel}">
-                <local:TwoButtonControl />
-            </DataTemplate>
             <DataTemplate DataType="{x:Type vm:DialogRejectedChampionsViewModel}">
                 <local:RejectedChampionsControl />
             </DataTemplate>
@@ -25,6 +19,7 @@
                 <materialDesign:BundledTheme BaseTheme="Dark" PrimaryColor="DeepPurple" SecondaryColor="DeepPurple" />
                 <ResourceDictionary
                     Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/NedMaterialMVVM;component/view/Resources.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
