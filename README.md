@@ -1,15 +1,21 @@
 ﻿# GuessWho
 
-This simple WPF project represents a single board for a PC version of "Guess Who". The game is set up in the theme of League of Legends.
+This simple WPF project represents a single board for a PC version of "Guess Who?". The game is set up in the theme of League of Legends.
 The champions are split into categories, which are easily configurable from both the code or a .json config file itself.
 
 *GuessWho was not meant to be an open project, hence the messages hard-coded within the code are in **Polish**, which is my native language. As stated in the TODO section below, I am looking forward to changing this!*
+
+## Credits
+
+Credits for the app idea go to **Dr Hodo** from [YouTube](https://www.youtube.com/channel/UCSBeTmftfh52x7G2eMu_dRA), for whom the project was eventually established.
+
+The 'Guess Who?' game is actually the main point in one of his videos: **video is not released yet**.
 
 ## Champion preparation
 
 Due to the amount of League of Legends champions being dynamic, all of the icons come from [Riot's Data Dragon](https://developer.riotgames.com/docs/lol).
 
-The icons used are located in **$version/img/champion** subdirectory.
+The icons used are located in **$(version)/img/champion** subdirectory.
 
 Currently used Data Dragon version:
 ```
