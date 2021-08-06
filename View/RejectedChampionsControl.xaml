@@ -6,12 +6,18 @@
              xmlns:local="clr-namespace:GuessWho.View"
              xmlns:vm="clr-namespace:GuessWho.ViewModel"
              mc:Ignorable="d" d:DataContext="{d:DesignInstance vm:DialogRejectedChampionsViewModel}"
-             d:DesignHeight="400" d:DesignWidth="350">
+             d:DesignHeight="400" d:DesignWidth="400">
     <Grid>
         <DockPanel Margin="10">
-            <StackPanel Orientation="Horizontal" DockPanel.Dock="Bottom" HorizontalAlignment="Center" Margin="0,10,0,0">
-                <Button Content="ZAMKNIJ" Command="{Binding Close}"
+            <StackPanel Orientation="Vertical" DockPanel.Dock="Bottom" HorizontalAlignment="Center" Margin="0,10,0,0">
+                <Button Content="ZAMKNIJ" Command="{Binding Close}" Margin="0,0,0,5"
                         Style="{StaticResource MaterialDesignRaisedAccentButton}" />
+                <Button Content="PRZYWRÓĆ WSZYSTKIE" Command="{Binding RestoreAll}" Background="DarkRed" BorderBrush="DarkRed"
+                        Style="{StaticResource MaterialDesignRaisedAccentButton}" RenderTransformOrigin="0.5,0.5">
+                    <Button.RenderTransform>
+                        <ScaleTransform ScaleX="0.8" ScaleY="0.8"/>
+                    </Button.RenderTransform>
+                </Button>
             </StackPanel>
             <ListView ItemsSource="{Binding RejectedChampions}" HorizontalContentAlignment="Stretch"
                       HorizontalAlignment="Stretch"

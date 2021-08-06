@@ -10,10 +10,24 @@ using NedMaterialMVVM.ViewModel;
 
 namespace GuessWho.ViewModel {
     public class DialogRejectedChampionsViewModel : DialogBaseViewModel {
+        private DialogTwoButtonViewModel DialogYesNoViewModel { get; }
+
         public DialogRejectedChampionsViewModel(MainViewModel mainViewModel) {
             MainViewModel = mainViewModel;
             Close = new RelayCommand(ExecuteClose);
             RestoreChampion = new RelayCommand<Champion>(ExecuteRestoreChampion);
+            RestoreAll = new RelayCommand(ExecuteRestoreAll);
+            DialogYesNoViewModel = new DialogTwoButtonViewModel {
+                Button1Action = () =>
+                {
+                    RejectedChampions.Clear();
+                    MainViewModel.RestoreAllChampions();
+                    CloseDialog();
+                },
+                Button1Text = "TAK",
+                Button2Text = "NIE",
+                Message = "Przywrócisz wszystkie odrzucone postacie.\nCzy na pewno?"
+            };
         }
 
         public ObservableCollection<Champion> RejectedChampions { get; } = new ObservableCollection<Champion>();
@@ -22,6 +36,7 @@ namespace GuessWho.ViewModel {
 
         public ICommand Close { get; }
         public ICommand RestoreChampion { get; }
+        public ICommand RestoreAll { get; }
 
         private void ExecuteClose() {
             CloseDialog();
@@ -33,6 +48,10 @@ namespace GuessWho.ViewModel {
             if (!RejectedChampions.Any()) {
                 CloseDialog();
             }
+        }
+
+        private void ExecuteRestoreAll() {
+            DialogYesNoViewModel.OpenDialog(MainViewModel.DialogIdentifier2);
         }
 
         public void OpenDialog(HashSet<Champion> rejectedChampions) {

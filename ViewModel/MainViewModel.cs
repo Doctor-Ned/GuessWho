@@ -161,7 +161,11 @@ namespace GuessWho.ViewModel {
             RaisePropertyChanged(nameof(AnyChampionsRejected));
         }
 
-        #region Private methods
+        public void RestoreAllChampions() {
+            RejectedChampions.Clear();
+            RevalidateChampions();
+            RaisePropertyChanged(nameof(AnyChampionsRejected));
+        }
 
         #region Command actions
 
@@ -176,6 +180,7 @@ namespace GuessWho.ViewModel {
         }
 
         private void ExecuteOnLoaded() {
+            ChampionProvider.Validate();
             LoadConfiguration();
         }
 
@@ -241,6 +246,8 @@ namespace GuessWho.ViewModel {
         }
 
         #endregion
+
+        #region Private methods
 
         private void LoadConfiguration() {
             ApplyConfiguration(ConfigManager.ReadConfig());

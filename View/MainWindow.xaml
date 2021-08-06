@@ -8,14 +8,16 @@
         xmlns:controls="clr-namespace:WpfToolkit.Controls;assembly=VirtualizingWrapPanel"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
         TextElement.FontSize="13"
         TextOptions.TextFormattingMode="Ideal"
         TextOptions.TextRenderingMode="Auto"
-        Background="{DynamicResource MaterialDesignPaper}"
+        Background="Transparent"
+        AllowsTransparency="True"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        mc:Ignorable="d"
+        mc:Ignorable="d" WindowStyle="None"
         Title="Zgadnij Kto To?" MinHeight="400" MinWidth="600"
         Height="{Binding WindowHeight, Mode=TwoWay}" Width="{Binding WindowWidth, Mode=TwoWay}" x:Name="Window">
     <Window.DataContext>
@@ -30,6 +32,10 @@
         </i:EventTrigger>
     </i:Interaction.Triggers>
     <Window.Resources>
+        <Style x:Key="TopButton" TargetType="Button" BasedOn="{StaticResource MaterialDesignFloatingActionMiniButton}">
+            <Setter Property="Width" Value="28"/>
+            <Setter Property="Height" Value="28"/>
+        </Style>
         <Style x:Key="MediumIconButton" TargetType="Button"
                BasedOn="{StaticResource MaterialDesignFloatingActionButton}">
             <Setter Property="Width" Value="40" />
@@ -44,183 +50,241 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style x:Key="MediumPackIcon" TargetType="materialDesign:PackIcon">
+            <Setter Property="RenderTransformOrigin" Value="0.5 0.5" />
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
-    <Grid>
-        <DockPanel>
-            <Grid DockPanel.Dock="Right" Width="{Binding SidePanelWidth}">
-                <Border BorderThickness="2 0 0 0" BorderBrush="Black" />
-                <DockPanel>
-                    <Grid DockPanel.Dock="Top"
+    <WindowChrome.WindowChrome>
+        <WindowChrome x:Name="WindowChrome" ResizeBorderThickness="10" UseAeroCaptionButtons="False"  GlassFrameThickness="0"
+                      CornerRadius="18" CaptionHeight="38"/>
+    </WindowChrome.WindowChrome>
+    <Border Background="{DynamicResource MaterialDesignPaper}" CornerRadius="{Binding Path=CornerRadius, ElementName=WindowChrome}" Name="WindowBorder">
+        <Border.Clip>
+            <RectangleGeometry RadiusX="{Binding ElementName=WindowBorder, Path=CornerRadius.TopLeft}" RadiusY="{Binding ElementName=WindowBorder, Path=CornerRadius.TopLeft}">
+                <RectangleGeometry.Rect>
+                    <MultiBinding Converter="{StaticResource WidthHeightToRectConverter}" TargetNullValue="0,0,600,400">
+                        <Binding ElementName="Window" Path="Width"/>
+                        <Binding ElementName="Window" Path="Height"/>
+                    </MultiBinding>
+                </RectangleGeometry.Rect>
+            </RectangleGeometry>
+        </Border.Clip>
+        <Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="{Binding Path=CaptionHeight, ElementName=WindowChrome}" Name="TopBarRowDefinition"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Background="Black">
+                    <StackPanel Orientation="Horizontal" FlowDirection="RightToLeft" WindowChrome.IsHitTestVisibleInChrome="True">
+                        <Button Style="{StaticResource TopButton}" Margin="6,0,0,0" Click="CloseWindowButton_OnClick"
+                                Background="DarkRed" BorderBrush="DarkRed" ToolTip="Zapisz i zamknij grę">
+                            <materialDesign:PackIcon Kind="WindowClose" Style="{StaticResource MediumPackIcon}"/>
+                        </Button>
+                        <Button Style="{StaticResource TopButton}" Margin="6,0,0,0" Click="MaximizeWindowButton_OnClick"
+                                Background="SteelBlue" BorderBrush="SteelBlue" ToolTip="Zmaksymalizuj grę">
+                            <materialDesign:PackIcon Kind="WindowMaximize" Style="{StaticResource MediumPackIcon}"/>
+                        </Button>
+                        <Button Style="{StaticResource TopButton}" Margin="6,0,0,0" Click="MinimizeWindowButton_OnClick"
+                                Background="SteelBlue" BorderBrush="SteelBlue" ToolTip="Zminimalizuj grę">
+                            <materialDesign:PackIcon Kind="WindowMinimize" Style="{StaticResource MediumPackIcon}"/>
+                        </Button>
+                        <Button Style="{StaticResource TopButton}" Margin="6,0,0,0" Command="{Binding ToggleSettings}"
+                            ToolTip="{Binding ShowSettings, Converter={StaticResource BoolToSettingsToolTipConverter}}">
+                            <materialDesign:PackIcon Kind="{Binding ShowSettings, Converter={StaticResource BoolToSettingsIconConverter}}" />
+                        </Button>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <DockPanel>
+                        <Grid DockPanel.Dock="Right" Width="{Binding SidePanelWidth}">
+                            <Border BorderThickness="2 0 0 0" BorderBrush="Black" />
+                            <DockPanel>
+                                <Grid DockPanel.Dock="Top"
                           Visibility="{Binding ShowSettings, Converter={StaticResource BooleanToVisibilityConverter}}"
                           VerticalAlignment="Top" HorizontalAlignment="Stretch" Background="#15FFFFFF">
-                        <StackPanel Margin="10">
-                            <Label Content="{Binding IconSize}" ContentStringFormat="Rozmiar ikon: {0}" FontSize="13"
+                                    <StackPanel Margin="10">
+                                        <Label Content="{Binding IconSize}" ContentStringFormat="Rozmiar ikon: {0}" FontSize="13"
                                    HorizontalAlignment="Left" />
-                            <Slider Minimum="35" Maximum="125" TickFrequency="1" IsSnapToTickEnabled="True"
+                                        <Slider Minimum="35" Maximum="125" TickFrequency="1" IsSnapToTickEnabled="True"
                                     VerticalAlignment="Center" HorizontalAlignment="Stretch" Value="{Binding IconSize}" />
-                            <Separator Opacity="0.5" />
-                            <Label Content="{Binding CategoryCheckBoxSize}"
+                                        <Separator Opacity="0.5" />
+                                        <Label Content="{Binding CategoryCheckBoxSize}"
                                    ContentStringFormat="Rozmiar kategorii: {0}" FontSize="13"
                                    HorizontalAlignment="Left" />
-                            <Slider Minimum="1.0" Maximum="2.0" TickFrequency="0.1" IsSnapToTickEnabled="True"
+                                        <Slider Minimum="1.0" Maximum="2.0" TickFrequency="0.1" IsSnapToTickEnabled="True"
                                     VerticalAlignment="Center" HorizontalAlignment="Stretch"
                                     Value="{Binding CategoryCheckBoxSize}" />
-                            <Separator Opacity="0.5" />
-                            <Label Content="{Binding CategoryFontSize}"
+                                        <Separator Opacity="0.5" />
+                                        <Label Content="{Binding CategoryFontSize}"
                                    ContentStringFormat="Rozmiar czcionki kategorii: {0}" FontSize="13"
                                    HorizontalAlignment="Left" />
-                            <Slider Minimum="5" Maximum="25" TickFrequency="1" IsSnapToTickEnabled="True"
+                                        <Slider Minimum="5" Maximum="25" TickFrequency="1" IsSnapToTickEnabled="True"
                                     VerticalAlignment="Center" HorizontalAlignment="Stretch"
                                     Value="{Binding CategoryFontSize}" />
-                            <Separator Opacity="0.5" />
-                            <Label Content="{Binding SidePanelWidth}"
+                                        <Separator Opacity="0.5" />
+                                        <Label Content="{Binding SidePanelWidth}"
                                    ContentStringFormat="Szerokość panelu bocznego: {0}" FontSize="13"
                                    HorizontalAlignment="Left" />
-                            <Slider Minimum="220" Maximum="400" TickFrequency="10" IsSnapToTickEnabled="True"
+                                        <Slider Minimum="220" Maximum="400" TickFrequency="10" IsSnapToTickEnabled="True"
                                     VerticalAlignment="Center" HorizontalAlignment="Stretch"
                                     Value="{Binding SidePanelWidth}" />
-                            <Separator Opacity="0.5" />
-                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                                <Label Content="Pokazuj tooltipy" Margin="0,0,5,0" />
-                                <CheckBox IsChecked="{Binding ShowTooltips}" />
-                            </StackPanel>
-                            <Separator Opacity="0.5" />
-                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                <Button Style="{StaticResource MediumIconButton}" Command="{Binding ResetGame}"
+                                        <Separator Opacity="0.5" />
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                                            <Label Content="Pokazuj tooltipy" Margin="0,0,5,0" />
+                                            <CheckBox IsChecked="{Binding ShowTooltips}" />
+                                        </StackPanel>
+                                        <Separator Opacity="0.5" />
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                            <Button Style="{StaticResource MediumIconButton}" Command="{Binding ResetGame}"
                                         ToolTip="Zresetuj grę">
-                                    <materialDesign:PackIcon Style="{StaticResource BigPackIcon}" Kind="Restore" />
-                                </Button>
-                                <Button Style="{StaticResource MediumIconButton}" Command="{Binding LoadConfig}"
+                                                <materialDesign:PackIcon Style="{StaticResource BigPackIcon}" Kind="Restore" />
+                                            </Button>
+                                            <Button Style="{StaticResource MediumIconButton}" Command="{Binding LoadConfig}"
                                         ToolTip="Wczytaj konfigurację">
-                                    <materialDesign:PackIcon Style="{StaticResource BigPackIcon}" Kind="FileDownload" />
-                                </Button>
-                                <Button Style="{StaticResource MediumIconButton}" Command="{Binding SaveConfig}"
+                                                <materialDesign:PackIcon Style="{StaticResource BigPackIcon}" Kind="FileDownload" />
+                                            </Button>
+                                            <Button Style="{StaticResource MediumIconButton}" Command="{Binding SaveConfig}"
                                         ToolTip="Zapisz konfigurację">
-                                    <materialDesign:PackIcon Style="{StaticResource BigPackIcon}" Kind="FileUpload" />
-                                </Button>
-                                <Button Style="{StaticResource MediumIconButton}" Command="{Binding ResetConfig}"
+                                                <materialDesign:PackIcon Style="{StaticResource BigPackIcon}" Kind="FileUpload" />
+                                            </Button>
+                                            <Button Style="{StaticResource MediumIconButton}" Command="{Binding ResetConfig}"
                                         ToolTip="Zresetuj konfigurację">
-                                    <materialDesign:PackIcon Style="{StaticResource BigPackIcon}" Kind="ContentSaveOff" />
-                                </Button>
-                            </StackPanel>
-                        </StackPanel>
-                    </Grid>
-                    <Button Style="{StaticResource MaterialDesignRaisedAccentButton}" DockPanel.Dock="Bottom"
+                                                <materialDesign:PackIcon Style="{StaticResource BigPackIcon}" Kind="ContentSaveOff" />
+                                            </Button>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Grid>
+                                <Button Style="{StaticResource MaterialDesignRaisedAccentButton}" DockPanel.Dock="Bottom"
                             Margin="0,5,0,5" HorizontalAlignment="Center" VerticalAlignment="Center"
                             Command="{Binding RestoreChampions}"
                             Visibility="{Binding AnyChampionsRejected, Converter={StaticResource BooleanToVisibilityConverter}}">
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="AccountArrowLeft" Margin="0,5,5,5"
+                                    <StackPanel Orientation="Horizontal">
+                                        <materialDesign:PackIcon Kind="AccountArrowLeft" Margin="0,5,5,5"
                                                      RenderTransformOrigin="0.5,0.5" VerticalAlignment="Center">
-                                <materialDesign:PackIcon.RenderTransform>
-                                    <ScaleTransform ScaleX="1.3" ScaleY="1.3" />
-                                </materialDesign:PackIcon.RenderTransform>
-                            </materialDesign:PackIcon>
-                            <TextBlock Text="PRZYWRÓĆ POSTAĆ" VerticalAlignment="Center" />
-                        </StackPanel>
-                    </Button>
-                    <ListView ItemsSource="{Binding Categories}">
-                        <ListView.ItemContainerStyle>
-                            <Style TargetType="ListViewItem">
-                                <Setter Property="Margin" Value="3" />
-                                <Setter Property="Background" Value="Transparent" />
-                                <Setter Property="Template">
-                                    <Setter.Value>
-                                        <ControlTemplate TargetType="{x:Type ListViewItem}">
-                                            <ContentPresenter />
-                                        </ControlTemplate>
-                                    </Setter.Value>
-                                </Setter>
-                                <Setter Property="Focusable" Value="False" />
-                            </Style>
-                        </ListView.ItemContainerStyle>
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <StackPanel Margin="5,3,5,3" Orientation="Horizontal">
-                                    <CheckBox Margin="0,0,5,0" IsChecked="{Binding IsSelected}"
+                                            <materialDesign:PackIcon.RenderTransform>
+                                                <ScaleTransform ScaleX="1.3" ScaleY="1.3" />
+                                            </materialDesign:PackIcon.RenderTransform>
+                                        </materialDesign:PackIcon>
+                                        <TextBlock Text="PRZYWRÓĆ POSTAĆ" VerticalAlignment="Center" />
+                                    </StackPanel>
+                                </Button>
+                                <ListView ItemsSource="{Binding Categories}">
+                                    <ListView.ItemContainerStyle>
+                                        <Style TargetType="ListViewItem">
+                                            <Setter Property="Margin" Value="3" />
+                                            <Setter Property="Background" Value="Transparent" />
+                                            <Setter Property="Template">
+                                                <Setter.Value>
+                                                    <ControlTemplate TargetType="{x:Type ListViewItem}">
+                                                        <ContentPresenter />
+                                                    </ControlTemplate>
+                                                </Setter.Value>
+                                            </Setter>
+                                            <Setter Property="Focusable" Value="False" />
+                                        </Style>
+                                    </ListView.ItemContainerStyle>
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Margin="5,3,5,3" Orientation="Horizontal">
+                                                <CheckBox Margin="0,0,5,0" IsChecked="{Binding IsSelected}"
                                               RenderTransformOrigin="0.5,0.5">
-                                        <CheckBox.RenderTransform>
-                                            <ScaleTransform
+                                                    <CheckBox.RenderTransform>
+                                                        <ScaleTransform
                                                 ScaleX="{Binding Path=DataContext.CategoryCheckBoxSize, ElementName=Window}"
                                                 ScaleY="{Binding Path=DataContext.CategoryCheckBoxSize, ElementName=Window}" />
-                                        </CheckBox.RenderTransform>
-                                    </CheckBox>
-                                    <Label Content="{Binding CategoryName}"
+                                                    </CheckBox.RenderTransform>
+                                                </CheckBox>
+                                                <Label Content="{Binding CategoryName}"
                                            FontSize="{Binding Path=DataContext.CategoryFontSize, ElementName=Window}" />
-                                </StackPanel>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
-                </DockPanel>
-                <Ellipse Width="58" Height="58" HorizontalAlignment="Right" VerticalAlignment="Top"
-                         Margin="0,-20,-20,0" Fill="#70000000" />
-                <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="25" Height="25"
-                        VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,5,5,0"
-                        Command="{Binding ToggleSettings}">
-                    <materialDesign:PackIcon
-                        Kind="{Binding ShowSettings, Converter={StaticResource BoolToSettingsIconConverter}}" />
-                </Button>
-            </Grid>
-            <ListBox ItemsSource="{Binding Champions}" VirtualizingPanel.IsVirtualizing="True"
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
+                            </DockPanel>
+                        </Grid>
+                        <ListBox ItemsSource="{Binding Champions}" VirtualizingPanel.IsVirtualizing="True" Margin="15"
                      VirtualizingPanel.ScrollUnit="Item"
                      VirtualizingPanel.VirtualizationMode="Recycling" VerticalAlignment="Stretch"
                      HorizontalAlignment="Stretch"
                      Background="Black" SelectionMode="Single" x:Name="ChampionBox">
-                <ListBox.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <controls:VirtualizingWrapPanel
+                            <ListBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <controls:VirtualizingWrapPanel
                             ItemSize="{Binding IconSize, Converter={StaticResource IntToSizeConverter}}" />
-                    </ItemsPanelTemplate>
-                </ListBox.ItemsPanel>
-                <ListBox.ItemContainerStyle>
-                    <Style TargetType="{x:Type ListBoxItem}">
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="{x:Type ListBoxItem}">
-                                    <ContentPresenter />
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                        <Setter Property="RenderTransformOrigin" Value="0.5, 0.5" />
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="RenderTransform">
-                                    <Setter.Value>
-                                        <ScaleTransform ScaleX="1.1" ScaleY="1.1" />
-                                    </Setter.Value>
-                                </Setter>
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </ListBox.ItemContainerStyle>
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <Grid Width="{Binding Path=DataContext.IconSize, ElementName=Window}"
+                                </ItemsPanelTemplate>
+                            </ListBox.ItemsPanel>
+                            <ListBox.ItemContainerStyle>
+                                <Style TargetType="{x:Type ListBoxItem}">
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                                                <ContentPresenter />
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Setter Property="RenderTransformOrigin" Value="0.5, 0.5" />
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="RenderTransform">
+                                                <Setter.Value>
+                                                    <ScaleTransform ScaleX="1.1" ScaleY="1.1" />
+                                                </Setter.Value>
+                                            </Setter>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </ListBox.ItemContainerStyle>
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Width="{Binding Path=DataContext.IconSize, ElementName=Window}"
                               Height="{Binding Path=Width, RelativeSource={RelativeSource Self}}">
-                            <Image Source="{Binding Path=Champion, Converter={StaticResource ChampionToImageConverter}}"
+                                        <Image Source="{Binding Path=Champion, Converter={StaticResource ChampionToImageConverter}}"
                                    ToolTipService.InitialShowDelay="750"
                                    ToolTipService.Placement="Mouse"
                                    ToolTipService.IsEnabled="{Binding Path=DataContext.ShowTooltips, ElementName=Window}">
-                                <Image.ToolTip>
-                                    <StackPanel Orientation="Vertical">
-                                        <TextBlock FontWeight="Bold" Text="{Binding Path=Champion, Converter={StaticResource ChampionToNameConverter}}"/>
-                                        <TextBlock Text="{Binding Path=Description}"/>
-                                    </StackPanel>
-                                </Image.ToolTip>
-                                <i:Interaction.Triggers>
-                                    <i:EventTrigger EventName="MouseLeftButtonDown">
-                                        <i:InvokeCommandAction
+                                            <Image.ToolTip>
+                                                <StackPanel Orientation="Vertical">
+                                                    <TextBlock FontWeight="Bold" Text="{Binding Path=Champion, Converter={StaticResource ChampionToNameConverter}}"/>
+                                                    <TextBlock Text="{Binding Path=Description}"/>
+                                                </StackPanel>
+                                            </Image.ToolTip>
+                                            <i:Interaction.Triggers>
+                                                <i:EventTrigger EventName="MouseLeftButtonDown">
+                                                    <i:InvokeCommandAction
                                             Command="{Binding Path=DataContext.RejectChampion, ElementName=Window}"
                                             CommandParameter="{Binding Champion}" />
-                                    </i:EventTrigger>
-                                </i:Interaction.Triggers>
-                            </Image>
-                        </Grid>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
-        </DockPanel>
-        <materialDesign:DialogHost Identifier="{Binding DialogIdentifier1}" />
-        <materialDesign:DialogHost Identifier="{Binding DialogIdentifier2}" />
-    </Grid>
+                                                </i:EventTrigger>
+                                            </i:Interaction.Triggers>
+                                        </Image>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </DockPanel>
+                    <materialDesign:DialogHost Identifier="{Binding DialogIdentifier1}" />
+                    <materialDesign:DialogHost Identifier="{Binding DialogIdentifier2}" />
+                </Grid>
+            </Grid>
+            <Border CornerRadius="{Binding Path=CornerRadius, ElementName=WindowBorder}" BorderThickness="2">
+                <Border.Style>
+                    <Style TargetType="Border">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsActive, ElementName=Window}" Value="True">
+                                <Setter Property="BorderBrush" Value="{DynamicResource PrimaryHueMidBrush}"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Path=IsActive, ElementName=Window}" Value="False">
+                                <Setter Property="BorderBrush" Value="{DynamicResource PrimaryHueDarkBrush}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Border.Style>
+            </Border>
+        </Grid>
+    </Border>
 </Window>

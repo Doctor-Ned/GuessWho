@@ -1,15 +1,21 @@
 ﻿using System.Windows;
 
-using GuessWho.Model;
-
 namespace GuessWho.View {
-    /// <summary>
-    ///     Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window {
         public MainWindow() {
             InitializeComponent();
-            ChampionProvider.Validate();
+        }
+
+        private void CloseWindowButton_OnClick(object sender, RoutedEventArgs e) {
+            Close();
+        }
+
+        private void MaximizeWindowButton_OnClick(object sender, RoutedEventArgs e) {
+            WindowState = WindowState == WindowState.Normal ? WindowState.Maximized : WindowState.Normal;
+        }
+
+        private void MinimizeWindowButton_OnClick(object sender, RoutedEventArgs e) {
+            WindowState = WindowState.Minimized;
         }
     }
 }
