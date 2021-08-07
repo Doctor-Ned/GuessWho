@@ -7,6 +7,7 @@
         xmlns:local="clr-namespace:GuessWho.View"
         xmlns:controls="clr-namespace:WpfToolkit.Controls;assembly=VirtualizingWrapPanel"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:shell="clr-namespace:System.Windows.Shell;assembly=PresentationFramework"
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:system="clr-namespace:System;assembly=mscorlib"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
@@ -60,10 +61,19 @@
         </Style>
     </Window.Resources>
     <WindowChrome.WindowChrome>
-        <WindowChrome x:Name="WindowChrome" ResizeBorderThickness="10" UseAeroCaptionButtons="False"  GlassFrameThickness="0"
-                      CornerRadius="18" CaptionHeight="38"/>
+        <WindowChrome x:Name="WindowChrome" CornerRadius="{Binding ElementName=WindowBorder, Path=CornerRadius}" ResizeBorderThickness="10" UseAeroCaptionButtons="False"  GlassFrameThickness="0" CaptionHeight="38"/>
     </WindowChrome.WindowChrome>
-    <Border Background="{DynamicResource MaterialDesignPaper}" CornerRadius="{Binding Path=CornerRadius, ElementName=WindowChrome}" Name="WindowBorder">
+    <Border Background="{DynamicResource MaterialDesignPaper}" Name="WindowBorder">
+        <Border.Style>
+            <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="18"></Setter>
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding Path=WindowState, ElementName=Window}" Value="Maximized">
+                        <Setter Property="CornerRadius" Value="0"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+        </Border.Style>
         <Border.Clip>
             <RectangleGeometry RadiusX="{Binding ElementName=WindowBorder, Path=CornerRadius.TopLeft}" RadiusY="{Binding ElementName=WindowBorder, Path=CornerRadius.TopLeft}">
                 <RectangleGeometry.Rect>
