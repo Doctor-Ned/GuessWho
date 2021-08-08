@@ -19,7 +19,7 @@
         AllowsTransparency="True"
         FontFamily="{DynamicResource MaterialDesignFont}"
         mc:Ignorable="d" WindowStyle="None"
-        Title="Zgadnij Kto To?" MinHeight="400" MinWidth="600"
+        Title="Zgadnij Kto To?" MinHeight="400" MinWidth="600" Closed="Window_Closed" SourceInitialized="Window_SourceInitialized"
         Height="{Binding WindowHeight, Mode=TwoWay}" Width="{Binding WindowWidth, Mode=TwoWay}" x:Name="Window">
     <Window.DataContext>
         <vm:MainViewModel />

@@ -142,17 +142,15 @@ namespace GuessWho.View {
 
         public MainWindow() {
             InitializeComponent();
-            SourceInitialized += MainWindow_SourceInitialized;
-            Closed += MainWindow_Closed;
         }
 
-        private void MainWindow_SourceInitialized(object sender, EventArgs e) {
+        private void Window_Closed(object sender, EventArgs e) {
+            WindowHandle?.Dispose();
+        }
+
+        private void Window_SourceInitialized(object sender, EventArgs e) {
             WindowHandle = HwndSource.FromHwnd(new WindowInteropHelper(this).Handle);
             WindowHandle?.AddHook(WindowProc);
-        }
-
-        private void MainWindow_Closed(object sender, EventArgs e) {
-            WindowHandle?.Dispose();
         }
 
         private void CloseWindowButton_OnClick(object sender, RoutedEventArgs e) {
