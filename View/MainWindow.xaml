@@ -7,9 +7,7 @@
         xmlns:local="clr-namespace:GuessWho.View"
         xmlns:controls="clr-namespace:WpfToolkit.Controls;assembly=VirtualizingWrapPanel"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        xmlns:shell="clr-namespace:System.Windows.Shell;assembly=PresentationFramework"
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
-        xmlns:system="clr-namespace:System;assembly=mscorlib"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
         TextElement.FontSize="13"
@@ -79,8 +77,8 @@
             <RectangleGeometry RadiusX="{Binding ElementName=WindowBorder, Path=CornerRadius.TopLeft}" RadiusY="{Binding ElementName=WindowBorder, Path=CornerRadius.TopLeft}">
                 <RectangleGeometry.Rect>
                     <MultiBinding Converter="{StaticResource WidthHeightToRectConverter}" TargetNullValue="0,0,600,400">
-                        <Binding ElementName="Window" Path="Width"/>
-                        <Binding ElementName="Window" Path="Height"/>
+                        <Binding ElementName="Window" Path="ActualWidth"/>
+                        <Binding ElementName="Window" Path="ActualHeight"/>
                     </MultiBinding>
                 </RectangleGeometry.Rect>
             </RectangleGeometry>

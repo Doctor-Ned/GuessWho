@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Interop;
@@ -347,9 +346,6 @@ namespace GuessWho.View {
 
         [DllImport("user32")]
         internal static extern IntPtr MonitorFromWindow(IntPtr handle, int flags);
-
-        [DllImport("user32")]
-        internal static extern IntPtr DefWindowProc(IntPtr hWnd, uint uMsg, IntPtr wParam, IntPtr lParam);
 
         #endregion
 
