@@ -59,5 +59,14 @@ namespace GuessWho.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 11.15.1.
+        /// </summary>
+        internal static string DataDragonVersion {
+            get {
+                return ResourceManager.GetString("DataDragonVersion", resourceCulture);
+            }
+        }
     }
 }

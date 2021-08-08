@@ -3,14 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessWho", "GuessWho.csproj", "{A03A098E-389C-45A4-90D3-E6BC2F6E7456}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessWho", "GuessWho\GuessWho.csproj", "{A03A098E-389C-45A4-90D3-E6BC2F6E7456}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9F8D7BBF-54D4-48E0-BD39-8B782F9F7344}"
 	ProjectSection(SolutionItems) = preProject
-		AppIcon.ico = AppIcon.ico
 		AppIcon.psd = AppIcon.psd
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessWhoDataManager", "GuessWhoDataManager\GuessWhoDataManager.csproj", "{BF15C5B6-5505-4E72-BC42-D4052470BD4E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,6 +23,10 @@ Global
 		{A03A098E-389C-45A4-90D3-E6BC2F6E7456}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A03A098E-389C-45A4-90D3-E6BC2F6E7456}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A03A098E-389C-45A4-90D3-E6BC2F6E7456}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF15C5B6-5505-4E72-BC42-D4052470BD4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF15C5B6-5505-4E72-BC42-D4052470BD4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF15C5B6-5505-4E72-BC42-D4052470BD4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF15C5B6-5505-4E72-BC42-D4052470BD4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
