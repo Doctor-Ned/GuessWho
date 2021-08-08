@@ -18,7 +18,7 @@
         Background="Transparent"
         AllowsTransparency="True"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        mc:Ignorable="d" WindowStyle="None"
+        mc:Ignorable="d" WindowStyle="None" Closing="MainWindow_OnClosing"
         Title="Zgadnij Kto To?" MinHeight="400" MinWidth="600" Closed="Window_Closed" SourceInitialized="Window_SourceInitialized"
         Height="{Binding WindowHeight, Mode=TwoWay}" Width="{Binding WindowWidth, Mode=TwoWay}" x:Name="Window">
     <Window.DataContext>
@@ -61,7 +61,8 @@
         </Style>
     </Window.Resources>
     <WindowChrome.WindowChrome>
-        <WindowChrome x:Name="WindowChrome" CornerRadius="{Binding ElementName=WindowBorder, Path=CornerRadius}" ResizeBorderThickness="10" UseAeroCaptionButtons="False"  GlassFrameThickness="0" CaptionHeight="38"/>
+        <WindowChrome x:Name="WindowChrome" CornerRadius="{Binding ElementName=WindowBorder, Path=CornerRadius}"
+                      ResizeBorderThickness="10" UseAeroCaptionButtons="False"  GlassFrameThickness="0" CaptionHeight="38"/>
     </WindowChrome.WindowChrome>
     <Border Background="{DynamicResource MaterialDesignPaper}" Name="WindowBorder">
         <Border.Style>
