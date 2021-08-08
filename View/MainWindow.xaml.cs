@@ -278,7 +278,6 @@ namespace GuessWho.View {
             switch ((WindowsMessage)msg) {
                 case WindowsMessage.WM_GETMINMAXINFO:
                     WmGetMinMaxInfo(hWnd, lParam);
-                    handled = true;
                     break;
             }
             return (IntPtr)0;
@@ -339,6 +338,20 @@ namespace GuessWho.View {
             public RECT rcMonitor = new RECT();
             public RECT rcWork = new RECT();
             public int dwFlags = 0;
+        }
+
+        [StructLayout(LayoutKind.Sequential)]
+        internal struct WINDOWPOS {
+            public IntPtr hWnd;
+            public IntPtr hWndInsertAfter;
+            public int x;
+            public int y;
+            public int cx;
+            public int cy;
+            public uint flags;
+            public override string ToString() {
+                return $"[{hWnd},{hWndInsertAfter},({x},{y}),({cx},{cy}),{flags}]";
+            }
         }
 
         [DllImport("user32")]
