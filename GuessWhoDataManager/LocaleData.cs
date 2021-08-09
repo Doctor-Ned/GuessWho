@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net;
+using System.Text;
 
 using GuessWhoResources;
 
@@ -14,9 +15,8 @@ namespace GuessWhoDataManager {
         internal LocaleData(Locale locale, string localisedUrl) {
             JObject langObj, champObj;
             using (WebClient wc = new WebClient()) {
-                wc.Headers["Accept-Language"] = locale.ToString();
-                langObj = JObject.Parse(wc.DownloadString($"{localisedUrl}language.json"))["data"].Value<JObject>();
-                champObj = JObject.Parse(wc.DownloadString($"{localisedUrl}champion.json"))["data"].Value<JObject>();
+                langObj = JObject.Parse(Encoding.UTF8.GetString(wc.DownloadData($"{localisedUrl}language.json")))["data"].Value<JObject>();
+                champObj = JObject.Parse(Encoding.UTF8.GetString(wc.DownloadData($"{localisedUrl}champion.json")))["data"].Value<JObject>();
             }
             BasicCategoryNames = new Dictionary<BasicCategory, string>();
             foreach (BasicCategory bc in Enum.GetValues(typeof(BasicCategory))) {
