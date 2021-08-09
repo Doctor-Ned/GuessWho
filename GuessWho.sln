@@ -13,6 +13,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessWhoDataManager", "GuessWhoDataManager\GuessWhoDataManager.csproj", "{BF15C5B6-5505-4E72-BC42-D4052470BD4E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessWhoResources", "GuessWhoResources\GuessWhoResources.csproj", "{83C870C2-81C6-4099-80EA-D1CB5E060EF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessWho.Tests", "GuessWho.Tests\GuessWho.Tests.csproj", "{072378F8-1D18-48BB-910A-1BF31DEDD901}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{BF15C5B6-5505-4E72-BC42-D4052470BD4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF15C5B6-5505-4E72-BC42-D4052470BD4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF15C5B6-5505-4E72-BC42-D4052470BD4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83C870C2-81C6-4099-80EA-D1CB5E060EF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83C870C2-81C6-4099-80EA-D1CB5E060EF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83C870C2-81C6-4099-80EA-D1CB5E060EF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83C870C2-81C6-4099-80EA-D1CB5E060EF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{072378F8-1D18-48BB-910A-1BF31DEDD901}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{072378F8-1D18-48BB-910A-1BF31DEDD901}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{072378F8-1D18-48BB-910A-1BF31DEDD901}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{072378F8-1D18-48BB-910A-1BF31DEDD901}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

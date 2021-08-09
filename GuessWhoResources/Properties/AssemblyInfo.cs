@@ -5,12 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: InternalsVisibleTo("GuessWho.Tests")]
-[assembly: AssemblyTitle("GuessWhoDataManager")]
+[assembly: AssemblyTitle("GuessWhoResources")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("GuessWhoDataManager")]
+[assembly: AssemblyProduct("GuessWhoResources")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -21,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("bf15c5b6-5505-4e72-bc42-d4052470bd4e")]
+[assembly: Guid("83c870c2-81c6-4099-80ea-d1cb5e060ef2")]
 
 // Version information for an assembly consists of the following four values:
 //

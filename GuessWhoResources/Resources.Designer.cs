@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GuessWho.Properties {
+namespace GuessWhoResources {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace GuessWho.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GuessWho.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GuessWhoResources.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,6 +57,15 @@ namespace GuessWho.Properties {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 11.15.1.
+        /// </summary>
+        internal static string DataDragonVersion {
+            get {
+                return ResourceManager.GetString("DataDragonVersion", resourceCulture);
             }
         }
     }

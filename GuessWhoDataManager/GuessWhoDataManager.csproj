@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,12 +46,78 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LocaleChampionData.cs" />
+    <Compile Include="LocaleData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Statics.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GuessWhoResources\GuessWhoResources.csproj">
+      <Project>{83C870C2-81C6-4099-80EA-D1CB5E060EF2}</Project>
+      <Name>GuessWhoResources</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Res_CustomCategories\CustomCategories_ko_KR.resx" />
+    <EmbeddedResource Include="Res_CustomCategories\CustomCategories_pl_PL.resx" />
+    <EmbeddedResource Include="Res_CustomCategories\CustomCategories_pt_BR.resx" />
+    <EmbeddedResource Include="Res_CustomCategories\CustomCategories_ro_RO.resx" />
+    <EmbeddedResource Include="Res_CustomCategories\CustomCategories_es_AR.resx" />
+    <EmbeddedResource Include="Res_CustomCategories\CustomCategories_ru_RU.resx" />
+    <EmbeddedResource Include="Res_CustomCategories\CustomCategories_es_ES.resx" />
+    <EmbeddedResource Include="Res_CustomCategories\CustomCategories_th_TH.resx" />
+    <EmbeddedResource Include="Res_CustomCategories\CustomCategories_es_MX.resx" />
+    <EmbeddedResource Include="Res_CustomCategories\CustomCategories_tr_TR.resx" />
+    <EmbeddedResource Include="Res_CustomCategories\CustomCategories_fr_FR.resx" />
+    <EmbeddedResource Include="Res_CustomCategories\CustomCategories_en_AU.resx" />
+    <EmbeddedResource Include="Res_CustomCategories\CustomCategories_vn_VN.resx" />
+    <EmbeddedResource Include="Res_CustomCategories\CustomCategories_hu_HU.resx" />
+    <EmbeddedResource Include="Res_CustomCategories\CustomCategories_en_GB.resx" />
+    <EmbeddedResource Include="Res_CustomCategories\CustomCategories_zh_CN.resx" />
+    <EmbeddedResource Include="Res_CustomCategories\CustomCategories_id_ID.resx" />
+    <EmbeddedResource Include="Res_CustomCategories\CustomCategories_en_PH.resx" />
+    <EmbeddedResource Include="Res_CustomCategories\CustomCategories_el_GR.resx" />
+    <EmbeddedResource Include="Res_CustomCategories\CustomCategories_cs_CZ.resx" />
+    <EmbeddedResource Include="Res_CustomCategories\CustomCategories_de_DE.resx" />
+    <EmbeddedResource Include="Res_CustomCategories\CustomCategories_zh_MY.resx" />
+    <EmbeddedResource Include="Res_CustomCategories\CustomCategories_it_IT.resx" />
+    <EmbeddedResource Include="Res_CustomCategories\CustomCategories_en_SG.resx" />
+    <EmbeddedResource Include="Res_CustomCategories\CustomCategories_zh_TW.resx" />
+    <EmbeddedResource Include="Res_CustomCategories\CustomCategories_ja_JP.resx" />
+    <EmbeddedResource Include="Res_CustomCategories\CustomCategories_en_US.resx" />
+    <EmbeddedResource Include="Res_Locale\Locale_fr_FR.resx" />
+    <EmbeddedResource Include="Res_Locale\Locale_hu_HU.resx" />
+    <EmbeddedResource Include="Res_Locale\Locale_id_ID.resx" />
+    <EmbeddedResource Include="Res_Locale\Locale_th_TH.resx" />
+    <EmbeddedResource Include="Res_Locale\Locale_it_IT.resx" />
+    <EmbeddedResource Include="Res_Locale\Locale_tr_TR.resx" />
+    <EmbeddedResource Include="Res_Locale\Locale_ja_JP.resx" />
+    <EmbeddedResource Include="Res_Locale\Locale_vn_VN.resx" />
+    <EmbeddedResource Include="Res_Locale\Locale_ko_KR.resx" />
+    <EmbeddedResource Include="Res_Locale\Locale_zh_CN.resx" />
+    <EmbeddedResource Include="Res_Locale\Locale_pt_BR.resx" />
+    <EmbeddedResource Include="Res_Locale\Locale_zh_MY.resx" />
+    <EmbeddedResource Include="Res_Locale\Locale_ro_RO.resx" />
+    <EmbeddedResource Include="Res_Locale\Locale_zh_TW.resx" />
+    <EmbeddedResource Include="Res_Locale\Locale_ru_RU.resx" />
+    <EmbeddedResource Include="Res_Locale\Locale_es_ES.resx" />
+    <EmbeddedResource Include="Res_Locale\Locale_es_MX.resx" />
+    <EmbeddedResource Include="Res_Locale\Locale_es_AR.resx" />
+    <EmbeddedResource Include="Res_Locale\Locale_en_SG.resx" />
+    <EmbeddedResource Include="Res_Locale\Locale_en_GB.resx" />
+    <EmbeddedResource Include="Res_Locale\Locale_en_PH.resx" />
+    <EmbeddedResource Include="Res_Locale\Locale_en_AU.resx" />
+    <EmbeddedResource Include="Res_Locale\Locale_el_GR.resx" />
+    <EmbeddedResource Include="Res_Locale\Locale_de_DE.resx" />
+    <EmbeddedResource Include="Res_Locale\Locale_cs_CZ.resx" />
+    <EmbeddedResource Include="Res_Locale\Locale_pl_PL.resx" />
+    <EmbeddedResource Include="Res_Locale\Locale_en_US.resx" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

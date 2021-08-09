@@ -117,4 +117,99 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CategoryFontSizeFormat" xml:space="preserve">
+    <value>Rozmiar czcionki kategorii: {0}</value>
+  </data>
+  <data name="CategorySizeFormat" xml:space="preserve">
+    <value>Rozmiar kategorii: {0}</value>
+  </data>
+  <data name="CloseCapital" xml:space="preserve">
+    <value>ZAMKNIJ</value>
+  </data>
+  <data name="HideSettingsToolTip" xml:space="preserve">
+    <value>Schowaj panel ustawień</value>
+  </data>
+  <data name="IconSizeFormat" xml:space="preserve">
+    <value>Rozmiar ikon: {0}</value>
+  </data>
+  <data name="LoadConfigFailedFormat" xml:space="preserve">
+    <value>Nie udało się wczytać konfiguracji!
+{0}</value>
+  </data>
+  <data name="LoadConfigPrompt" xml:space="preserve">
+    <value>Zamierzasz wczytać ponownie konfigurację. Wszelkie niezapisane zmiany zostaną utracone!
+Na pewno?</value>
+  </data>
+  <data name="LoadConfigToolTip" xml:space="preserve">
+    <value>Wczytaj konfigurację</value>
+  </data>
+  <data name="MaximizeToolTip" xml:space="preserve">
+    <value>Zmaksymalizuj okno</value>
+  </data>
+  <data name="MinimizeToolTip" xml:space="preserve">
+    <value>Zminimalizuj okno</value>
+  </data>
+  <data name="NoCapital" xml:space="preserve">
+    <value>NIE</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="ResetConfigDoneWithExceptionFormat" xml:space="preserve">
+    <value>Konfiguracja została zresetowana, lecz w trakcie zapisu wystąpił błąd!
+{0}</value>
+  </data>
+  <data name="ResetConfigPrompt" xml:space="preserve">
+    <value>Zamierzasz zresetować grę i wszystkie ustawienia.
+Na pewno?</value>
+  </data>
+  <data name="ResetConfigToolTIp" xml:space="preserve">
+    <value>Zresetuj konfigurację</value>
+  </data>
+  <data name="ResetGameDoneWithExceptionFormat" xml:space="preserve">
+    <value>Gra została zresetowana, lecz w trakcie zapisu wystąpił błąd!
+{0}</value>
+  </data>
+  <data name="ResetGamePrompt" xml:space="preserve">
+    <value>Zamierzasz zresetować grę. Ustawienia pozostaną nienaruszone.
+Na pewno?</value>
+  </data>
+  <data name="ResetGameToolTip" xml:space="preserve">
+    <value>Zresetuj grę</value>
+  </data>
+  <data name="RestoreAllCapital" xml:space="preserve">
+    <value>PRZYWRÓĆ WSZYSTKIE</value>
+  </data>
+  <data name="RestoreAllPrompt" xml:space="preserve">
+    <value>Przywrócisz wszystkie odrzucone postacie.
+Na pewno?</value>
+  </data>
+  <data name="RestoreCapital" xml:space="preserve">
+    <value>PRZYWRÓĆ</value>
+  </data>
+  <data name="RestoreChampionCapital" xml:space="preserve">
+    <value>PRZYWRÓĆ POSTAĆ</value>
+  </data>
+  <data name="SaveAndCloseToolTip" xml:space="preserve">
+    <value>Zapisz i zamknij grę</value>
+  </data>
+  <data name="SaveConfigFailedFormat" xml:space="preserve">
+    <value>Nie udało się zapisać konfiguracji!
+{0}</value>
+  </data>
+  <data name="SaveConfigSuccessful" xml:space="preserve">
+    <value>Konfiguracja zapisana!</value>
+  </data>
+  <data name="SaveConfigToolTip" xml:space="preserve">
+    <value>Zapisz konfigurację</value>
+  </data>
+  <data name="ShowSettingsToolTip" xml:space="preserve">
+    <value>Pokaż panel ustawień</value>
+  </data>
+  <data name="ShowToolTips" xml:space="preserve">
+    <value>Pokazuj tooltipy</value>
+  </data>
+  <data name="YesCapital" xml:space="preserve">
+    <value>TAK</value>
+  </data>
 </root>

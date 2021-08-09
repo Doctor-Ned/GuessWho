@@ -117,4 +117,99 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CategoryFontSizeFormat" xml:space="preserve">
+    <value>Category font size: {0}</value>
+  </data>
+  <data name="CategorySizeFormat" xml:space="preserve">
+    <value>Category size: {0}</value>
+  </data>
+  <data name="CloseCapital" xml:space="preserve">
+    <value>CLOSE</value>
+  </data>
+  <data name="HideSettingsToolTip" xml:space="preserve">
+    <value>Hide the settings panel</value>
+  </data>
+  <data name="IconSizeFormat" xml:space="preserve">
+    <value>Icon size: {0}</value>
+  </data>
+  <data name="LoadConfigFailedFormat" xml:space="preserve">
+    <value>Failed to load the config!
+{0}</value>
+  </data>
+  <data name="LoadConfigPrompt" xml:space="preserve">
+    <value>You're about to reload the config. Unsaved changes will be lost!
+Are you sure?</value>
+  </data>
+  <data name="LoadConfigToolTip" xml:space="preserve">
+    <value>Load the config</value>
+  </data>
+  <data name="MaximizeToolTip" xml:space="preserve">
+    <value>Maximize the window</value>
+  </data>
+  <data name="MinimizeToolTip" xml:space="preserve">
+    <value>Minimalize the window</value>
+  </data>
+  <data name="NoCapital" xml:space="preserve">
+    <value>NO</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="ResetConfigDoneWithExceptionFormat" xml:space="preserve">
+    <value>The config was reset, but an exception occurred!
+{0}</value>
+  </data>
+  <data name="ResetConfigPrompt" xml:space="preserve">
+    <value>You're about to reset the game and all of the settings.
+Are you sure?</value>
+  </data>
+  <data name="ResetConfigToolTIp" xml:space="preserve">
+    <value>Reset the config</value>
+  </data>
+  <data name="ResetGameDoneWithExceptionFormat" xml:space="preserve">
+    <value>The game was reset, but an exception occurred!
+{0}</value>
+  </data>
+  <data name="ResetGamePrompt" xml:space="preserve">
+    <value>You're about to reset the game. Current settings will be preserved.
+Are you sure?</value>
+  </data>
+  <data name="ResetGameToolTip" xml:space="preserve">
+    <value>Reset the game</value>
+  </data>
+  <data name="RestoreAllCapital" xml:space="preserve">
+    <value>RESTORE ALL</value>
+  </data>
+  <data name="RestoreAllPrompt" xml:space="preserve">
+    <value>You're about to restore all rejected champions.
+Are you sure?</value>
+  </data>
+  <data name="RestoreCapital" xml:space="preserve">
+    <value>RESTORE</value>
+  </data>
+  <data name="RestoreChampionCapital" xml:space="preserve">
+    <value>RESTORE A CHAMPION</value>
+  </data>
+  <data name="SaveAndCloseToolTip" xml:space="preserve">
+    <value>Save and close the game</value>
+  </data>
+  <data name="SaveConfigFailedFormat" xml:space="preserve">
+    <value>Failed to save the config!
+{0}</value>
+  </data>
+  <data name="SaveConfigSuccessful" xml:space="preserve">
+    <value>Configuration saved!</value>
+  </data>
+  <data name="SaveConfigToolTip" xml:space="preserve">
+    <value>Save the config</value>
+  </data>
+  <data name="ShowSettingsToolTip" xml:space="preserve">
+    <value>Show the settings panel</value>
+  </data>
+  <data name="ShowToolTips" xml:space="preserve">
+    <value>Show tooltips</value>
+  </data>
+  <data name="YesCapital" xml:space="preserve">
+    <value>YES</value>
+  </data>
 </root>
