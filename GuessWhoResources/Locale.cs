@@ -13,7 +13,7 @@
         es_MX,
         fr_FR,
         hu_HU,
-        id_ID,
+        //id_ID,
         it_IT,
         ja_JP,
         ko_KR,

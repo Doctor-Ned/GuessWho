@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 using GuessWhoDataManager;
 
@@ -12,29 +13,39 @@ namespace GuessWho.Tests {
         private const int CHAMP_COUNT_11_15_1 = 156;
         private const string VER_11_15_1 = "11.15.1";
 
-        [DataTestMethod]
-        [DataRow(VER_11_15_1, CHAMP_COUNT_11_15_1)]
-        public void InitializeChampionIds_SuccessfulAndChampCountValid(string version, int champCount) {
-            string url = Statics.GetDataDragonUrl(version);
-            Statics.InitializeChampionIds(url);
-            Assert.AreEqual(champCount, Statics.AllChampionIds.Length);
-            Assert.IsNotNull(Statics.CustomCategoryMappings);
+        [TestMethod]
+        public void DataDragon_GetAvailableVersions_NonEmpty() {
+            string[] versions = DataDragon.GetAvailableVersions();
+            Assert.IsNotNull(versions);
+            Assert.AreNotEqual(0, versions.Length);
         }
 
-        [DataTestMethod]
-        [DataRow(VER_11_15_1, Locale.en_US, CHAMP_COUNT_11_15_1, "Kaisa", "Kai'Sa", BasicCategory.Marksman)]
-        [DataRow(VER_11_15_1, Locale.ko_KR, CHAMP_COUNT_11_15_1, "Kaisa", "카이사", BasicCategory.Marksman)]
-        public void LocaleData_ConstructionAndContentValid(string version, Locale locale, int champCount, string testChampId, string testChampName, BasicCategory basicCategory) {
-            string url = Statics.GetDataDragonUrl(version);
-            Statics.InitializeChampionIds(url);
-            string localisedUrl = Statics.LocalizeUrl(url, locale);
-            LocaleData data = new LocaleData(locale, localisedUrl);
-            Assert.AreEqual(Enum.GetValues(typeof(BasicCategory)).Length, data.BasicCategoryNames.Keys.Count);
-            Assert.AreEqual(champCount, data.ChampionData.Keys.Count);
-            Assert.IsTrue(data.ChampionData.ContainsKey(testChampId));
-            LocaleChampionData testChamp = data.ChampionData[testChampId];
-            Assert.AreEqual(testChampName, testChamp.Name);
-            Assert.IsTrue(testChamp.BasicCategories.Contains(basicCategory));
+        [TestMethod]
+        public void DataDragon_GetLatestVersion_NonEmpty() {
+            Assert.IsFalse(string.IsNullOrWhiteSpace(DataDragon.GetLatestVersion()));
+        }
+
+        [TestMethod]
+        public void DataDragon_ContentValid() {
+            DataDragon dd = new DataDragon(VER_11_15_1);
+            Assert.AreEqual(CHAMP_COUNT_11_15_1, dd.ChampionIds.Length);
+            foreach (Locale locale in Enum.GetValues(typeof(Locale))) {
+                Assert.IsTrue(dd.Locales.ContainsKey(locale));
+                LocaleData data = dd.Locales[locale];
+                Assert.AreEqual(Enum.GetValues(typeof(BasicCategory)).Length, data.BasicCategoryNames.Keys.Count);
+                Assert.IsTrue(data.ChampionData.ContainsKey("Akshan"));
+                Assert.IsTrue(data.ChampionData.ContainsKey("Kaisa"));
+                Assert.IsTrue(data.ChampionData["Kaisa"].BasicCategories.Contains(BasicCategory.Marksman));
+            }
+            Assert.AreEqual("Kai'Sa", dd.Locales[Locale.en_US].ChampionData["Kaisa"].Name);
+            Assert.AreEqual("카이사", dd.Locales[Locale.ko_KR].ChampionData["Kaisa"].Name);
+            FileInfo testFileInfo = new FileInfo("TestChampIcon.png");
+            if (testFileInfo.Exists) {
+                testFileInfo.Delete();
+            }
+            dd.DownloadChampIcon("Akshan", testFileInfo);
+            testFileInfo.Refresh();
+            Assert.IsTrue(testFileInfo.Exists);
         }
     }
 }
