@@ -79,7 +79,6 @@
     <EmbeddedResource Include="Res_CustomCategories\CustomCategories_hu_HU.resx" />
     <EmbeddedResource Include="Res_CustomCategories\CustomCategories_en_GB.resx" />
     <EmbeddedResource Include="Res_CustomCategories\CustomCategories_zh_CN.resx" />
-    <EmbeddedResource Include="Res_CustomCategories\CustomCategories_id_ID.resx" />
     <EmbeddedResource Include="Res_CustomCategories\CustomCategories_en_PH.resx" />
     <EmbeddedResource Include="Res_CustomCategories\CustomCategories_el_GR.resx" />
     <EmbeddedResource Include="Res_CustomCategories\CustomCategories_cs_CZ.resx" />
@@ -92,7 +91,6 @@
     <EmbeddedResource Include="Res_CustomCategories\CustomCategories_en_US.resx" />
     <EmbeddedResource Include="Res_Locale\Locale_fr_FR.resx" />
     <EmbeddedResource Include="Res_Locale\Locale_hu_HU.resx" />
-    <EmbeddedResource Include="Res_Locale\Locale_id_ID.resx" />
     <EmbeddedResource Include="Res_Locale\Locale_th_TH.resx" />
     <EmbeddedResource Include="Res_Locale\Locale_it_IT.resx" />
     <EmbeddedResource Include="Res_Locale\Locale_tr_TR.resx" />

@@ -24,7 +24,6 @@ namespace GuessWhoResources {
                     new Language(Locale.es_MX, "Spanish (Mexico)"),
                     new Language(Locale.fr_FR, "French (France)"),
                     new Language(Locale.hu_HU, "Hungarian (Hungary)"),
-                    //new Language(Locale.id_ID, "Indonesian (Indonesia)"),
                     new Language(Locale.it_IT, "Italian (Italy)"),
                     new Language(Locale.ja_JP, "Japanese (Japan)"),
                     new Language(Locale.ko_KR, "Korean (Korea)"),

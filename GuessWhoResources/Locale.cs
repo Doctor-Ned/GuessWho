@@ -13,7 +13,6 @@
         es_MX,
         fr_FR,
         hu_HU,
-        //id_ID, // indonesian is disabled for now as the current DataDragon version does not support it?
         it_IT,
         ja_JP,
         ko_KR,
