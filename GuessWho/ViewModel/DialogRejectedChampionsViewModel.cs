@@ -51,7 +51,7 @@ namespace GuessWho.ViewModel {
         }
 
         private void ExecuteRestoreAll() {
-            DialogYesNoViewModel.OpenDialog(MainViewModel.DialogIdentifier2);
+            DialogYesNoViewModel.OpenIDialog(MainViewModel.DialogIdentifier2);
         }
 
         public void OpenDialog(HashSet<Champion> rejectedChampions) {
@@ -59,9 +59,9 @@ namespace GuessWho.ViewModel {
             OpenDialog();
         }
 
-        public void OpenDialog(object dialogIdentifier, HashSet<Champion> rejectedChampions) {
+        public void OpenIDialog(object dialogIdentifier, HashSet<Champion> rejectedChampions) {
             Inject(rejectedChampions);
-            OpenDialog(dialogIdentifier);
+            OpenIDialog(dialogIdentifier);
         }
 
         private void Inject(HashSet<Champion> rejectedChampions) {

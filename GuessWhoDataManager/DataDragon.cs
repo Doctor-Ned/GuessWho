@@ -18,7 +18,7 @@ namespace GuessWhoDataManager {
 
         public string[] ChampionIds { get; }
 
-        public Dictionary<Locale, LocaleData> Locales { get; } = new Dictionary<Locale, LocaleData>();
+        public Dictionary<Locale, LocaleLolData> Locales { get; } = new Dictionary<Locale, LocaleLolData>();
 
         private Dictionary<CustomCategory, string[]> CustomCategoryMappings { get; } = new Dictionary<CustomCategory, string[]>();
 
@@ -177,7 +177,7 @@ namespace GuessWhoDataManager {
                     JObject champsObj = JObject.Parse(Encoding.UTF8.GetString(
                         wc.DownloadData($"{DATA_DRAGON_URL}{Version}/data/{locale}/champion.json")))["data"].Value<JObject>();
 
-                    Dictionary<string, LocaleChampionData> championData = new Dictionary<string, LocaleChampionData>();
+                    Dictionary<string, LocaleLolChampionData> championData = new Dictionary<string, LocaleLolChampionData>();
                     foreach (JProperty prop in champsObj.Properties()) {
                         JObject champObj = prop.Value.Value<JObject>();
                         string name = champObj["name"].Value<string>();
@@ -187,9 +187,9 @@ namespace GuessWhoDataManager {
                             basicCategories.Add((BasicCategory)Enum.Parse(typeof(BasicCategory), tag, true));
                         }
                         HashSet<CustomCategory> customCategories = GetCustomCategories(champObj["id"].Value<string>());
-                        championData.Add(prop.Name, new LocaleChampionData(name, title, basicCategories, customCategories));
+                        championData.Add(prop.Name, new LocaleLolChampionData(name, title, basicCategories, customCategories));
                     }
-                    Locales.Add(locale, new LocaleData(championData, basicCategoryNames));
+                    Locales.Add(locale, new LocaleLolData(championData, basicCategoryNames));
                 }
             }
         }

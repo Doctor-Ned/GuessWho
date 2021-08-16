@@ -170,7 +170,7 @@ namespace GuessWho.ViewModel {
         #region Command actions
 
         private void ExecuteRestoreChampions() {
-            DialogRejectedChampionsViewModel.OpenDialog(DialogIdentifier1, RejectedChampions);
+            DialogRejectedChampionsViewModel.OpenIDialog(DialogIdentifier1, RejectedChampions);
         }
 
         private void ExecuteRejectChampion(Champion champion) {
@@ -323,11 +323,14 @@ namespace GuessWho.ViewModel {
         }
 
         private void ShowYesNoDialog(string message, Action yesAction = null, Action noAction = null) {
-            DialogTwoButtonViewModel.OpenDialog(DialogIdentifier1, message, yesAction, noAction);
+            DialogTwoButtonViewModel.Message = message;
+            DialogTwoButtonViewModel.Button1Action = yesAction;
+            DialogTwoButtonViewModel.Button2Action = noAction;
+            DialogTwoButtonViewModel.OpenIDialog(DialogIdentifier1);
         }
 
         private void ShowInformationDialog(string message) {
-            DialogOneButtonViewModel.OpenDialog(DialogIdentifier2, message);
+            DialogOneButtonViewModel.OpenIDialog(DialogIdentifier2, message);
         }
 
         #endregion

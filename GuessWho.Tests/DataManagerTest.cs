@@ -31,11 +31,11 @@ namespace GuessWho.Tests {
             Assert.AreEqual(CHAMP_COUNT_11_15_1, dd.ChampionIds.Length);
             foreach (Locale locale in Enum.GetValues(typeof(Locale))) {
                 Assert.IsTrue(dd.Locales.ContainsKey(locale));
-                LocaleData data = dd.Locales[locale];
-                Assert.AreEqual(Enum.GetValues(typeof(BasicCategory)).Length, data.BasicCategoryNames.Keys.Count);
-                Assert.IsTrue(data.ChampionData.ContainsKey("Akshan"));
-                Assert.IsTrue(data.ChampionData.ContainsKey("Kaisa"));
-                Assert.IsTrue(data.ChampionData["Kaisa"].BasicCategories.Contains(BasicCategory.Marksman));
+                LocaleLolData lolData = dd.Locales[locale];
+                Assert.AreEqual(Enum.GetValues(typeof(BasicCategory)).Length, lolData.BasicCategoryNames.Keys.Count);
+                Assert.IsTrue(lolData.ChampionData.ContainsKey("Akshan"));
+                Assert.IsTrue(lolData.ChampionData.ContainsKey("Kaisa"));
+                Assert.IsTrue(lolData.ChampionData["Kaisa"].BasicCategories.Contains(BasicCategory.Marksman));
             }
             Assert.AreEqual("Kai'Sa", dd.Locales[Locale.en_US].ChampionData["Kaisa"].Name);
             Assert.AreEqual("카이사", dd.Locales[Locale.ko_KR].ChampionData["Kaisa"].Name);

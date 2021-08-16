@@ -3,11 +3,11 @@
 using GuessWhoResources;
 
 namespace GuessWhoDataManager {
-    internal class LocaleData {
-        public Dictionary<string, LocaleChampionData> ChampionData { get; }
+    internal class LocaleLolData {
+        public Dictionary<string, LocaleLolChampionData> ChampionData { get; }
         public Dictionary<BasicCategory, string> BasicCategoryNames { get; }
 
-        internal LocaleData(Dictionary<string, LocaleChampionData> championData,
+        internal LocaleLolData(Dictionary<string, LocaleLolChampionData> championData,
             Dictionary<BasicCategory, string> basicCategoryNames) {
             ChampionData = championData;
             BasicCategoryNames = basicCategoryNames;

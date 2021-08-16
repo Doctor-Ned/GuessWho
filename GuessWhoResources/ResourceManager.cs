@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace GuessWhoResources {
     public static class ResourceManager {
@@ -47,6 +48,10 @@ namespace GuessWhoResources {
 
                 return _AvailableLanguages;
             }
+        }
+
+        public static CultureInfo ToCultureInfo(this Locale locale) {
+            return new CultureInfo(locale.ToString().Replace('_', '-'));
         }
     }
 }

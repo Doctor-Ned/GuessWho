@@ -39,7 +39,8 @@ After importing the images, the *GuessWho/Model/Champion.cs* enum must be update
 
 The project utilizes the following third-party tools all of which are licensed under the MIT license:
 
-- [**Material Design In XAML Toolkit**](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit) for an elegant UI
-- [**Json.NET**](https://github.com/JamesNK/Newtonsoft.Json) for config serialization
-- [**VirtualizingWrapPanel**](https://github.com/sbaeumlisberger/VirtualizingWrapPanel) for a nice presentation of champions
+- [**Material Design In XAML Toolkit**](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit) [MIT] for an elegant UI
+- [**Json.NET**](https://github.com/JamesNK/Newtonsoft.Json) [MIT] for config serialization
+- [**VirtualizingWrapPanel**](https://github.com/sbaeumlisberger/VirtualizingWrapPanel) [MIT] for a nice presentation of champions
+- [**WPFLocalizationExtension**](https://github.com/XAMLMarkupExtensions/WPFLocalizationExtension/) [MS-PL] for support of different locales
 - **NedMaterialMVVM** (my own package) for basic MVVM functionality
