@@ -118,10 +118,1378 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="DataDragonVersion" xml:space="preserve">
-    <value>11.15.1</value>
-    <comment>The version of Riot's Data Dragon that is currently in use.</comment>
+    <value>11.16.1</value>
   </data>
   <data name="LeagueChampionConfig" xml:space="preserve">
-    <value />
+    <value>{
+  "ChampionCategoryConfigs": {
+    "Aatrox": {
+      "BasicCategories": [
+        "Fighter",
+        "Tank"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Ahri": {
+      "BasicCategories": [
+        "Mage",
+        "Assassin"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Akali": {
+      "BasicCategories": [
+        "Assassin"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Akshan": {
+      "BasicCategories": [
+        "Marksman",
+        "Assassin"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Alistar": {
+      "BasicCategories": [
+        "Tank",
+        "Support"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Amumu": {
+      "BasicCategories": [
+        "Tank",
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Anivia": {
+      "BasicCategories": [
+        "Mage",
+        "Support"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Annie": {
+      "BasicCategories": [
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Aphelios": {
+      "BasicCategories": [
+        "Marksman"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Ashe": {
+      "BasicCategories": [
+        "Marksman",
+        "Support"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "AurelionSol": {
+      "BasicCategories": [
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Azir": {
+      "BasicCategories": [
+        "Mage",
+        "Marksman"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Bard": {
+      "BasicCategories": [
+        "Support",
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Blitzcrank": {
+      "BasicCategories": [
+        "Tank",
+        "Fighter"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Brand": {
+      "BasicCategories": [
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Braum": {
+      "BasicCategories": [
+        "Support",
+        "Tank"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Caitlyn": {
+      "BasicCategories": [
+        "Marksman"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Camille": {
+      "BasicCategories": [
+        "Fighter",
+        "Tank"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Cassiopeia": {
+      "BasicCategories": [
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Chogath": {
+      "BasicCategories": [
+        "Tank",
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Corki": {
+      "BasicCategories": [
+        "Marksman"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Darius": {
+      "BasicCategories": [
+        "Fighter",
+        "Tank"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Diana": {
+      "BasicCategories": [
+        "Fighter",
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Draven": {
+      "BasicCategories": [
+        "Marksman"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "DrMundo": {
+      "BasicCategories": [
+        "Fighter",
+        "Tank"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Ekko": {
+      "BasicCategories": [
+        "Assassin",
+        "Fighter"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Elise": {
+      "BasicCategories": [
+        "Mage",
+        "Fighter"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Evelynn": {
+      "BasicCategories": [
+        "Assassin",
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Ezreal": {
+      "BasicCategories": [
+        "Marksman",
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Fiddlesticks": {
+      "BasicCategories": [
+        "Mage",
+        "Support"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Fiora": {
+      "BasicCategories": [
+        "Fighter",
+        "Assassin"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Fizz": {
+      "BasicCategories": [
+        "Assassin",
+        "Fighter"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Galio": {
+      "BasicCategories": [
+        "Tank",
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Gangplank": {
+      "BasicCategories": [
+        "Fighter"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Garen": {
+      "BasicCategories": [
+        "Fighter",
+        "Tank"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Gnar": {
+      "BasicCategories": [
+        "Fighter",
+        "Tank"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Gragas": {
+      "BasicCategories": [
+        "Fighter",
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Graves": {
+      "BasicCategories": [
+        "Marksman"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Gwen": {
+      "BasicCategories": [
+        "Fighter",
+        "Assassin"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Hecarim": {
+      "BasicCategories": [
+        "Fighter",
+        "Tank"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Heimerdinger": {
+      "BasicCategories": [
+        "Mage",
+        "Support"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Illaoi": {
+      "BasicCategories": [
+        "Fighter",
+        "Tank"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Irelia": {
+      "BasicCategories": [
+        "Fighter",
+        "Assassin"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Ivern": {
+      "BasicCategories": [
+        "Support",
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Janna": {
+      "BasicCategories": [
+        "Support",
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "JarvanIV": {
+      "BasicCategories": [
+        "Tank",
+        "Fighter"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Jax": {
+      "BasicCategories": [
+        "Fighter",
+        "Assassin"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Jayce": {
+      "BasicCategories": [
+        "Fighter",
+        "Marksman"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Jhin": {
+      "BasicCategories": [
+        "Marksman",
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Jinx": {
+      "BasicCategories": [
+        "Marksman"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Kaisa": {
+      "BasicCategories": [
+        "Marksman"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Kalista": {
+      "BasicCategories": [
+        "Marksman"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Karma": {
+      "BasicCategories": [
+        "Mage",
+        "Support"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Karthus": {
+      "BasicCategories": [
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Kassadin": {
+      "BasicCategories": [
+        "Assassin",
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Katarina": {
+      "BasicCategories": [
+        "Assassin",
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Kayle": {
+      "BasicCategories": [
+        "Fighter",
+        "Support"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Kayn": {
+      "BasicCategories": [
+        "Fighter",
+        "Assassin"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Kennen": {
+      "BasicCategories": [
+        "Mage",
+        "Marksman"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Khazix": {
+      "BasicCategories": [
+        "Assassin"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Kindred": {
+      "BasicCategories": [
+        "Marksman"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Kled": {
+      "BasicCategories": [
+        "Fighter",
+        "Tank"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "KogMaw": {
+      "BasicCategories": [
+        "Marksman",
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Leblanc": {
+      "BasicCategories": [
+        "Assassin",
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "LeeSin": {
+      "BasicCategories": [
+        "Fighter",
+        "Assassin"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Leona": {
+      "BasicCategories": [
+        "Tank",
+        "Support"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Lillia": {
+      "BasicCategories": [
+        "Fighter",
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Lissandra": {
+      "BasicCategories": [
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Lucian": {
+      "BasicCategories": [
+        "Marksman"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Lulu": {
+      "BasicCategories": [
+        "Support",
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Lux": {
+      "BasicCategories": [
+        "Mage",
+        "Support"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Malphite": {
+      "BasicCategories": [
+        "Tank",
+        "Fighter"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Malzahar": {
+      "BasicCategories": [
+        "Mage",
+        "Assassin"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Maokai": {
+      "BasicCategories": [
+        "Tank",
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "MasterYi": {
+      "BasicCategories": [
+        "Assassin",
+        "Fighter"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "MissFortune": {
+      "BasicCategories": [
+        "Marksman"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "MonkeyKing": {
+      "BasicCategories": [
+        "Fighter",
+        "Tank"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Mordekaiser": {
+      "BasicCategories": [
+        "Fighter"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Morgana": {
+      "BasicCategories": [
+        "Mage",
+        "Support"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Nami": {
+      "BasicCategories": [
+        "Support",
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Nasus": {
+      "BasicCategories": [
+        "Fighter",
+        "Tank"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Nautilus": {
+      "BasicCategories": [
+        "Tank",
+        "Fighter"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Neeko": {
+      "BasicCategories": [
+        "Mage",
+        "Support"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Nidalee": {
+      "BasicCategories": [
+        "Assassin",
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Nocturne": {
+      "BasicCategories": [
+        "Assassin",
+        "Fighter"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Nunu": {
+      "BasicCategories": [
+        "Tank",
+        "Fighter"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Olaf": {
+      "BasicCategories": [
+        "Fighter",
+        "Tank"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Orianna": {
+      "BasicCategories": [
+        "Mage",
+        "Support"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Ornn": {
+      "BasicCategories": [
+        "Tank",
+        "Fighter"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Pantheon": {
+      "BasicCategories": [
+        "Fighter",
+        "Assassin"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Poppy": {
+      "BasicCategories": [
+        "Tank",
+        "Fighter"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Pyke": {
+      "BasicCategories": [
+        "Support",
+        "Assassin"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Qiyana": {
+      "BasicCategories": [
+        "Assassin",
+        "Fighter"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Quinn": {
+      "BasicCategories": [
+        "Marksman",
+        "Assassin"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Rakan": {
+      "BasicCategories": [
+        "Support"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Rammus": {
+      "BasicCategories": [
+        "Tank",
+        "Fighter"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "RekSai": {
+      "BasicCategories": [
+        "Fighter"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Rell": {
+      "BasicCategories": [
+        "Tank"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Renekton": {
+      "BasicCategories": [
+        "Fighter",
+        "Tank"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Rengar": {
+      "BasicCategories": [
+        "Assassin",
+        "Fighter"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Riven": {
+      "BasicCategories": [
+        "Fighter",
+        "Assassin"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Rumble": {
+      "BasicCategories": [
+        "Fighter",
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Ryze": {
+      "BasicCategories": [
+        "Mage",
+        "Fighter"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Samira": {
+      "BasicCategories": [
+        "Marksman"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Sejuani": {
+      "BasicCategories": [
+        "Tank",
+        "Fighter"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Senna": {
+      "BasicCategories": [
+        "Marksman",
+        "Support"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Seraphine": {
+      "BasicCategories": [
+        "Mage",
+        "Support"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Sett": {
+      "BasicCategories": [
+        "Fighter",
+        "Tank"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Shaco": {
+      "BasicCategories": [
+        "Assassin"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Shen": {
+      "BasicCategories": [
+        "Tank"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Shyvana": {
+      "BasicCategories": [
+        "Fighter",
+        "Tank"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Singed": {
+      "BasicCategories": [
+        "Tank",
+        "Fighter"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Sion": {
+      "BasicCategories": [
+        "Tank",
+        "Fighter"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Sivir": {
+      "BasicCategories": [
+        "Marksman"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Skarner": {
+      "BasicCategories": [
+        "Fighter",
+        "Tank"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Sona": {
+      "BasicCategories": [
+        "Support",
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Soraka": {
+      "BasicCategories": [
+        "Support",
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Swain": {
+      "BasicCategories": [
+        "Mage",
+        "Fighter"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Sylas": {
+      "BasicCategories": [
+        "Mage",
+        "Assassin"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Syndra": {
+      "BasicCategories": [
+        "Mage",
+        "Support"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "TahmKench": {
+      "BasicCategories": [
+        "Support",
+        "Tank"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Taliyah": {
+      "BasicCategories": [
+        "Mage",
+        "Support"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Talon": {
+      "BasicCategories": [
+        "Assassin"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Taric": {
+      "BasicCategories": [
+        "Support",
+        "Fighter"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Teemo": {
+      "BasicCategories": [
+        "Marksman",
+        "Assassin"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Thresh": {
+      "BasicCategories": [
+        "Support",
+        "Fighter"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Tristana": {
+      "BasicCategories": [
+        "Marksman",
+        "Assassin"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Trundle": {
+      "BasicCategories": [
+        "Fighter",
+        "Tank"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Tryndamere": {
+      "BasicCategories": [
+        "Fighter",
+        "Assassin"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "TwistedFate": {
+      "BasicCategories": [
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Twitch": {
+      "BasicCategories": [
+        "Marksman",
+        "Assassin"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Udyr": {
+      "BasicCategories": [
+        "Fighter",
+        "Tank"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Urgot": {
+      "BasicCategories": [
+        "Fighter",
+        "Tank"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Varus": {
+      "BasicCategories": [
+        "Marksman",
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Vayne": {
+      "BasicCategories": [
+        "Marksman",
+        "Assassin"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Veigar": {
+      "BasicCategories": [
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Velkoz": {
+      "BasicCategories": [
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Vi": {
+      "BasicCategories": [
+        "Fighter",
+        "Assassin"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Viego": {
+      "BasicCategories": [
+        "Assassin",
+        "Fighter"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Viktor": {
+      "BasicCategories": [
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Vladimir": {
+      "BasicCategories": [
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Volibear": {
+      "BasicCategories": [
+        "Fighter",
+        "Tank"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Warwick": {
+      "BasicCategories": [
+        "Fighter",
+        "Tank"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Xayah": {
+      "BasicCategories": [
+        "Marksman"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Xerath": {
+      "BasicCategories": [
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "XinZhao": {
+      "BasicCategories": [
+        "Fighter",
+        "Assassin"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Yasuo": {
+      "BasicCategories": [
+        "Fighter",
+        "Assassin"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Yone": {
+      "BasicCategories": [
+        "Assassin",
+        "Fighter"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Yorick": {
+      "BasicCategories": [
+        "Fighter",
+        "Tank"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Yuumi": {
+      "BasicCategories": [
+        "Support",
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Zac": {
+      "BasicCategories": [
+        "Tank",
+        "Fighter"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Zed": {
+      "BasicCategories": [
+        "Assassin"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Ziggs": {
+      "BasicCategories": [
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Zilean": {
+      "BasicCategories": [
+        "Support",
+        "Mage"
+      ],
+      "CustomCategories": [
+        "Man"
+      ]
+    },
+    "Zoe": {
+      "BasicCategories": [
+        "Mage",
+        "Support"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    },
+    "Zyra": {
+      "BasicCategories": [
+        "Mage",
+        "Support"
+      ],
+      "CustomCategories": [
+        "Woman"
+      ]
+    }
+  }
+}</value>
   </data>
 </root>

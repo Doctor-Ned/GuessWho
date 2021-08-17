@@ -1,0 +1,1074 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BasicCategory.Assassin" xml:space="preserve">
+    <value>刺客</value>
+  </data>
+  <data name="BasicCategory.Fighter" xml:space="preserve">
+    <value>鬥士</value>
+  </data>
+  <data name="BasicCategory.Marksman" xml:space="preserve">
+    <value>射手</value>
+  </data>
+  <data name="BasicCategory.Mage" xml:space="preserve">
+    <value>法師</value>
+  </data>
+  <data name="BasicCategory.Support" xml:space="preserve">
+    <value>輔助</value>
+  </data>
+  <data name="BasicCategory.Tank" xml:space="preserve">
+    <value>坦克</value>
+  </data>
+  <data name="Champion.Aatrox.Name" xml:space="preserve">
+    <value>厄薩斯</value>
+  </data>
+  <data name="Champion.Aatrox.Title" xml:space="preserve">
+    <value>冥血劍魔</value>
+  </data>
+  <data name="Champion.Ahri.Name" xml:space="preserve">
+    <value>阿璃</value>
+  </data>
+  <data name="Champion.Ahri.Title" xml:space="preserve">
+    <value>九尾妖狐</value>
+  </data>
+  <data name="Champion.Akali.Name" xml:space="preserve">
+    <value>阿卡莉</value>
+  </data>
+  <data name="Champion.Akali.Title" xml:space="preserve">
+    <value>隻影刺客</value>
+  </data>
+  <data name="Champion.Akshan.Name" xml:space="preserve">
+    <value>埃可尚</value>
+  </data>
+  <data name="Champion.Akshan.Title" xml:space="preserve">
+    <value>俠盜哨兵</value>
+  </data>
+  <data name="Champion.Alistar.Name" xml:space="preserve">
+    <value>亞歷斯塔</value>
+  </data>
+  <data name="Champion.Alistar.Title" xml:space="preserve">
+    <value>牛頭酋長</value>
+  </data>
+  <data name="Champion.Amumu.Name" xml:space="preserve">
+    <value>阿姆姆</value>
+  </data>
+  <data name="Champion.Amumu.Title" xml:space="preserve">
+    <value>殤之木乃伊</value>
+  </data>
+  <data name="Champion.Anivia.Name" xml:space="preserve">
+    <value>艾妮維亞</value>
+  </data>
+  <data name="Champion.Anivia.Title" xml:space="preserve">
+    <value>冰晶鳳凰</value>
+  </data>
+  <data name="Champion.Annie.Name" xml:space="preserve">
+    <value>安妮</value>
+  </data>
+  <data name="Champion.Annie.Title" xml:space="preserve">
+    <value>黑暗之女</value>
+  </data>
+  <data name="Champion.Aphelios.Name" xml:space="preserve">
+    <value>亞菲利歐</value>
+  </data>
+  <data name="Champion.Aphelios.Title" xml:space="preserve">
+    <value>信仰銳武</value>
+  </data>
+  <data name="Champion.Ashe.Name" xml:space="preserve">
+    <value>艾希</value>
+  </data>
+  <data name="Champion.Ashe.Title" xml:space="preserve">
+    <value>冰霜射手</value>
+  </data>
+  <data name="Champion.AurelionSol.Name" xml:space="preserve">
+    <value>翱銳龍獸</value>
+  </data>
+  <data name="Champion.AurelionSol.Title" xml:space="preserve">
+    <value>星際漫遊者</value>
+  </data>
+  <data name="Champion.Azir.Name" xml:space="preserve">
+    <value>阿祈爾</value>
+  </data>
+  <data name="Champion.Azir.Title" xml:space="preserve">
+    <value>蘇瑞瑪砂皇</value>
+  </data>
+  <data name="Champion.Bard.Name" xml:space="preserve">
+    <value>巴德</value>
+  </data>
+  <data name="Champion.Bard.Title" xml:space="preserve">
+    <value>漂泊守望者</value>
+  </data>
+  <data name="Champion.Blitzcrank.Name" xml:space="preserve">
+    <value>布里茨</value>
+  </data>
+  <data name="Champion.Blitzcrank.Title" xml:space="preserve">
+    <value>蒸汽巨神兵</value>
+  </data>
+  <data name="Champion.Brand.Name" xml:space="preserve">
+    <value>布蘭德</value>
+  </data>
+  <data name="Champion.Brand.Title" xml:space="preserve">
+    <value>復仇業火</value>
+  </data>
+  <data name="Champion.Braum.Name" xml:space="preserve">
+    <value>布郎姆</value>
+  </data>
+  <data name="Champion.Braum.Title" xml:space="preserve">
+    <value>弗雷爾卓德豪腕</value>
+  </data>
+  <data name="Champion.Caitlyn.Name" xml:space="preserve">
+    <value>凱特琳</value>
+  </data>
+  <data name="Champion.Caitlyn.Title" xml:space="preserve">
+    <value>執法者</value>
+  </data>
+  <data name="Champion.Camille.Name" xml:space="preserve">
+    <value>卡蜜兒</value>
+  </data>
+  <data name="Champion.Camille.Title" xml:space="preserve">
+    <value>鋼鐵殘影</value>
+  </data>
+  <data name="Champion.Cassiopeia.Name" xml:space="preserve">
+    <value>卡莎碧雅</value>
+  </data>
+  <data name="Champion.Cassiopeia.Title" xml:space="preserve">
+    <value>蛇之擁抱</value>
+  </data>
+  <data name="Champion.Chogath.Name" xml:space="preserve">
+    <value>科加斯</value>
+  </data>
+  <data name="Champion.Chogath.Title" xml:space="preserve">
+    <value>虛空恐懼</value>
+  </data>
+  <data name="Champion.Corki.Name" xml:space="preserve">
+    <value>庫奇</value>
+  </data>
+  <data name="Champion.Corki.Title" xml:space="preserve">
+    <value>英勇投彈手</value>
+  </data>
+  <data name="Champion.Darius.Name" xml:space="preserve">
+    <value>達瑞斯</value>
+  </data>
+  <data name="Champion.Darius.Title" xml:space="preserve">
+    <value>諾克薩斯之力</value>
+  </data>
+  <data name="Champion.Diana.Name" xml:space="preserve">
+    <value>黛安娜</value>
+  </data>
+  <data name="Champion.Diana.Title" xml:space="preserve">
+    <value>輕藐之月</value>
+  </data>
+  <data name="Champion.Draven.Name" xml:space="preserve">
+    <value>達瑞文</value>
+  </data>
+  <data name="Champion.Draven.Title" xml:space="preserve">
+    <value>處刑娛樂大師</value>
+  </data>
+  <data name="Champion.DrMundo.Name" xml:space="preserve">
+    <value>蒙多醫生</value>
+  </data>
+  <data name="Champion.DrMundo.Title" xml:space="preserve">
+    <value>佐恩狂人</value>
+  </data>
+  <data name="Champion.Ekko.Name" xml:space="preserve">
+    <value>艾克</value>
+  </data>
+  <data name="Champion.Ekko.Title" xml:space="preserve">
+    <value>時空少年</value>
+  </data>
+  <data name="Champion.Elise.Name" xml:space="preserve">
+    <value>伊莉絲</value>
+  </data>
+  <data name="Champion.Elise.Title" xml:space="preserve">
+    <value>蜘蛛女王</value>
+  </data>
+  <data name="Champion.Evelynn.Name" xml:space="preserve">
+    <value>伊芙琳</value>
+  </data>
+  <data name="Champion.Evelynn.Title" xml:space="preserve">
+    <value>臨終擁抱</value>
+  </data>
+  <data name="Champion.Ezreal.Name" xml:space="preserve">
+    <value>伊澤瑞爾</value>
+  </data>
+  <data name="Champion.Ezreal.Title" xml:space="preserve">
+    <value>探險家</value>
+  </data>
+  <data name="Champion.Fiddlesticks.Name" xml:space="preserve">
+    <value>費德提克</value>
+  </data>
+  <data name="Champion.Fiddlesticks.Title" xml:space="preserve">
+    <value>亙古之懼</value>
+  </data>
+  <data name="Champion.Fiora.Name" xml:space="preserve">
+    <value>菲歐拉</value>
+  </data>
+  <data name="Champion.Fiora.Title" xml:space="preserve">
+    <value>孤高劍客</value>
+  </data>
+  <data name="Champion.Fizz.Name" xml:space="preserve">
+    <value>飛斯</value>
+  </data>
+  <data name="Champion.Fizz.Title" xml:space="preserve">
+    <value>深海頑童</value>
+  </data>
+  <data name="Champion.Galio.Name" xml:space="preserve">
+    <value>加里歐</value>
+  </data>
+  <data name="Champion.Galio.Title" xml:space="preserve">
+    <value>禦國巨像</value>
+  </data>
+  <data name="Champion.Gangplank.Name" xml:space="preserve">
+    <value>剛普朗克</value>
+  </data>
+  <data name="Champion.Gangplank.Title" xml:space="preserve">
+    <value>海洋之災</value>
+  </data>
+  <data name="Champion.Garen.Name" xml:space="preserve">
+    <value>蓋倫</value>
+  </data>
+  <data name="Champion.Garen.Title" xml:space="preserve">
+    <value>蒂瑪西亞之力</value>
+  </data>
+  <data name="Champion.Gnar.Name" xml:space="preserve">
+    <value>吶兒</value>
+  </data>
+  <data name="Champion.Gnar.Title" xml:space="preserve">
+    <value>失落之子</value>
+  </data>
+  <data name="Champion.Gragas.Name" xml:space="preserve">
+    <value>古拉格斯</value>
+  </data>
+  <data name="Champion.Gragas.Title" xml:space="preserve">
+    <value>酒桶之王</value>
+  </data>
+  <data name="Champion.Graves.Name" xml:space="preserve">
+    <value>葛雷夫</value>
+  </data>
+  <data name="Champion.Graves.Title" xml:space="preserve">
+    <value>亡命之徒</value>
+  </data>
+  <data name="Champion.Gwen.Name" xml:space="preserve">
+    <value>關</value>
+  </data>
+  <data name="Champion.Gwen.Title" xml:space="preserve">
+    <value>聖啟織偶</value>
+  </data>
+  <data name="Champion.Hecarim.Name" xml:space="preserve">
+    <value>赫克林</value>
+  </data>
+  <data name="Champion.Hecarim.Title" xml:space="preserve">
+    <value>戰爭之影</value>
+  </data>
+  <data name="Champion.Heimerdinger.Name" xml:space="preserve">
+    <value>漢默丁格</value>
+  </data>
+  <data name="Champion.Heimerdinger.Title" xml:space="preserve">
+    <value>大發明家</value>
+  </data>
+  <data name="Champion.Illaoi.Name" xml:space="preserve">
+    <value>伊羅旖</value>
+  </data>
+  <data name="Champion.Illaoi.Title" xml:space="preserve">
+    <value>海妖祭司</value>
+  </data>
+  <data name="Champion.Irelia.Name" xml:space="preserve">
+    <value>伊瑞莉雅</value>
+  </data>
+  <data name="Champion.Irelia.Title" xml:space="preserve">
+    <value>舞劍靈使</value>
+  </data>
+  <data name="Champion.Ivern.Name" xml:space="preserve">
+    <value>埃爾文</value>
+  </data>
+  <data name="Champion.Ivern.Title" xml:space="preserve">
+    <value>綠林之父</value>
+  </data>
+  <data name="Champion.Janna.Name" xml:space="preserve">
+    <value>珍娜</value>
+  </data>
+  <data name="Champion.Janna.Title" xml:space="preserve">
+    <value>風暴女神</value>
+  </data>
+  <data name="Champion.JarvanIV.Name" xml:space="preserve">
+    <value>嘉文四世</value>
+  </data>
+  <data name="Champion.JarvanIV.Title" xml:space="preserve">
+    <value>蒂瑪西亞楷模</value>
+  </data>
+  <data name="Champion.Jax.Name" xml:space="preserve">
+    <value>賈克斯</value>
+  </data>
+  <data name="Champion.Jax.Title" xml:space="preserve">
+    <value>武器達人</value>
+  </data>
+  <data name="Champion.Jayce.Name" xml:space="preserve">
+    <value>杰西</value>
+  </data>
+  <data name="Champion.Jayce.Title" xml:space="preserve">
+    <value>明日守護者</value>
+  </data>
+  <data name="Champion.Jhin.Name" xml:space="preserve">
+    <value>燼</value>
+  </data>
+  <data name="Champion.Jhin.Title" xml:space="preserve">
+    <value>炫技大師</value>
+  </data>
+  <data name="Champion.Jinx.Name" xml:space="preserve">
+    <value>吉茵珂絲</value>
+  </data>
+  <data name="Champion.Jinx.Title" xml:space="preserve">
+    <value>暴走重砲</value>
+  </data>
+  <data name="Champion.Kaisa.Name" xml:space="preserve">
+    <value>凱莎</value>
+  </data>
+  <data name="Champion.Kaisa.Title" xml:space="preserve">
+    <value>虛空之女</value>
+  </data>
+  <data name="Champion.Kalista.Name" xml:space="preserve">
+    <value>克黎思妲</value>
+  </data>
+  <data name="Champion.Kalista.Title" xml:space="preserve">
+    <value>復仇之矛</value>
+  </data>
+  <data name="Champion.Karma.Name" xml:space="preserve">
+    <value>卡瑪</value>
+  </data>
+  <data name="Champion.Karma.Title" xml:space="preserve">
+    <value>魂之啟者</value>
+  </data>
+  <data name="Champion.Karthus.Name" xml:space="preserve">
+    <value>卡爾瑟斯</value>
+  </data>
+  <data name="Champion.Karthus.Title" xml:space="preserve">
+    <value>死亡頌唱者</value>
+  </data>
+  <data name="Champion.Kassadin.Name" xml:space="preserve">
+    <value>卡薩丁</value>
+  </data>
+  <data name="Champion.Kassadin.Title" xml:space="preserve">
+    <value>虛空行者</value>
+  </data>
+  <data name="Champion.Katarina.Name" xml:space="preserve">
+    <value>卡特蓮娜</value>
+  </data>
+  <data name="Champion.Katarina.Title" xml:space="preserve">
+    <value>不祥之刃</value>
+  </data>
+  <data name="Champion.Kayle.Name" xml:space="preserve">
+    <value>凱爾</value>
+  </data>
+  <data name="Champion.Kayle.Title" xml:space="preserve">
+    <value>正義天使</value>
+  </data>
+  <data name="Champion.Kayn.Name" xml:space="preserve">
+    <value>慨影</value>
+  </data>
+  <data name="Champion.Kayn.Title" xml:space="preserve">
+    <value>闇魂收割者</value>
+  </data>
+  <data name="Champion.Kennen.Name" xml:space="preserve">
+    <value>凱能</value>
+  </data>
+  <data name="Champion.Kennen.Title" xml:space="preserve">
+    <value>狂暴之心</value>
+  </data>
+  <data name="Champion.Khazix.Name" xml:space="preserve">
+    <value>卡力斯</value>
+  </data>
+  <data name="Champion.Khazix.Title" xml:space="preserve">
+    <value>虛空掠食者</value>
+  </data>
+  <data name="Champion.Kindred.Name" xml:space="preserve">
+    <value>鏡爪</value>
+  </data>
+  <data name="Champion.Kindred.Title" xml:space="preserve">
+    <value>永恆獵手</value>
+  </data>
+  <data name="Champion.Kled.Name" xml:space="preserve">
+    <value>克雷德</value>
+  </data>
+  <data name="Champion.Kled.Title" xml:space="preserve">
+    <value>暴躁騎士</value>
+  </data>
+  <data name="Champion.KogMaw.Name" xml:space="preserve">
+    <value>寇格魔</value>
+  </data>
+  <data name="Champion.KogMaw.Title" xml:space="preserve">
+    <value>深淵巨口</value>
+  </data>
+  <data name="Champion.Leblanc.Name" xml:space="preserve">
+    <value>勒布朗</value>
+  </data>
+  <data name="Champion.Leblanc.Title" xml:space="preserve">
+    <value>詐欺師</value>
+  </data>
+  <data name="Champion.LeeSin.Name" xml:space="preserve">
+    <value>李星</value>
+  </data>
+  <data name="Champion.LeeSin.Title" xml:space="preserve">
+    <value>盲眼武僧</value>
+  </data>
+  <data name="Champion.Leona.Name" xml:space="preserve">
+    <value>雷歐娜</value>
+  </data>
+  <data name="Champion.Leona.Title" xml:space="preserve">
+    <value>黎明之光</value>
+  </data>
+  <data name="Champion.Lillia.Name" xml:space="preserve">
+    <value>莉莉亞</value>
+  </data>
+  <data name="Champion.Lillia.Title" xml:space="preserve">
+    <value>羞赧綻華</value>
+  </data>
+  <data name="Champion.Lissandra.Name" xml:space="preserve">
+    <value>麗珊卓</value>
+  </data>
+  <data name="Champion.Lissandra.Title" xml:space="preserve">
+    <value>傲雪巫女</value>
+  </data>
+  <data name="Champion.Lucian.Name" xml:space="preserve">
+    <value>路西恩</value>
+  </data>
+  <data name="Champion.Lucian.Title" xml:space="preserve">
+    <value>驅魔聖槍</value>
+  </data>
+  <data name="Champion.Lulu.Name" xml:space="preserve">
+    <value>露璐</value>
+  </data>
+  <data name="Champion.Lulu.Title" xml:space="preserve">
+    <value>精靈魔法使</value>
+  </data>
+  <data name="Champion.Lux.Name" xml:space="preserve">
+    <value>拉克絲</value>
+  </data>
+  <data name="Champion.Lux.Title" xml:space="preserve">
+    <value>光之少女</value>
+  </data>
+  <data name="Champion.Malphite.Name" xml:space="preserve">
+    <value>墨菲特</value>
+  </data>
+  <data name="Champion.Malphite.Title" xml:space="preserve">
+    <value>幻石碎片</value>
+  </data>
+  <data name="Champion.Malzahar.Name" xml:space="preserve">
+    <value>馬爾札哈</value>
+  </data>
+  <data name="Champion.Malzahar.Title" xml:space="preserve">
+    <value>虛空先知</value>
+  </data>
+  <data name="Champion.Maokai.Name" xml:space="preserve">
+    <value>茂凱</value>
+  </data>
+  <data name="Champion.Maokai.Title" xml:space="preserve">
+    <value>扭曲樹人</value>
+  </data>
+  <data name="Champion.MasterYi.Name" xml:space="preserve">
+    <value>易大師</value>
+  </data>
+  <data name="Champion.MasterYi.Title" xml:space="preserve">
+    <value>無極劍聖</value>
+  </data>
+  <data name="Champion.MissFortune.Name" xml:space="preserve">
+    <value>好運姐</value>
+  </data>
+  <data name="Champion.MissFortune.Title" xml:space="preserve">
+    <value>賞金獵人</value>
+  </data>
+  <data name="Champion.MonkeyKing.Name" xml:space="preserve">
+    <value>悟空</value>
+  </data>
+  <data name="Champion.MonkeyKing.Title" xml:space="preserve">
+    <value>齊天大聖</value>
+  </data>
+  <data name="Champion.Mordekaiser.Name" xml:space="preserve">
+    <value>魔鬥凱薩</value>
+  </data>
+  <data name="Champion.Mordekaiser.Title" xml:space="preserve">
+    <value> 金屬亡靈</value>
+  </data>
+  <data name="Champion.Morgana.Name" xml:space="preserve">
+    <value>魔甘娜</value>
+  </data>
+  <data name="Champion.Morgana.Title" xml:space="preserve">
+    <value>墮落天使</value>
+  </data>
+  <data name="Champion.Nami.Name" xml:space="preserve">
+    <value>娜米</value>
+  </data>
+  <data name="Champion.Nami.Title" xml:space="preserve">
+    <value>海潮之音</value>
+  </data>
+  <data name="Champion.Nasus.Name" xml:space="preserve">
+    <value>納瑟斯</value>
+  </data>
+  <data name="Champion.Nasus.Title" xml:space="preserve">
+    <value>沙漠死神</value>
+  </data>
+  <data name="Champion.Nautilus.Name" xml:space="preserve">
+    <value>納帝魯斯</value>
+  </data>
+  <data name="Champion.Nautilus.Title" xml:space="preserve">
+    <value>深淵巨人</value>
+  </data>
+  <data name="Champion.Neeko.Name" xml:space="preserve">
+    <value>妮可</value>
+  </data>
+  <data name="Champion.Neeko.Title" xml:space="preserve">
+    <value>好奇變色龍</value>
+  </data>
+  <data name="Champion.Nidalee.Name" xml:space="preserve">
+    <value>奈德麗</value>
+  </data>
+  <data name="Champion.Nidalee.Title" xml:space="preserve">
+    <value>狂野獵手</value>
+  </data>
+  <data name="Champion.Nocturne.Name" xml:space="preserve">
+    <value>夜曲</value>
+  </data>
+  <data name="Champion.Nocturne.Title" xml:space="preserve">
+    <value>永恆夢魘</value>
+  </data>
+  <data name="Champion.Nunu.Name" xml:space="preserve">
+    <value>努努和威朗普</value>
+  </data>
+  <data name="Champion.Nunu.Title" xml:space="preserve">
+    <value>冰原拍檔</value>
+  </data>
+  <data name="Champion.Olaf.Name" xml:space="preserve">
+    <value>歐拉夫</value>
+  </data>
+  <data name="Champion.Olaf.Title" xml:space="preserve">
+    <value>狂戰士</value>
+  </data>
+  <data name="Champion.Orianna.Name" xml:space="preserve">
+    <value>奧莉安娜</value>
+  </data>
+  <data name="Champion.Orianna.Title" xml:space="preserve">
+    <value>發條少女</value>
+  </data>
+  <data name="Champion.Ornn.Name" xml:space="preserve">
+    <value>鄂爾</value>
+  </data>
+  <data name="Champion.Ornn.Title" xml:space="preserve">
+    <value>爐心山神</value>
+  </data>
+  <data name="Champion.Pantheon.Name" xml:space="preserve">
+    <value>潘森</value>
+  </data>
+  <data name="Champion.Pantheon.Title" xml:space="preserve">
+    <value>不屈之矛</value>
+  </data>
+  <data name="Champion.Poppy.Name" xml:space="preserve">
+    <value>波比</value>
+  </data>
+  <data name="Champion.Poppy.Title" xml:space="preserve">
+    <value>聖槌守護者</value>
+  </data>
+  <data name="Champion.Pyke.Name" xml:space="preserve">
+    <value>派克</value>
+  </data>
+  <data name="Champion.Pyke.Title" xml:space="preserve">
+    <value>血港開膛手</value>
+  </data>
+  <data name="Champion.Qiyana.Name" xml:space="preserve">
+    <value>姬亞娜</value>
+  </data>
+  <data name="Champion.Qiyana.Title" xml:space="preserve">
+    <value>元素女帝</value>
+  </data>
+  <data name="Champion.Quinn.Name" xml:space="preserve">
+    <value>葵恩</value>
+  </data>
+  <data name="Champion.Quinn.Title" xml:space="preserve">
+    <value>蒂瑪西亞之翼</value>
+  </data>
+  <data name="Champion.Rakan.Name" xml:space="preserve">
+    <value>銳空</value>
+  </data>
+  <data name="Champion.Rakan.Title" xml:space="preserve">
+    <value>惑羽</value>
+  </data>
+  <data name="Champion.Rammus.Name" xml:space="preserve">
+    <value>拉姆斯</value>
+  </data>
+  <data name="Champion.Rammus.Title" xml:space="preserve">
+    <value>披甲龍龜</value>
+  </data>
+  <data name="Champion.RekSai.Name" xml:space="preserve">
+    <value>雷珂煞</value>
+  </data>
+  <data name="Champion.RekSai.Title" xml:space="preserve">
+    <value>虛空穿梭者</value>
+  </data>
+  <data name="Champion.Rell.Name" xml:space="preserve">
+    <value>銳兒</value>
+  </data>
+  <data name="Champion.Rell.Title" xml:space="preserve">
+    <value>鋼鐵少女</value>
+  </data>
+  <data name="Champion.Renekton.Name" xml:space="preserve">
+    <value>雷尼克頓</value>
+  </data>
+  <data name="Champion.Renekton.Title" xml:space="preserve">
+    <value>沙漠屠夫</value>
+  </data>
+  <data name="Champion.Rengar.Name" xml:space="preserve">
+    <value>雷葛爾</value>
+  </data>
+  <data name="Champion.Rengar.Title" xml:space="preserve">
+    <value>傲慢伏擊者</value>
+  </data>
+  <data name="Champion.Riven.Name" xml:space="preserve">
+    <value>雷玟</value>
+  </data>
+  <data name="Champion.Riven.Title" xml:space="preserve">
+    <value>破刃放逐者</value>
+  </data>
+  <data name="Champion.Rumble.Name" xml:space="preserve">
+    <value>藍寶</value>
+  </data>
+  <data name="Champion.Rumble.Title" xml:space="preserve">
+    <value>武裝機兵</value>
+  </data>
+  <data name="Champion.Ryze.Name" xml:space="preserve">
+    <value>雷茲</value>
+  </data>
+  <data name="Champion.Ryze.Title" xml:space="preserve">
+    <value>符文法師</value>
+  </data>
+  <data name="Champion.Samira.Name" xml:space="preserve">
+    <value>煞蜜拉</value>
+  </data>
+  <data name="Champion.Samira.Title" xml:space="preserve">
+    <value>荒漠薔薇</value>
+  </data>
+  <data name="Champion.Sejuani.Name" xml:space="preserve">
+    <value>史瓦妮</value>
+  </data>
+  <data name="Champion.Sejuani.Title" xml:space="preserve">
+    <value>北境之怒</value>
+  </data>
+  <data name="Champion.Senna.Name" xml:space="preserve">
+    <value>姍娜</value>
+  </data>
+  <data name="Champion.Senna.Title" xml:space="preserve">
+    <value>贖魂聖槍</value>
+  </data>
+  <data name="Champion.Seraphine.Name" xml:space="preserve">
+    <value>瑟菈紛</value>
+  </data>
+  <data name="Champion.Seraphine.Title" xml:space="preserve">
+    <value>燦眸歌姬</value>
+  </data>
+  <data name="Champion.Sett.Name" xml:space="preserve">
+    <value>賽特</value>
+  </data>
+  <data name="Champion.Sett.Title" xml:space="preserve">
+    <value>獸血拳皇</value>
+  </data>
+  <data name="Champion.Shaco.Name" xml:space="preserve">
+    <value>薩科</value>
+  </data>
+  <data name="Champion.Shaco.Title" xml:space="preserve">
+    <value>惡魔小丑</value>
+  </data>
+  <data name="Champion.Shen.Name" xml:space="preserve">
+    <value>慎</value>
+  </data>
+  <data name="Champion.Shen.Title" xml:space="preserve">
+    <value>暮光之眼</value>
+  </data>
+  <data name="Champion.Shyvana.Name" xml:space="preserve">
+    <value>希瓦娜</value>
+  </data>
+  <data name="Champion.Shyvana.Title" xml:space="preserve">
+    <value>半龍少女</value>
+  </data>
+  <data name="Champion.Singed.Name" xml:space="preserve">
+    <value>辛吉德</value>
+  </data>
+  <data name="Champion.Singed.Title" xml:space="preserve">
+    <value>瘋狂煉金師</value>
+  </data>
+  <data name="Champion.Sion.Name" xml:space="preserve">
+    <value>賽恩</value>
+  </data>
+  <data name="Champion.Sion.Title" xml:space="preserve">
+    <value>亡靈勇士</value>
+  </data>
+  <data name="Champion.Sivir.Name" xml:space="preserve">
+    <value>希維爾</value>
+  </data>
+  <data name="Champion.Sivir.Title" xml:space="preserve">
+    <value>戰爭女神</value>
+  </data>
+  <data name="Champion.Skarner.Name" xml:space="preserve">
+    <value>史加納</value>
+  </data>
+  <data name="Champion.Skarner.Title" xml:space="preserve">
+    <value>水晶戰蠍</value>
+  </data>
+  <data name="Champion.Sona.Name" xml:space="preserve">
+    <value>索娜</value>
+  </data>
+  <data name="Champion.Sona.Title" xml:space="preserve">
+    <value>琴仙</value>
+  </data>
+  <data name="Champion.Soraka.Name" xml:space="preserve">
+    <value>索拉卡</value>
+  </data>
+  <data name="Champion.Soraka.Title" xml:space="preserve">
+    <value>眾星之子</value>
+  </data>
+  <data name="Champion.Swain.Name" xml:space="preserve">
+    <value>斯溫</value>
+  </data>
+  <data name="Champion.Swain.Title" xml:space="preserve">
+    <value>諾克薩斯總帥</value>
+  </data>
+  <data name="Champion.Sylas.Name" xml:space="preserve">
+    <value>賽勒斯</value>
+  </data>
+  <data name="Champion.Sylas.Title" xml:space="preserve">
+    <value>罪鍊術士</value>
+  </data>
+  <data name="Champion.Syndra.Name" xml:space="preserve">
+    <value>星朵拉</value>
+  </data>
+  <data name="Champion.Syndra.Title" xml:space="preserve">
+    <value>黑暗領主</value>
+  </data>
+  <data name="Champion.TahmKench.Name" xml:space="preserve">
+    <value>貪啃奇</value>
+  </data>
+  <data name="Champion.TahmKench.Title" xml:space="preserve">
+    <value>河中巨怪</value>
+  </data>
+  <data name="Champion.Taliyah.Name" xml:space="preserve">
+    <value>塔莉雅</value>
+  </data>
+  <data name="Champion.Taliyah.Title" xml:space="preserve">
+    <value>岩石編織者</value>
+  </data>
+  <data name="Champion.Talon.Name" xml:space="preserve">
+    <value>塔隆</value>
+  </data>
+  <data name="Champion.Talon.Title" xml:space="preserve">
+    <value>神影刺客</value>
+  </data>
+  <data name="Champion.Taric.Name" xml:space="preserve">
+    <value>塔里克</value>
+  </data>
+  <data name="Champion.Taric.Title" xml:space="preserve">
+    <value>瓦羅然之盾</value>
+  </data>
+  <data name="Champion.Teemo.Name" xml:space="preserve">
+    <value>提摩</value>
+  </data>
+  <data name="Champion.Teemo.Title" xml:space="preserve">
+    <value>迅捷斥候</value>
+  </data>
+  <data name="Champion.Thresh.Name" xml:space="preserve">
+    <value>瑟雷西</value>
+  </data>
+  <data name="Champion.Thresh.Title" xml:space="preserve">
+    <value>鍊魂獄長</value>
+  </data>
+  <data name="Champion.Tristana.Name" xml:space="preserve">
+    <value>崔絲塔娜</value>
+  </data>
+  <data name="Champion.Tristana.Title" xml:space="preserve">
+    <value>約德爾炮手</value>
+  </data>
+  <data name="Champion.Trundle.Name" xml:space="preserve">
+    <value>特朗德</value>
+  </data>
+  <data name="Champion.Trundle.Title" xml:space="preserve">
+    <value>巨魔王</value>
+  </data>
+  <data name="Champion.Tryndamere.Name" xml:space="preserve">
+    <value>泰達米爾</value>
+  </data>
+  <data name="Champion.Tryndamere.Title" xml:space="preserve">
+    <value>蠻族之王</value>
+  </data>
+  <data name="Champion.TwistedFate.Name" xml:space="preserve">
+    <value>逆命</value>
+  </data>
+  <data name="Champion.TwistedFate.Title" xml:space="preserve">
+    <value>卡牌大師</value>
+  </data>
+  <data name="Champion.Twitch.Name" xml:space="preserve">
+    <value>圖奇</value>
+  </data>
+  <data name="Champion.Twitch.Title" xml:space="preserve">
+    <value>瘟疫之源</value>
+  </data>
+  <data name="Champion.Udyr.Name" xml:space="preserve">
+    <value>烏迪爾</value>
+  </data>
+  <data name="Champion.Udyr.Title" xml:space="preserve">
+    <value>神靈行者</value>
+  </data>
+  <data name="Champion.Urgot.Name" xml:space="preserve">
+    <value>烏爾加特</value>
+  </data>
+  <data name="Champion.Urgot.Title" xml:space="preserve">
+    <value>重裝無畏</value>
+  </data>
+  <data name="Champion.Varus.Name" xml:space="preserve">
+    <value>法洛士</value>
+  </data>
+  <data name="Champion.Varus.Title" xml:space="preserve">
+    <value>懲戒之箭</value>
+  </data>
+  <data name="Champion.Vayne.Name" xml:space="preserve">
+    <value>汎</value>
+  </data>
+  <data name="Champion.Vayne.Title" xml:space="preserve">
+    <value>暗夜獵人</value>
+  </data>
+  <data name="Champion.Veigar.Name" xml:space="preserve">
+    <value>維迦</value>
+  </data>
+  <data name="Champion.Veigar.Title" xml:space="preserve">
+    <value>邪惡小法師</value>
+  </data>
+  <data name="Champion.Velkoz.Name" xml:space="preserve">
+    <value>威寇茲</value>
+  </data>
+  <data name="Champion.Velkoz.Title" xml:space="preserve">
+    <value>虛空魔眼</value>
+  </data>
+  <data name="Champion.Vi.Name" xml:space="preserve">
+    <value>菲艾</value>
+  </data>
+  <data name="Champion.Vi.Title" xml:space="preserve">
+    <value>鐵腕特警</value>
+  </data>
+  <data name="Champion.Viego.Name" xml:space="preserve">
+    <value>維爾戈</value>
+  </data>
+  <data name="Champion.Viego.Title" xml:space="preserve">
+    <value>殞落王者</value>
+  </data>
+  <data name="Champion.Viktor.Name" xml:space="preserve">
+    <value>維克特</value>
+  </data>
+  <data name="Champion.Viktor.Title" xml:space="preserve">
+    <value>機械使徒</value>
+  </data>
+  <data name="Champion.Vladimir.Name" xml:space="preserve">
+    <value>弗拉迪米爾</value>
+  </data>
+  <data name="Champion.Vladimir.Title" xml:space="preserve">
+    <value>血色收割者</value>
+  </data>
+  <data name="Champion.Volibear.Name" xml:space="preserve">
+    <value>弗力貝爾</value>
+  </data>
+  <data name="Champion.Volibear.Title" xml:space="preserve">
+    <value>無情風暴</value>
+  </data>
+  <data name="Champion.Warwick.Name" xml:space="preserve">
+    <value>沃維克</value>
+  </data>
+  <data name="Champion.Warwick.Title" xml:space="preserve">
+    <value>嗜血狂怒</value>
+  </data>
+  <data name="Champion.Xayah.Name" xml:space="preserve">
+    <value>剎雅</value>
+  </data>
+  <data name="Champion.Xayah.Title" xml:space="preserve">
+    <value>逆羽</value>
+  </data>
+  <data name="Champion.Xerath.Name" xml:space="preserve">
+    <value>齊勒斯</value>
+  </data>
+  <data name="Champion.Xerath.Title" xml:space="preserve">
+    <value>遠古魔導</value>
+  </data>
+  <data name="Champion.XinZhao.Name" xml:space="preserve">
+    <value>趙信</value>
+  </data>
+  <data name="Champion.XinZhao.Title" xml:space="preserve">
+    <value>蒂瑪西亞總管</value>
+  </data>
+  <data name="Champion.Yasuo.Name" xml:space="preserve">
+    <value>犽宿</value>
+  </data>
+  <data name="Champion.Yasuo.Title" xml:space="preserve">
+    <value>放逐浪人</value>
+  </data>
+  <data name="Champion.Yone.Name" xml:space="preserve">
+    <value>犽凝</value>
+  </data>
+  <data name="Champion.Yone.Title" xml:space="preserve">
+    <value>不滅劍豪</value>
+  </data>
+  <data name="Champion.Yorick.Name" xml:space="preserve">
+    <value>約瑞科</value>
+  </data>
+  <data name="Champion.Yorick.Title" xml:space="preserve">
+    <value>亡魂牧人</value>
+  </data>
+  <data name="Champion.Yuumi.Name" xml:space="preserve">
+    <value>悠咪</value>
+  </data>
+  <data name="Champion.Yuumi.Title" xml:space="preserve">
+    <value>魔法靈貓</value>
+  </data>
+  <data name="Champion.Zac.Name" xml:space="preserve">
+    <value>札克</value>
+  </data>
+  <data name="Champion.Zac.Title" xml:space="preserve">
+    <value>魔人</value>
+  </data>
+  <data name="Champion.Zed.Name" xml:space="preserve">
+    <value>劫</value>
+  </data>
+  <data name="Champion.Zed.Title" xml:space="preserve">
+    <value>影忍至尊</value>
+  </data>
+  <data name="Champion.Ziggs.Name" xml:space="preserve">
+    <value>希格斯</value>
+  </data>
+  <data name="Champion.Ziggs.Title" xml:space="preserve">
+    <value>魔法爆破專家</value>
+  </data>
+  <data name="Champion.Zilean.Name" xml:space="preserve">
+    <value>極靈</value>
+  </data>
+  <data name="Champion.Zilean.Title" xml:space="preserve">
+    <value>時光守護者</value>
+  </data>
+  <data name="Champion.Zoe.Name" xml:space="preserve">
+    <value>柔依</value>
+  </data>
+  <data name="Champion.Zoe.Title" xml:space="preserve">
+    <value>暮光星靈</value>
+  </data>
+  <data name="Champion.Zyra.Name" xml:space="preserve">
+    <value>枷蘿</value>
+  </data>
+  <data name="Champion.Zyra.Title" xml:space="preserve">
+    <value>荊棘漫遊者</value>
+  </data>
+</root>

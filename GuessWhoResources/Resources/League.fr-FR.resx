@@ -1,0 +1,1074 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BasicCategory.Assassin" xml:space="preserve">
+    <value>Assassin</value>
+  </data>
+  <data name="BasicCategory.Fighter" xml:space="preserve">
+    <value>Combattant</value>
+  </data>
+  <data name="BasicCategory.Marksman" xml:space="preserve">
+    <value>Tireur</value>
+  </data>
+  <data name="BasicCategory.Mage" xml:space="preserve">
+    <value>Mage</value>
+  </data>
+  <data name="BasicCategory.Support" xml:space="preserve">
+    <value>Support</value>
+  </data>
+  <data name="BasicCategory.Tank" xml:space="preserve">
+    <value>Tank</value>
+  </data>
+  <data name="Champion.Aatrox.Name" xml:space="preserve">
+    <value>Aatrox</value>
+  </data>
+  <data name="Champion.Aatrox.Title" xml:space="preserve">
+    <value>Épée des Darkin</value>
+  </data>
+  <data name="Champion.Ahri.Name" xml:space="preserve">
+    <value>Ahri</value>
+  </data>
+  <data name="Champion.Ahri.Title" xml:space="preserve">
+    <value>Renard à neuf queues</value>
+  </data>
+  <data name="Champion.Akali.Name" xml:space="preserve">
+    <value>Akali</value>
+  </data>
+  <data name="Champion.Akali.Title" xml:space="preserve">
+    <value>Assassin rebelle</value>
+  </data>
+  <data name="Champion.Akshan.Name" xml:space="preserve">
+    <value>Akshan</value>
+  </data>
+  <data name="Champion.Akshan.Title" xml:space="preserve">
+    <value>Sentinelle rebelle</value>
+  </data>
+  <data name="Champion.Alistar.Name" xml:space="preserve">
+    <value>Alistar</value>
+  </data>
+  <data name="Champion.Alistar.Title" xml:space="preserve">
+    <value>Minotaure</value>
+  </data>
+  <data name="Champion.Amumu.Name" xml:space="preserve">
+    <value>Amumu</value>
+  </data>
+  <data name="Champion.Amumu.Title" xml:space="preserve">
+    <value>Momie mélancolique</value>
+  </data>
+  <data name="Champion.Anivia.Name" xml:space="preserve">
+    <value>Anivia</value>
+  </data>
+  <data name="Champion.Anivia.Title" xml:space="preserve">
+    <value>Cryophénix</value>
+  </data>
+  <data name="Champion.Annie.Name" xml:space="preserve">
+    <value>Annie</value>
+  </data>
+  <data name="Champion.Annie.Title" xml:space="preserve">
+    <value>Enfant des ténèbres</value>
+  </data>
+  <data name="Champion.Aphelios.Name" xml:space="preserve">
+    <value>Aphelios</value>
+  </data>
+  <data name="Champion.Aphelios.Title" xml:space="preserve">
+    <value>Arme des Lunaris</value>
+  </data>
+  <data name="Champion.Ashe.Name" xml:space="preserve">
+    <value>Ashe</value>
+  </data>
+  <data name="Champion.Ashe.Title" xml:space="preserve">
+    <value>Archère de givre</value>
+  </data>
+  <data name="Champion.AurelionSol.Name" xml:space="preserve">
+    <value>Aurelion Sol</value>
+  </data>
+  <data name="Champion.AurelionSol.Title" xml:space="preserve">
+    <value>Forgeur d'étoiles</value>
+  </data>
+  <data name="Champion.Azir.Name" xml:space="preserve">
+    <value>Azir</value>
+  </data>
+  <data name="Champion.Azir.Title" xml:space="preserve">
+    <value>Empereur des sables</value>
+  </data>
+  <data name="Champion.Bard.Name" xml:space="preserve">
+    <value>Bard</value>
+  </data>
+  <data name="Champion.Bard.Title" xml:space="preserve">
+    <value>Gardien errant</value>
+  </data>
+  <data name="Champion.Blitzcrank.Name" xml:space="preserve">
+    <value>Blitzcrank</value>
+  </data>
+  <data name="Champion.Blitzcrank.Title" xml:space="preserve">
+    <value>Golem de vapeur</value>
+  </data>
+  <data name="Champion.Brand.Name" xml:space="preserve">
+    <value>Brand</value>
+  </data>
+  <data name="Champion.Brand.Title" xml:space="preserve">
+    <value>Vengeur flamboyant</value>
+  </data>
+  <data name="Champion.Braum.Name" xml:space="preserve">
+    <value>Braum</value>
+  </data>
+  <data name="Champion.Braum.Title" xml:space="preserve">
+    <value>Cœur de Freljord</value>
+  </data>
+  <data name="Champion.Caitlyn.Name" xml:space="preserve">
+    <value>Caitlyn</value>
+  </data>
+  <data name="Champion.Caitlyn.Title" xml:space="preserve">
+    <value>Shérif de Piltover</value>
+  </data>
+  <data name="Champion.Camille.Name" xml:space="preserve">
+    <value>Camille</value>
+  </data>
+  <data name="Champion.Camille.Title" xml:space="preserve">
+    <value>Ombre d'acier</value>
+  </data>
+  <data name="Champion.Cassiopeia.Name" xml:space="preserve">
+    <value>Cassiopeia</value>
+  </data>
+  <data name="Champion.Cassiopeia.Title" xml:space="preserve">
+    <value>Étreinte du serpent</value>
+  </data>
+  <data name="Champion.Chogath.Name" xml:space="preserve">
+    <value>Cho'Gath</value>
+  </data>
+  <data name="Champion.Chogath.Title" xml:space="preserve">
+    <value>Terreur noire</value>
+  </data>
+  <data name="Champion.Corki.Name" xml:space="preserve">
+    <value>Corki</value>
+  </data>
+  <data name="Champion.Corki.Title" xml:space="preserve">
+    <value>Artilleur téméraire</value>
+  </data>
+  <data name="Champion.Darius.Name" xml:space="preserve">
+    <value>Darius</value>
+  </data>
+  <data name="Champion.Darius.Title" xml:space="preserve">
+    <value>Main de Noxus</value>
+  </data>
+  <data name="Champion.Diana.Name" xml:space="preserve">
+    <value>Diana</value>
+  </data>
+  <data name="Champion.Diana.Title" xml:space="preserve">
+    <value>Mépris de la lune</value>
+  </data>
+  <data name="Champion.Draven.Name" xml:space="preserve">
+    <value>Draven</value>
+  </data>
+  <data name="Champion.Draven.Title" xml:space="preserve">
+    <value>Glorieux exécuteur</value>
+  </data>
+  <data name="Champion.DrMundo.Name" xml:space="preserve">
+    <value>Dr. Mundo</value>
+  </data>
+  <data name="Champion.DrMundo.Title" xml:space="preserve">
+    <value>Dément de Zaun</value>
+  </data>
+  <data name="Champion.Ekko.Name" xml:space="preserve">
+    <value>Ekko</value>
+  </data>
+  <data name="Champion.Ekko.Title" xml:space="preserve">
+    <value>Fractureur du temps</value>
+  </data>
+  <data name="Champion.Elise.Name" xml:space="preserve">
+    <value>Elise</value>
+  </data>
+  <data name="Champion.Elise.Title" xml:space="preserve">
+    <value>Reine araignée</value>
+  </data>
+  <data name="Champion.Evelynn.Name" xml:space="preserve">
+    <value>Evelynn</value>
+  </data>
+  <data name="Champion.Evelynn.Title" xml:space="preserve">
+    <value>Démon sadique</value>
+  </data>
+  <data name="Champion.Ezreal.Name" xml:space="preserve">
+    <value>Ezreal</value>
+  </data>
+  <data name="Champion.Ezreal.Title" xml:space="preserve">
+    <value>Explorateur prodigue</value>
+  </data>
+  <data name="Champion.Fiddlesticks.Name" xml:space="preserve">
+    <value>Fiddlesticks</value>
+  </data>
+  <data name="Champion.Fiddlesticks.Title" xml:space="preserve">
+    <value>Effroi nocturne</value>
+  </data>
+  <data name="Champion.Fiora.Name" xml:space="preserve">
+    <value>Fiora</value>
+  </data>
+  <data name="Champion.Fiora.Title" xml:space="preserve">
+    <value>Sublime bretteuse</value>
+  </data>
+  <data name="Champion.Fizz.Name" xml:space="preserve">
+    <value>Fizz</value>
+  </data>
+  <data name="Champion.Fizz.Title" xml:space="preserve">
+    <value>Filou des mers</value>
+  </data>
+  <data name="Champion.Galio.Name" xml:space="preserve">
+    <value>Galio</value>
+  </data>
+  <data name="Champion.Galio.Title" xml:space="preserve">
+    <value>Colosse</value>
+  </data>
+  <data name="Champion.Gangplank.Name" xml:space="preserve">
+    <value>Gangplank</value>
+  </data>
+  <data name="Champion.Gangplank.Title" xml:space="preserve">
+    <value>Fléau des mers</value>
+  </data>
+  <data name="Champion.Garen.Name" xml:space="preserve">
+    <value>Garen</value>
+  </data>
+  <data name="Champion.Garen.Title" xml:space="preserve">
+    <value>Force de Demacia</value>
+  </data>
+  <data name="Champion.Gnar.Name" xml:space="preserve">
+    <value>Gnar</value>
+  </data>
+  <data name="Champion.Gnar.Title" xml:space="preserve">
+    <value>Chaînon manquant</value>
+  </data>
+  <data name="Champion.Gragas.Name" xml:space="preserve">
+    <value>Gragas</value>
+  </data>
+  <data name="Champion.Gragas.Title" xml:space="preserve">
+    <value>Agitateur</value>
+  </data>
+  <data name="Champion.Graves.Name" xml:space="preserve">
+    <value>Graves</value>
+  </data>
+  <data name="Champion.Graves.Title" xml:space="preserve">
+    <value>Hors-la-loi</value>
+  </data>
+  <data name="Champion.Gwen.Name" xml:space="preserve">
+    <value>Gwen</value>
+  </data>
+  <data name="Champion.Gwen.Title" xml:space="preserve">
+    <value>Couturière sacrée</value>
+  </data>
+  <data name="Champion.Hecarim.Name" xml:space="preserve">
+    <value>Hecarim</value>
+  </data>
+  <data name="Champion.Hecarim.Title" xml:space="preserve">
+    <value>Ombre de la guerre</value>
+  </data>
+  <data name="Champion.Heimerdinger.Name" xml:space="preserve">
+    <value>Heimerdinger</value>
+  </data>
+  <data name="Champion.Heimerdinger.Title" xml:space="preserve">
+    <value>Inventeur réputé</value>
+  </data>
+  <data name="Champion.Illaoi.Name" xml:space="preserve">
+    <value>Illaoi</value>
+  </data>
+  <data name="Champion.Illaoi.Title" xml:space="preserve">
+    <value>Prêtresse du kraken</value>
+  </data>
+  <data name="Champion.Irelia.Name" xml:space="preserve">
+    <value>Irelia</value>
+  </data>
+  <data name="Champion.Irelia.Title" xml:space="preserve">
+    <value>Danseuse des lames</value>
+  </data>
+  <data name="Champion.Ivern.Name" xml:space="preserve">
+    <value>Ivern</value>
+  </data>
+  <data name="Champion.Ivern.Title" xml:space="preserve">
+    <value>Aîné de la forêt</value>
+  </data>
+  <data name="Champion.Janna.Name" xml:space="preserve">
+    <value>Janna</value>
+  </data>
+  <data name="Champion.Janna.Title" xml:space="preserve">
+    <value>Avatar de l'air</value>
+  </data>
+  <data name="Champion.JarvanIV.Name" xml:space="preserve">
+    <value>Jarvan IV</value>
+  </data>
+  <data name="Champion.JarvanIV.Title" xml:space="preserve">
+    <value>Exemple demacien</value>
+  </data>
+  <data name="Champion.Jax.Name" xml:space="preserve">
+    <value>Jax</value>
+  </data>
+  <data name="Champion.Jax.Title" xml:space="preserve">
+    <value>Maître d'armes</value>
+  </data>
+  <data name="Champion.Jayce.Name" xml:space="preserve">
+    <value>Jayce</value>
+  </data>
+  <data name="Champion.Jayce.Title" xml:space="preserve">
+    <value>Protecteur du futur</value>
+  </data>
+  <data name="Champion.Jhin.Name" xml:space="preserve">
+    <value>Jhin</value>
+  </data>
+  <data name="Champion.Jhin.Title" xml:space="preserve">
+    <value>Virtuose</value>
+  </data>
+  <data name="Champion.Jinx.Name" xml:space="preserve">
+    <value>Jinx</value>
+  </data>
+  <data name="Champion.Jinx.Title" xml:space="preserve">
+    <value>Gâchette folle</value>
+  </data>
+  <data name="Champion.Kaisa.Name" xml:space="preserve">
+    <value>Kai'Sa</value>
+  </data>
+  <data name="Champion.Kaisa.Title" xml:space="preserve">
+    <value>Fille du Néant</value>
+  </data>
+  <data name="Champion.Kalista.Name" xml:space="preserve">
+    <value>Kalista</value>
+  </data>
+  <data name="Champion.Kalista.Title" xml:space="preserve">
+    <value>Lance de la vengeance</value>
+  </data>
+  <data name="Champion.Karma.Name" xml:space="preserve">
+    <value>Karma</value>
+  </data>
+  <data name="Champion.Karma.Title" xml:space="preserve">
+    <value>Sagesse incarnée</value>
+  </data>
+  <data name="Champion.Karthus.Name" xml:space="preserve">
+    <value>Karthus</value>
+  </data>
+  <data name="Champion.Karthus.Title" xml:space="preserve">
+    <value>Liche</value>
+  </data>
+  <data name="Champion.Kassadin.Name" xml:space="preserve">
+    <value>Kassadin</value>
+  </data>
+  <data name="Champion.Kassadin.Title" xml:space="preserve">
+    <value>Chasseur du Néant</value>
+  </data>
+  <data name="Champion.Katarina.Name" xml:space="preserve">
+    <value>Katarina</value>
+  </data>
+  <data name="Champion.Katarina.Title" xml:space="preserve">
+    <value>Lame sinistre</value>
+  </data>
+  <data name="Champion.Kayle.Name" xml:space="preserve">
+    <value>Kayle</value>
+  </data>
+  <data name="Champion.Kayle.Title" xml:space="preserve">
+    <value>Vertueuse</value>
+  </data>
+  <data name="Champion.Kayn.Name" xml:space="preserve">
+    <value>Kayn</value>
+  </data>
+  <data name="Champion.Kayn.Title" xml:space="preserve">
+    <value>Faucheur de l'ombre</value>
+  </data>
+  <data name="Champion.Kennen.Name" xml:space="preserve">
+    <value>Kennen</value>
+  </data>
+  <data name="Champion.Kennen.Title" xml:space="preserve">
+    <value>Cœur de la tempête</value>
+  </data>
+  <data name="Champion.Khazix.Name" xml:space="preserve">
+    <value>Kha'Zix</value>
+  </data>
+  <data name="Champion.Khazix.Title" xml:space="preserve">
+    <value>Faucheur du Néant</value>
+  </data>
+  <data name="Champion.Kindred.Name" xml:space="preserve">
+    <value>Kindred</value>
+  </data>
+  <data name="Champion.Kindred.Title" xml:space="preserve">
+    <value>Chasseurs éternels</value>
+  </data>
+  <data name="Champion.Kled.Name" xml:space="preserve">
+    <value>Kled</value>
+  </data>
+  <data name="Champion.Kled.Title" xml:space="preserve">
+    <value>Cavalier colérique</value>
+  </data>
+  <data name="Champion.KogMaw.Name" xml:space="preserve">
+    <value>Kog'Maw</value>
+  </data>
+  <data name="Champion.KogMaw.Title" xml:space="preserve">
+    <value>Gueule des abysses</value>
+  </data>
+  <data name="Champion.Leblanc.Name" xml:space="preserve">
+    <value>LeBlanc</value>
+  </data>
+  <data name="Champion.Leblanc.Title" xml:space="preserve">
+    <value>Manipulatrice</value>
+  </data>
+  <data name="Champion.LeeSin.Name" xml:space="preserve">
+    <value>Lee Sin</value>
+  </data>
+  <data name="Champion.LeeSin.Title" xml:space="preserve">
+    <value>Moine aveugle</value>
+  </data>
+  <data name="Champion.Leona.Name" xml:space="preserve">
+    <value>Leona</value>
+  </data>
+  <data name="Champion.Leona.Title" xml:space="preserve">
+    <value>Aube radieuse</value>
+  </data>
+  <data name="Champion.Lillia.Name" xml:space="preserve">
+    <value>Lillia</value>
+  </data>
+  <data name="Champion.Lillia.Title" xml:space="preserve">
+    <value>Fleur timide</value>
+  </data>
+  <data name="Champion.Lissandra.Name" xml:space="preserve">
+    <value>Lissandra</value>
+  </data>
+  <data name="Champion.Lissandra.Title" xml:space="preserve">
+    <value>Sorcière de glace</value>
+  </data>
+  <data name="Champion.Lucian.Name" xml:space="preserve">
+    <value>Lucian</value>
+  </data>
+  <data name="Champion.Lucian.Title" xml:space="preserve">
+    <value>Purificateur</value>
+  </data>
+  <data name="Champion.Lulu.Name" xml:space="preserve">
+    <value>Lulu</value>
+  </data>
+  <data name="Champion.Lulu.Title" xml:space="preserve">
+    <value>Sorcière féérique</value>
+  </data>
+  <data name="Champion.Lux.Name" xml:space="preserve">
+    <value>Lux</value>
+  </data>
+  <data name="Champion.Lux.Title" xml:space="preserve">
+    <value>Dame de lumière</value>
+  </data>
+  <data name="Champion.Malphite.Name" xml:space="preserve">
+    <value>Malphite</value>
+  </data>
+  <data name="Champion.Malphite.Title" xml:space="preserve">
+    <value>Éclat du monolithe</value>
+  </data>
+  <data name="Champion.Malzahar.Name" xml:space="preserve">
+    <value>Malzahar</value>
+  </data>
+  <data name="Champion.Malzahar.Title" xml:space="preserve">
+    <value>Prophète du Néant</value>
+  </data>
+  <data name="Champion.Maokai.Name" xml:space="preserve">
+    <value>Maokai</value>
+  </data>
+  <data name="Champion.Maokai.Title" xml:space="preserve">
+    <value>Tréant torturé</value>
+  </data>
+  <data name="Champion.MasterYi.Name" xml:space="preserve">
+    <value>Maître Yi</value>
+  </data>
+  <data name="Champion.MasterYi.Title" xml:space="preserve">
+    <value>Fine lame Wuju</value>
+  </data>
+  <data name="Champion.MissFortune.Name" xml:space="preserve">
+    <value>Miss Fortune</value>
+  </data>
+  <data name="Champion.MissFortune.Title" xml:space="preserve">
+    <value>Chasseuse de primes</value>
+  </data>
+  <data name="Champion.MonkeyKing.Name" xml:space="preserve">
+    <value>Wukong</value>
+  </data>
+  <data name="Champion.MonkeyKing.Title" xml:space="preserve">
+    <value>Roi des singes</value>
+  </data>
+  <data name="Champion.Mordekaiser.Name" xml:space="preserve">
+    <value>Mordekaiser</value>
+  </data>
+  <data name="Champion.Mordekaiser.Title" xml:space="preserve">
+    <value>Revenant de fer</value>
+  </data>
+  <data name="Champion.Morgana.Name" xml:space="preserve">
+    <value>Morgana</value>
+  </data>
+  <data name="Champion.Morgana.Title" xml:space="preserve">
+    <value>Déchue</value>
+  </data>
+  <data name="Champion.Nami.Name" xml:space="preserve">
+    <value>Nami</value>
+  </data>
+  <data name="Champion.Nami.Title" xml:space="preserve">
+    <value>Aquamancienne</value>
+  </data>
+  <data name="Champion.Nasus.Name" xml:space="preserve">
+    <value>Nasus</value>
+  </data>
+  <data name="Champion.Nasus.Title" xml:space="preserve">
+    <value>Gardien des sables</value>
+  </data>
+  <data name="Champion.Nautilus.Name" xml:space="preserve">
+    <value>Nautilus</value>
+  </data>
+  <data name="Champion.Nautilus.Title" xml:space="preserve">
+    <value>Titan des profondeurs</value>
+  </data>
+  <data name="Champion.Neeko.Name" xml:space="preserve">
+    <value>Neeko</value>
+  </data>
+  <data name="Champion.Neeko.Title" xml:space="preserve">
+    <value>Caméléon curieux</value>
+  </data>
+  <data name="Champion.Nidalee.Name" xml:space="preserve">
+    <value>Nidalee</value>
+  </data>
+  <data name="Champion.Nidalee.Title" xml:space="preserve">
+    <value>Chasseresse bestiale</value>
+  </data>
+  <data name="Champion.Nocturne.Name" xml:space="preserve">
+    <value>Nocturne</value>
+  </data>
+  <data name="Champion.Nocturne.Title" xml:space="preserve">
+    <value>Éternel cauchemar</value>
+  </data>
+  <data name="Champion.Nunu.Name" xml:space="preserve">
+    <value>Nunu et Willump</value>
+  </data>
+  <data name="Champion.Nunu.Title" xml:space="preserve">
+    <value>Le Garçon et son yéti</value>
+  </data>
+  <data name="Champion.Olaf.Name" xml:space="preserve">
+    <value>Olaf</value>
+  </data>
+  <data name="Champion.Olaf.Title" xml:space="preserve">
+    <value>Berzerker</value>
+  </data>
+  <data name="Champion.Orianna.Name" xml:space="preserve">
+    <value>Orianna</value>
+  </data>
+  <data name="Champion.Orianna.Title" xml:space="preserve">
+    <value>Demoiselle mécanique</value>
+  </data>
+  <data name="Champion.Ornn.Name" xml:space="preserve">
+    <value>Ornn</value>
+  </data>
+  <data name="Champion.Ornn.Title" xml:space="preserve">
+    <value>Dieu de la forge volcanique</value>
+  </data>
+  <data name="Champion.Pantheon.Name" xml:space="preserve">
+    <value>Pantheon</value>
+  </data>
+  <data name="Champion.Pantheon.Title" xml:space="preserve">
+    <value>Lance éternelle</value>
+  </data>
+  <data name="Champion.Poppy.Name" xml:space="preserve">
+    <value>Poppy</value>
+  </data>
+  <data name="Champion.Poppy.Title" xml:space="preserve">
+    <value>Gardienne du marteau</value>
+  </data>
+  <data name="Champion.Pyke.Name" xml:space="preserve">
+    <value>Pyke</value>
+  </data>
+  <data name="Champion.Pyke.Title" xml:space="preserve">
+    <value>Éventreur des abysses</value>
+  </data>
+  <data name="Champion.Qiyana.Name" xml:space="preserve">
+    <value>Qiyana</value>
+  </data>
+  <data name="Champion.Qiyana.Title" xml:space="preserve">
+    <value>Impératrice des éléments</value>
+  </data>
+  <data name="Champion.Quinn.Name" xml:space="preserve">
+    <value>Quinn</value>
+  </data>
+  <data name="Champion.Quinn.Title" xml:space="preserve">
+    <value>Ailes de Demacia</value>
+  </data>
+  <data name="Champion.Rakan.Name" xml:space="preserve">
+    <value>Rakan</value>
+  </data>
+  <data name="Champion.Rakan.Title" xml:space="preserve">
+    <value>Charmeur</value>
+  </data>
+  <data name="Champion.Rammus.Name" xml:space="preserve">
+    <value>Rammus</value>
+  </data>
+  <data name="Champion.Rammus.Title" xml:space="preserve">
+    <value>Tatou blindé</value>
+  </data>
+  <data name="Champion.RekSai.Name" xml:space="preserve">
+    <value>Rek'Sai</value>
+  </data>
+  <data name="Champion.RekSai.Title" xml:space="preserve">
+    <value>Traqueuse du Néant</value>
+  </data>
+  <data name="Champion.Rell.Name" xml:space="preserve">
+    <value>Rell</value>
+  </data>
+  <data name="Champion.Rell.Title" xml:space="preserve">
+    <value>Vierge de fer</value>
+  </data>
+  <data name="Champion.Renekton.Name" xml:space="preserve">
+    <value>Renekton</value>
+  </data>
+  <data name="Champion.Renekton.Title" xml:space="preserve">
+    <value>Dévoreur des sables</value>
+  </data>
+  <data name="Champion.Rengar.Name" xml:space="preserve">
+    <value>Rengar</value>
+  </data>
+  <data name="Champion.Rengar.Title" xml:space="preserve">
+    <value>Fier traqueur</value>
+  </data>
+  <data name="Champion.Riven.Name" xml:space="preserve">
+    <value>Riven</value>
+  </data>
+  <data name="Champion.Riven.Title" xml:space="preserve">
+    <value>Exilée brisée</value>
+  </data>
+  <data name="Champion.Rumble.Name" xml:space="preserve">
+    <value>Rumble</value>
+  </data>
+  <data name="Champion.Rumble.Title" xml:space="preserve">
+    <value>Menace mécanisée</value>
+  </data>
+  <data name="Champion.Ryze.Name" xml:space="preserve">
+    <value>Ryze</value>
+  </data>
+  <data name="Champion.Ryze.Title" xml:space="preserve">
+    <value>Mage runique</value>
+  </data>
+  <data name="Champion.Samira.Name" xml:space="preserve">
+    <value>Samira</value>
+  </data>
+  <data name="Champion.Samira.Title" xml:space="preserve">
+    <value>Rose du désert</value>
+  </data>
+  <data name="Champion.Sejuani.Name" xml:space="preserve">
+    <value>Sejuani</value>
+  </data>
+  <data name="Champion.Sejuani.Title" xml:space="preserve">
+    <value>Fureur du nord</value>
+  </data>
+  <data name="Champion.Senna.Name" xml:space="preserve">
+    <value>Senna</value>
+  </data>
+  <data name="Champion.Senna.Title" xml:space="preserve">
+    <value>Rédemptrice</value>
+  </data>
+  <data name="Champion.Seraphine.Name" xml:space="preserve">
+    <value>Séraphine</value>
+  </data>
+  <data name="Champion.Seraphine.Title" xml:space="preserve">
+    <value>Chanteuse rêveuse</value>
+  </data>
+  <data name="Champion.Sett.Name" xml:space="preserve">
+    <value>Sett</value>
+  </data>
+  <data name="Champion.Sett.Title" xml:space="preserve">
+    <value>Patron</value>
+  </data>
+  <data name="Champion.Shaco.Name" xml:space="preserve">
+    <value>Shaco</value>
+  </data>
+  <data name="Champion.Shaco.Title" xml:space="preserve">
+    <value>Bouffon des ténèbres</value>
+  </data>
+  <data name="Champion.Shen.Name" xml:space="preserve">
+    <value>Shen</value>
+  </data>
+  <data name="Champion.Shen.Title" xml:space="preserve">
+    <value>Œil du crépuscule</value>
+  </data>
+  <data name="Champion.Shyvana.Name" xml:space="preserve">
+    <value>Shyvana</value>
+  </data>
+  <data name="Champion.Shyvana.Title" xml:space="preserve">
+    <value>Demi-dragon</value>
+  </data>
+  <data name="Champion.Singed.Name" xml:space="preserve">
+    <value>Singed</value>
+  </data>
+  <data name="Champion.Singed.Title" xml:space="preserve">
+    <value>Chimiste fou</value>
+  </data>
+  <data name="Champion.Sion.Name" xml:space="preserve">
+    <value>Sion</value>
+  </data>
+  <data name="Champion.Sion.Title" xml:space="preserve">
+    <value>Colosse mort-vivant</value>
+  </data>
+  <data name="Champion.Sivir.Name" xml:space="preserve">
+    <value>Sivir</value>
+  </data>
+  <data name="Champion.Sivir.Title" xml:space="preserve">
+    <value>Vierge martiale</value>
+  </data>
+  <data name="Champion.Skarner.Name" xml:space="preserve">
+    <value>Skarner</value>
+  </data>
+  <data name="Champion.Skarner.Title" xml:space="preserve">
+    <value>Gardien de cristal</value>
+  </data>
+  <data name="Champion.Sona.Name" xml:space="preserve">
+    <value>Sona</value>
+  </data>
+  <data name="Champion.Sona.Title" xml:space="preserve">
+    <value>Virtuose de la harpe</value>
+  </data>
+  <data name="Champion.Soraka.Name" xml:space="preserve">
+    <value>Soraka</value>
+  </data>
+  <data name="Champion.Soraka.Title" xml:space="preserve">
+    <value>Enfant des étoiles</value>
+  </data>
+  <data name="Champion.Swain.Name" xml:space="preserve">
+    <value>Swain</value>
+  </data>
+  <data name="Champion.Swain.Title" xml:space="preserve">
+    <value>Grand général noxien</value>
+  </data>
+  <data name="Champion.Sylas.Name" xml:space="preserve">
+    <value>Sylas</value>
+  </data>
+  <data name="Champion.Sylas.Title" xml:space="preserve">
+    <value>Révolutionnaire déchaîné</value>
+  </data>
+  <data name="Champion.Syndra.Name" xml:space="preserve">
+    <value>Syndra</value>
+  </data>
+  <data name="Champion.Syndra.Title" xml:space="preserve">
+    <value>Souveraine obscure</value>
+  </data>
+  <data name="Champion.TahmKench.Name" xml:space="preserve">
+    <value>Tahm Kench</value>
+  </data>
+  <data name="Champion.TahmKench.Title" xml:space="preserve">
+    <value>Roi des rivières</value>
+  </data>
+  <data name="Champion.Taliyah.Name" xml:space="preserve">
+    <value>Taliyah</value>
+  </data>
+  <data name="Champion.Taliyah.Title" xml:space="preserve">
+    <value>Tisseuse de pierres</value>
+  </data>
+  <data name="Champion.Talon.Name" xml:space="preserve">
+    <value>Talon</value>
+  </data>
+  <data name="Champion.Talon.Title" xml:space="preserve">
+    <value>Lame des ténèbres</value>
+  </data>
+  <data name="Champion.Taric.Name" xml:space="preserve">
+    <value>Taric</value>
+  </data>
+  <data name="Champion.Taric.Title" xml:space="preserve">
+    <value>Bouclier de Valoran</value>
+  </data>
+  <data name="Champion.Teemo.Name" xml:space="preserve">
+    <value>Teemo</value>
+  </data>
+  <data name="Champion.Teemo.Title" xml:space="preserve">
+    <value>Scout de Bantam</value>
+  </data>
+  <data name="Champion.Thresh.Name" xml:space="preserve">
+    <value>Thresh</value>
+  </data>
+  <data name="Champion.Thresh.Title" xml:space="preserve">
+    <value>Garde aux chaînes</value>
+  </data>
+  <data name="Champion.Tristana.Name" xml:space="preserve">
+    <value>Tristana</value>
+  </data>
+  <data name="Champion.Tristana.Title" xml:space="preserve">
+    <value>Canonnière yordle</value>
+  </data>
+  <data name="Champion.Trundle.Name" xml:space="preserve">
+    <value>Trundle</value>
+  </data>
+  <data name="Champion.Trundle.Title" xml:space="preserve">
+    <value>Roi des trolls</value>
+  </data>
+  <data name="Champion.Tryndamere.Name" xml:space="preserve">
+    <value>Tryndamere</value>
+  </data>
+  <data name="Champion.Tryndamere.Title" xml:space="preserve">
+    <value>Roi barbare</value>
+  </data>
+  <data name="Champion.TwistedFate.Name" xml:space="preserve">
+    <value>Twisted Fate</value>
+  </data>
+  <data name="Champion.TwistedFate.Title" xml:space="preserve">
+    <value>Maître des cartes</value>
+  </data>
+  <data name="Champion.Twitch.Name" xml:space="preserve">
+    <value>Twitch</value>
+  </data>
+  <data name="Champion.Twitch.Title" xml:space="preserve">
+    <value>Semeur de peste</value>
+  </data>
+  <data name="Champion.Udyr.Name" xml:space="preserve">
+    <value>Udyr</value>
+  </data>
+  <data name="Champion.Udyr.Title" xml:space="preserve">
+    <value>Gardien des esprits</value>
+  </data>
+  <data name="Champion.Urgot.Name" xml:space="preserve">
+    <value>Urgot</value>
+  </data>
+  <data name="Champion.Urgot.Title" xml:space="preserve">
+    <value>Broyeur</value>
+  </data>
+  <data name="Champion.Varus.Name" xml:space="preserve">
+    <value>Varus</value>
+  </data>
+  <data name="Champion.Varus.Title" xml:space="preserve">
+    <value>Flèche de la vengeance</value>
+  </data>
+  <data name="Champion.Vayne.Name" xml:space="preserve">
+    <value>Vayne</value>
+  </data>
+  <data name="Champion.Vayne.Title" xml:space="preserve">
+    <value>Chasseur nocturne</value>
+  </data>
+  <data name="Champion.Veigar.Name" xml:space="preserve">
+    <value>Veigar</value>
+  </data>
+  <data name="Champion.Veigar.Title" xml:space="preserve">
+    <value>Seigneur des maléfices</value>
+  </data>
+  <data name="Champion.Velkoz.Name" xml:space="preserve">
+    <value>Vel'Koz</value>
+  </data>
+  <data name="Champion.Velkoz.Title" xml:space="preserve">
+    <value>Œil du Néant</value>
+  </data>
+  <data name="Champion.Vi.Name" xml:space="preserve">
+    <value>Vi</value>
+  </data>
+  <data name="Champion.Vi.Title" xml:space="preserve">
+    <value>Cogne de Piltover</value>
+  </data>
+  <data name="Champion.Viego.Name" xml:space="preserve">
+    <value>Viego</value>
+  </data>
+  <data name="Champion.Viego.Title" xml:space="preserve">
+    <value>Roi déchu</value>
+  </data>
+  <data name="Champion.Viktor.Name" xml:space="preserve">
+    <value>Viktor</value>
+  </data>
+  <data name="Champion.Viktor.Title" xml:space="preserve">
+    <value>Héraut des machines</value>
+  </data>
+  <data name="Champion.Vladimir.Name" xml:space="preserve">
+    <value>Vladimir</value>
+  </data>
+  <data name="Champion.Vladimir.Title" xml:space="preserve">
+    <value>Saigneur pourpre</value>
+  </data>
+  <data name="Champion.Volibear.Name" xml:space="preserve">
+    <value>Volibear</value>
+  </data>
+  <data name="Champion.Volibear.Title" xml:space="preserve">
+    <value>Tempête impitoyable</value>
+  </data>
+  <data name="Champion.Warwick.Name" xml:space="preserve">
+    <value>Warwick</value>
+  </data>
+  <data name="Champion.Warwick.Title" xml:space="preserve">
+    <value>Fureur déchaînée de Zaun</value>
+  </data>
+  <data name="Champion.Xayah.Name" xml:space="preserve">
+    <value>Xayah</value>
+  </data>
+  <data name="Champion.Xayah.Title" xml:space="preserve">
+    <value>Rebelle</value>
+  </data>
+  <data name="Champion.Xerath.Name" xml:space="preserve">
+    <value>Xerath</value>
+  </data>
+  <data name="Champion.Xerath.Title" xml:space="preserve">
+    <value>Mage suprême</value>
+  </data>
+  <data name="Champion.XinZhao.Name" xml:space="preserve">
+    <value>Xin Zhao</value>
+  </data>
+  <data name="Champion.XinZhao.Title" xml:space="preserve">
+    <value>Sénéchal de Demacia</value>
+  </data>
+  <data name="Champion.Yasuo.Name" xml:space="preserve">
+    <value>Yasuo</value>
+  </data>
+  <data name="Champion.Yasuo.Title" xml:space="preserve">
+    <value>Disgracié</value>
+  </data>
+  <data name="Champion.Yone.Name" xml:space="preserve">
+    <value>Yone</value>
+  </data>
+  <data name="Champion.Yone.Title" xml:space="preserve">
+    <value>Inoublié</value>
+  </data>
+  <data name="Champion.Yorick.Name" xml:space="preserve">
+    <value>Yorick</value>
+  </data>
+  <data name="Champion.Yorick.Title" xml:space="preserve">
+    <value>Berger des âmes</value>
+  </data>
+  <data name="Champion.Yuumi.Name" xml:space="preserve">
+    <value>Yuumi</value>
+  </data>
+  <data name="Champion.Yuumi.Title" xml:space="preserve">
+    <value>Gardienne du Grimoire</value>
+  </data>
+  <data name="Champion.Zac.Name" xml:space="preserve">
+    <value>Zac</value>
+  </data>
+  <data name="Champion.Zac.Title" xml:space="preserve">
+    <value>Arme secrète</value>
+  </data>
+  <data name="Champion.Zed.Name" xml:space="preserve">
+    <value>Zed</value>
+  </data>
+  <data name="Champion.Zed.Title" xml:space="preserve">
+    <value>Maître des ombres</value>
+  </data>
+  <data name="Champion.Ziggs.Name" xml:space="preserve">
+    <value>Ziggs</value>
+  </data>
+  <data name="Champion.Ziggs.Title" xml:space="preserve">
+    <value>Expert des Hexplosifs</value>
+  </data>
+  <data name="Champion.Zilean.Name" xml:space="preserve">
+    <value>Zilean</value>
+  </data>
+  <data name="Champion.Zilean.Title" xml:space="preserve">
+    <value>Gardien du Temps</value>
+  </data>
+  <data name="Champion.Zoe.Name" xml:space="preserve">
+    <value>Zoé</value>
+  </data>
+  <data name="Champion.Zoe.Title" xml:space="preserve">
+    <value>Manifestation du Crépuscule</value>
+  </data>
+  <data name="Champion.Zyra.Name" xml:space="preserve">
+    <value>Zyra</value>
+  </data>
+  <data name="Champion.Zyra.Title" xml:space="preserve">
+    <value>Dame aux ronces</value>
+  </data>
+</root>

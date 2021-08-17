@@ -65,10 +65,60 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\League.cs-CZ.resx" />
+    <EmbeddedResource Include="Resources\League.de-DE.resx" />
+    <EmbeddedResource Include="Resources\League.el-GR.resx" />
+    <EmbeddedResource Include="Resources\League.en-AU.resx" />
+    <EmbeddedResource Include="Resources\League.en-GB.resx" />
+    <EmbeddedResource Include="Resources\League.en-PH.resx" />
+    <EmbeddedResource Include="Resources\League.en-SG.resx" />
+    <EmbeddedResource Include="Resources\League.en-US.resx" />
+    <EmbeddedResource Include="Resources\League.es-AR.resx" />
+    <EmbeddedResource Include="Resources\League.es-ES.resx" />
+    <EmbeddedResource Include="Resources\League.es-MX.resx" />
+    <EmbeddedResource Include="Resources\League.fr-FR.resx" />
+    <EmbeddedResource Include="Resources\League.hu-HU.resx" />
+    <EmbeddedResource Include="Resources\League.it-IT.resx" />
+    <EmbeddedResource Include="Resources\League.ja-JP.resx" />
+    <EmbeddedResource Include="Resources\League.ko-KR.resx" />
+    <EmbeddedResource Include="Resources\League.pl-PL.resx" />
+    <EmbeddedResource Include="Resources\League.pt-BR.resx" />
+    <EmbeddedResource Include="Resources\League.ro-RO.resx" />
+    <EmbeddedResource Include="Resources\League.ru-RU.resx" />
+    <EmbeddedResource Include="Resources\League.th-TH.resx" />
+    <EmbeddedResource Include="Resources\League.tr-TR.resx" />
+    <EmbeddedResource Include="Resources\League.vn-VN.resx" />
+    <EmbeddedResource Include="Resources\League.zh-CN.resx" />
+    <EmbeddedResource Include="Resources\League.zh-MY.resx" />
+    <EmbeddedResource Include="Resources\League.zh-TW.resx" />
+    <EmbeddedResource Include="Resources\Locale.cs-CZ.resx" />
+    <EmbeddedResource Include="Resources\Locale.de-DE.resx" />
+    <EmbeddedResource Include="Resources\Locale.el-GR.resx" />
+    <EmbeddedResource Include="Resources\Locale.en-AU.resx" />
+    <EmbeddedResource Include="Resources\Locale.en-GB.resx" />
+    <EmbeddedResource Include="Resources\Locale.en-PH.resx" />
+    <EmbeddedResource Include="Resources\Locale.en-SG.resx" />
+    <EmbeddedResource Include="Resources\Locale.en-US.resx" />
+    <EmbeddedResource Include="Resources\Locale.es-AR.resx" />
+    <EmbeddedResource Include="Resources\Locale.es-ES.resx" />
+    <EmbeddedResource Include="Resources\Locale.es-MX.resx" />
+    <EmbeddedResource Include="Resources\Locale.fr-FR.resx" />
+    <EmbeddedResource Include="Resources\Locale.hu-HU.resx" />
+    <EmbeddedResource Include="Resources\Locale.it-IT.resx" />
+    <EmbeddedResource Include="Resources\Locale.ja-JP.resx" />
+    <EmbeddedResource Include="Resources\Locale.ko-KR.resx" />
+    <EmbeddedResource Include="Resources\Locale.pl-PL.resx" />
+    <EmbeddedResource Include="Resources\Locale.pt-BR.resx" />
+    <EmbeddedResource Include="Resources\Locale.ro-RO.resx" />
+    <EmbeddedResource Include="Resources\Locale.ru-RU.resx" />
+    <EmbeddedResource Include="Resources\Locale.th-TH.resx" />
+    <EmbeddedResource Include="Resources\Locale.tr-TR.resx" />
+    <EmbeddedResource Include="Resources\Locale.vn-VN.resx" />
+    <EmbeddedResource Include="Resources\Locale.zh-CN.resx" />
+    <EmbeddedResource Include="Resources\Locale.zh-MY.resx" />
+    <EmbeddedResource Include="Resources\Locale.zh-TW.resx" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
@@ -76,4 +126,469 @@
     <Resource Include="Champions\Aatrox.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Resource Include="Champions\Ahri.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Akali.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Akshan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Alistar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Amumu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Anivia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Annie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Aphelios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Ashe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\AurelionSol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Azir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Bard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Blitzcrank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Brand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Braum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Caitlyn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Camille.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Cassiopeia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Chogath.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Corki.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Darius.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Diana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Draven.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\DrMundo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Ekko.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Elise.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Evelynn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Ezreal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Fiddlesticks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Fiora.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Fizz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Galio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Gangplank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Garen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Gnar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Gragas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Graves.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Gwen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Hecarim.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Heimerdinger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Illaoi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Irelia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Ivern.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Janna.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\JarvanIV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Jax.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Jayce.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Jhin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Jinx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Kaisa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Kalista.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Karma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Karthus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Kassadin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Katarina.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Kayle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Kayn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Kennen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Khazix.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Kindred.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Kled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\KogMaw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Leblanc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\LeeSin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Leona.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Lillia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Lissandra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Lucian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Lulu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Lux.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Malphite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Malzahar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Maokai.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\MasterYi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\MissFortune.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\MonkeyKing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Mordekaiser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Morgana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Nami.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Nasus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Nautilus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Neeko.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Nidalee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Nocturne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Nunu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Olaf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Orianna.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Ornn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Pantheon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Poppy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Pyke.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Qiyana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Quinn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Rakan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Rammus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\RekSai.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Rell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Renekton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Rengar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Riven.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Rumble.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Ryze.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Samira.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Sejuani.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Senna.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Seraphine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Sett.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Shaco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Shen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Shyvana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Singed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Sion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Sivir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Skarner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Sona.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Soraka.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Swain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Sylas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Syndra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\TahmKench.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Taliyah.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Talon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Taric.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Teemo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Thresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Tristana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Trundle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Tryndamere.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\TwistedFate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Twitch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Udyr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Urgot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Varus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Vayne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Veigar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Velkoz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Vi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Viego.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Viktor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Vladimir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Volibear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Warwick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Xayah.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Xerath.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\XinZhao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Yasuo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Yone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Yorick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Yuumi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Zac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Zed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Ziggs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Zilean.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Zoe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Champions\Zyra.png" />
+  </ItemGroup>
 </Project>

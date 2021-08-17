@@ -128,10 +128,14 @@ namespace GuessWhoDataManager {
 
             Logger.Info("Updating champion icons...");
             XmlDocument doc = new XmlDocument();
-            doc.Load(Path.Combine(SolutionPath, RESOURCE_PROJECT_NAME, $"{RESOURCE_PROJECT_NAME}.csproj"));
+            string projectFilePath =
+                Path.Combine(SolutionPath, RESOURCE_PROJECT_NAME, $"{RESOURCE_PROJECT_NAME}.csproj");
+            doc.Load(projectFilePath);
             if (doc.DocumentElement == null) {
                 throw new InvalidOperationException("Provided resource project file is invalid!");
             }
+
+            string xmlns = doc.DocumentElement.Attributes["xmlns"].Value;
             XmlNodeList resourceNodes = doc.GetElementsByTagName(XML_RESOURCE_NODE);
             foreach (string id in dataDragon.ChampionIds) {
                 string resourceIncludeAttribute = $"{CHAMPIONS}\\{id}.png";
@@ -150,13 +154,14 @@ namespace GuessWhoDataManager {
                 }
 
                 if (!resourceFound) {
-                    XmlElement itemGroupElement = doc.CreateElement(XML_ITEMGROUP_NODE);
-                    XmlElement resourceElement = doc.CreateElement(XML_RESOURCE_NODE);
+                    XmlElement itemGroupElement = doc.CreateElement(XML_ITEMGROUP_NODE, xmlns);
+                    XmlElement resourceElement = doc.CreateElement(XML_RESOURCE_NODE, xmlns);
                     resourceElement.SetAttribute(XML_INCLUDE_ATTRIBUTE, resourceIncludeAttribute);
                     itemGroupElement.AppendChild(resourceElement);
                     doc.DocumentElement?.AppendChild(itemGroupElement);
                 }
             }
+            doc.Save(projectFilePath);
 
             using (ResXResourceWriter versionResourceWriter = new ResXResourceWriter(VersionResourcePath)) {
                 versionResourceWriter.AddResource(DATA_DRAGON_VERSION_KEY, version);

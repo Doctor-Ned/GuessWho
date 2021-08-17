@@ -1,0 +1,1074 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BasicCategory.Assassin" xml:space="preserve">
+    <value>Убийца</value>
+  </data>
+  <data name="BasicCategory.Fighter" xml:space="preserve">
+    <value>Воин</value>
+  </data>
+  <data name="BasicCategory.Marksman" xml:space="preserve">
+    <value>Стрелок</value>
+  </data>
+  <data name="BasicCategory.Mage" xml:space="preserve">
+    <value>Маг</value>
+  </data>
+  <data name="BasicCategory.Support" xml:space="preserve">
+    <value>Поддержка</value>
+  </data>
+  <data name="BasicCategory.Tank" xml:space="preserve">
+    <value>Танк</value>
+  </data>
+  <data name="Champion.Aatrox.Name" xml:space="preserve">
+    <value>Атрокс</value>
+  </data>
+  <data name="Champion.Aatrox.Title" xml:space="preserve">
+    <value>Клинок даркинов</value>
+  </data>
+  <data name="Champion.Ahri.Name" xml:space="preserve">
+    <value>Ари</value>
+  </data>
+  <data name="Champion.Ahri.Title" xml:space="preserve">
+    <value>Девятихвостая лиса</value>
+  </data>
+  <data name="Champion.Akali.Name" xml:space="preserve">
+    <value>Акали</value>
+  </data>
+  <data name="Champion.Akali.Title" xml:space="preserve">
+    <value>Вольная убийца</value>
+  </data>
+  <data name="Champion.Akshan.Name" xml:space="preserve">
+    <value>Акшан</value>
+  </data>
+  <data name="Champion.Akshan.Title" xml:space="preserve">
+    <value>Своевольный Страж</value>
+  </data>
+  <data name="Champion.Alistar.Name" xml:space="preserve">
+    <value>Алистар</value>
+  </data>
+  <data name="Champion.Alistar.Title" xml:space="preserve">
+    <value>Минотавр</value>
+  </data>
+  <data name="Champion.Amumu.Name" xml:space="preserve">
+    <value>Амуму</value>
+  </data>
+  <data name="Champion.Amumu.Title" xml:space="preserve">
+    <value>Печальная мумия</value>
+  </data>
+  <data name="Champion.Anivia.Name" xml:space="preserve">
+    <value>Анивия</value>
+  </data>
+  <data name="Champion.Anivia.Title" xml:space="preserve">
+    <value>Криофеникс</value>
+  </data>
+  <data name="Champion.Annie.Name" xml:space="preserve">
+    <value>Энни</value>
+  </data>
+  <data name="Champion.Annie.Title" xml:space="preserve">
+    <value>Дитя тьмы</value>
+  </data>
+  <data name="Champion.Aphelios.Name" xml:space="preserve">
+    <value>Афелий</value>
+  </data>
+  <data name="Champion.Aphelios.Title" xml:space="preserve">
+    <value>Оружие веры</value>
+  </data>
+  <data name="Champion.Ashe.Name" xml:space="preserve">
+    <value>Эш</value>
+  </data>
+  <data name="Champion.Ashe.Title" xml:space="preserve">
+    <value>Ледяная лучница</value>
+  </data>
+  <data name="Champion.AurelionSol.Name" xml:space="preserve">
+    <value>Аурелион Сол</value>
+  </data>
+  <data name="Champion.AurelionSol.Title" xml:space="preserve">
+    <value>Создатель звезд</value>
+  </data>
+  <data name="Champion.Azir.Name" xml:space="preserve">
+    <value>Азир</value>
+  </data>
+  <data name="Champion.Azir.Title" xml:space="preserve">
+    <value>Император пустыни</value>
+  </data>
+  <data name="Champion.Bard.Name" xml:space="preserve">
+    <value>Бард</value>
+  </data>
+  <data name="Champion.Bard.Title" xml:space="preserve">
+    <value>Странствующий хранитель</value>
+  </data>
+  <data name="Champion.Blitzcrank.Name" xml:space="preserve">
+    <value>Блицкранк</value>
+  </data>
+  <data name="Champion.Blitzcrank.Title" xml:space="preserve">
+    <value>Великий паровой голем</value>
+  </data>
+  <data name="Champion.Brand.Name" xml:space="preserve">
+    <value>Брэнд</value>
+  </data>
+  <data name="Champion.Brand.Title" xml:space="preserve">
+    <value>Пылающее возмездие</value>
+  </data>
+  <data name="Champion.Braum.Name" xml:space="preserve">
+    <value>Браум</value>
+  </data>
+  <data name="Champion.Braum.Title" xml:space="preserve">
+    <value>Сердце Фрельйорда</value>
+  </data>
+  <data name="Champion.Caitlyn.Name" xml:space="preserve">
+    <value>Кейтлин</value>
+  </data>
+  <data name="Champion.Caitlyn.Title" xml:space="preserve">
+    <value>Шериф Пилтовера</value>
+  </data>
+  <data name="Champion.Camille.Name" xml:space="preserve">
+    <value>Камилла</value>
+  </data>
+  <data name="Champion.Camille.Title" xml:space="preserve">
+    <value>Стальная тень</value>
+  </data>
+  <data name="Champion.Cassiopeia.Name" xml:space="preserve">
+    <value>Кассиопея</value>
+  </data>
+  <data name="Champion.Cassiopeia.Title" xml:space="preserve">
+    <value>Змеиная хватка</value>
+  </data>
+  <data name="Champion.Chogath.Name" xml:space="preserve">
+    <value>Чо'Гат</value>
+  </data>
+  <data name="Champion.Chogath.Title" xml:space="preserve">
+    <value>Ужас Бездны</value>
+  </data>
+  <data name="Champion.Corki.Name" xml:space="preserve">
+    <value>Корки</value>
+  </data>
+  <data name="Champion.Corki.Title" xml:space="preserve">
+    <value>Отважный бомбардир</value>
+  </data>
+  <data name="Champion.Darius.Name" xml:space="preserve">
+    <value>Дариус</value>
+  </data>
+  <data name="Champion.Darius.Title" xml:space="preserve">
+    <value>Рука Ноксуса</value>
+  </data>
+  <data name="Champion.Diana.Name" xml:space="preserve">
+    <value>Диана</value>
+  </data>
+  <data name="Champion.Diana.Title" xml:space="preserve">
+    <value>Превосходство Луны</value>
+  </data>
+  <data name="Champion.Draven.Name" xml:space="preserve">
+    <value>Дрейвен</value>
+  </data>
+  <data name="Champion.Draven.Title" xml:space="preserve">
+    <value>Блистательный палач</value>
+  </data>
+  <data name="Champion.DrMundo.Name" xml:space="preserve">
+    <value>Доктор Мундо</value>
+  </data>
+  <data name="Champion.DrMundo.Title" xml:space="preserve">
+    <value>Сумасшедший из Зауна</value>
+  </data>
+  <data name="Champion.Ekko.Name" xml:space="preserve">
+    <value>Экко</value>
+  </data>
+  <data name="Champion.Ekko.Title" xml:space="preserve">
+    <value>Покоритель времени</value>
+  </data>
+  <data name="Champion.Elise.Name" xml:space="preserve">
+    <value>Элиза</value>
+  </data>
+  <data name="Champion.Elise.Title" xml:space="preserve">
+    <value>Королева пауков</value>
+  </data>
+  <data name="Champion.Evelynn.Name" xml:space="preserve">
+    <value>Эвелинн</value>
+  </data>
+  <data name="Champion.Evelynn.Title" xml:space="preserve">
+    <value>Объятия агонии</value>
+  </data>
+  <data name="Champion.Ezreal.Name" xml:space="preserve">
+    <value>Эзреаль</value>
+  </data>
+  <data name="Champion.Ezreal.Title" xml:space="preserve">
+    <value>Вольный исследователь</value>
+  </data>
+  <data name="Champion.Fiddlesticks.Name" xml:space="preserve">
+    <value>Фиддлстикс</value>
+  </data>
+  <data name="Champion.Fiddlesticks.Title" xml:space="preserve">
+    <value>Древний ужас</value>
+  </data>
+  <data name="Champion.Fiora.Name" xml:space="preserve">
+    <value>Фиора</value>
+  </data>
+  <data name="Champion.Fiora.Title" xml:space="preserve">
+    <value>Бесподобный дуэлянт</value>
+  </data>
+  <data name="Champion.Fizz.Name" xml:space="preserve">
+    <value>Физз</value>
+  </data>
+  <data name="Champion.Fizz.Title" xml:space="preserve">
+    <value>Морской ловкач</value>
+  </data>
+  <data name="Champion.Galio.Name" xml:space="preserve">
+    <value>Галио</value>
+  </data>
+  <data name="Champion.Galio.Title" xml:space="preserve">
+    <value>Колосс</value>
+  </data>
+  <data name="Champion.Gangplank.Name" xml:space="preserve">
+    <value>Гангпланк</value>
+  </data>
+  <data name="Champion.Gangplank.Title" xml:space="preserve">
+    <value>Гроза морей</value>
+  </data>
+  <data name="Champion.Garen.Name" xml:space="preserve">
+    <value>Гарен</value>
+  </data>
+  <data name="Champion.Garen.Title" xml:space="preserve">
+    <value>Мощь Демасии</value>
+  </data>
+  <data name="Champion.Gnar.Name" xml:space="preserve">
+    <value>Гнар</value>
+  </data>
+  <data name="Champion.Gnar.Title" xml:space="preserve">
+    <value>Недостающее звено</value>
+  </data>
+  <data name="Champion.Gragas.Name" xml:space="preserve">
+    <value>Грагас</value>
+  </data>
+  <data name="Champion.Gragas.Title" xml:space="preserve">
+    <value>Бедокур</value>
+  </data>
+  <data name="Champion.Graves.Name" xml:space="preserve">
+    <value>Грейвз</value>
+  </data>
+  <data name="Champion.Graves.Title" xml:space="preserve">
+    <value>Беззаконник</value>
+  </data>
+  <data name="Champion.Gwen.Name" xml:space="preserve">
+    <value>Гвен</value>
+  </data>
+  <data name="Champion.Gwen.Title" xml:space="preserve">
+    <value>Благая швея</value>
+  </data>
+  <data name="Champion.Hecarim.Name" xml:space="preserve">
+    <value>Гекарим</value>
+  </data>
+  <data name="Champion.Hecarim.Title" xml:space="preserve">
+    <value>Призрак войны</value>
+  </data>
+  <data name="Champion.Heimerdinger.Name" xml:space="preserve">
+    <value>Хеймердингер</value>
+  </data>
+  <data name="Champion.Heimerdinger.Title" xml:space="preserve">
+    <value>Одержимый ученый</value>
+  </data>
+  <data name="Champion.Illaoi.Name" xml:space="preserve">
+    <value>Иллаой</value>
+  </data>
+  <data name="Champion.Illaoi.Title" xml:space="preserve">
+    <value>Жрица Матери Глубин</value>
+  </data>
+  <data name="Champion.Irelia.Name" xml:space="preserve">
+    <value>Ирелия</value>
+  </data>
+  <data name="Champion.Irelia.Title" xml:space="preserve">
+    <value>Танцующая с клинками</value>
+  </data>
+  <data name="Champion.Ivern.Name" xml:space="preserve">
+    <value>Иверн</value>
+  </data>
+  <data name="Champion.Ivern.Title" xml:space="preserve">
+    <value>Зеленый отец</value>
+  </data>
+  <data name="Champion.Janna.Name" xml:space="preserve">
+    <value>Жанна</value>
+  </data>
+  <data name="Champion.Janna.Title" xml:space="preserve">
+    <value>Ярость шторма</value>
+  </data>
+  <data name="Champion.JarvanIV.Name" xml:space="preserve">
+    <value>Джарван IV</value>
+  </data>
+  <data name="Champion.JarvanIV.Title" xml:space="preserve">
+    <value>Воплощение Демасии</value>
+  </data>
+  <data name="Champion.Jax.Name" xml:space="preserve">
+    <value>Джакс</value>
+  </data>
+  <data name="Champion.Jax.Title" xml:space="preserve">
+    <value>Великий мастер оружия</value>
+  </data>
+  <data name="Champion.Jayce.Name" xml:space="preserve">
+    <value>Джейс</value>
+  </data>
+  <data name="Champion.Jayce.Title" xml:space="preserve">
+    <value>Защитник завтрашнего дня</value>
+  </data>
+  <data name="Champion.Jhin.Name" xml:space="preserve">
+    <value>Джин</value>
+  </data>
+  <data name="Champion.Jhin.Title" xml:space="preserve">
+    <value>Виртуоз</value>
+  </data>
+  <data name="Champion.Jinx.Name" xml:space="preserve">
+    <value>Джинкс</value>
+  </data>
+  <data name="Champion.Jinx.Title" xml:space="preserve">
+    <value>Безбашенная хулиганка</value>
+  </data>
+  <data name="Champion.Kaisa.Name" xml:space="preserve">
+    <value>Кай'Са</value>
+  </data>
+  <data name="Champion.Kaisa.Title" xml:space="preserve">
+    <value>Дочь Бездны</value>
+  </data>
+  <data name="Champion.Kalista.Name" xml:space="preserve">
+    <value>Калиста</value>
+  </data>
+  <data name="Champion.Kalista.Title" xml:space="preserve">
+    <value>Копье возмездия</value>
+  </data>
+  <data name="Champion.Karma.Name" xml:space="preserve">
+    <value>Карма</value>
+  </data>
+  <data name="Champion.Karma.Title" xml:space="preserve">
+    <value>Просвещенная</value>
+  </data>
+  <data name="Champion.Karthus.Name" xml:space="preserve">
+    <value>Картус</value>
+  </data>
+  <data name="Champion.Karthus.Title" xml:space="preserve">
+    <value>Певец смерти</value>
+  </data>
+  <data name="Champion.Kassadin.Name" xml:space="preserve">
+    <value>Кассадин</value>
+  </data>
+  <data name="Champion.Kassadin.Title" xml:space="preserve">
+    <value>Скиталец Бездны</value>
+  </data>
+  <data name="Champion.Katarina.Name" xml:space="preserve">
+    <value>Катарина</value>
+  </data>
+  <data name="Champion.Katarina.Title" xml:space="preserve">
+    <value>Гибельный клинок</value>
+  </data>
+  <data name="Champion.Kayle.Name" xml:space="preserve">
+    <value>Кейл</value>
+  </data>
+  <data name="Champion.Kayle.Title" xml:space="preserve">
+    <value>Праведница</value>
+  </data>
+  <data name="Champion.Kayn.Name" xml:space="preserve">
+    <value>Каин</value>
+  </data>
+  <data name="Champion.Kayn.Title" xml:space="preserve">
+    <value>Сумеречный жнец</value>
+  </data>
+  <data name="Champion.Kennen.Name" xml:space="preserve">
+    <value>Кеннен</value>
+  </data>
+  <data name="Champion.Kennen.Title" xml:space="preserve">
+    <value>Сердце бури</value>
+  </data>
+  <data name="Champion.Khazix.Name" xml:space="preserve">
+    <value>Ка'Зикс</value>
+  </data>
+  <data name="Champion.Khazix.Title" xml:space="preserve">
+    <value>Хищник из Бездны</value>
+  </data>
+  <data name="Champion.Kindred.Name" xml:space="preserve">
+    <value>Киндред</value>
+  </data>
+  <data name="Champion.Kindred.Title" xml:space="preserve">
+    <value>Вечные охотники</value>
+  </data>
+  <data name="Champion.Kled.Name" xml:space="preserve">
+    <value>Клед</value>
+  </data>
+  <data name="Champion.Kled.Title" xml:space="preserve">
+    <value>Сварливый кавалерист</value>
+  </data>
+  <data name="Champion.KogMaw.Name" xml:space="preserve">
+    <value>Ког'Мао</value>
+  </data>
+  <data name="Champion.KogMaw.Title" xml:space="preserve">
+    <value>Пасть Бездны</value>
+  </data>
+  <data name="Champion.Leblanc.Name" xml:space="preserve">
+    <value>Ле Блан</value>
+  </data>
+  <data name="Champion.Leblanc.Title" xml:space="preserve">
+    <value>Обманщица</value>
+  </data>
+  <data name="Champion.LeeSin.Name" xml:space="preserve">
+    <value>Ли Син</value>
+  </data>
+  <data name="Champion.LeeSin.Title" xml:space="preserve">
+    <value>Слепой монах</value>
+  </data>
+  <data name="Champion.Leona.Name" xml:space="preserve">
+    <value>Леона</value>
+  </data>
+  <data name="Champion.Leona.Title" xml:space="preserve">
+    <value>Ослепительный рассвет</value>
+  </data>
+  <data name="Champion.Lillia.Name" xml:space="preserve">
+    <value>Лиллия</value>
+  </data>
+  <data name="Champion.Lillia.Title" xml:space="preserve">
+    <value>Робкий цветок</value>
+  </data>
+  <data name="Champion.Lissandra.Name" xml:space="preserve">
+    <value>Лиссандра</value>
+  </data>
+  <data name="Champion.Lissandra.Title" xml:space="preserve">
+    <value>Ледяная ведьма</value>
+  </data>
+  <data name="Champion.Lucian.Name" xml:space="preserve">
+    <value>Люциан</value>
+  </data>
+  <data name="Champion.Lucian.Title" xml:space="preserve">
+    <value>Истребитель скверны</value>
+  </data>
+  <data name="Champion.Lulu.Name" xml:space="preserve">
+    <value>Лулу</value>
+  </data>
+  <data name="Champion.Lulu.Title" xml:space="preserve">
+    <value>Волшебница фей</value>
+  </data>
+  <data name="Champion.Lux.Name" xml:space="preserve">
+    <value>Люкс</value>
+  </data>
+  <data name="Champion.Lux.Title" xml:space="preserve">
+    <value>Леди сияния</value>
+  </data>
+  <data name="Champion.Malphite.Name" xml:space="preserve">
+    <value>Мальфит</value>
+  </data>
+  <data name="Champion.Malphite.Title" xml:space="preserve">
+    <value>Осколок Монолита</value>
+  </data>
+  <data name="Champion.Malzahar.Name" xml:space="preserve">
+    <value>Мальзахар</value>
+  </data>
+  <data name="Champion.Malzahar.Title" xml:space="preserve">
+    <value>Пророк Бездны</value>
+  </data>
+  <data name="Champion.Maokai.Name" xml:space="preserve">
+    <value>Маокай</value>
+  </data>
+  <data name="Champion.Maokai.Title" xml:space="preserve">
+    <value>Испорченный энт</value>
+  </data>
+  <data name="Champion.MasterYi.Name" xml:space="preserve">
+    <value>Мастер Йи</value>
+  </data>
+  <data name="Champion.MasterYi.Title" xml:space="preserve">
+    <value>Мечник вуджу</value>
+  </data>
+  <data name="Champion.MissFortune.Name" xml:space="preserve">
+    <value>Мисс Фортуна</value>
+  </data>
+  <data name="Champion.MissFortune.Title" xml:space="preserve">
+    <value>Охотница за головами</value>
+  </data>
+  <data name="Champion.MonkeyKing.Name" xml:space="preserve">
+    <value>Вуконг</value>
+  </data>
+  <data name="Champion.MonkeyKing.Title" xml:space="preserve">
+    <value>Царь обезьян</value>
+  </data>
+  <data name="Champion.Mordekaiser.Name" xml:space="preserve">
+    <value>Мордекайзер</value>
+  </data>
+  <data name="Champion.Mordekaiser.Title" xml:space="preserve">
+    <value>Железный призрак</value>
+  </data>
+  <data name="Champion.Morgana.Name" xml:space="preserve">
+    <value>Моргана</value>
+  </data>
+  <data name="Champion.Morgana.Title" xml:space="preserve">
+    <value>Падшая</value>
+  </data>
+  <data name="Champion.Nami.Name" xml:space="preserve">
+    <value>Нами</value>
+  </data>
+  <data name="Champion.Nami.Title" xml:space="preserve">
+    <value>Повелительница морей</value>
+  </data>
+  <data name="Champion.Nasus.Name" xml:space="preserve">
+    <value>Насус</value>
+  </data>
+  <data name="Champion.Nasus.Title" xml:space="preserve">
+    <value>Хранитель песков</value>
+  </data>
+  <data name="Champion.Nautilus.Name" xml:space="preserve">
+    <value>Наутилус</value>
+  </data>
+  <data name="Champion.Nautilus.Title" xml:space="preserve">
+    <value>Титан глубин</value>
+  </data>
+  <data name="Champion.Neeko.Name" xml:space="preserve">
+    <value>Нико</value>
+  </data>
+  <data name="Champion.Neeko.Title" xml:space="preserve">
+    <value>Любопытный хамелеон</value>
+  </data>
+  <data name="Champion.Nidalee.Name" xml:space="preserve">
+    <value>Нидали</value>
+  </data>
+  <data name="Champion.Nidalee.Title" xml:space="preserve">
+    <value>Дикая охотница</value>
+  </data>
+  <data name="Champion.Nocturne.Name" xml:space="preserve">
+    <value>Ноктюрн</value>
+  </data>
+  <data name="Champion.Nocturne.Title" xml:space="preserve">
+    <value>Извечный кошмар</value>
+  </data>
+  <data name="Champion.Nunu.Name" xml:space="preserve">
+    <value>Нуну и Виллумп</value>
+  </data>
+  <data name="Champion.Nunu.Title" xml:space="preserve">
+    <value>Мальчик и его йети</value>
+  </data>
+  <data name="Champion.Olaf.Name" xml:space="preserve">
+    <value>Олаф</value>
+  </data>
+  <data name="Champion.Olaf.Title" xml:space="preserve">
+    <value>Берсерк</value>
+  </data>
+  <data name="Champion.Orianna.Name" xml:space="preserve">
+    <value>Орианна</value>
+  </data>
+  <data name="Champion.Orianna.Title" xml:space="preserve">
+    <value>Заводная леди</value>
+  </data>
+  <data name="Champion.Ornn.Name" xml:space="preserve">
+    <value>Орн</value>
+  </data>
+  <data name="Champion.Ornn.Title" xml:space="preserve">
+    <value>Пламя Горных Глубин</value>
+  </data>
+  <data name="Champion.Pantheon.Name" xml:space="preserve">
+    <value>Пантеон</value>
+  </data>
+  <data name="Champion.Pantheon.Title" xml:space="preserve">
+    <value>Несокрушимое Копье</value>
+  </data>
+  <data name="Champion.Poppy.Name" xml:space="preserve">
+    <value>Поппи</value>
+  </data>
+  <data name="Champion.Poppy.Title" xml:space="preserve">
+    <value>Хранительница молота</value>
+  </data>
+  <data name="Champion.Pyke.Name" xml:space="preserve">
+    <value>Пайк</value>
+  </data>
+  <data name="Champion.Pyke.Title" xml:space="preserve">
+    <value>Потрошитель из Кровавой гавани</value>
+  </data>
+  <data name="Champion.Qiyana.Name" xml:space="preserve">
+    <value>Киана</value>
+  </data>
+  <data name="Champion.Qiyana.Title" xml:space="preserve">
+    <value>Повелительница стихий</value>
+  </data>
+  <data name="Champion.Quinn.Name" xml:space="preserve">
+    <value>Квинн</value>
+  </data>
+  <data name="Champion.Quinn.Title" xml:space="preserve">
+    <value>Крылья Демасии</value>
+  </data>
+  <data name="Champion.Rakan.Name" xml:space="preserve">
+    <value>Рэйкан</value>
+  </data>
+  <data name="Champion.Rakan.Title" xml:space="preserve">
+    <value>Обольститель</value>
+  </data>
+  <data name="Champion.Rammus.Name" xml:space="preserve">
+    <value>Раммус</value>
+  </data>
+  <data name="Champion.Rammus.Title" xml:space="preserve">
+    <value>Броненосец</value>
+  </data>
+  <data name="Champion.RekSai.Name" xml:space="preserve">
+    <value>Рек'Сай</value>
+  </data>
+  <data name="Champion.RekSai.Title" xml:space="preserve">
+    <value>Хозяйка недр Бездны</value>
+  </data>
+  <data name="Champion.Rell.Name" xml:space="preserve">
+    <value>Релл</value>
+  </data>
+  <data name="Champion.Rell.Title" xml:space="preserve">
+    <value>Железная дева</value>
+  </data>
+  <data name="Champion.Renekton.Name" xml:space="preserve">
+    <value>Ренектон</value>
+  </data>
+  <data name="Champion.Renekton.Title" xml:space="preserve">
+    <value>Мясник из песков</value>
+  </data>
+  <data name="Champion.Rengar.Name" xml:space="preserve">
+    <value>Ренгар</value>
+  </data>
+  <data name="Champion.Rengar.Title" xml:space="preserve">
+    <value>Охотник за трофеями</value>
+  </data>
+  <data name="Champion.Riven.Name" xml:space="preserve">
+    <value>Ривен</value>
+  </data>
+  <data name="Champion.Riven.Title" xml:space="preserve">
+    <value>Изгнанница</value>
+  </data>
+  <data name="Champion.Rumble.Name" xml:space="preserve">
+    <value>Рамбл</value>
+  </data>
+  <data name="Champion.Rumble.Title" xml:space="preserve">
+    <value>Механизированная угроза</value>
+  </data>
+  <data name="Champion.Ryze.Name" xml:space="preserve">
+    <value>Райз</value>
+  </data>
+  <data name="Champion.Ryze.Title" xml:space="preserve">
+    <value>Рунный маг</value>
+  </data>
+  <data name="Champion.Samira.Name" xml:space="preserve">
+    <value>Самира</value>
+  </data>
+  <data name="Champion.Samira.Title" xml:space="preserve">
+    <value>Пустынная роза</value>
+  </data>
+  <data name="Champion.Sejuani.Name" xml:space="preserve">
+    <value>Седжуани</value>
+  </data>
+  <data name="Champion.Sejuani.Title" xml:space="preserve">
+    <value>Ярость севера</value>
+  </data>
+  <data name="Champion.Senna.Name" xml:space="preserve">
+    <value>Сенна</value>
+  </data>
+  <data name="Champion.Senna.Title" xml:space="preserve">
+    <value>Освободительница</value>
+  </data>
+  <data name="Champion.Seraphine.Name" xml:space="preserve">
+    <value>Серафина</value>
+  </data>
+  <data name="Champion.Seraphine.Title" xml:space="preserve">
+    <value>Мечтательная певица</value>
+  </data>
+  <data name="Champion.Sett.Name" xml:space="preserve">
+    <value>Сетт</value>
+  </data>
+  <data name="Champion.Sett.Title" xml:space="preserve">
+    <value>Босс</value>
+  </data>
+  <data name="Champion.Shaco.Name" xml:space="preserve">
+    <value>Шако</value>
+  </data>
+  <data name="Champion.Shaco.Title" xml:space="preserve">
+    <value>Демонический шут</value>
+  </data>
+  <data name="Champion.Shen.Name" xml:space="preserve">
+    <value>Шен</value>
+  </data>
+  <data name="Champion.Shen.Title" xml:space="preserve">
+    <value>Око сумрака</value>
+  </data>
+  <data name="Champion.Shyvana.Name" xml:space="preserve">
+    <value>Шивана</value>
+  </data>
+  <data name="Champion.Shyvana.Title" xml:space="preserve">
+    <value>Полудракон</value>
+  </data>
+  <data name="Champion.Singed.Name" xml:space="preserve">
+    <value>Синджед</value>
+  </data>
+  <data name="Champion.Singed.Title" xml:space="preserve">
+    <value>Безумный химик</value>
+  </data>
+  <data name="Champion.Sion.Name" xml:space="preserve">
+    <value>Сион</value>
+  </data>
+  <data name="Champion.Sion.Title" xml:space="preserve">
+    <value>Восставший сокрушитель</value>
+  </data>
+  <data name="Champion.Sivir.Name" xml:space="preserve">
+    <value>Сивир</value>
+  </data>
+  <data name="Champion.Sivir.Title" xml:space="preserve">
+    <value>Королева сражений</value>
+  </data>
+  <data name="Champion.Skarner.Name" xml:space="preserve">
+    <value>Скарнер</value>
+  </data>
+  <data name="Champion.Skarner.Title" xml:space="preserve">
+    <value>Кристальный страж</value>
+  </data>
+  <data name="Champion.Sona.Name" xml:space="preserve">
+    <value>Сона</value>
+  </data>
+  <data name="Champion.Sona.Title" xml:space="preserve">
+    <value>Виртуоз струн</value>
+  </data>
+  <data name="Champion.Soraka.Name" xml:space="preserve">
+    <value>Сорака</value>
+  </data>
+  <data name="Champion.Soraka.Title" xml:space="preserve">
+    <value>Звездное дитя</value>
+  </data>
+  <data name="Champion.Swain.Name" xml:space="preserve">
+    <value>Свейн</value>
+  </data>
+  <data name="Champion.Swain.Title" xml:space="preserve">
+    <value>Верховный полководец Ноксуса</value>
+  </data>
+  <data name="Champion.Sylas.Name" xml:space="preserve">
+    <value>Сайлас</value>
+  </data>
+  <data name="Champion.Sylas.Title" xml:space="preserve">
+    <value>Сбросивший оковы</value>
+  </data>
+  <data name="Champion.Syndra.Name" xml:space="preserve">
+    <value>Синдра</value>
+  </data>
+  <data name="Champion.Syndra.Title" xml:space="preserve">
+    <value>Темная властительница</value>
+  </data>
+  <data name="Champion.TahmKench.Name" xml:space="preserve">
+    <value>Таам Кенч</value>
+  </data>
+  <data name="Champion.TahmKench.Title" xml:space="preserve">
+    <value>Речной царь</value>
+  </data>
+  <data name="Champion.Taliyah.Name" xml:space="preserve">
+    <value>Талия</value>
+  </data>
+  <data name="Champion.Taliyah.Title" xml:space="preserve">
+    <value>Прядущая камни</value>
+  </data>
+  <data name="Champion.Talon.Name" xml:space="preserve">
+    <value>Талон</value>
+  </data>
+  <data name="Champion.Talon.Title" xml:space="preserve">
+    <value>Тень клинка</value>
+  </data>
+  <data name="Champion.Taric.Name" xml:space="preserve">
+    <value>Тарик</value>
+  </data>
+  <data name="Champion.Taric.Title" xml:space="preserve">
+    <value>Щит Валорана</value>
+  </data>
+  <data name="Champion.Teemo.Name" xml:space="preserve">
+    <value>Тимо</value>
+  </data>
+  <data name="Champion.Teemo.Title" xml:space="preserve">
+    <value>Шустрый скаут</value>
+  </data>
+  <data name="Champion.Thresh.Name" xml:space="preserve">
+    <value>Треш</value>
+  </data>
+  <data name="Champion.Thresh.Title" xml:space="preserve">
+    <value>Страж цепей</value>
+  </data>
+  <data name="Champion.Tristana.Name" xml:space="preserve">
+    <value>Тристана</value>
+  </data>
+  <data name="Champion.Tristana.Title" xml:space="preserve">
+    <value>Йордлский канонир</value>
+  </data>
+  <data name="Champion.Trundle.Name" xml:space="preserve">
+    <value>Трандл</value>
+  </data>
+  <data name="Champion.Trundle.Title" xml:space="preserve">
+    <value>Король троллей</value>
+  </data>
+  <data name="Champion.Tryndamere.Name" xml:space="preserve">
+    <value>Триндамир</value>
+  </data>
+  <data name="Champion.Tryndamere.Title" xml:space="preserve">
+    <value>Король варваров</value>
+  </data>
+  <data name="Champion.TwistedFate.Name" xml:space="preserve">
+    <value>Твистед Фэйт</value>
+  </data>
+  <data name="Champion.TwistedFate.Title" xml:space="preserve">
+    <value>Мастер карт</value>
+  </data>
+  <data name="Champion.Twitch.Name" xml:space="preserve">
+    <value>Твич</value>
+  </data>
+  <data name="Champion.Twitch.Title" xml:space="preserve">
+    <value>Чумная крыса</value>
+  </data>
+  <data name="Champion.Udyr.Name" xml:space="preserve">
+    <value>Удир</value>
+  </data>
+  <data name="Champion.Udyr.Title" xml:space="preserve">
+    <value>Странник духов</value>
+  </data>
+  <data name="Champion.Urgot.Name" xml:space="preserve">
+    <value>Ургот</value>
+  </data>
+  <data name="Champion.Urgot.Title" xml:space="preserve">
+    <value>Дредноут</value>
+  </data>
+  <data name="Champion.Varus.Name" xml:space="preserve">
+    <value>Варус</value>
+  </data>
+  <data name="Champion.Varus.Title" xml:space="preserve">
+    <value>Стрела возмездия</value>
+  </data>
+  <data name="Champion.Vayne.Name" xml:space="preserve">
+    <value>Вейн</value>
+  </data>
+  <data name="Champion.Vayne.Title" xml:space="preserve">
+    <value>Ночная охотница</value>
+  </data>
+  <data name="Champion.Veigar.Name" xml:space="preserve">
+    <value>Вейгар</value>
+  </data>
+  <data name="Champion.Veigar.Title" xml:space="preserve">
+    <value>Маленький повелитель зла</value>
+  </data>
+  <data name="Champion.Velkoz.Name" xml:space="preserve">
+    <value>Вел'Коз</value>
+  </data>
+  <data name="Champion.Velkoz.Title" xml:space="preserve">
+    <value>Око Бездны</value>
+  </data>
+  <data name="Champion.Vi.Name" xml:space="preserve">
+    <value>Вай</value>
+  </data>
+  <data name="Champion.Vi.Title" xml:space="preserve">
+    <value>Пилтоверский миротворец</value>
+  </data>
+  <data name="Champion.Viego.Name" xml:space="preserve">
+    <value>Виего</value>
+  </data>
+  <data name="Champion.Viego.Title" xml:space="preserve">
+    <value>Падший король</value>
+  </data>
+  <data name="Champion.Viktor.Name" xml:space="preserve">
+    <value>Виктор</value>
+  </data>
+  <data name="Champion.Viktor.Title" xml:space="preserve">
+    <value>Механический вестник</value>
+  </data>
+  <data name="Champion.Vladimir.Name" xml:space="preserve">
+    <value>Владимир</value>
+  </data>
+  <data name="Champion.Vladimir.Title" xml:space="preserve">
+    <value>Алый жнец</value>
+  </data>
+  <data name="Champion.Volibear.Name" xml:space="preserve">
+    <value>Волибир</value>
+  </data>
+  <data name="Champion.Volibear.Title" xml:space="preserve">
+    <value>Неутихающая Буря</value>
+  </data>
+  <data name="Champion.Warwick.Name" xml:space="preserve">
+    <value>Варвик</value>
+  </data>
+  <data name="Champion.Warwick.Title" xml:space="preserve">
+    <value>Освобожденный гнев Зауна</value>
+  </data>
+  <data name="Champion.Xayah.Name" xml:space="preserve">
+    <value>Шая</value>
+  </data>
+  <data name="Champion.Xayah.Title" xml:space="preserve">
+    <value>Бунтарка</value>
+  </data>
+  <data name="Champion.Xerath.Name" xml:space="preserve">
+    <value>Зерат</value>
+  </data>
+  <data name="Champion.Xerath.Title" xml:space="preserve">
+    <value>Высший маг</value>
+  </data>
+  <data name="Champion.XinZhao.Name" xml:space="preserve">
+    <value>Ксин Жао</value>
+  </data>
+  <data name="Champion.XinZhao.Title" xml:space="preserve">
+    <value>Сенешаль Демасии</value>
+  </data>
+  <data name="Champion.Yasuo.Name" xml:space="preserve">
+    <value>Ясуо</value>
+  </data>
+  <data name="Champion.Yasuo.Title" xml:space="preserve">
+    <value>Непрощенный</value>
+  </data>
+  <data name="Champion.Yone.Name" xml:space="preserve">
+    <value>Ёнэ</value>
+  </data>
+  <data name="Champion.Yone.Title" xml:space="preserve">
+    <value>Незабытый</value>
+  </data>
+  <data name="Champion.Yorick.Name" xml:space="preserve">
+    <value>Йорик</value>
+  </data>
+  <data name="Champion.Yorick.Title" xml:space="preserve">
+    <value>Пастух заблудших душ</value>
+  </data>
+  <data name="Champion.Yuumi.Name" xml:space="preserve">
+    <value>Юми</value>
+  </data>
+  <data name="Champion.Yuumi.Title" xml:space="preserve">
+    <value>Волшебная кошка</value>
+  </data>
+  <data name="Champion.Zac.Name" xml:space="preserve">
+    <value>Зак</value>
+  </data>
+  <data name="Champion.Zac.Title" xml:space="preserve">
+    <value>Секретное оружие</value>
+  </data>
+  <data name="Champion.Zed.Name" xml:space="preserve">
+    <value>Зед</value>
+  </data>
+  <data name="Champion.Zed.Title" xml:space="preserve">
+    <value>Мастер теней</value>
+  </data>
+  <data name="Champion.Ziggs.Name" xml:space="preserve">
+    <value>Зиггс</value>
+  </data>
+  <data name="Champion.Ziggs.Title" xml:space="preserve">
+    <value>Эксперт по хексчатке</value>
+  </data>
+  <data name="Champion.Zilean.Name" xml:space="preserve">
+    <value>Зилеан</value>
+  </data>
+  <data name="Champion.Zilean.Title" xml:space="preserve">
+    <value>Хранитель времени</value>
+  </data>
+  <data name="Champion.Zoe.Name" xml:space="preserve">
+    <value>Зои</value>
+  </data>
+  <data name="Champion.Zoe.Title" xml:space="preserve">
+    <value>Звездная посланница</value>
+  </data>
+  <data name="Champion.Zyra.Name" xml:space="preserve">
+    <value>Зайра</value>
+  </data>
+  <data name="Champion.Zyra.Title" xml:space="preserve">
+    <value>Повелительница терний</value>
+  </data>
+</root>
