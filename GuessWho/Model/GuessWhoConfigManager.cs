@@ -60,23 +60,16 @@ namespace GuessWho.Model {
                 throw new InvalidDataException($"Icon size ({config.IconSize}) must be positive!");
             }
 
-            foreach (ChampionCategory category in config.Categories) {
-                if (string.IsNullOrWhiteSpace(category.CategoryName)) {
-                    throw new InvalidDataException("Category name must not be empty!");
-                }
-
-                if (!category.Champions.Any()) {
-                    throw new InvalidDataException($"Category '{category.CategoryName}' contains no champions!");
-                }
+            if (config.RejectedChampions.Distinct().Count() != config.RejectedChampions.Count) {
+                throw new InvalidDataException($"Values of {nameof(config.RejectedChampions)} are not unique!");
             }
 
-            for (int i = 0; i < config.Categories.Count - 1; ++i) {
-                for (int j = i + 1; j < config.Categories.Count; ++j) {
-                    if (config.Categories[i].CategoryName == config.Categories[j].CategoryName) {
-                        throw new InvalidDataException(
-                            $"Duplicate category found ('{config.Categories[i].CategoryName}')!");
-                    }
-                }
+            if (config.RejectedBasicCategories.Distinct().Count() != config.RejectedBasicCategories.Count) {
+                throw new InvalidDataException($"Values of {nameof(config.RejectedBasicCategories)} are not unique!");
+            }
+
+            if (config.RejectedCustomCategories.Distinct().Count() != config.RejectedCustomCategories.Count) {
+                throw new InvalidDataException($"Values of {nameof(config.RejectedCustomCategories)} are not unique!");
             }
 
             return config;

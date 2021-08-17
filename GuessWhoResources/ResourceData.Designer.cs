@@ -22,14 +22,14 @@ namespace GuessWhoResources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    internal class ResourceData {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources() {
+        internal ResourceData() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace GuessWhoResources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GuessWhoResources.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GuessWhoResources.ResourceData", typeof(ResourceData).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace GuessWhoResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 11.15.1.
+        ///   Looks up a localized string similar to 11.16.1.
         /// </summary>
         internal static string DataDragonVersion {
             get {
@@ -70,7 +70,36 @@ namespace GuessWhoResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to {
+        ///  &quot;ChampionCategoryConfigs&quot;: {
+        ///    &quot;Aatrox&quot;: {
+        ///      &quot;BasicCategories&quot;: [
+        ///        &quot;Fighter&quot;,
+        ///        &quot;Tank&quot;
+        ///      ],
+        ///      &quot;CustomCategories&quot;: [
+        ///        &quot;Man&quot;
+        ///      ]
+        ///    },
+        ///    &quot;Ahri&quot;: {
+        ///      &quot;BasicCategories&quot;: [
+        ///        &quot;Mage&quot;,
+        ///        &quot;Assassin&quot;
+        ///      ],
+        ///      &quot;CustomCategories&quot;: [
+        ///        &quot;Woman&quot;
+        ///      ]
+        ///    },
+        ///    &quot;Akali&quot;: {
+        ///      &quot;BasicCategories&quot;: [
+        ///        &quot;Assassin&quot;
+        ///      ],
+        ///      &quot;CustomCategories&quot;: [
+        ///        &quot;Woman&quot;
+        ///      ]
+        ///    },
+        ///    &quot;Akshan&quot;: {
+        ///      &quot;BasicCatego [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string LeagueChampionConfig {
             get {

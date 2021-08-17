@@ -11,7 +11,7 @@ namespace GuessWhoResources {
         }
 
         public static LeagueChampionConfig LoadConfigFromResources() {
-            return JsonConvert.DeserializeObject<LeagueChampionConfig>(Resources.LeagueChampionConfig);
+            return JsonConvert.DeserializeObject<LeagueChampionConfig>(ResourceData.LeagueChampionConfig);
         }
     }
 }

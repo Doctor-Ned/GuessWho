@@ -1,9 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Windows.Input;
-
-using GuessWho.Model;
+﻿using System.Windows.Input;
 
 using NedMaterialMVVM;
 using NedMaterialMVVM.ViewModel;
@@ -15,13 +10,12 @@ namespace GuessWho.ViewModel {
         public DialogRejectedChampionsViewModel(MainViewModel mainViewModel) {
             MainViewModel = mainViewModel;
             Close = new RelayCommand(ExecuteClose);
-            RestoreChampion = new RelayCommand<Champion>(ExecuteRestoreChampion);
+            RestoreChampion = new RelayCommand<string>(ExecuteRestoreChampion);
             RestoreAll = new RelayCommand(ExecuteRestoreAll);
             DialogYesNoViewModel = new DialogTwoButtonViewModel {
                 Button1Action = () =>
                 {
-                    RejectedChampions.Clear();
-                    MainViewModel.RestoreAllChampions();
+                    MainViewModel.RejectedChampions.Clear();
                     CloseDialog();
                 },
                 Button1Text = "TAK",
@@ -29,8 +23,6 @@ namespace GuessWho.ViewModel {
                 Message = "Przywrócisz wszystkie odrzucone postacie.\nCzy na pewno?"
             };
         }
-
-        public ObservableCollection<Champion> RejectedChampions { get; } = new ObservableCollection<Champion>();
 
         private MainViewModel MainViewModel { get; }
 
@@ -42,10 +34,9 @@ namespace GuessWho.ViewModel {
             CloseDialog();
         }
 
-        private void ExecuteRestoreChampion(Champion champion) {
-            RejectedChampions.Remove(champion);
-            MainViewModel.RestoreChampion(champion);
-            if (!RejectedChampions.Any()) {
+        private void ExecuteRestoreChampion(string champId) {
+            MainViewModel.RejectedChampions.Remove(champId);
+            if (!MainViewModel.AnyChampionsRejected) {
                 CloseDialog();
             }
         }
@@ -54,21 +45,12 @@ namespace GuessWho.ViewModel {
             DialogYesNoViewModel.OpenIDialog(MainViewModel.DialogIdentifier2);
         }
 
-        public void OpenDialog(HashSet<Champion> rejectedChampions) {
-            Inject(rejectedChampions);
-            OpenDialog();
+        public new void OpenDialog() {
+            base.OpenDialog();
         }
 
-        public void OpenIDialog(object dialogIdentifier, HashSet<Champion> rejectedChampions) {
-            Inject(rejectedChampions);
-            OpenIDialog(dialogIdentifier);
-        }
-
-        private void Inject(HashSet<Champion> rejectedChampions) {
-            RejectedChampions.Clear();
-            foreach (Champion champ in rejectedChampions.OrderByChampionName()) {
-                RejectedChampions.Add(champ);
-            }
+        public new void OpenIDialog(object dialogIdentifier) {
+            base.OpenIDialog(dialogIdentifier);
         }
     }
 }

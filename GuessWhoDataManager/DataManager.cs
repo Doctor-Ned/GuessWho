@@ -9,15 +9,14 @@ using System.Xml;
 
 using GuessWhoResources;
 
+using ResourceManager = GuessWhoResources.ResourceManager;
+
 namespace GuessWhoDataManager {
     internal class DataManager {
         private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
         internal const string DATA_DRAGON_VERSION_KEY = "DataDragonVersion";
         internal const string LEAGUE_CHAMPION_CONFIG_KEY = "LeagueChampionConfig";
-        internal const string DATA_MANAGER_PROJECT_NAME = "GuessWhoDataManager";
-        internal const string RESOURCE_PROJECT_NAME = "GuessWhoResources";
         internal const string RESOURCES = "Resources";
-        internal const string CHAMPIONS = "Champions";
         internal const string XML_RESOURCE_NODE = "Resource";
         internal const string XML_ITEMGROUP_NODE = "ItemGroup";
         internal const string XML_INCLUDE_ATTRIBUTE = "Include";
@@ -25,6 +24,14 @@ namespace GuessWhoDataManager {
 
         internal static string DefaultSolutionPath {
             get { return Path.Combine(new FileInfo(Assembly.GetExecutingAssembly().Location).DirectoryName ?? throw new InvalidOperationException(), "../../.."); }
+        }
+
+        internal static string DataManagerProjectName {
+            get { return Assembly.GetExecutingAssembly().GetName().Name; }
+        }
+
+        internal static string ResourcesProjectName {
+            get { return typeof(ResourceManager).Assembly.GetName().Name; }
         }
 
         public DataManager() : this(DefaultSolutionPath) { }
@@ -40,6 +47,7 @@ namespace GuessWhoDataManager {
         }
 
         public void ReworkResources(string version) {
+            // todo: this method could be split into multiple smaller ones for improved readability
             Dictionary<Locale, LocaleData> localeDatas = new Dictionary<Locale, LocaleData>();
             foreach (Locale locale in Enum.GetValues(typeof(Locale))) {
                 Logger.Debug($"Preparing data for locale {locale}...");
@@ -88,17 +96,6 @@ namespace GuessWhoDataManager {
                 if (locale != DEFAULT_LOCALE) {
                     localeDatas[locale].RefillMissingFromDefaultLocale(localeDatas[DEFAULT_LOCALE]);
                 }
-
-                using (ResXResourceWriter writer = new ResXResourceWriter(GetOutputLocaleResourcePath(locale))) {
-                    Logger.Debug($"Writing {locale} resource file '{writer.BasePath}'...");
-                    foreach (KeyValuePair<string, string> pair in localeDatas[locale].LocaleLabels) {
-                        writer.AddResource($"{ResourceType.Locale}.{pair.Key}", pair.Value);
-                    }
-                    foreach (KeyValuePair<CustomCategory, string> pair in localeDatas[locale].CustomCategoryLabels) {
-                        writer.AddResource($"{ResourceType.CustomCategories}.{pair.Key}", pair.Value);
-                    }
-                    writer.Generate();
-                }
             }
 
             Logger.Info("Processing DataDragon...");
@@ -114,13 +111,20 @@ namespace GuessWhoDataManager {
 
             foreach (Locale locale in Enum.GetValues(typeof(Locale))) {
                 LocaleLolData lolData = dataDragon.Locales[locale];
-                using (ResXResourceWriter writer = new ResXResourceWriter(GetOutputLeagueResourcePath(locale))) {
+                using (ResXResourceWriter writer = new ResXResourceWriter(GetOutputResourcePath(locale))) {
+                    Logger.Debug($"Writing {locale} resource file '{writer.BasePath}'...");
+                    foreach (KeyValuePair<string, string> pair in localeDatas[locale].LocaleLabels) {
+                        writer.AddResource($"{ResourceType.Locale}.{pair.Key}", pair.Value);
+                    }
+                    foreach (KeyValuePair<CustomCategory, string> pair in localeDatas[locale].CustomCategoryLabels) {
+                        writer.AddResource($"{ResourceType.CustomCategories}.{pair.Key}", pair.Value);
+                    }
                     foreach (KeyValuePair<BasicCategory, string> pair in lolData.BasicCategoryNames) {
-                        writer.AddResource($"{nameof(BasicCategory)}.{pair.Key}", pair.Value);
+                        writer.AddResource($"{ResourceType.League}.{nameof(BasicCategory)}.{pair.Key}", pair.Value);
                     }
                     foreach (KeyValuePair<string, LocaleLolChampionData> pair in lolData.ChampionData) {
-                        writer.AddResource($"Champion.{pair.Key}.Name", pair.Value.Name);
-                        writer.AddResource($"Champion.{pair.Key}.Title", pair.Value.Title);
+                        writer.AddResource($"{ResourceType.League}.Champion.{pair.Key}.Name", pair.Value.Name);
+                        writer.AddResource($"{ResourceType.League}.Champion.{pair.Key}.Title", pair.Value.Title);
                     }
                     writer.Generate();
                 }
@@ -128,8 +132,9 @@ namespace GuessWhoDataManager {
 
             Logger.Info("Updating champion icons...");
             XmlDocument doc = new XmlDocument();
+            bool xmlDocModified = false;
             string projectFilePath =
-                Path.Combine(SolutionPath, RESOURCE_PROJECT_NAME, $"{RESOURCE_PROJECT_NAME}.csproj");
+                Path.Combine(SolutionPath, ResourcesProjectName, $"{ResourcesProjectName}.csproj");
             doc.Load(projectFilePath);
             if (doc.DocumentElement == null) {
                 throw new InvalidOperationException("Provided resource project file is invalid!");
@@ -138,8 +143,8 @@ namespace GuessWhoDataManager {
             string xmlns = doc.DocumentElement.Attributes["xmlns"].Value;
             XmlNodeList resourceNodes = doc.GetElementsByTagName(XML_RESOURCE_NODE);
             foreach (string id in dataDragon.ChampionIds) {
-                string resourceIncludeAttribute = $"{CHAMPIONS}\\{id}.png";
-                FileInfo iconFile = new FileInfo(Path.Combine(SolutionPath, RESOURCE_PROJECT_NAME, resourceIncludeAttribute));
+                string resourceIncludeAttribute = $"{ResourceManager.ICON_DIRECTORY}\\{id}.{ResourceManager.ICON_EXTENSION}";
+                FileInfo iconFile = new FileInfo(Path.Combine(SolutionPath, ResourcesProjectName, resourceIncludeAttribute));
                 if (!iconFile.Exists) {
                     dataDragon.DownloadChampIcon(id, iconFile);
                 }
@@ -159,9 +164,14 @@ namespace GuessWhoDataManager {
                     resourceElement.SetAttribute(XML_INCLUDE_ATTRIBUTE, resourceIncludeAttribute);
                     itemGroupElement.AppendChild(resourceElement);
                     doc.DocumentElement?.AppendChild(itemGroupElement);
+                    xmlDocModified = true;
                 }
             }
-            doc.Save(projectFilePath);
+
+            if (xmlDocModified) {
+                Logger.Info($"Overwriting project file '{projectFilePath}'...");
+                doc.Save(projectFilePath);
+            }
 
             using (ResXResourceWriter versionResourceWriter = new ResXResourceWriter(VersionResourcePath)) {
                 versionResourceWriter.AddResource(DATA_DRAGON_VERSION_KEY, version);
@@ -188,27 +198,22 @@ namespace GuessWhoDataManager {
         private string SolutionPath { get; }
 
         public string VersionResourcePath {
-            get { return Path.Combine(SolutionPath, RESOURCE_PROJECT_NAME, $"{RESOURCES}.resx"); }
+            get { return Path.Combine(SolutionPath, ResourcesProjectName, $"{RESOURCES}.resx"); }
         }
 
         private string GetDataManagerLocaleResourcePath(Locale locale) {
-            return Path.Combine(SolutionPath, DATA_MANAGER_PROJECT_NAME, RESOURCES,
+            return Path.Combine(SolutionPath, DataManagerProjectName, ResourceManager.RESOURCE_DIRECTORY,
                 ResourceType.Locale.ToString(), $"{ResourceType.Locale}.{locale.ToCultureInfoString()}.resx");
         }
 
         private string GetDataManagerCustomCategoriesResourcePath(Locale locale) {
-            return Path.Combine(SolutionPath, DATA_MANAGER_PROJECT_NAME, RESOURCES,
+            return Path.Combine(SolutionPath, DataManagerProjectName, ResourceManager.RESOURCE_DIRECTORY,
                 ResourceType.CustomCategories.ToString(), $"{ResourceType.CustomCategories}.{locale.ToCultureInfoString()}.resx");
         }
 
-        private string GetOutputLocaleResourcePath(Locale locale) {
-            return Path.Combine(SolutionPath, RESOURCE_PROJECT_NAME, RESOURCES,
-                $"{ResourceType.Locale}.{locale.ToCultureInfoString()}.resx");
-        }
-
-        private string GetOutputLeagueResourcePath(Locale locale) {
-            return Path.Combine(SolutionPath, RESOURCE_PROJECT_NAME, RESOURCES,
-                $"{ResourceType.League}.{locale.ToCultureInfoString()}.resx");
+        private string GetOutputResourcePath(Locale locale) {
+            return Path.Combine(SolutionPath, ResourcesProjectName, ResourceManager.RESOURCE_DIRECTORY,
+                $"{RESOURCES}.{locale.ToCultureInfoString()}.resx");
         }
     }
 }

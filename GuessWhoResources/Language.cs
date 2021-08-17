@@ -1,13 +1,24 @@
 ﻿using System;
+using System.Globalization;
 
 namespace GuessWhoResources {
     public class Language : IComparable<Language> {
         public Locale Locale { get; }
-        public string Name { get; }
 
-        internal Language(Locale locale, string name) {
+        public CultureInfo CultureInfo { get; }
+
+        public string DisplayName { get; }
+
+        public string EnglishName { get; }
+
+        public string LanguageCode { get; }
+
+        internal Language(Locale locale) {
             Locale = locale;
-            Name = name;
+            CultureInfo = locale.ToCultureInfo();
+            DisplayName = CultureInfo.DisplayName;
+            EnglishName = CultureInfo.EnglishName;
+            LanguageCode = locale.GetLanguageCode();
         }
 
         public int CompareTo(Language other) {
@@ -19,7 +30,7 @@ namespace GuessWhoResources {
                 return 1;
             }
 
-            int nameComparison = string.Compare(Name, other.Name, StringComparison.OrdinalIgnoreCase);
+            int nameComparison = string.Compare(DisplayName, other.DisplayName, StringComparison.OrdinalIgnoreCase);
             if (nameComparison != 0) {
                 return nameComparison;
             }
