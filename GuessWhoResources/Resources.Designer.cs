@@ -68,5 +68,14 @@ namespace GuessWhoResources {
                 return ResourceManager.GetString("DataDragonVersion", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string LeagueChampionConfig {
+            get {
+                return ResourceManager.GetString("LeagueChampionConfig", resourceCulture);
+            }
+        }
     }
 }

@@ -11,6 +11,7 @@ using Newtonsoft.Json.Linq;
 
 namespace GuessWhoDataManager {
     internal class DataDragon {
+        private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
         private const string DATA_DRAGON_URL = "http://ddragon.leagueoflegends.com/cdn/";
         private const string DATA_DRAGON_VERSIONS_URL = "https://ddragon.leagueoflegends.com/api/versions.json";
 
@@ -28,6 +29,8 @@ namespace GuessWhoDataManager {
             }
 
             Version = version;
+
+            Logger.Info($"Downloading DataDragon data for version '{version}'...");
 
             using (WebClient wc = new WebClient()) {
                 JObject champObj = JObject.Parse(wc.DownloadString($"{DATA_DRAGON_URL}{Version}/data/{Locale.en_US}/champion.json"))["data"].Value<JObject>();
@@ -166,7 +169,7 @@ namespace GuessWhoDataManager {
         private void InitializeLocales() {
             using (WebClient wc = new WebClient()) {
                 foreach (Locale locale in Enum.GetValues(typeof(Locale))) {
-
+                    Logger.Info($"Downloading locale {locale} data...");
                     JObject langObj = JObject.Parse(Encoding.UTF8.GetString(
                         wc.DownloadData($"{DATA_DRAGON_URL}{Version}/data/{locale}/language.json")))["data"].Value<JObject>();
 

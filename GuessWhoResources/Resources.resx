@@ -121,4 +121,7 @@
     <value>11.15.1</value>
     <comment>The version of Riot's Data Dragon that is currently in use.</comment>
   </data>
+  <data name="LeagueChampionConfig" xml:space="preserve">
+    <value />
+  </data>
 </root>
