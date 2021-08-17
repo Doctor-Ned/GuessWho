@@ -89,7 +89,13 @@ namespace GuessWhoDataManager {
 
             foreach (Locale locale in Enum.GetValues(typeof(Locale))) {
                 if (locale != DEFAULT_LOCALE) {
-                    localeDatas[locale].RefillMissingData(localeDatas, DEFAULT_LOCALE);
+                    localeDatas[locale].RefillMissingFromSimilarLanguages(localeDatas, DEFAULT_LOCALE);
+                }
+            }
+
+            foreach (Locale locale in Enum.GetValues(typeof(Locale))) {
+                if (locale != DEFAULT_LOCALE) {
+                    localeDatas[locale].RefillMissingFromDefaultLocale(localeDatas[DEFAULT_LOCALE]);
                 }
 
                 using (ResXResourceWriter writer = new ResXResourceWriter(Path.Combine(SolutionPath,
