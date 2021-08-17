@@ -92,6 +92,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModel\CategoryViewModel.cs" />
+    <Compile Include="ViewModel\CustomCategoryViewModel.cs" />
     <Compile Include="ViewModel\DialogRejectedChampionsViewModel.cs" />
     <Compile Include="View\BoolToSettingsToolTipConverter.cs" />
     <Compile Include="View\WidthHeightToRectConverter.cs" />
@@ -104,7 +106,7 @@
     </Page>
     <Compile Include="Model\GuessWhoConfig.cs" />
     <Compile Include="Model\GuessWhoConfigManager.cs" />
-    <Compile Include="ViewModel\ChampionCategoryViewModel.cs" />
+    <Compile Include="ViewModel\BasicCategoryViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="View\App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>

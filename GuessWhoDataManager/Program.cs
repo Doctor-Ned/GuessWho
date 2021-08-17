@@ -6,7 +6,7 @@ namespace GuessWhoDataManager {
             // todo: add args etc., I guess
             DataManager dataManager = new DataManager();
             dataManager.ReworkResources(true);
-            Console.WriteLine("Done!");
+            Console.WriteLine("Done! (Press any button to continue)");
             Console.ReadKey();
         }
     }

@@ -1,0 +1,1175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Locale_CategoryFontSizeFormat" xml:space="preserve">
+    <value>Category font size: {0}</value>
+  </data>
+  <data name="Locale_CategorySizeFormat" xml:space="preserve">
+    <value>Category size: {0}</value>
+  </data>
+  <data name="Locale_CloseCapital" xml:space="preserve">
+    <value>CLOSE</value>
+  </data>
+  <data name="Locale_HideSettingsToolTip" xml:space="preserve">
+    <value>Hide the settings panel</value>
+  </data>
+  <data name="Locale_IconSizeFormat" xml:space="preserve">
+    <value>Icon size: {0}</value>
+  </data>
+  <data name="Locale_LoadConfigFailedFormat" xml:space="preserve">
+    <value>Failed to load the config!
+{0}</value>
+  </data>
+  <data name="Locale_LoadConfigPrompt" xml:space="preserve">
+    <value>You're about to reload the config. Unsaved changes will be lost!
+Are you sure?</value>
+  </data>
+  <data name="Locale_LoadConfigToolTip" xml:space="preserve">
+    <value>Load the config</value>
+  </data>
+  <data name="Locale_MaximizeToolTip" xml:space="preserve">
+    <value>Maximize the window</value>
+  </data>
+  <data name="Locale_MinimizeToolTip" xml:space="preserve">
+    <value>Minimalize the window</value>
+  </data>
+  <data name="Locale_NoCapital" xml:space="preserve">
+    <value>NO</value>
+  </data>
+  <data name="Locale_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Locale_ResetConfigDoneWithExceptionFormat" xml:space="preserve">
+    <value>The config was reset, but an exception occurred!
+{0}</value>
+  </data>
+  <data name="Locale_ResetConfigPrompt" xml:space="preserve">
+    <value>You're about to reset the game and all of the settings.
+Are you sure?</value>
+  </data>
+  <data name="Locale_ResetConfigToolTIp" xml:space="preserve">
+    <value>Reset the config</value>
+  </data>
+  <data name="Locale_ResetGameDoneWithExceptionFormat" xml:space="preserve">
+    <value>The game was reset, but an exception occurred!
+{0}</value>
+  </data>
+  <data name="Locale_ResetGamePrompt" xml:space="preserve">
+    <value>You're about to reset the game. Current settings will be preserved.
+Are you sure?</value>
+  </data>
+  <data name="Locale_ResetGameToolTip" xml:space="preserve">
+    <value>Reset the game</value>
+  </data>
+  <data name="Locale_RestoreAllCapital" xml:space="preserve">
+    <value>RESTORE ALL</value>
+  </data>
+  <data name="Locale_RestoreAllPrompt" xml:space="preserve">
+    <value>You're about to restore all rejected champions.
+Are you sure?</value>
+  </data>
+  <data name="Locale_RestoreCapital" xml:space="preserve">
+    <value>RESTORE</value>
+  </data>
+  <data name="Locale_RestoreChampionCapital" xml:space="preserve">
+    <value>RESTORE A CHAMPION</value>
+  </data>
+  <data name="Locale_SaveAndCloseToolTip" xml:space="preserve">
+    <value>Save and close the game</value>
+  </data>
+  <data name="Locale_SaveConfigFailedFormat" xml:space="preserve">
+    <value>Failed to save the config!
+{0}</value>
+  </data>
+  <data name="Locale_SaveConfigSuccessful" xml:space="preserve">
+    <value>Configuration saved!</value>
+  </data>
+  <data name="Locale_SaveConfigToolTip" xml:space="preserve">
+    <value>Save the config</value>
+  </data>
+  <data name="Locale_ShowSettingsToolTip" xml:space="preserve">
+    <value>Show the settings panel</value>
+  </data>
+  <data name="Locale_ShowToolTips" xml:space="preserve">
+    <value>Show tooltips</value>
+  </data>
+  <data name="Locale_YesCapital" xml:space="preserve">
+    <value>YES</value>
+  </data>
+  <data name="CustomCategories_Man" xml:space="preserve">
+    <value>男人</value>
+  </data>
+  <data name="CustomCategories_Woman" xml:space="preserve">
+    <value>女人</value>
+  </data>
+  <data name="League_BasicCategory_Assassin" xml:space="preserve">
+    <value>刺杀</value>
+  </data>
+  <data name="League_BasicCategory_Fighter" xml:space="preserve">
+    <value>斗士</value>
+  </data>
+  <data name="League_BasicCategory_Marksman" xml:space="preserve">
+    <value>射手</value>
+  </data>
+  <data name="League_BasicCategory_Mage" xml:space="preserve">
+    <value>法师</value>
+  </data>
+  <data name="League_BasicCategory_Support" xml:space="preserve">
+    <value>辅助</value>
+  </data>
+  <data name="League_BasicCategory_Tank" xml:space="preserve">
+    <value>坦克</value>
+  </data>
+  <data name="League_Champion_Aatrox_Name" xml:space="preserve">
+    <value>厄萨斯</value>
+  </data>
+  <data name="League_Champion_Aatrox_Title" xml:space="preserve">
+    <value>冥血剑魔</value>
+  </data>
+  <data name="League_Champion_Ahri_Name" xml:space="preserve">
+    <value>阿璃</value>
+  </data>
+  <data name="League_Champion_Ahri_Title" xml:space="preserve">
+    <value>九尾妖狐</value>
+  </data>
+  <data name="League_Champion_Akali_Name" xml:space="preserve">
+    <value>阿卡莉</value>
+  </data>
+  <data name="League_Champion_Akali_Title" xml:space="preserve">
+    <value>只影刺客</value>
+  </data>
+  <data name="League_Champion_Akshan_Name" xml:space="preserve">
+    <value>埃可尚</value>
+  </data>
+  <data name="League_Champion_Akshan_Title" xml:space="preserve">
+    <value>侠盗哨兵</value>
+  </data>
+  <data name="League_Champion_Alistar_Name" xml:space="preserve">
+    <value>亚历斯塔</value>
+  </data>
+  <data name="League_Champion_Alistar_Title" xml:space="preserve">
+    <value>牛头酋长</value>
+  </data>
+  <data name="League_Champion_Amumu_Name" xml:space="preserve">
+    <value>阿姆姆</value>
+  </data>
+  <data name="League_Champion_Amumu_Title" xml:space="preserve">
+    <value>殇之木乃伊</value>
+  </data>
+  <data name="League_Champion_Anivia_Name" xml:space="preserve">
+    <value>艾妮维亚</value>
+  </data>
+  <data name="League_Champion_Anivia_Title" xml:space="preserve">
+    <value>冰晶凤凰</value>
+  </data>
+  <data name="League_Champion_Annie_Name" xml:space="preserve">
+    <value>安妮</value>
+  </data>
+  <data name="League_Champion_Annie_Title" xml:space="preserve">
+    <value>黑暗之女</value>
+  </data>
+  <data name="League_Champion_Aphelios_Name" xml:space="preserve">
+    <value>亚菲利欧</value>
+  </data>
+  <data name="League_Champion_Aphelios_Title" xml:space="preserve">
+    <value>信仰锐武</value>
+  </data>
+  <data name="League_Champion_Ashe_Name" xml:space="preserve">
+    <value>艾希</value>
+  </data>
+  <data name="League_Champion_Ashe_Title" xml:space="preserve">
+    <value>冰霜射手</value>
+  </data>
+  <data name="League_Champion_AurelionSol_Name" xml:space="preserve">
+    <value>翱锐龙兽</value>
+  </data>
+  <data name="League_Champion_AurelionSol_Title" xml:space="preserve">
+    <value>星际漫游者</value>
+  </data>
+  <data name="League_Champion_Azir_Name" xml:space="preserve">
+    <value>阿祈尔</value>
+  </data>
+  <data name="League_Champion_Azir_Title" xml:space="preserve">
+    <value>苏瑞玛砂皇</value>
+  </data>
+  <data name="League_Champion_Bard_Name" xml:space="preserve">
+    <value>巴德</value>
+  </data>
+  <data name="League_Champion_Bard_Title" xml:space="preserve">
+    <value>漂泊守望者</value>
+  </data>
+  <data name="League_Champion_Blitzcrank_Name" xml:space="preserve">
+    <value>布里茨</value>
+  </data>
+  <data name="League_Champion_Blitzcrank_Title" xml:space="preserve">
+    <value>蒸汽巨神兵</value>
+  </data>
+  <data name="League_Champion_Brand_Name" xml:space="preserve">
+    <value>布兰德</value>
+  </data>
+  <data name="League_Champion_Brand_Title" xml:space="preserve">
+    <value>复仇业火</value>
+  </data>
+  <data name="League_Champion_Braum_Name" xml:space="preserve">
+    <value>布郎姆</value>
+  </data>
+  <data name="League_Champion_Braum_Title" xml:space="preserve">
+    <value>弗雷尔卓德豪腕</value>
+  </data>
+  <data name="League_Champion_Caitlyn_Name" xml:space="preserve">
+    <value>凯特琳</value>
+  </data>
+  <data name="League_Champion_Caitlyn_Title" xml:space="preserve">
+    <value>执法者</value>
+  </data>
+  <data name="League_Champion_Camille_Name" xml:space="preserve">
+    <value>卡蜜儿</value>
+  </data>
+  <data name="League_Champion_Camille_Title" xml:space="preserve">
+    <value>钢铁残影</value>
+  </data>
+  <data name="League_Champion_Cassiopeia_Name" xml:space="preserve">
+    <value>卡莎碧雅</value>
+  </data>
+  <data name="League_Champion_Cassiopeia_Title" xml:space="preserve">
+    <value>蛇之拥抱</value>
+  </data>
+  <data name="League_Champion_Chogath_Name" xml:space="preserve">
+    <value>科加斯</value>
+  </data>
+  <data name="League_Champion_Chogath_Title" xml:space="preserve">
+    <value>虚空恐惧</value>
+  </data>
+  <data name="League_Champion_Corki_Name" xml:space="preserve">
+    <value>库奇</value>
+  </data>
+  <data name="League_Champion_Corki_Title" xml:space="preserve">
+    <value>英勇投弹手</value>
+  </data>
+  <data name="League_Champion_Darius_Name" xml:space="preserve">
+    <value>达瑞斯</value>
+  </data>
+  <data name="League_Champion_Darius_Title" xml:space="preserve">
+    <value>诺克萨斯之力</value>
+  </data>
+  <data name="League_Champion_Diana_Name" xml:space="preserve">
+    <value>黛安娜</value>
+  </data>
+  <data name="League_Champion_Diana_Title" xml:space="preserve">
+    <value>轻藐之月</value>
+  </data>
+  <data name="League_Champion_Draven_Name" xml:space="preserve">
+    <value>达瑞文</value>
+  </data>
+  <data name="League_Champion_Draven_Title" xml:space="preserve">
+    <value>处刑娱乐大师</value>
+  </data>
+  <data name="League_Champion_DrMundo_Name" xml:space="preserve">
+    <value>蒙多医生</value>
+  </data>
+  <data name="League_Champion_DrMundo_Title" xml:space="preserve">
+    <value>佐恩狂人</value>
+  </data>
+  <data name="League_Champion_Ekko_Name" xml:space="preserve">
+    <value>艾克</value>
+  </data>
+  <data name="League_Champion_Ekko_Title" xml:space="preserve">
+    <value>时空少年</value>
+  </data>
+  <data name="League_Champion_Elise_Name" xml:space="preserve">
+    <value>伊莉丝</value>
+  </data>
+  <data name="League_Champion_Elise_Title" xml:space="preserve">
+    <value>蜘蛛女王</value>
+  </data>
+  <data name="League_Champion_Evelynn_Name" xml:space="preserve">
+    <value>伊芙琳</value>
+  </data>
+  <data name="League_Champion_Evelynn_Title" xml:space="preserve">
+    <value>临终拥抱</value>
+  </data>
+  <data name="League_Champion_Ezreal_Name" xml:space="preserve">
+    <value>伊泽瑞尔</value>
+  </data>
+  <data name="League_Champion_Ezreal_Title" xml:space="preserve">
+    <value>探险家</value>
+  </data>
+  <data name="League_Champion_Fiddlesticks_Name" xml:space="preserve">
+    <value>费德提克</value>
+  </data>
+  <data name="League_Champion_Fiddlesticks_Title" xml:space="preserve">
+    <value>亘古之惧</value>
+  </data>
+  <data name="League_Champion_Fiora_Name" xml:space="preserve">
+    <value>菲欧拉</value>
+  </data>
+  <data name="League_Champion_Fiora_Title" xml:space="preserve">
+    <value>孤高剑客</value>
+  </data>
+  <data name="League_Champion_Fizz_Name" xml:space="preserve">
+    <value>飞斯</value>
+  </data>
+  <data name="League_Champion_Fizz_Title" xml:space="preserve">
+    <value>深海顽童</value>
+  </data>
+  <data name="League_Champion_Galio_Name" xml:space="preserve">
+    <value>加里欧</value>
+  </data>
+  <data name="League_Champion_Galio_Title" xml:space="preserve">
+    <value>御国巨像</value>
+  </data>
+  <data name="League_Champion_Gangplank_Name" xml:space="preserve">
+    <value>刚普朗克</value>
+  </data>
+  <data name="League_Champion_Gangplank_Title" xml:space="preserve">
+    <value>海洋之灾</value>
+  </data>
+  <data name="League_Champion_Garen_Name" xml:space="preserve">
+    <value>盖伦</value>
+  </data>
+  <data name="League_Champion_Garen_Title" xml:space="preserve">
+    <value>蒂玛西亚之力</value>
+  </data>
+  <data name="League_Champion_Gnar_Name" xml:space="preserve">
+    <value>呐儿</value>
+  </data>
+  <data name="League_Champion_Gnar_Title" xml:space="preserve">
+    <value>失落之子</value>
+  </data>
+  <data name="League_Champion_Gragas_Name" xml:space="preserve">
+    <value>古拉格斯</value>
+  </data>
+  <data name="League_Champion_Gragas_Title" xml:space="preserve">
+    <value>酒桶之王</value>
+  </data>
+  <data name="League_Champion_Graves_Name" xml:space="preserve">
+    <value>葛雷夫</value>
+  </data>
+  <data name="League_Champion_Graves_Title" xml:space="preserve">
+    <value>亡命之徒</value>
+  </data>
+  <data name="League_Champion_Gwen_Name" xml:space="preserve">
+    <value>关</value>
+  </data>
+  <data name="League_Champion_Gwen_Title" xml:space="preserve">
+    <value>圣启织偶</value>
+  </data>
+  <data name="League_Champion_Hecarim_Name" xml:space="preserve">
+    <value>赫克林</value>
+  </data>
+  <data name="League_Champion_Hecarim_Title" xml:space="preserve">
+    <value>战争之影</value>
+  </data>
+  <data name="League_Champion_Heimerdinger_Name" xml:space="preserve">
+    <value>汉默丁格</value>
+  </data>
+  <data name="League_Champion_Heimerdinger_Title" xml:space="preserve">
+    <value>大发明家</value>
+  </data>
+  <data name="League_Champion_Illaoi_Name" xml:space="preserve">
+    <value>伊罗旖</value>
+  </data>
+  <data name="League_Champion_Illaoi_Title" xml:space="preserve">
+    <value>海妖祭司</value>
+  </data>
+  <data name="League_Champion_Irelia_Name" xml:space="preserve">
+    <value>伊瑞莉雅</value>
+  </data>
+  <data name="League_Champion_Irelia_Title" xml:space="preserve">
+    <value>舞剑灵使</value>
+  </data>
+  <data name="League_Champion_Ivern_Name" xml:space="preserve">
+    <value>埃尔文</value>
+  </data>
+  <data name="League_Champion_Ivern_Title" xml:space="preserve">
+    <value>绿林之父</value>
+  </data>
+  <data name="League_Champion_Janna_Name" xml:space="preserve">
+    <value>珍娜</value>
+  </data>
+  <data name="League_Champion_Janna_Title" xml:space="preserve">
+    <value>风暴女神</value>
+  </data>
+  <data name="League_Champion_JarvanIV_Name" xml:space="preserve">
+    <value>嘉文四世</value>
+  </data>
+  <data name="League_Champion_JarvanIV_Title" xml:space="preserve">
+    <value>蒂玛西亚楷模</value>
+  </data>
+  <data name="League_Champion_Jax_Name" xml:space="preserve">
+    <value>贾克斯</value>
+  </data>
+  <data name="League_Champion_Jax_Title" xml:space="preserve">
+    <value>武器达人</value>
+  </data>
+  <data name="League_Champion_Jayce_Name" xml:space="preserve">
+    <value>杰西</value>
+  </data>
+  <data name="League_Champion_Jayce_Title" xml:space="preserve">
+    <value>明日守护者</value>
+  </data>
+  <data name="League_Champion_Jhin_Name" xml:space="preserve">
+    <value>烬</value>
+  </data>
+  <data name="League_Champion_Jhin_Title" xml:space="preserve">
+    <value>炫技大师</value>
+  </data>
+  <data name="League_Champion_Jinx_Name" xml:space="preserve">
+    <value>吉茵珂丝</value>
+  </data>
+  <data name="League_Champion_Jinx_Title" xml:space="preserve">
+    <value>暴走重炮</value>
+  </data>
+  <data name="League_Champion_Kaisa_Name" xml:space="preserve">
+    <value>凯莎</value>
+  </data>
+  <data name="League_Champion_Kaisa_Title" xml:space="preserve">
+    <value>虚空之女</value>
+  </data>
+  <data name="League_Champion_Kalista_Name" xml:space="preserve">
+    <value>克黎思妲</value>
+  </data>
+  <data name="League_Champion_Kalista_Title" xml:space="preserve">
+    <value>复仇之矛</value>
+  </data>
+  <data name="League_Champion_Karma_Name" xml:space="preserve">
+    <value>卡玛</value>
+  </data>
+  <data name="League_Champion_Karma_Title" xml:space="preserve">
+    <value>魂之启者</value>
+  </data>
+  <data name="League_Champion_Karthus_Name" xml:space="preserve">
+    <value>卡尔瑟斯</value>
+  </data>
+  <data name="League_Champion_Karthus_Title" xml:space="preserve">
+    <value>死亡颂唱者</value>
+  </data>
+  <data name="League_Champion_Kassadin_Name" xml:space="preserve">
+    <value>卡萨丁</value>
+  </data>
+  <data name="League_Champion_Kassadin_Title" xml:space="preserve">
+    <value>虚空行者</value>
+  </data>
+  <data name="League_Champion_Katarina_Name" xml:space="preserve">
+    <value>卡特莲娜</value>
+  </data>
+  <data name="League_Champion_Katarina_Title" xml:space="preserve">
+    <value>不祥之刃</value>
+  </data>
+  <data name="League_Champion_Kayle_Name" xml:space="preserve">
+    <value>凯尔</value>
+  </data>
+  <data name="League_Champion_Kayle_Title" xml:space="preserve">
+    <value>正义天使</value>
+  </data>
+  <data name="League_Champion_Kayn_Name" xml:space="preserve">
+    <value>慨影</value>
+  </data>
+  <data name="League_Champion_Kayn_Title" xml:space="preserve">
+    <value>闇魂收割者</value>
+  </data>
+  <data name="League_Champion_Kennen_Name" xml:space="preserve">
+    <value>凯能</value>
+  </data>
+  <data name="League_Champion_Kennen_Title" xml:space="preserve">
+    <value>狂暴之心</value>
+  </data>
+  <data name="League_Champion_Khazix_Name" xml:space="preserve">
+    <value>卡力斯</value>
+  </data>
+  <data name="League_Champion_Khazix_Title" xml:space="preserve">
+    <value>虚空掠食者</value>
+  </data>
+  <data name="League_Champion_Kindred_Name" xml:space="preserve">
+    <value>镜爪</value>
+  </data>
+  <data name="League_Champion_Kindred_Title" xml:space="preserve">
+    <value>永恒猎手</value>
+  </data>
+  <data name="League_Champion_Kled_Name" xml:space="preserve">
+    <value>克雷德</value>
+  </data>
+  <data name="League_Champion_Kled_Title" xml:space="preserve">
+    <value>暴躁骑士</value>
+  </data>
+  <data name="League_Champion_KogMaw_Name" xml:space="preserve">
+    <value>寇格魔</value>
+  </data>
+  <data name="League_Champion_KogMaw_Title" xml:space="preserve">
+    <value>深渊巨口</value>
+  </data>
+  <data name="League_Champion_Leblanc_Name" xml:space="preserve">
+    <value>勒布朗</value>
+  </data>
+  <data name="League_Champion_Leblanc_Title" xml:space="preserve">
+    <value>诈欺师</value>
+  </data>
+  <data name="League_Champion_LeeSin_Name" xml:space="preserve">
+    <value>李星</value>
+  </data>
+  <data name="League_Champion_LeeSin_Title" xml:space="preserve">
+    <value>盲眼武僧</value>
+  </data>
+  <data name="League_Champion_Leona_Name" xml:space="preserve">
+    <value>雷欧娜</value>
+  </data>
+  <data name="League_Champion_Leona_Title" xml:space="preserve">
+    <value>黎明之光</value>
+  </data>
+  <data name="League_Champion_Lillia_Name" xml:space="preserve">
+    <value>莉莉亚</value>
+  </data>
+  <data name="League_Champion_Lillia_Title" xml:space="preserve">
+    <value>羞赧绽华</value>
+  </data>
+  <data name="League_Champion_Lissandra_Name" xml:space="preserve">
+    <value>丽珊卓</value>
+  </data>
+  <data name="League_Champion_Lissandra_Title" xml:space="preserve">
+    <value>傲雪巫女</value>
+  </data>
+  <data name="League_Champion_Lucian_Name" xml:space="preserve">
+    <value>路西恩</value>
+  </data>
+  <data name="League_Champion_Lucian_Title" xml:space="preserve">
+    <value>驱魔圣枪</value>
+  </data>
+  <data name="League_Champion_Lulu_Name" xml:space="preserve">
+    <value>露璐</value>
+  </data>
+  <data name="League_Champion_Lulu_Title" xml:space="preserve">
+    <value>精灵魔法使</value>
+  </data>
+  <data name="League_Champion_Lux_Name" xml:space="preserve">
+    <value>拉克丝</value>
+  </data>
+  <data name="League_Champion_Lux_Title" xml:space="preserve">
+    <value>光之少女</value>
+  </data>
+  <data name="League_Champion_Malphite_Name" xml:space="preserve">
+    <value>墨菲特</value>
+  </data>
+  <data name="League_Champion_Malphite_Title" xml:space="preserve">
+    <value>幻石碎片</value>
+  </data>
+  <data name="League_Champion_Malzahar_Name" xml:space="preserve">
+    <value>马尔札哈</value>
+  </data>
+  <data name="League_Champion_Malzahar_Title" xml:space="preserve">
+    <value>虚空先知</value>
+  </data>
+  <data name="League_Champion_Maokai_Name" xml:space="preserve">
+    <value>茂凯</value>
+  </data>
+  <data name="League_Champion_Maokai_Title" xml:space="preserve">
+    <value>扭曲树人</value>
+  </data>
+  <data name="League_Champion_MasterYi_Name" xml:space="preserve">
+    <value>易大师</value>
+  </data>
+  <data name="League_Champion_MasterYi_Title" xml:space="preserve">
+    <value>无极剑圣</value>
+  </data>
+  <data name="League_Champion_MissFortune_Name" xml:space="preserve">
+    <value>好运姐</value>
+  </data>
+  <data name="League_Champion_MissFortune_Title" xml:space="preserve">
+    <value>赏金猎人</value>
+  </data>
+  <data name="League_Champion_MonkeyKing_Name" xml:space="preserve">
+    <value>悟空</value>
+  </data>
+  <data name="League_Champion_MonkeyKing_Title" xml:space="preserve">
+    <value>齐天大圣</value>
+  </data>
+  <data name="League_Champion_Mordekaiser_Name" xml:space="preserve">
+    <value>魔斗凯萨</value>
+  </data>
+  <data name="League_Champion_Mordekaiser_Title" xml:space="preserve">
+    <value>金属亡灵</value>
+  </data>
+  <data name="League_Champion_Morgana_Name" xml:space="preserve">
+    <value>魔甘娜</value>
+  </data>
+  <data name="League_Champion_Morgana_Title" xml:space="preserve">
+    <value>墮落天使</value>
+  </data>
+  <data name="League_Champion_Nami_Name" xml:space="preserve">
+    <value>娜米</value>
+  </data>
+  <data name="League_Champion_Nami_Title" xml:space="preserve">
+    <value>海潮之音</value>
+  </data>
+  <data name="League_Champion_Nasus_Name" xml:space="preserve">
+    <value>纳瑟斯</value>
+  </data>
+  <data name="League_Champion_Nasus_Title" xml:space="preserve">
+    <value>沙漠死神</value>
+  </data>
+  <data name="League_Champion_Nautilus_Name" xml:space="preserve">
+    <value>纳帝鲁斯</value>
+  </data>
+  <data name="League_Champion_Nautilus_Title" xml:space="preserve">
+    <value>深渊巨人</value>
+  </data>
+  <data name="League_Champion_Neeko_Name" xml:space="preserve">
+    <value>妮可</value>
+  </data>
+  <data name="League_Champion_Neeko_Title" xml:space="preserve">
+    <value>好奇变色龙</value>
+  </data>
+  <data name="League_Champion_Nidalee_Name" xml:space="preserve">
+    <value>奈德丽</value>
+  </data>
+  <data name="League_Champion_Nidalee_Title" xml:space="preserve">
+    <value>狂野猎手</value>
+  </data>
+  <data name="League_Champion_Nocturne_Name" xml:space="preserve">
+    <value>夜曲</value>
+  </data>
+  <data name="League_Champion_Nocturne_Title" xml:space="preserve">
+    <value>永恒梦魇</value>
+  </data>
+  <data name="League_Champion_Nunu_Name" xml:space="preserve">
+    <value>努努和威朗普</value>
+  </data>
+  <data name="League_Champion_Nunu_Title" xml:space="preserve">
+    <value>冰原拍档</value>
+  </data>
+  <data name="League_Champion_Olaf_Name" xml:space="preserve">
+    <value>欧拉夫</value>
+  </data>
+  <data name="League_Champion_Olaf_Title" xml:space="preserve">
+    <value>狂战士</value>
+  </data>
+  <data name="League_Champion_Orianna_Name" xml:space="preserve">
+    <value>奥莉安娜</value>
+  </data>
+  <data name="League_Champion_Orianna_Title" xml:space="preserve">
+    <value>发条少女</value>
+  </data>
+  <data name="League_Champion_Ornn_Name" xml:space="preserve">
+    <value>鄂尔</value>
+  </data>
+  <data name="League_Champion_Ornn_Title" xml:space="preserve">
+    <value>炉心山神</value>
+  </data>
+  <data name="League_Champion_Pantheon_Name" xml:space="preserve">
+    <value>潘森</value>
+  </data>
+  <data name="League_Champion_Pantheon_Title" xml:space="preserve">
+    <value>不屈之矛</value>
+  </data>
+  <data name="League_Champion_Poppy_Name" xml:space="preserve">
+    <value>波比</value>
+  </data>
+  <data name="League_Champion_Poppy_Title" xml:space="preserve">
+    <value>圣槌守护者</value>
+  </data>
+  <data name="League_Champion_Pyke_Name" xml:space="preserve">
+    <value>派克</value>
+  </data>
+  <data name="League_Champion_Pyke_Title" xml:space="preserve">
+    <value>血港开膛手</value>
+  </data>
+  <data name="League_Champion_Qiyana_Name" xml:space="preserve">
+    <value>姬亚娜</value>
+  </data>
+  <data name="League_Champion_Qiyana_Title" xml:space="preserve">
+    <value>元素女帝</value>
+  </data>
+  <data name="League_Champion_Quinn_Name" xml:space="preserve">
+    <value>葵恩</value>
+  </data>
+  <data name="League_Champion_Quinn_Title" xml:space="preserve">
+    <value>蒂玛西亚之翼</value>
+  </data>
+  <data name="League_Champion_Rakan_Name" xml:space="preserve">
+    <value>锐空</value>
+  </data>
+  <data name="League_Champion_Rakan_Title" xml:space="preserve">
+    <value>惑羽</value>
+  </data>
+  <data name="League_Champion_Rammus_Name" xml:space="preserve">
+    <value>拉姆斯</value>
+  </data>
+  <data name="League_Champion_Rammus_Title" xml:space="preserve">
+    <value>披甲龙龟</value>
+  </data>
+  <data name="League_Champion_RekSai_Name" xml:space="preserve">
+    <value>雷珂煞</value>
+  </data>
+  <data name="League_Champion_RekSai_Title" xml:space="preserve">
+    <value>虚空穿梭者</value>
+  </data>
+  <data name="League_Champion_Rell_Name" xml:space="preserve">
+    <value>锐儿</value>
+  </data>
+  <data name="League_Champion_Rell_Title" xml:space="preserve">
+    <value>钢铁少女</value>
+  </data>
+  <data name="League_Champion_Renekton_Name" xml:space="preserve">
+    <value>雷尼克顿</value>
+  </data>
+  <data name="League_Champion_Renekton_Title" xml:space="preserve">
+    <value>沙漠屠夫</value>
+  </data>
+  <data name="League_Champion_Rengar_Name" xml:space="preserve">
+    <value>雷葛尔</value>
+  </data>
+  <data name="League_Champion_Rengar_Title" xml:space="preserve">
+    <value>傲慢伏击者</value>
+  </data>
+  <data name="League_Champion_Riven_Name" xml:space="preserve">
+    <value>雷玟</value>
+  </data>
+  <data name="League_Champion_Riven_Title" xml:space="preserve">
+    <value>破刃放逐者</value>
+  </data>
+  <data name="League_Champion_Rumble_Name" xml:space="preserve">
+    <value>蓝宝</value>
+  </data>
+  <data name="League_Champion_Rumble_Title" xml:space="preserve">
+    <value>武装机兵</value>
+  </data>
+  <data name="League_Champion_Ryze_Name" xml:space="preserve">
+    <value>雷兹</value>
+  </data>
+  <data name="League_Champion_Ryze_Title" xml:space="preserve">
+    <value>符文法师</value>
+  </data>
+  <data name="League_Champion_Samira_Name" xml:space="preserve">
+    <value>煞蜜拉</value>
+  </data>
+  <data name="League_Champion_Samira_Title" xml:space="preserve">
+    <value>荒漠蔷薇</value>
+  </data>
+  <data name="League_Champion_Sejuani_Name" xml:space="preserve">
+    <value>史瓦妮</value>
+  </data>
+  <data name="League_Champion_Sejuani_Title" xml:space="preserve">
+    <value>北境之怒</value>
+  </data>
+  <data name="League_Champion_Senna_Name" xml:space="preserve">
+    <value>姗娜</value>
+  </data>
+  <data name="League_Champion_Senna_Title" xml:space="preserve">
+    <value>赎魂圣枪</value>
+  </data>
+  <data name="League_Champion_Seraphine_Name" xml:space="preserve">
+    <value>瑟菈纷</value>
+  </data>
+  <data name="League_Champion_Seraphine_Title" xml:space="preserve">
+    <value>灿眸歌姬</value>
+  </data>
+  <data name="League_Champion_Sett_Name" xml:space="preserve">
+    <value>赛特</value>
+  </data>
+  <data name="League_Champion_Sett_Title" xml:space="preserve">
+    <value>兽血拳皇</value>
+  </data>
+  <data name="League_Champion_Shaco_Name" xml:space="preserve">
+    <value>萨科</value>
+  </data>
+  <data name="League_Champion_Shaco_Title" xml:space="preserve">
+    <value>恶魔小丑</value>
+  </data>
+  <data name="League_Champion_Shen_Name" xml:space="preserve">
+    <value>慎</value>
+  </data>
+  <data name="League_Champion_Shen_Title" xml:space="preserve">
+    <value>暮光之眼</value>
+  </data>
+  <data name="League_Champion_Shyvana_Name" xml:space="preserve">
+    <value>希瓦娜</value>
+  </data>
+  <data name="League_Champion_Shyvana_Title" xml:space="preserve">
+    <value>半龙少女</value>
+  </data>
+  <data name="League_Champion_Singed_Name" xml:space="preserve">
+    <value>辛吉德</value>
+  </data>
+  <data name="League_Champion_Singed_Title" xml:space="preserve">
+    <value>疯狂炼金师</value>
+  </data>
+  <data name="League_Champion_Sion_Name" xml:space="preserve">
+    <value>赛恩</value>
+  </data>
+  <data name="League_Champion_Sion_Title" xml:space="preserve">
+    <value>亡灵勇士</value>
+  </data>
+  <data name="League_Champion_Sivir_Name" xml:space="preserve">
+    <value>希维尔</value>
+  </data>
+  <data name="League_Champion_Sivir_Title" xml:space="preserve">
+    <value>战争女神</value>
+  </data>
+  <data name="League_Champion_Skarner_Name" xml:space="preserve">
+    <value>史加纳</value>
+  </data>
+  <data name="League_Champion_Skarner_Title" xml:space="preserve">
+    <value>水晶战蝎</value>
+  </data>
+  <data name="League_Champion_Sona_Name" xml:space="preserve">
+    <value>索娜</value>
+  </data>
+  <data name="League_Champion_Sona_Title" xml:space="preserve">
+    <value>琴仙</value>
+  </data>
+  <data name="League_Champion_Soraka_Name" xml:space="preserve">
+    <value>索拉卡</value>
+  </data>
+  <data name="League_Champion_Soraka_Title" xml:space="preserve">
+    <value>众星之子</value>
+  </data>
+  <data name="League_Champion_Swain_Name" xml:space="preserve">
+    <value>斯温</value>
+  </data>
+  <data name="League_Champion_Swain_Title" xml:space="preserve">
+    <value>诺克萨斯总帅</value>
+  </data>
+  <data name="League_Champion_Sylas_Name" xml:space="preserve">
+    <value>赛勒斯</value>
+  </data>
+  <data name="League_Champion_Sylas_Title" xml:space="preserve">
+    <value>罪链术士</value>
+  </data>
+  <data name="League_Champion_Syndra_Name" xml:space="preserve">
+    <value>星朵拉</value>
+  </data>
+  <data name="League_Champion_Syndra_Title" xml:space="preserve">
+    <value>黑暗领主</value>
+  </data>
+  <data name="League_Champion_TahmKench_Name" xml:space="preserve">
+    <value>贪啃奇</value>
+  </data>
+  <data name="League_Champion_TahmKench_Title" xml:space="preserve">
+    <value>河中巨怪</value>
+  </data>
+  <data name="League_Champion_Taliyah_Name" xml:space="preserve">
+    <value>塔莉雅</value>
+  </data>
+  <data name="League_Champion_Taliyah_Title" xml:space="preserve">
+    <value>岩石编织者</value>
+  </data>
+  <data name="League_Champion_Talon_Name" xml:space="preserve">
+    <value>塔隆</value>
+  </data>
+  <data name="League_Champion_Talon_Title" xml:space="preserve">
+    <value>神影刺客</value>
+  </data>
+  <data name="League_Champion_Taric_Name" xml:space="preserve">
+    <value>塔里克</value>
+  </data>
+  <data name="League_Champion_Taric_Title" xml:space="preserve">
+    <value>瓦罗然之盾</value>
+  </data>
+  <data name="League_Champion_Teemo_Name" xml:space="preserve">
+    <value>提摩</value>
+  </data>
+  <data name="League_Champion_Teemo_Title" xml:space="preserve">
+    <value>迅捷斥候</value>
+  </data>
+  <data name="League_Champion_Thresh_Name" xml:space="preserve">
+    <value>瑟雷西</value>
+  </data>
+  <data name="League_Champion_Thresh_Title" xml:space="preserve">
+    <value>炼魂狱长</value>
+  </data>
+  <data name="League_Champion_Tristana_Name" xml:space="preserve">
+    <value>崔丝塔娜</value>
+  </data>
+  <data name="League_Champion_Tristana_Title" xml:space="preserve">
+    <value>约德尔炮手</value>
+  </data>
+  <data name="League_Champion_Trundle_Name" xml:space="preserve">
+    <value>特朗德</value>
+  </data>
+  <data name="League_Champion_Trundle_Title" xml:space="preserve">
+    <value>巨魔王</value>
+  </data>
+  <data name="League_Champion_Tryndamere_Name" xml:space="preserve">
+    <value>泰达米尔</value>
+  </data>
+  <data name="League_Champion_Tryndamere_Title" xml:space="preserve">
+    <value>蛮族之王</value>
+  </data>
+  <data name="League_Champion_TwistedFate_Name" xml:space="preserve">
+    <value>逆命</value>
+  </data>
+  <data name="League_Champion_TwistedFate_Title" xml:space="preserve">
+    <value>卡牌大师</value>
+  </data>
+  <data name="League_Champion_Twitch_Name" xml:space="preserve">
+    <value>图奇</value>
+  </data>
+  <data name="League_Champion_Twitch_Title" xml:space="preserve">
+    <value>瘟疫之源</value>
+  </data>
+  <data name="League_Champion_Udyr_Name" xml:space="preserve">
+    <value>乌迪尔</value>
+  </data>
+  <data name="League_Champion_Udyr_Title" xml:space="preserve">
+    <value>神灵行者</value>
+  </data>
+  <data name="League_Champion_Urgot_Name" xml:space="preserve">
+    <value>乌尔加特</value>
+  </data>
+  <data name="League_Champion_Urgot_Title" xml:space="preserve">
+    <value>重装无畏</value>
+  </data>
+  <data name="League_Champion_Varus_Name" xml:space="preserve">
+    <value>法洛士</value>
+  </data>
+  <data name="League_Champion_Varus_Title" xml:space="preserve">
+    <value>惩戒之箭</value>
+  </data>
+  <data name="League_Champion_Vayne_Name" xml:space="preserve">
+    <value>汎</value>
+  </data>
+  <data name="League_Champion_Vayne_Title" xml:space="preserve">
+    <value>暗夜猎人</value>
+  </data>
+  <data name="League_Champion_Veigar_Name" xml:space="preserve">
+    <value>维迦</value>
+  </data>
+  <data name="League_Champion_Veigar_Title" xml:space="preserve">
+    <value>邪恶小法师</value>
+  </data>
+  <data name="League_Champion_Velkoz_Name" xml:space="preserve">
+    <value>威寇兹</value>
+  </data>
+  <data name="League_Champion_Velkoz_Title" xml:space="preserve">
+    <value>虚空魔眼</value>
+  </data>
+  <data name="League_Champion_Vi_Name" xml:space="preserve">
+    <value>菲艾</value>
+  </data>
+  <data name="League_Champion_Vi_Title" xml:space="preserve">
+    <value>铁腕特警</value>
+  </data>
+  <data name="League_Champion_Viego_Name" xml:space="preserve">
+    <value>维尔戈</value>
+  </data>
+  <data name="League_Champion_Viego_Title" xml:space="preserve">
+    <value>殒落王者</value>
+  </data>
+  <data name="League_Champion_Viktor_Name" xml:space="preserve">
+    <value>维克特</value>
+  </data>
+  <data name="League_Champion_Viktor_Title" xml:space="preserve">
+    <value>机械使徒</value>
+  </data>
+  <data name="League_Champion_Vladimir_Name" xml:space="preserve">
+    <value>弗拉迪米尔</value>
+  </data>
+  <data name="League_Champion_Vladimir_Title" xml:space="preserve">
+    <value>血色收割者</value>
+  </data>
+  <data name="League_Champion_Volibear_Name" xml:space="preserve">
+    <value>弗力贝尔</value>
+  </data>
+  <data name="League_Champion_Volibear_Title" xml:space="preserve">
+    <value>无情风暴</value>
+  </data>
+  <data name="League_Champion_Warwick_Name" xml:space="preserve">
+    <value>沃维克</value>
+  </data>
+  <data name="League_Champion_Warwick_Title" xml:space="preserve">
+    <value>嗜血狂怒</value>
+  </data>
+  <data name="League_Champion_Xayah_Name" xml:space="preserve">
+    <value>刹雅</value>
+  </data>
+  <data name="League_Champion_Xayah_Title" xml:space="preserve">
+    <value>逆羽</value>
+  </data>
+  <data name="League_Champion_Xerath_Name" xml:space="preserve">
+    <value>齐勒斯</value>
+  </data>
+  <data name="League_Champion_Xerath_Title" xml:space="preserve">
+    <value>远古魔导</value>
+  </data>
+  <data name="League_Champion_XinZhao_Name" xml:space="preserve">
+    <value>赵信</value>
+  </data>
+  <data name="League_Champion_XinZhao_Title" xml:space="preserve">
+    <value>蒂玛西亚总管</value>
+  </data>
+  <data name="League_Champion_Yasuo_Name" xml:space="preserve">
+    <value>犽宿</value>
+  </data>
+  <data name="League_Champion_Yasuo_Title" xml:space="preserve">
+    <value>放逐浪人</value>
+  </data>
+  <data name="League_Champion_Yone_Name" xml:space="preserve">
+    <value>犽凝</value>
+  </data>
+  <data name="League_Champion_Yone_Title" xml:space="preserve">
+    <value>不灭剑豪</value>
+  </data>
+  <data name="League_Champion_Yorick_Name" xml:space="preserve">
+    <value>约瑞科</value>
+  </data>
+  <data name="League_Champion_Yorick_Title" xml:space="preserve">
+    <value>亡魂牧人</value>
+  </data>
+  <data name="League_Champion_Yuumi_Name" xml:space="preserve">
+    <value>悠咪</value>
+  </data>
+  <data name="League_Champion_Yuumi_Title" xml:space="preserve">
+    <value>魔法灵猫</value>
+  </data>
+  <data name="League_Champion_Zac_Name" xml:space="preserve">
+    <value>札克</value>
+  </data>
+  <data name="League_Champion_Zac_Title" xml:space="preserve">
+    <value>秘密武器</value>
+  </data>
+  <data name="League_Champion_Zed_Name" xml:space="preserve">
+    <value>劫</value>
+  </data>
+  <data name="League_Champion_Zed_Title" xml:space="preserve">
+    <value>影忍至尊</value>
+  </data>
+  <data name="League_Champion_Ziggs_Name" xml:space="preserve">
+    <value>希格斯</value>
+  </data>
+  <data name="League_Champion_Ziggs_Title" xml:space="preserve">
+    <value>魔法爆破专家</value>
+  </data>
+  <data name="League_Champion_Zilean_Name" xml:space="preserve">
+    <value>极灵</value>
+  </data>
+  <data name="League_Champion_Zilean_Title" xml:space="preserve">
+    <value>时光守护者</value>
+  </data>
+  <data name="League_Champion_Zoe_Name" xml:space="preserve">
+    <value>柔依</value>
+  </data>
+  <data name="League_Champion_Zoe_Title" xml:space="preserve">
+    <value>暮光星灵</value>
+  </data>
+  <data name="League_Champion_Zyra_Name" xml:space="preserve">
+    <value>枷萝</value>
+  </data>
+  <data name="League_Champion_Zyra_Title" xml:space="preserve">
+    <value>荆棘漫游者</value>
+  </data>
+</root>

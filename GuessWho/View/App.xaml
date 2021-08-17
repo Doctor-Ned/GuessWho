@@ -16,7 +16,6 @@
             <DataTemplate DataType="{x:Type vm:DialogRejectedChampionsViewModel}">
                 <local:RejectedChampionsControl />
             </DataTemplate>
-            <ResourceDictionary x:Key="LocaleRes" Source="pack://application:,,,/GuessWhoResources;component/Resources/Locale.resx" />
             <ResourceDictionary.MergedDictionaries>
                 <materialDesign:BundledTheme BaseTheme="Dark" PrimaryColor="DeepPurple" SecondaryColor="DeepPurple" />
                 <ResourceDictionary

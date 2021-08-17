@@ -1,0 +1,1175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Locale_CategoryFontSizeFormat" xml:space="preserve">
+    <value>Category font size: {0}</value>
+  </data>
+  <data name="Locale_CategorySizeFormat" xml:space="preserve">
+    <value>Category size: {0}</value>
+  </data>
+  <data name="Locale_CloseCapital" xml:space="preserve">
+    <value>CLOSE</value>
+  </data>
+  <data name="Locale_HideSettingsToolTip" xml:space="preserve">
+    <value>Hide the settings panel</value>
+  </data>
+  <data name="Locale_IconSizeFormat" xml:space="preserve">
+    <value>Icon size: {0}</value>
+  </data>
+  <data name="Locale_LoadConfigFailedFormat" xml:space="preserve">
+    <value>Failed to load the config!
+{0}</value>
+  </data>
+  <data name="Locale_LoadConfigPrompt" xml:space="preserve">
+    <value>You're about to reload the config. Unsaved changes will be lost!
+Are you sure?</value>
+  </data>
+  <data name="Locale_LoadConfigToolTip" xml:space="preserve">
+    <value>Load the config</value>
+  </data>
+  <data name="Locale_MaximizeToolTip" xml:space="preserve">
+    <value>Maximize the window</value>
+  </data>
+  <data name="Locale_MinimizeToolTip" xml:space="preserve">
+    <value>Minimalize the window</value>
+  </data>
+  <data name="Locale_NoCapital" xml:space="preserve">
+    <value>NO</value>
+  </data>
+  <data name="Locale_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Locale_ResetConfigDoneWithExceptionFormat" xml:space="preserve">
+    <value>The config was reset, but an exception occurred!
+{0}</value>
+  </data>
+  <data name="Locale_ResetConfigPrompt" xml:space="preserve">
+    <value>You're about to reset the game and all of the settings.
+Are you sure?</value>
+  </data>
+  <data name="Locale_ResetConfigToolTIp" xml:space="preserve">
+    <value>Reset the config</value>
+  </data>
+  <data name="Locale_ResetGameDoneWithExceptionFormat" xml:space="preserve">
+    <value>The game was reset, but an exception occurred!
+{0}</value>
+  </data>
+  <data name="Locale_ResetGamePrompt" xml:space="preserve">
+    <value>You're about to reset the game. Current settings will be preserved.
+Are you sure?</value>
+  </data>
+  <data name="Locale_ResetGameToolTip" xml:space="preserve">
+    <value>Reset the game</value>
+  </data>
+  <data name="Locale_RestoreAllCapital" xml:space="preserve">
+    <value>RESTORE ALL</value>
+  </data>
+  <data name="Locale_RestoreAllPrompt" xml:space="preserve">
+    <value>You're about to restore all rejected champions.
+Are you sure?</value>
+  </data>
+  <data name="Locale_RestoreCapital" xml:space="preserve">
+    <value>RESTORE</value>
+  </data>
+  <data name="Locale_RestoreChampionCapital" xml:space="preserve">
+    <value>RESTORE A CHAMPION</value>
+  </data>
+  <data name="Locale_SaveAndCloseToolTip" xml:space="preserve">
+    <value>Save and close the game</value>
+  </data>
+  <data name="Locale_SaveConfigFailedFormat" xml:space="preserve">
+    <value>Failed to save the config!
+{0}</value>
+  </data>
+  <data name="Locale_SaveConfigSuccessful" xml:space="preserve">
+    <value>Configuration saved!</value>
+  </data>
+  <data name="Locale_SaveConfigToolTip" xml:space="preserve">
+    <value>Save the config</value>
+  </data>
+  <data name="Locale_ShowSettingsToolTip" xml:space="preserve">
+    <value>Show the settings panel</value>
+  </data>
+  <data name="Locale_ShowToolTips" xml:space="preserve">
+    <value>Show tooltips</value>
+  </data>
+  <data name="Locale_YesCapital" xml:space="preserve">
+    <value>YES</value>
+  </data>
+  <data name="CustomCategories_Man" xml:space="preserve">
+    <value>Mann</value>
+  </data>
+  <data name="CustomCategories_Woman" xml:space="preserve">
+    <value>Frau</value>
+  </data>
+  <data name="League_BasicCategory_Assassin" xml:space="preserve">
+    <value>Assassine</value>
+  </data>
+  <data name="League_BasicCategory_Fighter" xml:space="preserve">
+    <value>Kämpfer</value>
+  </data>
+  <data name="League_BasicCategory_Marksman" xml:space="preserve">
+    <value>Schütze</value>
+  </data>
+  <data name="League_BasicCategory_Mage" xml:space="preserve">
+    <value>Magier</value>
+  </data>
+  <data name="League_BasicCategory_Support" xml:space="preserve">
+    <value>Supporter</value>
+  </data>
+  <data name="League_BasicCategory_Tank" xml:space="preserve">
+    <value>Tank</value>
+  </data>
+  <data name="League_Champion_Aatrox_Name" xml:space="preserve">
+    <value>Aatrox</value>
+  </data>
+  <data name="League_Champion_Aatrox_Title" xml:space="preserve">
+    <value>Die Klinge der Düsteren</value>
+  </data>
+  <data name="League_Champion_Ahri_Name" xml:space="preserve">
+    <value>Ahri</value>
+  </data>
+  <data name="League_Champion_Ahri_Title" xml:space="preserve">
+    <value>die neunschwänzige Füchsin</value>
+  </data>
+  <data name="League_Champion_Akali_Name" xml:space="preserve">
+    <value>Akali</value>
+  </data>
+  <data name="League_Champion_Akali_Title" xml:space="preserve">
+    <value>die rebellische Assassine</value>
+  </data>
+  <data name="League_Champion_Akshan_Name" xml:space="preserve">
+    <value>Akshan</value>
+  </data>
+  <data name="League_Champion_Akshan_Title" xml:space="preserve">
+    <value>der rebellische Wächter</value>
+  </data>
+  <data name="League_Champion_Alistar_Name" xml:space="preserve">
+    <value>Alistar</value>
+  </data>
+  <data name="League_Champion_Alistar_Title" xml:space="preserve">
+    <value>der Minotaurus</value>
+  </data>
+  <data name="League_Champion_Amumu_Name" xml:space="preserve">
+    <value>Amumu</value>
+  </data>
+  <data name="League_Champion_Amumu_Title" xml:space="preserve">
+    <value>die traurige Mumie</value>
+  </data>
+  <data name="League_Champion_Anivia_Name" xml:space="preserve">
+    <value>Anivia</value>
+  </data>
+  <data name="League_Champion_Anivia_Title" xml:space="preserve">
+    <value>der Kryophönix</value>
+  </data>
+  <data name="League_Champion_Annie_Name" xml:space="preserve">
+    <value>Annie</value>
+  </data>
+  <data name="League_Champion_Annie_Title" xml:space="preserve">
+    <value>das Kind der Finsternis</value>
+  </data>
+  <data name="League_Champion_Aphelios_Name" xml:space="preserve">
+    <value>Aphelios</value>
+  </data>
+  <data name="League_Champion_Aphelios_Title" xml:space="preserve">
+    <value>die Waffe der Lunari</value>
+  </data>
+  <data name="League_Champion_Ashe_Name" xml:space="preserve">
+    <value>Ashe</value>
+  </data>
+  <data name="League_Champion_Ashe_Title" xml:space="preserve">
+    <value>die Frostbogenschützin</value>
+  </data>
+  <data name="League_Champion_AurelionSol_Name" xml:space="preserve">
+    <value>Aurelion Sol</value>
+  </data>
+  <data name="League_Champion_AurelionSol_Title" xml:space="preserve">
+    <value>der Sternenschmied</value>
+  </data>
+  <data name="League_Champion_Azir_Name" xml:space="preserve">
+    <value>Azir</value>
+  </data>
+  <data name="League_Champion_Azir_Title" xml:space="preserve">
+    <value>der Imperator des Sandes</value>
+  </data>
+  <data name="League_Champion_Bard_Name" xml:space="preserve">
+    <value>Bard</value>
+  </data>
+  <data name="League_Champion_Bard_Title" xml:space="preserve">
+    <value>der wandelnde Beschützer</value>
+  </data>
+  <data name="League_Champion_Blitzcrank_Name" xml:space="preserve">
+    <value>Blitzcrank</value>
+  </data>
+  <data name="League_Champion_Blitzcrank_Title" xml:space="preserve">
+    <value>der große Dampfgolem</value>
+  </data>
+  <data name="League_Champion_Brand_Name" xml:space="preserve">
+    <value>Brand</value>
+  </data>
+  <data name="League_Champion_Brand_Title" xml:space="preserve">
+    <value>die brennende Vergeltung</value>
+  </data>
+  <data name="League_Champion_Braum_Name" xml:space="preserve">
+    <value>Braum</value>
+  </data>
+  <data name="League_Champion_Braum_Title" xml:space="preserve">
+    <value>das Herz Freljords</value>
+  </data>
+  <data name="League_Champion_Caitlyn_Name" xml:space="preserve">
+    <value>Caitlyn</value>
+  </data>
+  <data name="League_Champion_Caitlyn_Title" xml:space="preserve">
+    <value>der Sheriff von Piltover</value>
+  </data>
+  <data name="League_Champion_Camille_Name" xml:space="preserve">
+    <value>Camille</value>
+  </data>
+  <data name="League_Champion_Camille_Title" xml:space="preserve">
+    <value>der stählerne Schatten</value>
+  </data>
+  <data name="League_Champion_Cassiopeia_Name" xml:space="preserve">
+    <value>Cassiopeia</value>
+  </data>
+  <data name="League_Champion_Cassiopeia_Title" xml:space="preserve">
+    <value>die Umarmung der Schlange</value>
+  </data>
+  <data name="League_Champion_Chogath_Name" xml:space="preserve">
+    <value>Cho'Gath</value>
+  </data>
+  <data name="League_Champion_Chogath_Title" xml:space="preserve">
+    <value>der Schrecken der Leere</value>
+  </data>
+  <data name="League_Champion_Corki_Name" xml:space="preserve">
+    <value>Corki</value>
+  </data>
+  <data name="League_Champion_Corki_Title" xml:space="preserve">
+    <value>der kühne Bombenschütze</value>
+  </data>
+  <data name="League_Champion_Darius_Name" xml:space="preserve">
+    <value>Darius</value>
+  </data>
+  <data name="League_Champion_Darius_Title" xml:space="preserve">
+    <value>die Hand von Noxus</value>
+  </data>
+  <data name="League_Champion_Diana_Name" xml:space="preserve">
+    <value>Diana</value>
+  </data>
+  <data name="League_Champion_Diana_Title" xml:space="preserve">
+    <value>der Hohn des Mondes</value>
+  </data>
+  <data name="League_Champion_Draven_Name" xml:space="preserve">
+    <value>Draven</value>
+  </data>
+  <data name="League_Champion_Draven_Title" xml:space="preserve">
+    <value>der ruhmreiche Scharfrichter</value>
+  </data>
+  <data name="League_Champion_DrMundo_Name" xml:space="preserve">
+    <value>Dr. Mundo</value>
+  </data>
+  <data name="League_Champion_DrMundo_Title" xml:space="preserve">
+    <value>der Irre von Zhaun</value>
+  </data>
+  <data name="League_Champion_Ekko_Name" xml:space="preserve">
+    <value>Ekko</value>
+  </data>
+  <data name="League_Champion_Ekko_Title" xml:space="preserve">
+    <value>der Zeitbrecher</value>
+  </data>
+  <data name="League_Champion_Elise_Name" xml:space="preserve">
+    <value>Elise</value>
+  </data>
+  <data name="League_Champion_Elise_Title" xml:space="preserve">
+    <value>die Spinnenkönigin</value>
+  </data>
+  <data name="League_Champion_Evelynn_Name" xml:space="preserve">
+    <value>Evelynn</value>
+  </data>
+  <data name="League_Champion_Evelynn_Title" xml:space="preserve">
+    <value>Umarmung der Qual</value>
+  </data>
+  <data name="League_Champion_Ezreal_Name" xml:space="preserve">
+    <value>Ezreal</value>
+  </data>
+  <data name="League_Champion_Ezreal_Title" xml:space="preserve">
+    <value>der verwegene Forscher</value>
+  </data>
+  <data name="League_Champion_Fiddlesticks_Name" xml:space="preserve">
+    <value>Fiddlesticks</value>
+  </data>
+  <data name="League_Champion_Fiddlesticks_Title" xml:space="preserve">
+    <value>das uralte Unheil</value>
+  </data>
+  <data name="League_Champion_Fiora_Name" xml:space="preserve">
+    <value>Fiora</value>
+  </data>
+  <data name="League_Champion_Fiora_Title" xml:space="preserve">
+    <value>die große Duellantin</value>
+  </data>
+  <data name="League_Champion_Fizz_Name" xml:space="preserve">
+    <value>Fizz</value>
+  </data>
+  <data name="League_Champion_Fizz_Title" xml:space="preserve">
+    <value>der Gezeitentäuscher</value>
+  </data>
+  <data name="League_Champion_Galio_Name" xml:space="preserve">
+    <value>Galio</value>
+  </data>
+  <data name="League_Champion_Galio_Title" xml:space="preserve">
+    <value>der Koloss</value>
+  </data>
+  <data name="League_Champion_Gangplank_Name" xml:space="preserve">
+    <value>Gangplank</value>
+  </data>
+  <data name="League_Champion_Gangplank_Title" xml:space="preserve">
+    <value>die Salzwassergeißel</value>
+  </data>
+  <data name="League_Champion_Garen_Name" xml:space="preserve">
+    <value>Garen</value>
+  </data>
+  <data name="League_Champion_Garen_Title" xml:space="preserve">
+    <value>die Macht von Demacia</value>
+  </data>
+  <data name="League_Champion_Gnar_Name" xml:space="preserve">
+    <value>Gnar</value>
+  </data>
+  <data name="League_Champion_Gnar_Title" xml:space="preserve">
+    <value>das fehlende Bindeglied</value>
+  </data>
+  <data name="League_Champion_Gragas_Name" xml:space="preserve">
+    <value>Gragas</value>
+  </data>
+  <data name="League_Champion_Gragas_Title" xml:space="preserve">
+    <value>der Unruhestifter</value>
+  </data>
+  <data name="League_Champion_Graves_Name" xml:space="preserve">
+    <value>Graves</value>
+  </data>
+  <data name="League_Champion_Graves_Title" xml:space="preserve">
+    <value>der Gesetzlose</value>
+  </data>
+  <data name="League_Champion_Gwen_Name" xml:space="preserve">
+    <value>Gwen</value>
+  </data>
+  <data name="League_Champion_Gwen_Title" xml:space="preserve">
+    <value>Die begnadete Näherin</value>
+  </data>
+  <data name="League_Champion_Hecarim_Name" xml:space="preserve">
+    <value>Hecarim</value>
+  </data>
+  <data name="League_Champion_Hecarim_Title" xml:space="preserve">
+    <value>der Schatten des Krieges</value>
+  </data>
+  <data name="League_Champion_Heimerdinger_Name" xml:space="preserve">
+    <value>Heimerdinger</value>
+  </data>
+  <data name="League_Champion_Heimerdinger_Title" xml:space="preserve">
+    <value>der verehrte Erfinder</value>
+  </data>
+  <data name="League_Champion_Illaoi_Name" xml:space="preserve">
+    <value>Illaoi</value>
+  </data>
+  <data name="League_Champion_Illaoi_Title" xml:space="preserve">
+    <value>die Krakenpriesterin</value>
+  </data>
+  <data name="League_Champion_Irelia_Name" xml:space="preserve">
+    <value>Irelia</value>
+  </data>
+  <data name="League_Champion_Irelia_Title" xml:space="preserve">
+    <value>die Klingentänzerin</value>
+  </data>
+  <data name="League_Champion_Ivern_Name" xml:space="preserve">
+    <value>Ivern</value>
+  </data>
+  <data name="League_Champion_Ivern_Title" xml:space="preserve">
+    <value>der Hüter der Haine</value>
+  </data>
+  <data name="League_Champion_Janna_Name" xml:space="preserve">
+    <value>Janna</value>
+  </data>
+  <data name="League_Champion_Janna_Title" xml:space="preserve">
+    <value>die Wut des Sturms</value>
+  </data>
+  <data name="League_Champion_JarvanIV_Name" xml:space="preserve">
+    <value>Jarvan IV.</value>
+  </data>
+  <data name="League_Champion_JarvanIV_Title" xml:space="preserve">
+    <value>das Vorbild von Demacia</value>
+  </data>
+  <data name="League_Champion_Jax_Name" xml:space="preserve">
+    <value>Jax</value>
+  </data>
+  <data name="League_Champion_Jax_Title" xml:space="preserve">
+    <value>der Großmeister der Waffen</value>
+  </data>
+  <data name="League_Champion_Jayce_Name" xml:space="preserve">
+    <value>Jayce</value>
+  </data>
+  <data name="League_Champion_Jayce_Title" xml:space="preserve">
+    <value>der Verteidiger von Morgen</value>
+  </data>
+  <data name="League_Champion_Jhin_Name" xml:space="preserve">
+    <value>Jhin</value>
+  </data>
+  <data name="League_Champion_Jhin_Title" xml:space="preserve">
+    <value>der Virtuose</value>
+  </data>
+  <data name="League_Champion_Jinx_Name" xml:space="preserve">
+    <value>Jinx</value>
+  </data>
+  <data name="League_Champion_Jinx_Title" xml:space="preserve">
+    <value>die Schießwütige</value>
+  </data>
+  <data name="League_Champion_Kaisa_Name" xml:space="preserve">
+    <value>Kai'Sa</value>
+  </data>
+  <data name="League_Champion_Kaisa_Title" xml:space="preserve">
+    <value>Tochter der Leere</value>
+  </data>
+  <data name="League_Champion_Kalista_Name" xml:space="preserve">
+    <value>Kalista</value>
+  </data>
+  <data name="League_Champion_Kalista_Title" xml:space="preserve">
+    <value>der Speer der Rache</value>
+  </data>
+  <data name="League_Champion_Karma_Name" xml:space="preserve">
+    <value>Karma</value>
+  </data>
+  <data name="League_Champion_Karma_Title" xml:space="preserve">
+    <value>die Erleuchtete</value>
+  </data>
+  <data name="League_Champion_Karthus_Name" xml:space="preserve">
+    <value>Karthus</value>
+  </data>
+  <data name="League_Champion_Karthus_Title" xml:space="preserve">
+    <value>der Todessänger</value>
+  </data>
+  <data name="League_Champion_Kassadin_Name" xml:space="preserve">
+    <value>Kassadin</value>
+  </data>
+  <data name="League_Champion_Kassadin_Title" xml:space="preserve">
+    <value>der Leerengänger</value>
+  </data>
+  <data name="League_Champion_Katarina_Name" xml:space="preserve">
+    <value>Katarina</value>
+  </data>
+  <data name="League_Champion_Katarina_Title" xml:space="preserve">
+    <value>die unheimliche Klinge</value>
+  </data>
+  <data name="League_Champion_Kayle_Name" xml:space="preserve">
+    <value>Kayle</value>
+  </data>
+  <data name="League_Champion_Kayle_Title" xml:space="preserve">
+    <value>die Rechtschaffene</value>
+  </data>
+  <data name="League_Champion_Kayn_Name" xml:space="preserve">
+    <value>Kayn</value>
+  </data>
+  <data name="League_Champion_Kayn_Title" xml:space="preserve">
+    <value>der Schatten des Todes</value>
+  </data>
+  <data name="League_Champion_Kennen_Name" xml:space="preserve">
+    <value>Kennen</value>
+  </data>
+  <data name="League_Champion_Kennen_Title" xml:space="preserve">
+    <value>das Herz des Sturms</value>
+  </data>
+  <data name="League_Champion_Khazix_Name" xml:space="preserve">
+    <value>Kha'Zix</value>
+  </data>
+  <data name="League_Champion_Khazix_Title" xml:space="preserve">
+    <value>Räuber der Leere</value>
+  </data>
+  <data name="League_Champion_Kindred_Name" xml:space="preserve">
+    <value>Kindred</value>
+  </data>
+  <data name="League_Champion_Kindred_Title" xml:space="preserve">
+    <value>die ewigen Jäger</value>
+  </data>
+  <data name="League_Champion_Kled_Name" xml:space="preserve">
+    <value>Kled</value>
+  </data>
+  <data name="League_Champion_Kled_Title" xml:space="preserve">
+    <value>der übellaunige Streiter</value>
+  </data>
+  <data name="League_Champion_KogMaw_Name" xml:space="preserve">
+    <value>Kog'Maw</value>
+  </data>
+  <data name="League_Champion_KogMaw_Title" xml:space="preserve">
+    <value>der Schlund des Abgrunds</value>
+  </data>
+  <data name="League_Champion_Leblanc_Name" xml:space="preserve">
+    <value>LeBlanc</value>
+  </data>
+  <data name="League_Champion_Leblanc_Title" xml:space="preserve">
+    <value>die Täuscherin</value>
+  </data>
+  <data name="League_Champion_LeeSin_Name" xml:space="preserve">
+    <value>Lee Sin</value>
+  </data>
+  <data name="League_Champion_LeeSin_Title" xml:space="preserve">
+    <value>der blinde Mönch</value>
+  </data>
+  <data name="League_Champion_Leona_Name" xml:space="preserve">
+    <value>Leona</value>
+  </data>
+  <data name="League_Champion_Leona_Title" xml:space="preserve">
+    <value>der strahlende Sonnenaufgang</value>
+  </data>
+  <data name="League_Champion_Lillia_Name" xml:space="preserve">
+    <value>Lillia</value>
+  </data>
+  <data name="League_Champion_Lillia_Title" xml:space="preserve">
+    <value>die scheue Blüte</value>
+  </data>
+  <data name="League_Champion_Lissandra_Name" xml:space="preserve">
+    <value>Lissandra</value>
+  </data>
+  <data name="League_Champion_Lissandra_Title" xml:space="preserve">
+    <value>die Eishexe</value>
+  </data>
+  <data name="League_Champion_Lucian_Name" xml:space="preserve">
+    <value>Lucian</value>
+  </data>
+  <data name="League_Champion_Lucian_Title" xml:space="preserve">
+    <value>der Läuterer</value>
+  </data>
+  <data name="League_Champion_Lulu_Name" xml:space="preserve">
+    <value>Lulu</value>
+  </data>
+  <data name="League_Champion_Lulu_Title" xml:space="preserve">
+    <value>die Zauberin der Fae</value>
+  </data>
+  <data name="League_Champion_Lux_Name" xml:space="preserve">
+    <value>Lux</value>
+  </data>
+  <data name="League_Champion_Lux_Title" xml:space="preserve">
+    <value>die Lady des Lichts</value>
+  </data>
+  <data name="League_Champion_Malphite_Name" xml:space="preserve">
+    <value>Malphite</value>
+  </data>
+  <data name="League_Champion_Malphite_Title" xml:space="preserve">
+    <value>der Splitter des Monolithen</value>
+  </data>
+  <data name="League_Champion_Malzahar_Name" xml:space="preserve">
+    <value>Malzahar</value>
+  </data>
+  <data name="League_Champion_Malzahar_Title" xml:space="preserve">
+    <value>der Prophet der Leere</value>
+  </data>
+  <data name="League_Champion_Maokai_Name" xml:space="preserve">
+    <value>Maokai</value>
+  </data>
+  <data name="League_Champion_Maokai_Title" xml:space="preserve">
+    <value>der verdorbene Baumriese</value>
+  </data>
+  <data name="League_Champion_MasterYi_Name" xml:space="preserve">
+    <value>Master Yi</value>
+  </data>
+  <data name="League_Champion_MasterYi_Title" xml:space="preserve">
+    <value>der Wuju-Schwertkämpfer</value>
+  </data>
+  <data name="League_Champion_MissFortune_Name" xml:space="preserve">
+    <value>Miss Fortune</value>
+  </data>
+  <data name="League_Champion_MissFortune_Title" xml:space="preserve">
+    <value>die Kopfgeldjägerin</value>
+  </data>
+  <data name="League_Champion_MonkeyKing_Name" xml:space="preserve">
+    <value>Wukong</value>
+  </data>
+  <data name="League_Champion_MonkeyKing_Title" xml:space="preserve">
+    <value>der Affenkönig</value>
+  </data>
+  <data name="League_Champion_Mordekaiser_Name" xml:space="preserve">
+    <value>Mordekaiser</value>
+  </data>
+  <data name="League_Champion_Mordekaiser_Title" xml:space="preserve">
+    <value>der eiserne Albtraum</value>
+  </data>
+  <data name="League_Champion_Morgana_Name" xml:space="preserve">
+    <value>Morgana</value>
+  </data>
+  <data name="League_Champion_Morgana_Title" xml:space="preserve">
+    <value>die Gefallene</value>
+  </data>
+  <data name="League_Champion_Nami_Name" xml:space="preserve">
+    <value>Nami</value>
+  </data>
+  <data name="League_Champion_Nami_Title" xml:space="preserve">
+    <value>die Gezeitenruferin</value>
+  </data>
+  <data name="League_Champion_Nasus_Name" xml:space="preserve">
+    <value>Nasus</value>
+  </data>
+  <data name="League_Champion_Nasus_Title" xml:space="preserve">
+    <value>der Bewahrer des Sandes</value>
+  </data>
+  <data name="League_Champion_Nautilus_Name" xml:space="preserve">
+    <value>Nautilus</value>
+  </data>
+  <data name="League_Champion_Nautilus_Title" xml:space="preserve">
+    <value>der Titan der Tiefen</value>
+  </data>
+  <data name="League_Champion_Neeko_Name" xml:space="preserve">
+    <value>Neeko</value>
+  </data>
+  <data name="League_Champion_Neeko_Title" xml:space="preserve">
+    <value>das wissbegierige Chamäleon</value>
+  </data>
+  <data name="League_Champion_Nidalee_Name" xml:space="preserve">
+    <value>Nidalee</value>
+  </data>
+  <data name="League_Champion_Nidalee_Title" xml:space="preserve">
+    <value>die bestialische Jägerin</value>
+  </data>
+  <data name="League_Champion_Nocturne_Name" xml:space="preserve">
+    <value>Nocturne</value>
+  </data>
+  <data name="League_Champion_Nocturne_Title" xml:space="preserve">
+    <value>der ewige Albtraum</value>
+  </data>
+  <data name="League_Champion_Nunu_Name" xml:space="preserve">
+    <value>Nunu &amp; Willump</value>
+  </data>
+  <data name="League_Champion_Nunu_Title" xml:space="preserve">
+    <value>der Junge und sein Yeti</value>
+  </data>
+  <data name="League_Champion_Olaf_Name" xml:space="preserve">
+    <value>Olaf</value>
+  </data>
+  <data name="League_Champion_Olaf_Title" xml:space="preserve">
+    <value>der Berserker</value>
+  </data>
+  <data name="League_Champion_Orianna_Name" xml:space="preserve">
+    <value>Orianna</value>
+  </data>
+  <data name="League_Champion_Orianna_Title" xml:space="preserve">
+    <value>die Aufziehpuppe</value>
+  </data>
+  <data name="League_Champion_Ornn_Name" xml:space="preserve">
+    <value>Ornn</value>
+  </data>
+  <data name="League_Champion_Ornn_Title" xml:space="preserve">
+    <value>der Gott der Vulkanschmiede</value>
+  </data>
+  <data name="League_Champion_Pantheon_Name" xml:space="preserve">
+    <value>Pantheon</value>
+  </data>
+  <data name="League_Champion_Pantheon_Title" xml:space="preserve">
+    <value>der unbeugsame Speer</value>
+  </data>
+  <data name="League_Champion_Poppy_Name" xml:space="preserve">
+    <value>Poppy</value>
+  </data>
+  <data name="League_Champion_Poppy_Title" xml:space="preserve">
+    <value>die Hüterin des Hammers</value>
+  </data>
+  <data name="League_Champion_Pyke_Name" xml:space="preserve">
+    <value>Pyke</value>
+  </data>
+  <data name="League_Champion_Pyke_Title" xml:space="preserve">
+    <value>der Schlitzer vom Bluthafen</value>
+  </data>
+  <data name="League_Champion_Qiyana_Name" xml:space="preserve">
+    <value>Qiyana</value>
+  </data>
+  <data name="League_Champion_Qiyana_Title" xml:space="preserve">
+    <value>Gebieterin der Elemente</value>
+  </data>
+  <data name="League_Champion_Quinn_Name" xml:space="preserve">
+    <value>Quinn</value>
+  </data>
+  <data name="League_Champion_Quinn_Title" xml:space="preserve">
+    <value>Demacias Schwingen</value>
+  </data>
+  <data name="League_Champion_Rakan_Name" xml:space="preserve">
+    <value>Rakan</value>
+  </data>
+  <data name="League_Champion_Rakan_Title" xml:space="preserve">
+    <value>der Publikumsliebling</value>
+  </data>
+  <data name="League_Champion_Rammus_Name" xml:space="preserve">
+    <value>Rammus</value>
+  </data>
+  <data name="League_Champion_Rammus_Title" xml:space="preserve">
+    <value>das Panzergürteltier</value>
+  </data>
+  <data name="League_Champion_RekSai_Name" xml:space="preserve">
+    <value>Rek'Sai</value>
+  </data>
+  <data name="League_Champion_RekSai_Title" xml:space="preserve">
+    <value>die Leerenwühlerin</value>
+  </data>
+  <data name="League_Champion_Rell_Name" xml:space="preserve">
+    <value>Rell</value>
+  </data>
+  <data name="League_Champion_Rell_Title" xml:space="preserve">
+    <value>die eiserne Jungfrau</value>
+  </data>
+  <data name="League_Champion_Renekton_Name" xml:space="preserve">
+    <value>Renekton</value>
+  </data>
+  <data name="League_Champion_Renekton_Title" xml:space="preserve">
+    <value>der Schlächter des Sandes</value>
+  </data>
+  <data name="League_Champion_Rengar_Name" xml:space="preserve">
+    <value>Rengar</value>
+  </data>
+  <data name="League_Champion_Rengar_Title" xml:space="preserve">
+    <value>der stolze Jäger</value>
+  </data>
+  <data name="League_Champion_Riven_Name" xml:space="preserve">
+    <value>Riven</value>
+  </data>
+  <data name="League_Champion_Riven_Title" xml:space="preserve">
+    <value>die Verbannte</value>
+  </data>
+  <data name="League_Champion_Rumble_Name" xml:space="preserve">
+    <value>Rumble</value>
+  </data>
+  <data name="League_Champion_Rumble_Title" xml:space="preserve">
+    <value>die mechanisierte Bedrohung</value>
+  </data>
+  <data name="League_Champion_Ryze_Name" xml:space="preserve">
+    <value>Ryze</value>
+  </data>
+  <data name="League_Champion_Ryze_Title" xml:space="preserve">
+    <value>der Runenmagier</value>
+  </data>
+  <data name="League_Champion_Samira_Name" xml:space="preserve">
+    <value>Samira</value>
+  </data>
+  <data name="League_Champion_Samira_Title" xml:space="preserve">
+    <value>die Wüstenrose</value>
+  </data>
+  <data name="League_Champion_Sejuani_Name" xml:space="preserve">
+    <value>Sejuani</value>
+  </data>
+  <data name="League_Champion_Sejuani_Title" xml:space="preserve">
+    <value>Zorn des Nordens</value>
+  </data>
+  <data name="League_Champion_Senna_Name" xml:space="preserve">
+    <value>Senna</value>
+  </data>
+  <data name="League_Champion_Senna_Title" xml:space="preserve">
+    <value>die Erlöserin</value>
+  </data>
+  <data name="League_Champion_Seraphine_Name" xml:space="preserve">
+    <value>Seraphine</value>
+  </data>
+  <data name="League_Champion_Seraphine_Title" xml:space="preserve">
+    <value>das verträumte Goldkehlchen</value>
+  </data>
+  <data name="League_Champion_Sett_Name" xml:space="preserve">
+    <value>Sett</value>
+  </data>
+  <data name="League_Champion_Sett_Title" xml:space="preserve">
+    <value>der Boss</value>
+  </data>
+  <data name="League_Champion_Shaco_Name" xml:space="preserve">
+    <value>Shaco</value>
+  </data>
+  <data name="League_Champion_Shaco_Title" xml:space="preserve">
+    <value>der dunkle Hofnarr</value>
+  </data>
+  <data name="League_Champion_Shen_Name" xml:space="preserve">
+    <value>Shen</value>
+  </data>
+  <data name="League_Champion_Shen_Title" xml:space="preserve">
+    <value>das Auge des Zwielichts</value>
+  </data>
+  <data name="League_Champion_Shyvana_Name" xml:space="preserve">
+    <value>Shyvana</value>
+  </data>
+  <data name="League_Champion_Shyvana_Title" xml:space="preserve">
+    <value>der Halbdrache</value>
+  </data>
+  <data name="League_Champion_Singed_Name" xml:space="preserve">
+    <value>Singed</value>
+  </data>
+  <data name="League_Champion_Singed_Title" xml:space="preserve">
+    <value>der verrückte Chemiker</value>
+  </data>
+  <data name="League_Champion_Sion_Name" xml:space="preserve">
+    <value>Sion</value>
+  </data>
+  <data name="League_Champion_Sion_Title" xml:space="preserve">
+    <value>der untote Moloch</value>
+  </data>
+  <data name="League_Champion_Sivir_Name" xml:space="preserve">
+    <value>Sivir</value>
+  </data>
+  <data name="League_Champion_Sivir_Title" xml:space="preserve">
+    <value>die Kampfmeisterin</value>
+  </data>
+  <data name="League_Champion_Skarner_Name" xml:space="preserve">
+    <value>Skarner</value>
+  </data>
+  <data name="League_Champion_Skarner_Title" xml:space="preserve">
+    <value>der Kristallstachel</value>
+  </data>
+  <data name="League_Champion_Sona_Name" xml:space="preserve">
+    <value>Sona</value>
+  </data>
+  <data name="League_Champion_Sona_Title" xml:space="preserve">
+    <value>die Virtuosin</value>
+  </data>
+  <data name="League_Champion_Soraka_Name" xml:space="preserve">
+    <value>Soraka</value>
+  </data>
+  <data name="League_Champion_Soraka_Title" xml:space="preserve">
+    <value>das Sternenkind</value>
+  </data>
+  <data name="League_Champion_Swain_Name" xml:space="preserve">
+    <value>Swain</value>
+  </data>
+  <data name="League_Champion_Swain_Title" xml:space="preserve">
+    <value>der noxianische Großgeneral</value>
+  </data>
+  <data name="League_Champion_Sylas_Name" xml:space="preserve">
+    <value>Sylas</value>
+  </data>
+  <data name="League_Champion_Sylas_Title" xml:space="preserve">
+    <value>Sprenger der Ketten</value>
+  </data>
+  <data name="League_Champion_Syndra_Name" xml:space="preserve">
+    <value>Syndra</value>
+  </data>
+  <data name="League_Champion_Syndra_Title" xml:space="preserve">
+    <value>die dunkle Herrscherin</value>
+  </data>
+  <data name="League_Champion_TahmKench_Name" xml:space="preserve">
+    <value>Tahm Kench</value>
+  </data>
+  <data name="League_Champion_TahmKench_Title" xml:space="preserve">
+    <value>Der König des Flusses</value>
+  </data>
+  <data name="League_Champion_Taliyah_Name" xml:space="preserve">
+    <value>Taliyah</value>
+  </data>
+  <data name="League_Champion_Taliyah_Title" xml:space="preserve">
+    <value>die Felsenweberin</value>
+  </data>
+  <data name="League_Champion_Talon_Name" xml:space="preserve">
+    <value>Talon</value>
+  </data>
+  <data name="League_Champion_Talon_Title" xml:space="preserve">
+    <value>der Klingenschatten</value>
+  </data>
+  <data name="League_Champion_Taric_Name" xml:space="preserve">
+    <value>Taric</value>
+  </data>
+  <data name="League_Champion_Taric_Title" xml:space="preserve">
+    <value>der Schild von Valoran</value>
+  </data>
+  <data name="League_Champion_Teemo_Name" xml:space="preserve">
+    <value>Teemo</value>
+  </data>
+  <data name="League_Champion_Teemo_Title" xml:space="preserve">
+    <value>der flinke Späher</value>
+  </data>
+  <data name="League_Champion_Thresh_Name" xml:space="preserve">
+    <value>Thresh</value>
+  </data>
+  <data name="League_Champion_Thresh_Title" xml:space="preserve">
+    <value>der Kettenwächter</value>
+  </data>
+  <data name="League_Champion_Tristana_Name" xml:space="preserve">
+    <value>Tristana</value>
+  </data>
+  <data name="League_Champion_Tristana_Title" xml:space="preserve">
+    <value>die Yordle-Schützin</value>
+  </data>
+  <data name="League_Champion_Trundle_Name" xml:space="preserve">
+    <value>Trundle</value>
+  </data>
+  <data name="League_Champion_Trundle_Title" xml:space="preserve">
+    <value>der Trollkönig</value>
+  </data>
+  <data name="League_Champion_Tryndamere_Name" xml:space="preserve">
+    <value>Tryndamere</value>
+  </data>
+  <data name="League_Champion_Tryndamere_Title" xml:space="preserve">
+    <value>der Barbarenkönig</value>
+  </data>
+  <data name="League_Champion_TwistedFate_Name" xml:space="preserve">
+    <value>Twisted Fate</value>
+  </data>
+  <data name="League_Champion_TwistedFate_Title" xml:space="preserve">
+    <value>der Meister der Karten</value>
+  </data>
+  <data name="League_Champion_Twitch_Name" xml:space="preserve">
+    <value>Twitch</value>
+  </data>
+  <data name="League_Champion_Twitch_Title" xml:space="preserve">
+    <value>die Seuchenratte</value>
+  </data>
+  <data name="League_Champion_Udyr_Name" xml:space="preserve">
+    <value>Udyr</value>
+  </data>
+  <data name="League_Champion_Udyr_Title" xml:space="preserve">
+    <value>der Geistwanderer</value>
+  </data>
+  <data name="League_Champion_Urgot_Name" xml:space="preserve">
+    <value>Urgot</value>
+  </data>
+  <data name="League_Champion_Urgot_Title" xml:space="preserve">
+    <value>der Chemtech-Terror</value>
+  </data>
+  <data name="League_Champion_Varus_Name" xml:space="preserve">
+    <value>Varus</value>
+  </data>
+  <data name="League_Champion_Varus_Title" xml:space="preserve">
+    <value>der Pfeil der Vergeltung</value>
+  </data>
+  <data name="League_Champion_Vayne_Name" xml:space="preserve">
+    <value>Vayne</value>
+  </data>
+  <data name="League_Champion_Vayne_Title" xml:space="preserve">
+    <value>die Jägerin der Nacht</value>
+  </data>
+  <data name="League_Champion_Veigar_Name" xml:space="preserve">
+    <value>Veigar</value>
+  </data>
+  <data name="League_Champion_Veigar_Title" xml:space="preserve">
+    <value>der kleine Meister des Bösen</value>
+  </data>
+  <data name="League_Champion_Velkoz_Name" xml:space="preserve">
+    <value>Vel'Koz</value>
+  </data>
+  <data name="League_Champion_Velkoz_Title" xml:space="preserve">
+    <value>das Auge der Leere</value>
+  </data>
+  <data name="League_Champion_Vi_Name" xml:space="preserve">
+    <value>Vi</value>
+  </data>
+  <data name="League_Champion_Vi_Title" xml:space="preserve">
+    <value>Piltovers Vollstreckerin</value>
+  </data>
+  <data name="League_Champion_Viego_Name" xml:space="preserve">
+    <value>Viego</value>
+  </data>
+  <data name="League_Champion_Viego_Title" xml:space="preserve">
+    <value>der gestürzte König</value>
+  </data>
+  <data name="League_Champion_Viktor_Name" xml:space="preserve">
+    <value>Viktor</value>
+  </data>
+  <data name="League_Champion_Viktor_Title" xml:space="preserve">
+    <value>der Vorbote der Maschinen</value>
+  </data>
+  <data name="League_Champion_Vladimir_Name" xml:space="preserve">
+    <value>Vladimir</value>
+  </data>
+  <data name="League_Champion_Vladimir_Title" xml:space="preserve">
+    <value>der blutrote Schnitter</value>
+  </data>
+  <data name="League_Champion_Volibear_Name" xml:space="preserve">
+    <value>Volibear</value>
+  </data>
+  <data name="League_Champion_Volibear_Title" xml:space="preserve">
+    <value>der unerbittliche Sturm</value>
+  </data>
+  <data name="League_Champion_Warwick_Name" xml:space="preserve">
+    <value>Warwick</value>
+  </data>
+  <data name="League_Champion_Warwick_Title" xml:space="preserve">
+    <value>Zhauns entfesselter Zorn</value>
+  </data>
+  <data name="League_Champion_Xayah_Name" xml:space="preserve">
+    <value>Xayah</value>
+  </data>
+  <data name="League_Champion_Xayah_Title" xml:space="preserve">
+    <value>die Rebellin</value>
+  </data>
+  <data name="League_Champion_Xerath_Name" xml:space="preserve">
+    <value>Xerath</value>
+  </data>
+  <data name="League_Champion_Xerath_Title" xml:space="preserve">
+    <value>der aufgestiegene Magier</value>
+  </data>
+  <data name="League_Champion_XinZhao_Name" xml:space="preserve">
+    <value>Xin Zhao</value>
+  </data>
+  <data name="League_Champion_XinZhao_Title" xml:space="preserve">
+    <value>der Seneschall von Demacia</value>
+  </data>
+  <data name="League_Champion_Yasuo_Name" xml:space="preserve">
+    <value>Yasuo</value>
+  </data>
+  <data name="League_Champion_Yasuo_Title" xml:space="preserve">
+    <value>der entehrte Krieger</value>
+  </data>
+  <data name="League_Champion_Yone_Name" xml:space="preserve">
+    <value>Yone</value>
+  </data>
+  <data name="League_Champion_Yone_Title" xml:space="preserve">
+    <value>der unvergessene Krieger</value>
+  </data>
+  <data name="League_Champion_Yorick_Name" xml:space="preserve">
+    <value>Yorick</value>
+  </data>
+  <data name="League_Champion_Yorick_Title" xml:space="preserve">
+    <value>der Hirte der verlorenen Seelen</value>
+  </data>
+  <data name="League_Champion_Yuumi_Name" xml:space="preserve">
+    <value>Yuumi</value>
+  </data>
+  <data name="League_Champion_Yuumi_Title" xml:space="preserve">
+    <value>die magische Katze</value>
+  </data>
+  <data name="League_Champion_Zac_Name" xml:space="preserve">
+    <value>Zac</value>
+  </data>
+  <data name="League_Champion_Zac_Title" xml:space="preserve">
+    <value>die Geheimwaffe</value>
+  </data>
+  <data name="League_Champion_Zed_Name" xml:space="preserve">
+    <value>Zed</value>
+  </data>
+  <data name="League_Champion_Zed_Title" xml:space="preserve">
+    <value>der Meister der Schatten</value>
+  </data>
+  <data name="League_Champion_Ziggs_Name" xml:space="preserve">
+    <value>Ziggs</value>
+  </data>
+  <data name="League_Champion_Ziggs_Title" xml:space="preserve">
+    <value>der Hexplosions-Experte</value>
+  </data>
+  <data name="League_Champion_Zilean_Name" xml:space="preserve">
+    <value>Zilean</value>
+  </data>
+  <data name="League_Champion_Zilean_Title" xml:space="preserve">
+    <value>der Zeitwächter</value>
+  </data>
+  <data name="League_Champion_Zoe_Name" xml:space="preserve">
+    <value>Zoe</value>
+  </data>
+  <data name="League_Champion_Zoe_Title" xml:space="preserve">
+    <value>der Aspekt des Zwielichts</value>
+  </data>
+  <data name="League_Champion_Zyra_Name" xml:space="preserve">
+    <value>Zyra</value>
+  </data>
+  <data name="League_Champion_Zyra_Title" xml:space="preserve">
+    <value>die Gebieterin der Dornen</value>
+  </data>
+</root>

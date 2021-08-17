@@ -1,0 +1,1175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Locale_CategoryFontSizeFormat" xml:space="preserve">
+    <value>Category font size: {0}</value>
+  </data>
+  <data name="Locale_CategorySizeFormat" xml:space="preserve">
+    <value>Category size: {0}</value>
+  </data>
+  <data name="Locale_CloseCapital" xml:space="preserve">
+    <value>CLOSE</value>
+  </data>
+  <data name="Locale_HideSettingsToolTip" xml:space="preserve">
+    <value>Hide the settings panel</value>
+  </data>
+  <data name="Locale_IconSizeFormat" xml:space="preserve">
+    <value>Icon size: {0}</value>
+  </data>
+  <data name="Locale_LoadConfigFailedFormat" xml:space="preserve">
+    <value>Failed to load the config!
+{0}</value>
+  </data>
+  <data name="Locale_LoadConfigPrompt" xml:space="preserve">
+    <value>You're about to reload the config. Unsaved changes will be lost!
+Are you sure?</value>
+  </data>
+  <data name="Locale_LoadConfigToolTip" xml:space="preserve">
+    <value>Load the config</value>
+  </data>
+  <data name="Locale_MaximizeToolTip" xml:space="preserve">
+    <value>Maximize the window</value>
+  </data>
+  <data name="Locale_MinimizeToolTip" xml:space="preserve">
+    <value>Minimalize the window</value>
+  </data>
+  <data name="Locale_NoCapital" xml:space="preserve">
+    <value>NO</value>
+  </data>
+  <data name="Locale_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Locale_ResetConfigDoneWithExceptionFormat" xml:space="preserve">
+    <value>The config was reset, but an exception occurred!
+{0}</value>
+  </data>
+  <data name="Locale_ResetConfigPrompt" xml:space="preserve">
+    <value>You're about to reset the game and all of the settings.
+Are you sure?</value>
+  </data>
+  <data name="Locale_ResetConfigToolTIp" xml:space="preserve">
+    <value>Reset the config</value>
+  </data>
+  <data name="Locale_ResetGameDoneWithExceptionFormat" xml:space="preserve">
+    <value>The game was reset, but an exception occurred!
+{0}</value>
+  </data>
+  <data name="Locale_ResetGamePrompt" xml:space="preserve">
+    <value>You're about to reset the game. Current settings will be preserved.
+Are you sure?</value>
+  </data>
+  <data name="Locale_ResetGameToolTip" xml:space="preserve">
+    <value>Reset the game</value>
+  </data>
+  <data name="Locale_RestoreAllCapital" xml:space="preserve">
+    <value>RESTORE ALL</value>
+  </data>
+  <data name="Locale_RestoreAllPrompt" xml:space="preserve">
+    <value>You're about to restore all rejected champions.
+Are you sure?</value>
+  </data>
+  <data name="Locale_RestoreCapital" xml:space="preserve">
+    <value>RESTORE</value>
+  </data>
+  <data name="Locale_RestoreChampionCapital" xml:space="preserve">
+    <value>RESTORE A CHAMPION</value>
+  </data>
+  <data name="Locale_SaveAndCloseToolTip" xml:space="preserve">
+    <value>Save and close the game</value>
+  </data>
+  <data name="Locale_SaveConfigFailedFormat" xml:space="preserve">
+    <value>Failed to save the config!
+{0}</value>
+  </data>
+  <data name="Locale_SaveConfigSuccessful" xml:space="preserve">
+    <value>Configuration saved!</value>
+  </data>
+  <data name="Locale_SaveConfigToolTip" xml:space="preserve">
+    <value>Save the config</value>
+  </data>
+  <data name="Locale_ShowSettingsToolTip" xml:space="preserve">
+    <value>Show the settings panel</value>
+  </data>
+  <data name="Locale_ShowToolTips" xml:space="preserve">
+    <value>Show tooltips</value>
+  </data>
+  <data name="Locale_YesCapital" xml:space="preserve">
+    <value>YES</value>
+  </data>
+  <data name="CustomCategories_Man" xml:space="preserve">
+    <value>Ανδρας</value>
+  </data>
+  <data name="CustomCategories_Woman" xml:space="preserve">
+    <value>Γυναίκα</value>
+  </data>
+  <data name="League_BasicCategory_Assassin" xml:space="preserve">
+    <value>Δολοφόνος</value>
+  </data>
+  <data name="League_BasicCategory_Fighter" xml:space="preserve">
+    <value>Μαχητής</value>
+  </data>
+  <data name="League_BasicCategory_Marksman" xml:space="preserve">
+    <value>Σκοπευτής</value>
+  </data>
+  <data name="League_BasicCategory_Mage" xml:space="preserve">
+    <value>Μάγος</value>
+  </data>
+  <data name="League_BasicCategory_Support" xml:space="preserve">
+    <value>Υποστηρικτής</value>
+  </data>
+  <data name="League_BasicCategory_Tank" xml:space="preserve">
+    <value>Τανκ</value>
+  </data>
+  <data name="League_Champion_Aatrox_Name" xml:space="preserve">
+    <value>Άατροξ</value>
+  </data>
+  <data name="League_Champion_Aatrox_Title" xml:space="preserve">
+    <value>η Λεπίδα των Ντάρκιν</value>
+  </data>
+  <data name="League_Champion_Ahri_Name" xml:space="preserve">
+    <value>Άρι</value>
+  </data>
+  <data name="League_Champion_Ahri_Title" xml:space="preserve">
+    <value>η Αλεπού με τις Εννιά Ουρές</value>
+  </data>
+  <data name="League_Champion_Akali_Name" xml:space="preserve">
+    <value>Ακάλι</value>
+  </data>
+  <data name="League_Champion_Akali_Title" xml:space="preserve">
+    <value>η Αποστάτρια Δολοφόνος</value>
+  </data>
+  <data name="League_Champion_Akshan_Name" xml:space="preserve">
+    <value>Ακσάν</value>
+  </data>
+  <data name="League_Champion_Akshan_Title" xml:space="preserve">
+    <value>ο Αποστάτης Φρουρός</value>
+  </data>
+  <data name="League_Champion_Alistar_Name" xml:space="preserve">
+    <value>Άλισταρ</value>
+  </data>
+  <data name="League_Champion_Alistar_Title" xml:space="preserve">
+    <value>ο Μινώταυρος</value>
+  </data>
+  <data name="League_Champion_Amumu_Name" xml:space="preserve">
+    <value>Αμούμου</value>
+  </data>
+  <data name="League_Champion_Amumu_Title" xml:space="preserve">
+    <value>η Θλιμμένη Μούμια</value>
+  </data>
+  <data name="League_Champion_Anivia_Name" xml:space="preserve">
+    <value>Ανίβια</value>
+  </data>
+  <data name="League_Champion_Anivia_Title" xml:space="preserve">
+    <value>ο Κρυοφοίνικας</value>
+  </data>
+  <data name="League_Champion_Annie_Name" xml:space="preserve">
+    <value>Άνι</value>
+  </data>
+  <data name="League_Champion_Annie_Title" xml:space="preserve">
+    <value>το Τέκνο του Σκότους</value>
+  </data>
+  <data name="League_Champion_Aphelios_Name" xml:space="preserve">
+    <value>Αφέλιος</value>
+  </data>
+  <data name="League_Champion_Aphelios_Title" xml:space="preserve">
+    <value>το Όπλο των Πιστών</value>
+  </data>
+  <data name="League_Champion_Ashe_Name" xml:space="preserve">
+    <value>Ας</value>
+  </data>
+  <data name="League_Champion_Ashe_Title" xml:space="preserve">
+    <value>η Τοξότρια των Πάγων</value>
+  </data>
+  <data name="League_Champion_AurelionSol_Name" xml:space="preserve">
+    <value>Ωρέλιον Σολ</value>
+  </data>
+  <data name="League_Champion_AurelionSol_Title" xml:space="preserve">
+    <value>ο Σφυρηλάτης των Άστρων</value>
+  </data>
+  <data name="League_Champion_Azir_Name" xml:space="preserve">
+    <value>Αζίρ</value>
+  </data>
+  <data name="League_Champion_Azir_Title" xml:space="preserve">
+    <value>ο Αυτοκράτορας της Άμμου</value>
+  </data>
+  <data name="League_Champion_Bard_Name" xml:space="preserve">
+    <value>Βάρδος</value>
+  </data>
+  <data name="League_Champion_Bard_Title" xml:space="preserve">
+    <value>ο Αλλόκοσμος Οδοιπόρος</value>
+  </data>
+  <data name="League_Champion_Blitzcrank_Name" xml:space="preserve">
+    <value>Μπλίτζκρανκ</value>
+  </data>
+  <data name="League_Champion_Blitzcrank_Title" xml:space="preserve">
+    <value>το Μεγάλο Ατμοκίνητο Γκόλεμ</value>
+  </data>
+  <data name="League_Champion_Brand_Name" xml:space="preserve">
+    <value>Μπραντ</value>
+  </data>
+  <data name="League_Champion_Brand_Title" xml:space="preserve">
+    <value>η Φλεγόμενη Εκδίκηση</value>
+  </data>
+  <data name="League_Champion_Braum_Name" xml:space="preserve">
+    <value>Μπράουμ</value>
+  </data>
+  <data name="League_Champion_Braum_Title" xml:space="preserve">
+    <value>η Καρδιά του Φρέλιορντ</value>
+  </data>
+  <data name="League_Champion_Caitlyn_Name" xml:space="preserve">
+    <value>Κέιτλιν</value>
+  </data>
+  <data name="League_Champion_Caitlyn_Title" xml:space="preserve">
+    <value>η Σερίφης του Πιλτόβερ</value>
+  </data>
+  <data name="League_Champion_Camille_Name" xml:space="preserve">
+    <value>Καμίλ</value>
+  </data>
+  <data name="League_Champion_Camille_Title" xml:space="preserve">
+    <value>η Ατσάλινη Σκιά</value>
+  </data>
+  <data name="League_Champion_Cassiopeia_Name" xml:space="preserve">
+    <value>Κασσιόπη</value>
+  </data>
+  <data name="League_Champion_Cassiopeia_Title" xml:space="preserve">
+    <value>η Αγκαλιά του Ερπετού</value>
+  </data>
+  <data name="League_Champion_Chogath_Name" xml:space="preserve">
+    <value>Τσο'Γκαθ</value>
+  </data>
+  <data name="League_Champion_Chogath_Title" xml:space="preserve">
+    <value>ο Τρόμος του Κενού</value>
+  </data>
+  <data name="League_Champion_Corki_Name" xml:space="preserve">
+    <value>Κόρκι</value>
+  </data>
+  <data name="League_Champion_Corki_Title" xml:space="preserve">
+    <value>ο Τολμηρός Βομβιστής</value>
+  </data>
+  <data name="League_Champion_Darius_Name" xml:space="preserve">
+    <value>Ντάριους</value>
+  </data>
+  <data name="League_Champion_Darius_Title" xml:space="preserve">
+    <value>ο Σύμβουλος της Νόξους</value>
+  </data>
+  <data name="League_Champion_Diana_Name" xml:space="preserve">
+    <value>Ντιάνα</value>
+  </data>
+  <data name="League_Champion_Diana_Title" xml:space="preserve">
+    <value>η Καταφρόνια της Σελήνης</value>
+  </data>
+  <data name="League_Champion_Draven_Name" xml:space="preserve">
+    <value>Ντρέιβεν</value>
+  </data>
+  <data name="League_Champion_Draven_Title" xml:space="preserve">
+    <value>ο Ένδοξος Εκτελεστής</value>
+  </data>
+  <data name="League_Champion_DrMundo_Name" xml:space="preserve">
+    <value>Δρ. Μούντο</value>
+  </data>
+  <data name="League_Champion_DrMundo_Title" xml:space="preserve">
+    <value>ο Σαδιστής Γιατρός του Ζάουν</value>
+  </data>
+  <data name="League_Champion_Ekko_Name" xml:space="preserve">
+    <value>Έκκο</value>
+  </data>
+  <data name="League_Champion_Ekko_Title" xml:space="preserve">
+    <value>το Αγόρι που Θρυμμάτισε τον Χρόνο</value>
+  </data>
+  <data name="League_Champion_Elise_Name" xml:space="preserve">
+    <value>Ελίζ</value>
+  </data>
+  <data name="League_Champion_Elise_Title" xml:space="preserve">
+    <value>η Βασίλισσα Αράχνη</value>
+  </data>
+  <data name="League_Champion_Evelynn_Name" xml:space="preserve">
+    <value>Έβελιν</value>
+  </data>
+  <data name="League_Champion_Evelynn_Title" xml:space="preserve">
+    <value>η Αγκαλιά της Οδύνης</value>
+  </data>
+  <data name="League_Champion_Ezreal_Name" xml:space="preserve">
+    <value>Έζρεαλ</value>
+  </data>
+  <data name="League_Champion_Ezreal_Title" xml:space="preserve">
+    <value>ο Μάγος Εξερευνητής</value>
+  </data>
+  <data name="League_Champion_Fiddlesticks_Name" xml:space="preserve">
+    <value>Φίντλστιξ</value>
+  </data>
+  <data name="League_Champion_Fiddlesticks_Title" xml:space="preserve">
+    <value>o Αρχαίος Τρόμος</value>
+  </data>
+  <data name="League_Champion_Fiora_Name" xml:space="preserve">
+    <value>Φιόρα</value>
+  </data>
+  <data name="League_Champion_Fiora_Title" xml:space="preserve">
+    <value>η Ανίκητη Ξιφομάχος</value>
+  </data>
+  <data name="League_Champion_Fizz_Name" xml:space="preserve">
+    <value>Φιζ</value>
+  </data>
+  <data name="League_Champion_Fizz_Title" xml:space="preserve">
+    <value>ο Σκανδαλιάρης της Παλίρροιας</value>
+  </data>
+  <data name="League_Champion_Galio_Name" xml:space="preserve">
+    <value>Γκάλιο</value>
+  </data>
+  <data name="League_Champion_Galio_Title" xml:space="preserve">
+    <value>ο Κολοσσός</value>
+  </data>
+  <data name="League_Champion_Gangplank_Name" xml:space="preserve">
+    <value>Γκάνγκπλανκ</value>
+  </data>
+  <data name="League_Champion_Gangplank_Title" xml:space="preserve">
+    <value>η Μάστιγα των Θαλασσών</value>
+  </data>
+  <data name="League_Champion_Garen_Name" xml:space="preserve">
+    <value>Γκάρεν</value>
+  </data>
+  <data name="League_Champion_Garen_Title" xml:space="preserve">
+    <value>η Δύναμη της Ντεμάσια</value>
+  </data>
+  <data name="League_Champion_Gnar_Name" xml:space="preserve">
+    <value>Γκναρ</value>
+  </data>
+  <data name="League_Champion_Gnar_Title" xml:space="preserve">
+    <value>ο Χαμένος Κρίκος</value>
+  </data>
+  <data name="League_Champion_Gragas_Name" xml:space="preserve">
+    <value>Γκράγκας</value>
+  </data>
+  <data name="League_Champion_Gragas_Title" xml:space="preserve">
+    <value>ο Καβγατζής</value>
+  </data>
+  <data name="League_Champion_Graves_Name" xml:space="preserve">
+    <value>Γκρέιβς</value>
+  </data>
+  <data name="League_Champion_Graves_Title" xml:space="preserve">
+    <value>ο Παράνομος</value>
+  </data>
+  <data name="League_Champion_Gwen_Name" xml:space="preserve">
+    <value>Γκουέν</value>
+  </data>
+  <data name="League_Champion_Gwen_Title" xml:space="preserve">
+    <value>Η Καθαγιασμένη Ράφτρα</value>
+  </data>
+  <data name="League_Champion_Hecarim_Name" xml:space="preserve">
+    <value>Χέκαριμ</value>
+  </data>
+  <data name="League_Champion_Hecarim_Title" xml:space="preserve">
+    <value>η Σκιά του Πολέμου</value>
+  </data>
+  <data name="League_Champion_Heimerdinger_Name" xml:space="preserve">
+    <value>Χάιμερντιγκερ</value>
+  </data>
+  <data name="League_Champion_Heimerdinger_Title" xml:space="preserve">
+    <value>ο Αναγνωρισμένος Εφευρέτης</value>
+  </data>
+  <data name="League_Champion_Illaoi_Name" xml:space="preserve">
+    <value>Ιλλαόη</value>
+  </data>
+  <data name="League_Champion_Illaoi_Title" xml:space="preserve">
+    <value>η Ιέρεια του Κράκεν</value>
+  </data>
+  <data name="League_Champion_Irelia_Name" xml:space="preserve">
+    <value>Ιρέλια</value>
+  </data>
+  <data name="League_Champion_Irelia_Title" xml:space="preserve">
+    <value>η Χορεύτρια των Λεπίδων</value>
+  </data>
+  <data name="League_Champion_Ivern_Name" xml:space="preserve">
+    <value>Άιβερν</value>
+  </data>
+  <data name="League_Champion_Ivern_Title" xml:space="preserve">
+    <value>ο Πράσινος Πατέρας</value>
+  </data>
+  <data name="League_Champion_Janna_Name" xml:space="preserve">
+    <value>Τζάνα</value>
+  </data>
+  <data name="League_Champion_Janna_Title" xml:space="preserve">
+    <value>η Οργή της Καταιγίδας</value>
+  </data>
+  <data name="League_Champion_JarvanIV_Name" xml:space="preserve">
+    <value>Τζάρβαν ο Δ'</value>
+  </data>
+  <data name="League_Champion_JarvanIV_Title" xml:space="preserve">
+    <value>το Υπόδειγμα της Ντεμάσια</value>
+  </data>
+  <data name="League_Champion_Jax_Name" xml:space="preserve">
+    <value>Τζαξ</value>
+  </data>
+  <data name="League_Champion_Jax_Title" xml:space="preserve">
+    <value>ο Γνώστης των Όπλων</value>
+  </data>
+  <data name="League_Champion_Jayce_Name" xml:space="preserve">
+    <value>Τζέις</value>
+  </data>
+  <data name="League_Champion_Jayce_Title" xml:space="preserve">
+    <value>ο Υπερασπιστής του Αύριο</value>
+  </data>
+  <data name="League_Champion_Jhin_Name" xml:space="preserve">
+    <value>Τζιν</value>
+  </data>
+  <data name="League_Champion_Jhin_Title" xml:space="preserve">
+    <value>ο Βιρτουόζος</value>
+  </data>
+  <data name="League_Champion_Jinx_Name" xml:space="preserve">
+    <value>Τζινξ</value>
+  </data>
+  <data name="League_Champion_Jinx_Title" xml:space="preserve">
+    <value>η Ανεξέλεγκτη</value>
+  </data>
+  <data name="League_Champion_Kaisa_Name" xml:space="preserve">
+    <value>Κάι'Σα</value>
+  </data>
+  <data name="League_Champion_Kaisa_Title" xml:space="preserve">
+    <value>η Κόρη του Κενού</value>
+  </data>
+  <data name="League_Champion_Kalista_Name" xml:space="preserve">
+    <value>Καλίστα</value>
+  </data>
+  <data name="League_Champion_Kalista_Title" xml:space="preserve">
+    <value>το Δόρυ της Εκδίκησης</value>
+  </data>
+  <data name="League_Champion_Karma_Name" xml:space="preserve">
+    <value>Κάρμα</value>
+  </data>
+  <data name="League_Champion_Karma_Title" xml:space="preserve">
+    <value>η Πεφωτισμένη</value>
+  </data>
+  <data name="League_Champion_Karthus_Name" xml:space="preserve">
+    <value>Κάρθους</value>
+  </data>
+  <data name="League_Champion_Karthus_Title" xml:space="preserve">
+    <value>ο Υμνωδός του Θανάτου</value>
+  </data>
+  <data name="League_Champion_Kassadin_Name" xml:space="preserve">
+    <value>Κάσαντιν</value>
+  </data>
+  <data name="League_Champion_Kassadin_Title" xml:space="preserve">
+    <value>ο Ταξιδευτής στο Κενό</value>
+  </data>
+  <data name="League_Champion_Katarina_Name" xml:space="preserve">
+    <value>Καταρίνα</value>
+  </data>
+  <data name="League_Champion_Katarina_Title" xml:space="preserve">
+    <value>η Ύπουλη Λεπίδα</value>
+  </data>
+  <data name="League_Champion_Kayle_Name" xml:space="preserve">
+    <value>Κέιλ</value>
+  </data>
+  <data name="League_Champion_Kayle_Title" xml:space="preserve">
+    <value>η Ενάρετη</value>
+  </data>
+  <data name="League_Champion_Kayn_Name" xml:space="preserve">
+    <value>Κέιν</value>
+  </data>
+  <data name="League_Champion_Kayn_Title" xml:space="preserve">
+    <value>ο Θεριστής των Ψυχών</value>
+  </data>
+  <data name="League_Champion_Kennen_Name" xml:space="preserve">
+    <value>Κένεν</value>
+  </data>
+  <data name="League_Champion_Kennen_Title" xml:space="preserve">
+    <value>το Μάτι του Κυκλώνα</value>
+  </data>
+  <data name="League_Champion_Khazix_Name" xml:space="preserve">
+    <value>Κα'Ζιξ</value>
+  </data>
+  <data name="League_Champion_Khazix_Title" xml:space="preserve">
+    <value>ο Εκτελεστής του Κενού</value>
+  </data>
+  <data name="League_Champion_Kindred_Name" xml:space="preserve">
+    <value>Κίντρεντ</value>
+  </data>
+  <data name="League_Champion_Kindred_Title" xml:space="preserve">
+    <value>οι Αιώνιοι Κυνηγοί</value>
+  </data>
+  <data name="League_Champion_Kled_Name" xml:space="preserve">
+    <value>Κλεντ</value>
+  </data>
+  <data name="League_Champion_Kled_Title" xml:space="preserve">
+    <value>ο Τζαναμπέτης Καβαλάρης</value>
+  </data>
+  <data name="League_Champion_KogMaw_Name" xml:space="preserve">
+    <value>Κογκ'Μο</value>
+  </data>
+  <data name="League_Champion_KogMaw_Title" xml:space="preserve">
+    <value>το Στόμα της Αβύσσου</value>
+  </data>
+  <data name="League_Champion_Leblanc_Name" xml:space="preserve">
+    <value>ΛεΜπλάν</value>
+  </data>
+  <data name="League_Champion_Leblanc_Title" xml:space="preserve">
+    <value>η Πλανεύτρα</value>
+  </data>
+  <data name="League_Champion_LeeSin_Name" xml:space="preserve">
+    <value>Λι Σιν</value>
+  </data>
+  <data name="League_Champion_LeeSin_Title" xml:space="preserve">
+    <value>ο Τυφλός Μοναχός</value>
+  </data>
+  <data name="League_Champion_Leona_Name" xml:space="preserve">
+    <value>Λεόνα</value>
+  </data>
+  <data name="League_Champion_Leona_Title" xml:space="preserve">
+    <value>η Υπέρλαμπρη Αυγή</value>
+  </data>
+  <data name="League_Champion_Lillia_Name" xml:space="preserve">
+    <value>Λίλια</value>
+  </data>
+  <data name="League_Champion_Lillia_Title" xml:space="preserve">
+    <value>το Ντροπαλό Άνθος</value>
+  </data>
+  <data name="League_Champion_Lissandra_Name" xml:space="preserve">
+    <value>Λισάντρα</value>
+  </data>
+  <data name="League_Champion_Lissandra_Title" xml:space="preserve">
+    <value>η Μάγισσα των Πάγων</value>
+  </data>
+  <data name="League_Champion_Lucian_Name" xml:space="preserve">
+    <value>Λούσιαν</value>
+  </data>
+  <data name="League_Champion_Lucian_Title" xml:space="preserve">
+    <value>ο Μαχητής του Φωτός</value>
+  </data>
+  <data name="League_Champion_Lulu_Name" xml:space="preserve">
+    <value>Λούλου</value>
+  </data>
+  <data name="League_Champion_Lulu_Title" xml:space="preserve">
+    <value>η Νεραϊδομάγισσα</value>
+  </data>
+  <data name="League_Champion_Lux_Name" xml:space="preserve">
+    <value>Λουξ</value>
+  </data>
+  <data name="League_Champion_Lux_Title" xml:space="preserve">
+    <value>η Κόρη του Φωτός</value>
+  </data>
+  <data name="League_Champion_Malphite_Name" xml:space="preserve">
+    <value>Μάλφαϊτ</value>
+  </data>
+  <data name="League_Champion_Malphite_Title" xml:space="preserve">
+    <value>το Θραύσμα του Μονόλιθου</value>
+  </data>
+  <data name="League_Champion_Malzahar_Name" xml:space="preserve">
+    <value>Μάλζαχαρ</value>
+  </data>
+  <data name="League_Champion_Malzahar_Title" xml:space="preserve">
+    <value>ο Προφήτης του Κενού</value>
+  </data>
+  <data name="League_Champion_Maokai_Name" xml:space="preserve">
+    <value>Μαοκάι</value>
+  </data>
+  <data name="League_Champion_Maokai_Title" xml:space="preserve">
+    <value>το Ζωντανό Δέντρο</value>
+  </data>
+  <data name="League_Champion_MasterYi_Name" xml:space="preserve">
+    <value>Μάστερ Γι</value>
+  </data>
+  <data name="League_Champion_MasterYi_Title" xml:space="preserve">
+    <value>ο Ξιφομάχος του Γούτζου</value>
+  </data>
+  <data name="League_Champion_MissFortune_Name" xml:space="preserve">
+    <value>Μις Φόρτσουν</value>
+  </data>
+  <data name="League_Champion_MissFortune_Title" xml:space="preserve">
+    <value>η Κυνηγός Επικηρυγμένων</value>
+  </data>
+  <data name="League_Champion_MonkeyKing_Name" xml:space="preserve">
+    <value>Γουκόνγκ</value>
+  </data>
+  <data name="League_Champion_MonkeyKing_Title" xml:space="preserve">
+    <value>ο Βασιλιάς των Πιθήκων</value>
+  </data>
+  <data name="League_Champion_Mordekaiser_Name" xml:space="preserve">
+    <value>Μορντεκάιζερ</value>
+  </data>
+  <data name="League_Champion_Mordekaiser_Title" xml:space="preserve">
+    <value>το Σιδηρούν Φάντασμα</value>
+  </data>
+  <data name="League_Champion_Morgana_Name" xml:space="preserve">
+    <value>Μοργκάνα</value>
+  </data>
+  <data name="League_Champion_Morgana_Title" xml:space="preserve">
+    <value>η Έκπτωτη</value>
+  </data>
+  <data name="League_Champion_Nami_Name" xml:space="preserve">
+    <value>Νάμι</value>
+  </data>
+  <data name="League_Champion_Nami_Title" xml:space="preserve">
+    <value>η Εκλεκτή της Παλίρροιας</value>
+  </data>
+  <data name="League_Champion_Nasus_Name" xml:space="preserve">
+    <value>Νάσους</value>
+  </data>
+  <data name="League_Champion_Nasus_Title" xml:space="preserve">
+    <value>ο Φύλακας της Άμμου</value>
+  </data>
+  <data name="League_Champion_Nautilus_Name" xml:space="preserve">
+    <value>Νότιλους</value>
+  </data>
+  <data name="League_Champion_Nautilus_Title" xml:space="preserve">
+    <value>ο Τιτάνας του Βυθού</value>
+  </data>
+  <data name="League_Champion_Neeko_Name" xml:space="preserve">
+    <value>Νίκκο</value>
+  </data>
+  <data name="League_Champion_Neeko_Title" xml:space="preserve">
+    <value>η Περίεργη Χαμαιλέοντας</value>
+  </data>
+  <data name="League_Champion_Nidalee_Name" xml:space="preserve">
+    <value>Νίνταλι</value>
+  </data>
+  <data name="League_Champion_Nidalee_Title" xml:space="preserve">
+    <value>η Άγρια Κυνηγός</value>
+  </data>
+  <data name="League_Champion_Nocturne_Name" xml:space="preserve">
+    <value>Νόκτουρν</value>
+  </data>
+  <data name="League_Champion_Nocturne_Title" xml:space="preserve">
+    <value>ο Αιώνιος Εφιάλτης</value>
+  </data>
+  <data name="League_Champion_Nunu_Name" xml:space="preserve">
+    <value>Νούνου και Γουίλαμπ</value>
+  </data>
+  <data name="League_Champion_Nunu_Title" xml:space="preserve">
+    <value>το Αγόρι και το Γέτι του</value>
+  </data>
+  <data name="League_Champion_Olaf_Name" xml:space="preserve">
+    <value>Όλαφ</value>
+  </data>
+  <data name="League_Champion_Olaf_Title" xml:space="preserve">
+    <value>ο Μπερζέρκερ</value>
+  </data>
+  <data name="League_Champion_Orianna_Name" xml:space="preserve">
+    <value>Οριάνα</value>
+  </data>
+  <data name="League_Champion_Orianna_Title" xml:space="preserve">
+    <value>η Αφέντρα του Ρολογιού</value>
+  </data>
+  <data name="League_Champion_Ornn_Name" xml:space="preserve">
+    <value>Ορν</value>
+  </data>
+  <data name="League_Champion_Ornn_Title" xml:space="preserve">
+    <value>ο Σμιλευτής των Βουνών</value>
+  </data>
+  <data name="League_Champion_Pantheon_Name" xml:space="preserve">
+    <value>Πάνθεον</value>
+  </data>
+  <data name="League_Champion_Pantheon_Title" xml:space="preserve">
+    <value>το Άθραυστο Δόρυ</value>
+  </data>
+  <data name="League_Champion_Poppy_Name" xml:space="preserve">
+    <value>Πόπι</value>
+  </data>
+  <data name="League_Champion_Poppy_Title" xml:space="preserve">
+    <value>η Φύλακας του Σφυριού</value>
+  </data>
+  <data name="League_Champion_Pyke_Name" xml:space="preserve">
+    <value>Πάικ</value>
+  </data>
+  <data name="League_Champion_Pyke_Title" xml:space="preserve">
+    <value>ο Αντεροβγάλτης του Ματωμένου Λιμανιού</value>
+  </data>
+  <data name="League_Champion_Qiyana_Name" xml:space="preserve">
+    <value>Κιάνα</value>
+  </data>
+  <data name="League_Champion_Qiyana_Title" xml:space="preserve">
+    <value>Η Αυτοκράτειρα των Στοιχείων</value>
+  </data>
+  <data name="League_Champion_Quinn_Name" xml:space="preserve">
+    <value>Κουίν</value>
+  </data>
+  <data name="League_Champion_Quinn_Title" xml:space="preserve">
+    <value>τα Φτερά της Ντεμάσια</value>
+  </data>
+  <data name="League_Champion_Rakan_Name" xml:space="preserve">
+    <value>Ρακάν</value>
+  </data>
+  <data name="League_Champion_Rakan_Title" xml:space="preserve">
+    <value>ο Γόης</value>
+  </data>
+  <data name="League_Champion_Rammus_Name" xml:space="preserve">
+    <value>Ράμους</value>
+  </data>
+  <data name="League_Champion_Rammus_Title" xml:space="preserve">
+    <value>ο Θωρακισμένος</value>
+  </data>
+  <data name="League_Champion_RekSai_Name" xml:space="preserve">
+    <value>Ρεκ'Σάι</value>
+  </data>
+  <data name="League_Champion_RekSai_Title" xml:space="preserve">
+    <value>η Υποχθόνια Κυνηγός</value>
+  </data>
+  <data name="League_Champion_Rell_Name" xml:space="preserve">
+    <value>Ρελ</value>
+  </data>
+  <data name="League_Champion_Rell_Title" xml:space="preserve">
+    <value>η Σιδηρά Κυρία</value>
+  </data>
+  <data name="League_Champion_Renekton_Name" xml:space="preserve">
+    <value>Ρένεκτον</value>
+  </data>
+  <data name="League_Champion_Renekton_Title" xml:space="preserve">
+    <value>ο Χασάπης της Ερήμου</value>
+  </data>
+  <data name="League_Champion_Rengar_Name" xml:space="preserve">
+    <value>Ρένγκαρ</value>
+  </data>
+  <data name="League_Champion_Rengar_Title" xml:space="preserve">
+    <value>ο Ένδοξος Κυνηγός</value>
+  </data>
+  <data name="League_Champion_Riven_Name" xml:space="preserve">
+    <value>Ρίβεν</value>
+  </data>
+  <data name="League_Champion_Riven_Title" xml:space="preserve">
+    <value>η Εξόριστη</value>
+  </data>
+  <data name="League_Champion_Rumble_Name" xml:space="preserve">
+    <value>Ραμπλ</value>
+  </data>
+  <data name="League_Champion_Rumble_Title" xml:space="preserve">
+    <value>ο Μηχανικός Μπελάς</value>
+  </data>
+  <data name="League_Champion_Ryze_Name" xml:space="preserve">
+    <value>Ράιζ</value>
+  </data>
+  <data name="League_Champion_Ryze_Title" xml:space="preserve">
+    <value>ο Μάγος των Ρούνων</value>
+  </data>
+  <data name="League_Champion_Samira_Name" xml:space="preserve">
+    <value>Σαμίρα</value>
+  </data>
+  <data name="League_Champion_Samira_Title" xml:space="preserve">
+    <value>το Ρόδο της Ερήμου</value>
+  </data>
+  <data name="League_Champion_Sejuani_Name" xml:space="preserve">
+    <value>Σεζουάνι</value>
+  </data>
+  <data name="League_Champion_Sejuani_Title" xml:space="preserve">
+    <value>η Οργή του Βορρά</value>
+  </data>
+  <data name="League_Champion_Senna_Name" xml:space="preserve">
+    <value>Σέννα</value>
+  </data>
+  <data name="League_Champion_Senna_Title" xml:space="preserve">
+    <value>η Λύτρωση των Ψυχών</value>
+  </data>
+  <data name="League_Champion_Seraphine_Name" xml:space="preserve">
+    <value>Σεραφίν</value>
+  </data>
+  <data name="League_Champion_Seraphine_Title" xml:space="preserve">
+    <value>η Ονειροπόλα Τραγουδίστρια</value>
+  </data>
+  <data name="League_Champion_Sett_Name" xml:space="preserve">
+    <value>Σεττ</value>
+  </data>
+  <data name="League_Champion_Sett_Title" xml:space="preserve">
+    <value>το Αφεντικό</value>
+  </data>
+  <data name="League_Champion_Shaco_Name" xml:space="preserve">
+    <value>Σάκο</value>
+  </data>
+  <data name="League_Champion_Shaco_Title" xml:space="preserve">
+    <value>ο Δαιμονικός Γελωτοποιός</value>
+  </data>
+  <data name="League_Champion_Shen_Name" xml:space="preserve">
+    <value>Σεν</value>
+  </data>
+  <data name="League_Champion_Shen_Title" xml:space="preserve">
+    <value>το Μάτι του Λυκόφωτος</value>
+  </data>
+  <data name="League_Champion_Shyvana_Name" xml:space="preserve">
+    <value>Σιβάνα</value>
+  </data>
+  <data name="League_Champion_Shyvana_Title" xml:space="preserve">
+    <value>η Ημι-Δράκαινα</value>
+  </data>
+  <data name="League_Champion_Singed_Name" xml:space="preserve">
+    <value>Σιντζντ</value>
+  </data>
+  <data name="League_Champion_Singed_Title" xml:space="preserve">
+    <value>ο Τρελός Χημικός</value>
+  </data>
+  <data name="League_Champion_Sion_Name" xml:space="preserve">
+    <value>Σάιον</value>
+  </data>
+  <data name="League_Champion_Sion_Title" xml:space="preserve">
+    <value>ο Απέθαντος Κολοσσός</value>
+  </data>
+  <data name="League_Champion_Sivir_Name" xml:space="preserve">
+    <value>Σίβιρ</value>
+  </data>
+  <data name="League_Champion_Sivir_Title" xml:space="preserve">
+    <value>η Κυρά της Μάχης</value>
+  </data>
+  <data name="League_Champion_Skarner_Name" xml:space="preserve">
+    <value>Σκάρνερ</value>
+  </data>
+  <data name="League_Champion_Skarner_Title" xml:space="preserve">
+    <value>ο Κρυστάλλινος Προστάτης</value>
+  </data>
+  <data name="League_Champion_Sona_Name" xml:space="preserve">
+    <value>Σόνα</value>
+  </data>
+  <data name="League_Champion_Sona_Title" xml:space="preserve">
+    <value>η Κυρίαρχος της Μουσικής</value>
+  </data>
+  <data name="League_Champion_Soraka_Name" xml:space="preserve">
+    <value>Σοράκα</value>
+  </data>
+  <data name="League_Champion_Soraka_Title" xml:space="preserve">
+    <value>το Παιδί των Άστρων</value>
+  </data>
+  <data name="League_Champion_Swain_Name" xml:space="preserve">
+    <value>Σουέιν</value>
+  </data>
+  <data name="League_Champion_Swain_Title" xml:space="preserve">
+    <value>ο Μέγας Στρατηγός της Νόξους</value>
+  </data>
+  <data name="League_Champion_Sylas_Name" xml:space="preserve">
+    <value>Σάιλας</value>
+  </data>
+  <data name="League_Champion_Sylas_Title" xml:space="preserve">
+    <value>ο Ελευθερωμένος</value>
+  </data>
+  <data name="League_Champion_Syndra_Name" xml:space="preserve">
+    <value>Σίντρα</value>
+  </data>
+  <data name="League_Champion_Syndra_Title" xml:space="preserve">
+    <value>η Σκοτεινή Βασίλισσα</value>
+  </data>
+  <data name="League_Champion_TahmKench_Name" xml:space="preserve">
+    <value>Ταμ Κεντς</value>
+  </data>
+  <data name="League_Champion_TahmKench_Title" xml:space="preserve">
+    <value>Ο Βασιλιάς του Ποταμού</value>
+  </data>
+  <data name="League_Champion_Taliyah_Name" xml:space="preserve">
+    <value>Τάλια</value>
+  </data>
+  <data name="League_Champion_Taliyah_Title" xml:space="preserve">
+    <value>το Σπουργίτι της Σουρίμα</value>
+  </data>
+  <data name="League_Champion_Talon_Name" xml:space="preserve">
+    <value>Τάλον</value>
+  </data>
+  <data name="League_Champion_Talon_Title" xml:space="preserve">
+    <value>η Σκιά της Λεπίδας</value>
+  </data>
+  <data name="League_Champion_Taric_Name" xml:space="preserve">
+    <value>Τάρικ</value>
+  </data>
+  <data name="League_Champion_Taric_Title" xml:space="preserve">
+    <value>η Ασπίδα του Βάλοραν</value>
+  </data>
+  <data name="League_Champion_Teemo_Name" xml:space="preserve">
+    <value>Τίμο</value>
+  </data>
+  <data name="League_Champion_Teemo_Title" xml:space="preserve">
+    <value>ο Αεικίνητος Ανιχνευτής</value>
+  </data>
+  <data name="League_Champion_Thresh_Name" xml:space="preserve">
+    <value>Θρες</value>
+  </data>
+  <data name="League_Champion_Thresh_Title" xml:space="preserve">
+    <value>ο Δεσμοφύλακας των Ψυχών</value>
+  </data>
+  <data name="League_Champion_Tristana_Name" xml:space="preserve">
+    <value>Τριστάνα</value>
+  </data>
+  <data name="League_Champion_Tristana_Title" xml:space="preserve">
+    <value>το Πυροβολικό των Γιόρντλ</value>
+  </data>
+  <data name="League_Champion_Trundle_Name" xml:space="preserve">
+    <value>Τραντλ</value>
+  </data>
+  <data name="League_Champion_Trundle_Title" xml:space="preserve">
+    <value>ο Βασιλιάς των Τρολ</value>
+  </data>
+  <data name="League_Champion_Tryndamere_Name" xml:space="preserve">
+    <value>Τρίνταμερ</value>
+  </data>
+  <data name="League_Champion_Tryndamere_Title" xml:space="preserve">
+    <value>ο Βασιλιάς των Βαρβάρων</value>
+  </data>
+  <data name="League_Champion_TwistedFate_Name" xml:space="preserve">
+    <value>Τουίστεντ Φέιτ</value>
+  </data>
+  <data name="League_Champion_TwistedFate_Title" xml:space="preserve">
+    <value>ο Μέγας Χαρτοπαίκτης</value>
+  </data>
+  <data name="League_Champion_Twitch_Name" xml:space="preserve">
+    <value>Τουίτς</value>
+  </data>
+  <data name="League_Champion_Twitch_Title" xml:space="preserve">
+    <value>ο Μολυσμένος Αρουραίος</value>
+  </data>
+  <data name="League_Champion_Udyr_Name" xml:space="preserve">
+    <value>Ούντιρ</value>
+  </data>
+  <data name="League_Champion_Udyr_Title" xml:space="preserve">
+    <value>ο Πνευματοβάτης</value>
+  </data>
+  <data name="League_Champion_Urgot_Name" xml:space="preserve">
+    <value>Ούργκοτ</value>
+  </data>
+  <data name="League_Champion_Urgot_Title" xml:space="preserve">
+    <value>ο Πάνοπλος Γίγαντας</value>
+  </data>
+  <data name="League_Champion_Varus_Name" xml:space="preserve">
+    <value>Βάρους</value>
+  </data>
+  <data name="League_Champion_Varus_Title" xml:space="preserve">
+    <value>το Βέλος της Ανταπόδοσης</value>
+  </data>
+  <data name="League_Champion_Vayne_Name" xml:space="preserve">
+    <value>Βέιν</value>
+  </data>
+  <data name="League_Champion_Vayne_Title" xml:space="preserve">
+    <value>η Κυνηγός της Νύχτας</value>
+  </data>
+  <data name="League_Champion_Veigar_Name" xml:space="preserve">
+    <value>Βέιγκαρ</value>
+  </data>
+  <data name="League_Champion_Veigar_Title" xml:space="preserve">
+    <value>ο Μικροσκοπικός Άρχοντας του Κακού</value>
+  </data>
+  <data name="League_Champion_Velkoz_Name" xml:space="preserve">
+    <value>Βελ'Κοζ</value>
+  </data>
+  <data name="League_Champion_Velkoz_Title" xml:space="preserve">
+    <value>το Μάτι του Κενού</value>
+  </data>
+  <data name="League_Champion_Vi_Name" xml:space="preserve">
+    <value>Βάι</value>
+  </data>
+  <data name="League_Champion_Vi_Title" xml:space="preserve">
+    <value>η Τιμωρός του Πιλτόβερ</value>
+  </data>
+  <data name="League_Champion_Viego_Name" xml:space="preserve">
+    <value>Βιέγκο</value>
+  </data>
+  <data name="League_Champion_Viego_Title" xml:space="preserve">
+    <value>Ο Έκπτωτος Βασιλιάς</value>
+  </data>
+  <data name="League_Champion_Viktor_Name" xml:space="preserve">
+    <value>Βίκτορ</value>
+  </data>
+  <data name="League_Champion_Viktor_Title" xml:space="preserve">
+    <value>ο Προάγγελος της Μηχανής</value>
+  </data>
+  <data name="League_Champion_Vladimir_Name" xml:space="preserve">
+    <value>Βλάντιμιρ</value>
+  </data>
+  <data name="League_Champion_Vladimir_Title" xml:space="preserve">
+    <value>ο Πορφυρός Θεριστής</value>
+  </data>
+  <data name="League_Champion_Volibear_Name" xml:space="preserve">
+    <value>Βόλιμπεαρ</value>
+  </data>
+  <data name="League_Champion_Volibear_Title" xml:space="preserve">
+    <value>η Ανελέητη Καταιγίδα</value>
+  </data>
+  <data name="League_Champion_Warwick_Name" xml:space="preserve">
+    <value>Γουόργουικ</value>
+  </data>
+  <data name="League_Champion_Warwick_Title" xml:space="preserve">
+    <value>η Ασταμάτητη Οργή του Ζάουν</value>
+  </data>
+  <data name="League_Champion_Xayah_Name" xml:space="preserve">
+    <value>Ζάια</value>
+  </data>
+  <data name="League_Champion_Xayah_Title" xml:space="preserve">
+    <value>η Επαναστάτρια</value>
+  </data>
+  <data name="League_Champion_Xerath_Name" xml:space="preserve">
+    <value>Ζέραθ</value>
+  </data>
+  <data name="League_Champion_Xerath_Title" xml:space="preserve">
+    <value>ο Εξυψωμένος Μάγος</value>
+  </data>
+  <data name="League_Champion_XinZhao_Name" xml:space="preserve">
+    <value>Ζιν Ζάο</value>
+  </data>
+  <data name="League_Champion_XinZhao_Title" xml:space="preserve">
+    <value>ο Αριστοκράτης της Ντεμάσια</value>
+  </data>
+  <data name="League_Champion_Yasuo_Name" xml:space="preserve">
+    <value>Υασούο</value>
+  </data>
+  <data name="League_Champion_Yasuo_Title" xml:space="preserve">
+    <value>ο Ασυγχώρητος</value>
+  </data>
+  <data name="League_Champion_Yone_Name" xml:space="preserve">
+    <value>Γιόνε</value>
+  </data>
+  <data name="League_Champion_Yone_Title" xml:space="preserve">
+    <value>ο Αλησμόνητος</value>
+  </data>
+  <data name="League_Champion_Yorick_Name" xml:space="preserve">
+    <value>Γιόρικ</value>
+  </data>
+  <data name="League_Champion_Yorick_Title" xml:space="preserve">
+    <value>Οδηγός των Ψυχών</value>
+  </data>
+  <data name="League_Champion_Yuumi_Name" xml:space="preserve">
+    <value>Γιούμι</value>
+  </data>
+  <data name="League_Champion_Yuumi_Title" xml:space="preserve">
+    <value>η Μαγική Γάτα</value>
+  </data>
+  <data name="League_Champion_Zac_Name" xml:space="preserve">
+    <value>Ζακ</value>
+  </data>
+  <data name="League_Champion_Zac_Title" xml:space="preserve">
+    <value>το Μυστικό Όπλο</value>
+  </data>
+  <data name="League_Champion_Zed_Name" xml:space="preserve">
+    <value>Ζεντ</value>
+  </data>
+  <data name="League_Champion_Zed_Title" xml:space="preserve">
+    <value>ο Άρχοντας των Σκιών</value>
+  </data>
+  <data name="League_Champion_Ziggs_Name" xml:space="preserve">
+    <value>Ζιγκζ</value>
+  </data>
+  <data name="League_Champion_Ziggs_Title" xml:space="preserve">
+    <value>ο Μαγοτεχνικός Μπουρλοτιέρης</value>
+  </data>
+  <data name="League_Champion_Zilean_Name" xml:space="preserve">
+    <value>Ζίλεαν</value>
+  </data>
+  <data name="League_Champion_Zilean_Title" xml:space="preserve">
+    <value>ο Φύλακας του Χρόνου</value>
+  </data>
+  <data name="League_Champion_Zoe_Name" xml:space="preserve">
+    <value>Ζόη</value>
+  </data>
+  <data name="League_Champion_Zoe_Title" xml:space="preserve">
+    <value>η Όψη του Λυκόφωτος</value>
+  </data>
+  <data name="League_Champion_Zyra_Name" xml:space="preserve">
+    <value>Ζάιρα</value>
+  </data>
+  <data name="League_Champion_Zyra_Title" xml:space="preserve">
+    <value>η Κυρά των Αγκαθιών</value>
+  </data>
+</root>

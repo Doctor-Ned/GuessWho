@@ -9,17 +9,17 @@ using GuessWho.Model;
 namespace GuessWho.View {
     public class ChampionToImageConverter : IValueConverter {
         public ChampionToImageConverter() {
-            foreach (Champion champ in Enum.GetValues(typeof(Champion))) {
-                ChampionIconDictionary.Add(champ, new BitmapImage(champ.GetWPFIconUri()));
+            foreach (string champId in ChampionProvider.AllChampionIds) {
+                ChampionIconDictionary.Add(champId, new BitmapImage(ChampionProvider.GetWPFIconUri(champId)));
             }
         }
 
-        private Dictionary<Champion, BitmapImage> ChampionIconDictionary { get; } =
-            new Dictionary<Champion, BitmapImage>();
+        private Dictionary<string, BitmapImage> ChampionIconDictionary { get; } =
+            new Dictionary<string, BitmapImage>();
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture) {
-            if (value != null && value is Champion champion) {
-                return ChampionIconDictionary[champion];
+            if (value != null && value is string champId) {
+                return ChampionIconDictionary[champId];
             }
 
             return null;

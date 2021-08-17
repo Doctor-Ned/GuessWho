@@ -8,6 +8,7 @@
         xmlns:controls="clr-namespace:WpfToolkit.Controls;assembly=VirtualizingWrapPanel"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:lex="http://wpflocalizeextension.codeplex.com"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
         TextElement.FontSize="13"
@@ -15,6 +16,9 @@
         TextOptions.TextRenderingMode="Auto"
         Background="Transparent"
         AllowsTransparency="True"
+        lex:LocalizeDictionary.DesignCulture="en-US"
+        lex:ResxLocalizationProvider.DefaultAssembly="GuessWhoResources"
+        lex:ResxLocalizationProvider.DefaultDictionary="Resources"
         FontFamily="{DynamicResource MaterialDesignFont}"
         mc:Ignorable="d" WindowStyle="None" Closing="MainWindow_OnClosing"
         Title="Zgadnij Kto To?" MinHeight="400" MinWidth="600" Closed="Window_Closed" SourceInitialized="Window_SourceInitialized"
@@ -118,7 +122,7 @@
                           Visibility="{Binding ShowSettings, Converter={StaticResource BooleanToVisibilityConverter}}"
                           VerticalAlignment="Top" HorizontalAlignment="Stretch" Background="#15FFFFFF">
                                     <StackPanel Margin="10">
-                                        <Label Content="{Binding IconSize}" ContentStringFormat="Rozmiar ikon: {0}" FontSize="13"
+                                        <Label Content="{Binding IconSize}" ContentStringFormat="{lex:Loc Locale_IconSizeFormat}" FontSize="13"
                                    HorizontalAlignment="Left" />
                                         <Slider Minimum="35" Maximum="125" TickFrequency="1" IsSnapToTickEnabled="True"
                                     VerticalAlignment="Center" HorizontalAlignment="Stretch" Value="{Binding IconSize}" />
@@ -209,7 +213,7 @@
                                                 ScaleY="{Binding Path=DataContext.CategoryCheckBoxSize, ElementName=Window}" />
                                                     </CheckBox.RenderTransform>
                                                 </CheckBox>
-                                                <Label Content="{Binding CategoryName}"
+                                                <Label Content="{Binding Category}"
                                            FontSize="{Binding Path=DataContext.CategoryFontSize, ElementName=Window}" />
                                             </StackPanel>
                                         </DataTemplate>
@@ -253,21 +257,21 @@
                                 <DataTemplate>
                                     <Grid Width="{Binding Path=DataContext.IconSize, ElementName=Window}"
                               Height="{Binding Path=Width, RelativeSource={RelativeSource Self}}">
-                                        <Image Source="{Binding Path=Champion, Converter={StaticResource ChampionToImageConverter}}"
+                                        <Image Source="{Binding Converter={StaticResource ChampionToImageConverter}}"
                                    ToolTipService.InitialShowDelay="750"
                                    ToolTipService.Placement="Mouse"
                                    ToolTipService.IsEnabled="{Binding Path=DataContext.ShowTooltips, ElementName=Window}">
                                             <Image.ToolTip>
                                                 <StackPanel Orientation="Vertical">
-                                                    <TextBlock FontWeight="Bold" Text="{Binding Path=Champion, Converter={StaticResource ChampionToNameConverter}}"/>
-                                                    <TextBlock Text="{Binding Path=Description}"/>
+                                                    <TextBlock FontWeight="Bold" Text="{lex:Loc Key=League_Champion_MonkeyKing_Name}"/>
+                                                    <!--<TextBlock Text="{Binding Path=Description}"/>-->
                                                 </StackPanel>
                                             </Image.ToolTip>
                                             <i:Interaction.Triggers>
                                                 <i:EventTrigger EventName="MouseLeftButtonDown">
                                                     <i:InvokeCommandAction
                                             Command="{Binding Path=DataContext.RejectChampion, ElementName=Window}"
-                                            CommandParameter="{Binding Champion}" />
+                                            CommandParameter="{Binding}" />
                                                 </i:EventTrigger>
                                             </i:Interaction.Triggers>
                                         </Image>

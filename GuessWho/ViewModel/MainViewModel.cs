@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.ComponentModel;
@@ -21,7 +20,7 @@ namespace GuessWho.ViewModel {
         private double _CategoryCheckBoxSize;
         private double _CategoryFontSize;
         private double _IconSize;
-        private bool _ShowSettings;
+        private bool _ShowSettings = true;
         private bool _ShowTooltips;
         private double _SidePanelWidth = 220.0;
         private double _WindowHeight;
@@ -67,8 +66,10 @@ namespace GuessWho.ViewModel {
                     }
                     break;
                 case NotifyCollectionChangedAction.Reset:
-                    foreach (string champId in e.OldItems) {
-                        AddChampionIfValid(champId);
+                    if (e.OldItems != null) {
+                        foreach (string champId in e.OldItems) {
+                            AddChampionIfValid(champId);
+                        }
                     }
                     break;
             }
@@ -104,9 +105,11 @@ namespace GuessWho.ViewModel {
                     }
                     break;
                 case NotifyCollectionChangedAction.Reset:
-                    foreach (BasicCategory cat in e.OldItems) {
-                        foreach (string champId in ChampionProvider.GetChampIds(cat)) {
-                            AddChampionIfValid(champId);
+                    if (e.OldItems != null) {
+                        foreach (BasicCategory cat in e.OldItems) {
+                            foreach (string champId in ChampionProvider.GetChampIds(cat)) {
+                                AddChampionIfValid(champId);
+                            }
                         }
                     }
                     break;
@@ -121,6 +124,7 @@ namespace GuessWho.ViewModel {
                             AddChampionIfValid(champId);
                         }
                     }
+
                     break;
                 case NotifyCollectionChangedAction.Add:
                     foreach (CustomCategory cat in e.NewItems) {
@@ -128,6 +132,7 @@ namespace GuessWho.ViewModel {
                             Champions.Remove(champId);
                         }
                     }
+
                     break;
                 case NotifyCollectionChangedAction.Replace:
                     foreach (CustomCategory cat in e.OldItems) {
@@ -135,16 +140,20 @@ namespace GuessWho.ViewModel {
                             AddChampionIfValid(champId);
                         }
                     }
+
                     foreach (CustomCategory cat in e.NewItems) {
                         foreach (string champId in ChampionProvider.GetChampIds(cat)) {
                             Champions.Remove(champId);
                         }
                     }
+
                     break;
                 case NotifyCollectionChangedAction.Reset:
-                    foreach (CustomCategory cat in e.OldItems) {
-                        foreach (string champId in ChampionProvider.GetChampIds(cat)) {
-                            AddChampionIfValid(champId);
+                    if (e.OldItems != null) {
+                        foreach (CustomCategory cat in e.OldItems) {
+                            foreach (string champId in ChampionProvider.GetChampIds(cat)) {
+                                AddChampionIfValid(champId);
+                            }
                         }
                     }
                     break;
@@ -153,8 +162,8 @@ namespace GuessWho.ViewModel {
 
         #region Public properties
 
-        //public ObservableCollection<ChampionCategoryViewModel> Categories { get; } =
-        //    new ObservableCollection<ChampionCategoryViewModel>();
+        public ObservableCollection<CategoryViewModel> Categories { get; } =
+            new ObservableCollection<CategoryViewModel>();
 
         public double WindowWidth {
             get { return _WindowWidth; }
@@ -387,34 +396,49 @@ namespace GuessWho.ViewModel {
                 RejectedBasicCategories.Add(cat);
             }
             RejectedCustomCategories.Clear();
+
             foreach (CustomCategory cat in config.RejectedCustomCategories) {
                 RejectedCustomCategories.Add(cat);
             }
-            foreach (ChampionCategoryViewModel vm in Categories) {
+            foreach (CategoryViewModel vm in Categories) {
                 vm.PropertyChanged -= ChampionCategory_PropertyChanged;
             }
 
             Categories.Clear();
-            foreach (ChampionCategory category in config.Categories) {
-                ChampionCategoryViewModel vm = new ChampionCategoryViewModel(category);
+            foreach (CustomCategory category in Enum.GetValues(typeof(CustomCategory))) {
+                CustomCategoryViewModel vm = new CustomCategoryViewModel(category) {
+                    IsSelected = !RejectedCustomCategories.Contains(category)
+                };
                 vm.PropertyChanged += ChampionCategory_PropertyChanged;
                 Categories.Add(vm);
             }
-
-            AllChampionDescriptions.Clear();
-            foreach (Champion champ in ChampionProvider.AllChampionsAlphabetical) {
-                AllChampionDescriptions.Add(champ,
-                    new ChampionDescription(champ,
-                        string.Join("\n",
-                            Categories.Where(c => c.Champions.Contains(champ)).
-                                    Select(c => c.CategoryName))));
+            foreach (BasicCategory category in Enum.GetValues(typeof(BasicCategory))) {
+                BasicCategoryViewModel vm = new BasicCategoryViewModel(category) {
+                    IsSelected = !RejectedBasicCategories.Contains(category)
+                };
+                vm.PropertyChanged += ChampionCategory_PropertyChanged;
+                Categories.Add(vm);
             }
         }
 
         private void ChampionCategory_PropertyChanged(object sender, PropertyChangedEventArgs e) {
             switch (e.PropertyName) {
-                case nameof(ChampionCategoryViewModel.IsSelected):
-                    RevalidateChampions();
+                case nameof(CategoryViewModel.IsSelected):
+                    if (sender is BasicCategoryViewModel bcVm) {
+                        if (bcVm.IsSelected) {
+                            RejectedBasicCategories.Remove(bcVm.BasicCategory);
+                        } else {
+                            RejectedBasicCategories.Add(bcVm.BasicCategory);
+                        }
+                    } else if (sender is CustomCategoryViewModel ccVm) {
+                        if (ccVm.IsSelected) {
+                            RejectedCustomCategories.Remove(ccVm.CustomCategory);
+                        } else {
+                            RejectedCustomCategories.Add(ccVm.CustomCategory);
+                        }
+                    } else {
+                        throw new InvalidOperationException($"{nameof(ChampionCategory_PropertyChanged)} sender type is invalid!");
+                    }
                     break;
             }
         }

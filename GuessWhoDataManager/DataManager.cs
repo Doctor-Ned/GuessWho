@@ -16,7 +16,6 @@ namespace GuessWhoDataManager {
         private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
         internal const string DATA_DRAGON_VERSION_KEY = "DataDragonVersion";
         internal const string LEAGUE_CHAMPION_CONFIG_KEY = "LeagueChampionConfig";
-        internal const string RESOURCES = "Resources";
         internal const string XML_RESOURCE_NODE = "Resource";
         internal const string XML_ITEMGROUP_NODE = "ItemGroup";
         internal const string XML_INCLUDE_ATTRIBUTE = "Include";
@@ -114,17 +113,17 @@ namespace GuessWhoDataManager {
                 using (ResXResourceWriter writer = new ResXResourceWriter(GetOutputResourcePath(locale))) {
                     Logger.Debug($"Writing {locale} resource file '{writer.BasePath}'...");
                     foreach (KeyValuePair<string, string> pair in localeDatas[locale].LocaleLabels) {
-                        writer.AddResource($"{ResourceType.Locale}.{pair.Key}", pair.Value);
+                        writer.AddResource($"{ResourceType.Locale}_{pair.Key}", pair.Value);
                     }
                     foreach (KeyValuePair<CustomCategory, string> pair in localeDatas[locale].CustomCategoryLabels) {
-                        writer.AddResource($"{ResourceType.CustomCategories}.{pair.Key}", pair.Value);
+                        writer.AddResource($"{ResourceType.CustomCategories}_{pair.Key}", pair.Value);
                     }
                     foreach (KeyValuePair<BasicCategory, string> pair in lolData.BasicCategoryNames) {
-                        writer.AddResource($"{ResourceType.League}.{nameof(BasicCategory)}.{pair.Key}", pair.Value);
+                        writer.AddResource($"{ResourceType.League}_{nameof(BasicCategory)}_{pair.Key}", pair.Value);
                     }
                     foreach (KeyValuePair<string, LocaleLolChampionData> pair in lolData.ChampionData) {
-                        writer.AddResource($"{ResourceType.League}.Champion.{pair.Key}.Name", pair.Value.Name);
-                        writer.AddResource($"{ResourceType.League}.Champion.{pair.Key}.Title", pair.Value.Title);
+                        writer.AddResource($"{ResourceType.League}_Champion_{pair.Key}_Name", pair.Value.Name);
+                        writer.AddResource($"{ResourceType.League}_Champion_{pair.Key}_Title", pair.Value.Title);
                     }
                     writer.Generate();
                 }
@@ -198,7 +197,7 @@ namespace GuessWhoDataManager {
         private string SolutionPath { get; }
 
         public string VersionResourcePath {
-            get { return Path.Combine(SolutionPath, ResourcesProjectName, $"{RESOURCES}.resx"); }
+            get { return Path.Combine(SolutionPath, ResourcesProjectName, "ResourceData.resx"); }
         }
 
         private string GetDataManagerLocaleResourcePath(Locale locale) {
@@ -213,7 +212,7 @@ namespace GuessWhoDataManager {
 
         private string GetOutputResourcePath(Locale locale) {
             return Path.Combine(SolutionPath, ResourcesProjectName, ResourceManager.RESOURCE_DIRECTORY,
-                $"{RESOURCES}.{locale.ToCultureInfoString()}.resx");
+                $"{ResourceManager.RESOURCE_FILENAME}.{locale.ToCultureInfoString()}.resx");
         }
     }
 }
