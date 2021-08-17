@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Resources;
+using System.Xml;
 
 using GuessWhoResources;
 
@@ -17,6 +18,9 @@ namespace GuessWhoDataManager {
         internal const string RESOURCE_PROJECT_NAME = "GuessWhoResources";
         internal const string RESOURCES = "Resources";
         internal const string CHAMPIONS = "Champions";
+        internal const string XML_RESOURCE_NODE = "Resource";
+        internal const string XML_ITEMGROUP_NODE = "ItemGroup";
+        internal const string XML_INCLUDE_ATTRIBUTE = "Include";
         internal const Locale DEFAULT_LOCALE = Locale.en_US;
 
         internal static string DefaultSolutionPath {
@@ -67,6 +71,8 @@ namespace GuessWhoDataManager {
                 localeDatas.Add(locale, new LocaleData(locale, localeLabels, customCategoryLabels));
             }
 
+            Logger.Info("Verifying resource data...");
+
             if (localeDatas[DEFAULT_LOCALE].CustomCategoryLabels.Keys.Count !=
                 Enum.GetValues(typeof(CustomCategory)).Length) {
                 throw new InvalidDataException($"Default locale {DEFAULT_LOCALE} custom categories are incomplete: fill the appropriate resource file to proceed.");
@@ -95,6 +101,8 @@ namespace GuessWhoDataManager {
                 }
             }
 
+            Logger.Info("Processing DataDragon...");
+
             DataDragon dataDragon = new DataDragon(version);
             LeagueChampionConfig config = new LeagueChampionConfig();
             foreach (KeyValuePair<string, LocaleLolChampionData> pair in dataDragon.Locales[DEFAULT_LOCALE].ChampionData) {
@@ -103,6 +111,7 @@ namespace GuessWhoDataManager {
                     CustomCategories = pair.Value.CustomCategories
                 });
             }
+
             foreach (Locale locale in Enum.GetValues(typeof(Locale))) {
                 LocaleLolData lolData = dataDragon.Locales[locale];
                 using (ResXResourceWriter writer = new ResXResourceWriter(GetOutputLeagueResourcePath(locale))) {
@@ -117,10 +126,37 @@ namespace GuessWhoDataManager {
                 }
             }
 
-            foreach (string id in dataDragon.ChampionIds) {
-                dataDragon.DownloadChampIcon(id, new FileInfo(Path.Combine(SolutionPath, RESOURCE_PROJECT_NAME, CHAMPIONS, $"{id}.png")));
+            Logger.Info("Updating champion icons...");
+            XmlDocument doc = new XmlDocument();
+            doc.Load(Path.Combine(SolutionPath, RESOURCE_PROJECT_NAME, $"{RESOURCE_PROJECT_NAME}.csproj"));
+            if (doc.DocumentElement == null) {
+                throw new InvalidOperationException("Provided resource project file is invalid!");
             }
-            //todo: add the icons to csproj as Resources
+            XmlNodeList resourceNodes = doc.GetElementsByTagName(XML_RESOURCE_NODE);
+            foreach (string id in dataDragon.ChampionIds) {
+                string resourceIncludeAttribute = $"{CHAMPIONS}\\{id}.png";
+                FileInfo iconFile = new FileInfo(Path.Combine(SolutionPath, RESOURCE_PROJECT_NAME, resourceIncludeAttribute));
+                if (!iconFile.Exists) {
+                    dataDragon.DownloadChampIcon(id, iconFile);
+                }
+
+                bool resourceFound = false;
+                foreach (XmlNode node in resourceNodes.Cast<XmlNode>()) {
+                    XmlAttribute includeAttribute = node.Attributes?[XML_INCLUDE_ATTRIBUTE];
+                    if (includeAttribute != null && includeAttribute.Value == resourceIncludeAttribute) {
+                        resourceFound = true;
+                        break;
+                    }
+                }
+
+                if (!resourceFound) {
+                    XmlElement itemGroupElement = doc.CreateElement(XML_ITEMGROUP_NODE);
+                    XmlElement resourceElement = doc.CreateElement(XML_RESOURCE_NODE);
+                    resourceElement.SetAttribute(XML_INCLUDE_ATTRIBUTE, resourceIncludeAttribute);
+                    itemGroupElement.AppendChild(resourceElement);
+                    doc.DocumentElement?.AppendChild(itemGroupElement);
+                }
+            }
 
             using (ResXResourceWriter versionResourceWriter = new ResXResourceWriter(VersionResourcePath)) {
                 versionResourceWriter.AddResource(DATA_DRAGON_VERSION_KEY, version);
