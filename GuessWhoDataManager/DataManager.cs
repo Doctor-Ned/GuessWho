@@ -211,7 +211,7 @@ namespace GuessWhoDataManager {
         }
 
         private string GetOutputResourcePath(Locale locale) {
-            return Path.Combine(SolutionPath, ResourcesProjectName, ResourceManager.RESOURCE_DIRECTORY,
+            return Path.Combine(SolutionPath, ResourcesProjectName,
                 $"{ResourceManager.RESOURCE_FILENAME}.{locale.ToCultureInfoString()}.resx");
         }
     }
