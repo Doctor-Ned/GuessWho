@@ -32,14 +32,13 @@ namespace GuessWhoDataManager {
 
             SolutionPath = dir.FullName;
             Logger.Info($"DataManager created with {nameof(SolutionPath)} '{SolutionPath}'!");
-            // use ResXResourceWriter
         }
 
         public void ReworkResources(bool force) {
             string latestVersion = DataDragon.GetLatestVersion();
             string versionResourcePath = Path.Combine(SolutionPath, RESOURCE_PROJECT_NAME, $"{RESOURCES}.resx");
-            using (ResXResourceReader versionResourceReader = new ResXResourceReader(versionResourcePath)) {
-                if (!force) {
+            if (!force) {
+                using (ResXResourceReader versionResourceReader = new ResXResourceReader(versionResourcePath)) {
                     string currentVersion = versionResourceReader.Cast<DictionaryEntry>()
                     .First(e => e.Key is string s && s == DATA_DRAGON_VERSION_KEY).Value as string;
                     if (currentVersion == latestVersion) {
@@ -90,6 +89,7 @@ namespace GuessWhoDataManager {
 
             foreach (Locale locale in Enum.GetValues(typeof(Locale))) {
                 if (locale != DEFAULT_LOCALE) {
+                    // todo: add refilling based on language
                     Tuple<int, int> refilled = localeDatas[locale].RefillMissingDataFrom(localeDatas[DEFAULT_LOCALE]);
                     if (refilled.Item1 != 0) {
                         Logger.Warn($"Locale {locale} labels are incomplete: {refilled.Item1} labels from default locale {DEFAULT_LOCALE} will be applied.");
@@ -112,7 +112,9 @@ namespace GuessWhoDataManager {
                 }
             }
 
-            //todo: make all the resources!
+            //todo: create all league-related resources!
+
+            throw new NotImplementedException();
 
             using (ResXResourceWriter versionResourceWriter = new ResXResourceWriter(versionResourcePath)) {
                 versionResourceWriter.AddResource(DATA_DRAGON_VERSION_KEY, latestVersion);
