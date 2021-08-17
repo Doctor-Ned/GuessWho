@@ -55,7 +55,7 @@ namespace GuessWhoDataManager {
                 Dictionary<CustomCategory, string> customCategoryLabels = new Dictionary<CustomCategory, string>();
                 using (ResXResourceReader localeReader = new ResXResourceReader(
                     Path.Combine(SolutionPath, DATA_MANAGER_PROJECT_NAME, RESOURCES,
-                        ResourceType.Locale.ToString(), $"{ResourceType.Locale}.{locale.ToCultureInfo().Name}.resx"))) {
+                        ResourceType.Locale.ToString(), $"{ResourceType.Locale}.{locale.ToCultureInfoString()}.resx"))) {
                     foreach (DictionaryEntry entry in localeReader) {
                         if (entry.Value == null) {
                             Logger.Warn($"Locale {locale} entry '{entry.Key}' value is empty!");
@@ -66,7 +66,7 @@ namespace GuessWhoDataManager {
                     }
                 }
                 using (ResXResourceReader customCategoryReader = new ResXResourceReader(Path.Combine(SolutionPath, DATA_MANAGER_PROJECT_NAME, RESOURCES,
-                    nameof(ResourceType.CustomCategories), $"{nameof(ResourceType.CustomCategories)}.{locale.ToCultureInfo().Name}.resx"))) {
+                    nameof(ResourceType.CustomCategories), $"{nameof(ResourceType.CustomCategories)}.{locale.ToCultureInfoString()}.resx"))) {
                     foreach (DictionaryEntry entry in customCategoryReader) {
                         if (Enum.GetValues(typeof(CustomCategory)).Cast<CustomCategory>()
                             .Any(c => c.ToString() == entry.Key.ToString())) {
@@ -79,7 +79,7 @@ namespace GuessWhoDataManager {
                         }
                     }
                 }
-                localeDatas.Add(locale, new LocaleData(localeLabels, customCategoryLabels));
+                localeDatas.Add(locale, new LocaleData(locale, localeLabels, customCategoryLabels));
             }
 
             if (localeDatas[DEFAULT_LOCALE].CustomCategoryLabels.Keys.Count !=
@@ -89,18 +89,11 @@ namespace GuessWhoDataManager {
 
             foreach (Locale locale in Enum.GetValues(typeof(Locale))) {
                 if (locale != DEFAULT_LOCALE) {
-                    // todo: add refilling based on language
-                    Tuple<int, int> refilled = localeDatas[locale].RefillMissingDataFrom(localeDatas[DEFAULT_LOCALE]);
-                    if (refilled.Item1 != 0) {
-                        Logger.Warn($"Locale {locale} labels are incomplete: {refilled.Item1} labels from default locale {DEFAULT_LOCALE} will be applied.");
-                    }
-                    if (refilled.Item2 != 0) {
-                        Logger.Warn($"Locale {locale} custom categories are incomplete: {refilled.Item2} custom categories from default locale {DEFAULT_LOCALE} will be applied.");
-                    }
+                    localeDatas[locale].RefillMissingData(localeDatas, DEFAULT_LOCALE);
                 }
 
                 using (ResXResourceWriter writer = new ResXResourceWriter(Path.Combine(SolutionPath,
-                    RESOURCE_PROJECT_NAME, RESOURCES, $"{ResourceType.Locale}.{locale.ToCultureInfo().Name}.resx"))) {
+                    RESOURCE_PROJECT_NAME, RESOURCES, $"{ResourceType.Locale}.{locale.ToCultureInfoString()}.resx"))) {
                     Logger.Debug($"Writing {locale} resource file '{writer.BasePath}'...");
                     foreach (KeyValuePair<string, string> pair in localeDatas[locale].LocaleLabels) {
                         writer.AddResource($"{ResourceType.Locale}.{pair.Key}", pair.Value);

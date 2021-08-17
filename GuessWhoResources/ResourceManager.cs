@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.Linq;
 
 namespace GuessWhoResources {
     public static class ResourceManager {
@@ -51,7 +52,20 @@ namespace GuessWhoResources {
         }
 
         public static CultureInfo ToCultureInfo(this Locale locale) {
-            return new CultureInfo(locale.ToString().Replace('_', '-'));
+            return new CultureInfo(locale.ToCultureInfoString());
+        }
+
+        public static string ToCultureInfoString(this Locale locale) {
+            return locale.ToString().Replace('_', '-');
+        }
+
+        public static string GetLanguageCode(this Locale locale) {
+            return locale.ToString().Substring(0, 2);
+        }
+
+        public static Locale[] GetLocalesWithSameLanguage(this Locale locale) {
+            return Enum.GetValues(typeof(Locale)).Cast<Locale>()
+                .Where(l => l != locale && l.GetLanguageCode() == locale.GetLanguageCode()).ToArray();
         }
     }
 }
