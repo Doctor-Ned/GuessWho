@@ -15,6 +15,7 @@
             <local:WidthHeightToRectConverter x:Key="WidthHeightToRectConverter"/>
             <local:LocaleToLanguageNameConverter x:Key="LocaleToLanguageNameConverter"/>
             <local:CategoryToNameConverter x:Key="CategoryToNameConverter"/>
+            <local:ChampionToDescriptionConverter x:Key="ChampionToDescriptionConverter"/>
             <DataTemplate DataType="{x:Type vm:DialogRejectedChampionsViewModel}">
                 <local:RejectedChampionsControl />
             </DataTemplate>

@@ -275,7 +275,7 @@
                                             <Image.ToolTip>
                                                 <StackPanel Orientation="Vertical">
                                                     <TextBlock FontWeight="Bold" Text="{Binding Converter={StaticResource ChampionToNameConverter}}"/>
-                                                    <!--<TextBlock Text="{Binding Path=Description}"/>-->
+                                                    <TextBlock Text="{Binding Converter={StaticResource ChampionToDescriptionConverter}}"/>
                                                 </StackPanel>
                                             </Image.ToolTip>
                                             <i:Interaction.Triggers>
