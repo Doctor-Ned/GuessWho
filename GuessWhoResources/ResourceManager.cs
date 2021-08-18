@@ -5,7 +5,7 @@ using System.Linq;
 namespace GuessWhoResources {
     public static class ResourceManager {
         public const string RESOURCE_FILENAME = "Resources";
-        public const string RESOURCE_DIRECTORY = "Resources";
+        public const string RESOURCE_DIRECTORY = "Properties";
         public const string ICON_DIRECTORY = "Champions";
         public const string ICON_EXTENSION = "png";
 

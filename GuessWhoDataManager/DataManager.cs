@@ -16,6 +16,7 @@ namespace GuessWhoDataManager {
         private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
         internal const string DATA_DRAGON_VERSION_KEY = "DataDragonVersion";
         internal const string LEAGUE_CHAMPION_CONFIG_KEY = "LeagueChampionConfig";
+        internal const string RESOURCE_DIRECTORY = "Resources";
         internal const string XML_RESOURCE_NODE = "Resource";
         internal const string XML_ITEMGROUP_NODE = "ItemGroup";
         internal const string XML_INCLUDE_ATTRIBUTE = "Include";
@@ -201,17 +202,17 @@ namespace GuessWhoDataManager {
         }
 
         private string GetDataManagerLocaleResourcePath(Locale locale) {
-            return Path.Combine(SolutionPath, DataManagerProjectName, ResourceManager.RESOURCE_DIRECTORY,
+            return Path.Combine(SolutionPath, DataManagerProjectName, RESOURCE_DIRECTORY,
                 ResourceType.Locale.ToString(), $"{ResourceType.Locale}.{locale.ToCultureInfoString()}.resx");
         }
 
         private string GetDataManagerCustomCategoriesResourcePath(Locale locale) {
-            return Path.Combine(SolutionPath, DataManagerProjectName, ResourceManager.RESOURCE_DIRECTORY,
+            return Path.Combine(SolutionPath, DataManagerProjectName, RESOURCE_DIRECTORY,
                 ResourceType.CustomCategories.ToString(), $"{ResourceType.CustomCategories}.{locale.ToCultureInfoString()}.resx");
         }
 
         private string GetOutputResourcePath(Locale locale) {
-            return Path.Combine(SolutionPath, ResourcesProjectName,
+            return Path.Combine(SolutionPath, ResourcesProjectName, ResourceManager.RESOURCE_DIRECTORY,
                 $"{ResourceManager.RESOURCE_FILENAME}.{locale.ToCultureInfoString()}.resx");
         }
     }
