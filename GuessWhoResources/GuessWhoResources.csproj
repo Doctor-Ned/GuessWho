@@ -47,7 +47,6 @@
     <Compile Include="BasicCategory.cs" />
     <Compile Include="ChampionCategoryConfig.cs" />
     <Compile Include="CustomCategory.cs" />
-    <Compile Include="Language.cs" />
     <Compile Include="LeagueChampionConfig.cs" />
     <Compile Include="Locale.cs" />
     <Compile Include="ResourceManager.cs" />

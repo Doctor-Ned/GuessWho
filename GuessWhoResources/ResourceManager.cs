@@ -10,9 +10,6 @@ namespace GuessWhoResources {
         public const string ICON_DIRECTORY = "Champions";
         public const string ICON_EXTENSION = "png";
 
-        public static Language[] AvailableLanguages { get; } = Enum.GetValues(typeof(Locale)).Cast<Locale>()
-            .Select(l => new Language(l)).OrderBy(l => l).ToArray();
-
         public static CultureInfo ToCultureInfo(this Locale locale) {
             return new CultureInfo(locale.ToCultureInfoString());
         }
