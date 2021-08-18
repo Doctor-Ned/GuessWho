@@ -7,6 +7,7 @@ The app itself supports all of the languages that are supported by Riot in Leagu
 Currently the app is fully translated into:
 - English
 - Polish
+
 The other languages that are not mentioned above are only partially supported - most of the UI for them remains English, but any data provided by Riot's Data Dragon (League related) are entirely translated.
 
 
@@ -27,6 +28,7 @@ I'm open for new translations!
 ## TODO
 
 - Maybe more configuration - that could include switching dark mode and changing color palletes
+- ToolTip for hovering over categories, which could show the amount of champions of that category shown
 
 ## Third-party tools
 
