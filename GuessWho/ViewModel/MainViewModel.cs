@@ -82,16 +82,7 @@ namespace GuessWho.ViewModel {
                         break;
                     }
                 case NotifyCollectionChangedAction.Reset: {
-                        if (e.OldItems != null) {
-                            bool changed = false;
-                            foreach (string champId in e.OldItems) {
-                                changed |= AddChampionIfValid(champId);
-                            }
-
-                            if (changed) {
-                                RefreshVisibleChampions();
-                            }
-                        }
+                        RevalidateChampions();
                         break;
                     }
             }
@@ -137,17 +128,7 @@ namespace GuessWho.ViewModel {
                         break;
                     }
                 case NotifyCollectionChangedAction.Reset: {
-                        if (e.OldItems != null) {
-                            bool changed = false;
-                            foreach (BasicCategory cat in e.OldItems) {
-                                foreach (string champId in ChampionProvider.GetChampIds(cat)) {
-                                    changed |= AddChampionIfValid(champId);
-                                }
-                            }
-                            if (changed) {
-                                RefreshVisibleChampions();
-                            }
-                        }
+                        RevalidateChampions();
                         break;
                     }
             }
@@ -192,17 +173,7 @@ namespace GuessWho.ViewModel {
                         break;
                     }
                 case NotifyCollectionChangedAction.Reset: {
-                        if (e.OldItems != null) {
-                            bool changed = false;
-                            foreach (CustomCategory cat in e.OldItems) {
-                                foreach (string champId in ChampionProvider.GetChampIds(cat)) {
-                                    changed |= AddChampionIfValid(champId);
-                                }
-                            }
-                            if (changed) {
-                                RefreshVisibleChampions();
-                            }
-                        }
+                        RevalidateChampions();
                         break;
                     }
             }
