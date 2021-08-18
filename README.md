@@ -31,6 +31,9 @@ I'm open for new translations!
 - ToolTip for hovering over categories, which could show the amount of champions of that category shown
 - Add category icons
 - Add the ability to chose your own character and have its icon and categories accessible all the time
+- Split GuessWhoDataManager functionality into smaller methods for SoC and easier testing
+- Add logging to main project for easier debugging
+- Unit tests for all of the projects
 
 ## Third-party tools
 
