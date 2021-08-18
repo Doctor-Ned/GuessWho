@@ -135,6 +135,9 @@
   <data name="Locale_IconSizeFormat" xml:space="preserve">
     <value>Icon size: {0}</value>
   </data>
+  <data name="Locale_LanguageCapital" xml:space="preserve">
+    <value>LANGUAGE</value>
+  </data>
   <data name="Locale_LoadConfigFailedFormat" xml:space="preserve">
     <value>Failed to load the config!
 {0}</value>

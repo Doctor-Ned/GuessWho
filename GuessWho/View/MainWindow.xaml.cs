@@ -4,10 +4,6 @@ using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Interop;
 
-using GuessWho.ViewModel;
-
-using GuessWhoResources;
-
 namespace GuessWho.View {
     public partial class MainWindow : Window {
 
@@ -395,11 +391,6 @@ namespace GuessWho.View {
 
         private void MinimizeWindowButton_OnClick(object sender, RoutedEventArgs e) {
             WindowState = WindowState.Minimized;
-        }
-
-        private void ButtonBase_OnClick(object sender, RoutedEventArgs e) {
-            ((MainViewModel)DataContext).Locale =
-                ((MainViewModel)DataContext).Locale == Locale.en_US ? Locale.pl_PL : Locale.en_US;
         }
     }
 }

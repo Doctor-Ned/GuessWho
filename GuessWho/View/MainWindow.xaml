@@ -113,15 +113,15 @@
                             ToolTip="{Binding ShowSettings, Converter={StaticResource BoolToSettingsToolTipConverter}}">
                             <materialDesign:PackIcon Kind="{Binding ShowSettings, Converter={StaticResource BoolToSettingsIconConverter}}" />
                         </Button>
-                        <Button Style="{StaticResource TopButton}" Margin="6,0,0,0" Click="ButtonBase_OnClick">
-                            <materialDesign:PackIcon Kind="Language" />
-                        </Button>
                     </StackPanel>
                 </Grid>
                 <Grid Grid.Row="1">
-                    <DockPanel>
-                        <Grid DockPanel.Dock="Right" Width="{Binding SidePanelWidth}">
-                            <Border BorderThickness="2 0 0 0" BorderBrush="Black" />
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" MinWidth="220"/>
+                            <ColumnDefinition Width="{Binding SidePanelWidth}" MinWidth="220"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="1">
                             <DockPanel>
                                 <Grid DockPanel.Dock="Top"
                           Visibility="{Binding ShowSettings, Converter={StaticResource BooleanToVisibilityConverter}}"
@@ -146,13 +146,6 @@
                                     VerticalAlignment="Center" HorizontalAlignment="Stretch"
                                     Value="{Binding CategoryFontSize}" />
                                         <Separator Opacity="0.5" />
-                                        <Label Content="{Binding SidePanelWidth}"
-                                   ContentStringFormat="SIDE PANEL WIDTH: {0}" FontSize="13"
-                                   HorizontalAlignment="Left" />
-                                        <Slider Minimum="220" Maximum="400" TickFrequency="10" IsSnapToTickEnabled="True"
-                                    VerticalAlignment="Center" HorizontalAlignment="Stretch"
-                                    Value="{Binding SidePanelWidth}" />
-                                        <Separator Opacity="0.5" />
                                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                                             <Label Content="{lex:Loc Locale_ShowToolTips}" Margin="0,0,5,0" />
                                             <CheckBox IsChecked="{Binding ShowTooltips}" />
@@ -176,6 +169,18 @@
                                                 <materialDesign:PackIcon Style="{StaticResource BigPackIcon}" Kind="ContentSaveOff" />
                                             </Button>
                                         </StackPanel>
+                                        <Button Style="{StaticResource MaterialDesignRaisedButton}"
+                                                HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding ChangeLanguage}">
+                                            <StackPanel Orientation="Horizontal">
+                                                <materialDesign:PackIcon Kind="Language" Margin="0,5,5,5"
+                                                                         RenderTransformOrigin="0.5,0.5" VerticalAlignment="Center">
+                                                    <materialDesign:PackIcon.RenderTransform>
+                                                        <ScaleTransform ScaleX="1.3" ScaleY="1.3" />
+                                                    </materialDesign:PackIcon.RenderTransform>
+                                                </materialDesign:PackIcon>
+                                                <TextBlock Text="{lex:Loc Locale_LanguageCapital}" VerticalAlignment="Center" />
+                                            </StackPanel>
+                                        </Button>
                                     </StackPanel>
                                 </Grid>
                                 <Button Style="{StaticResource MaterialDesignRaisedAccentButton}" DockPanel.Dock="Bottom"
@@ -226,7 +231,8 @@
                                 </ListView>
                             </DockPanel>
                         </Grid>
-                        <ListBox ItemsSource="{Binding Champions}" VirtualizingPanel.IsVirtualizing="True" Margin="15"
+                        <GridSplitter Grid.Column="0" Background="Black" Width="3" HorizontalAlignment="Right" VerticalAlignment="Stretch"/>
+                        <ListBox Grid.Column="0" ItemsSource="{Binding Champions}" VirtualizingPanel.IsVirtualizing="True" Margin="15"
                      VirtualizingPanel.ScrollUnit="Item"
                      VirtualizingPanel.VirtualizationMode="Recycling" VerticalAlignment="Stretch"
                      HorizontalAlignment="Stretch"
@@ -284,7 +290,7 @@
                                 </DataTemplate>
                             </ListBox.ItemTemplate>
                         </ListBox>
-                    </DockPanel>
+                    </Grid>
                     <materialDesign:DialogHost Identifier="{Binding DialogIdentifier1}" />
                     <materialDesign:DialogHost Identifier="{Binding DialogIdentifier2}" />
                 </Grid>

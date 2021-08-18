@@ -22,9 +22,9 @@ namespace GuessWho.ViewModel {
         private double _CategoryCheckBoxSize;
         private double _CategoryFontSize;
         private double _IconSize;
-        private bool _ShowSettings = true;
+        private bool _ShowSettings;
         private bool _ShowTooltips;
-        private double _SidePanelWidth = 220.0;
+        private double _SidePanelWidth;
         private double _WindowHeight;
         private double _WindowWidth;
         private Locale _Locale;
@@ -41,6 +41,7 @@ namespace GuessWho.ViewModel {
             LoadConfig = new RelayCommand(ExecuteLoadConfig);
             SaveConfig = new RelayCommand(ExecuteSaveConfig);
             ResetConfig = new RelayCommand(ExecuteResetConfig);
+            ChangeLanguage = new RelayCommand(ExecuteChangeLanguage);
             ConfigManager = new GuessWhoConfigManager();
             DialogRejectedChampionsViewModel = new DialogRejectedChampionsViewModel(this);
             RejectedChampions.CollectionChanged += RejectedChampions_CollectionChanged;
@@ -263,6 +264,7 @@ namespace GuessWho.ViewModel {
         public ICommand LoadConfig { get; }
         public ICommand SaveConfig { get; }
         public ICommand ResetConfig { get; }
+        public ICommand ChangeLanguage { get; }
 
         #endregion
 
@@ -364,6 +366,10 @@ namespace GuessWho.ViewModel {
                         $"Konfiguracja została zresetowana, lecz w trakcie zapisu wystąpił błąd!\n{e}");
                 }
             });
+        }
+
+        private void ExecuteChangeLanguage() {
+            Locale = Locale == Locale.en_US ? Locale.pl_PL : Locale.en_US;
         }
 
         #endregion
