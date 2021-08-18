@@ -119,7 +119,7 @@
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" MinWidth="220"/>
-                            <ColumnDefinition Width="{Binding SidePanelWidth}" MinWidth="220" MaxWidth="400"/>
+                            <ColumnDefinition Width="{Binding Path=SidePanelWidth, Mode=TwoWay, Converter={StaticResource DoubleGridLengthConverter}}" MinWidth="220" MaxWidth="400"/>
                         </Grid.ColumnDefinitions>
                         <Grid Grid.Column="1">
                             <DockPanel>

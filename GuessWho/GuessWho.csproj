@@ -99,6 +99,7 @@
     <Compile Include="View\BoolToMessageConverter.cs" />
     <Compile Include="View\CategoryToNameConverter.cs" />
     <Compile Include="View\ChampionToDescriptionConverter.cs" />
+    <Compile Include="View\DoubleGridLengthConverter.cs" />
     <Compile Include="View\LocaleToLanguageNameConverter.cs" />
     <Compile Include="View\ChampionToNameConverter.cs" />
     <Compile Include="View\LanguageSelectionControl.xaml.cs">

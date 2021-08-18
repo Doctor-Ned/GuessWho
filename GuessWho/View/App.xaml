@@ -16,6 +16,7 @@
             <local:LocaleToLanguageNameConverter x:Key="LocaleToLanguageNameConverter"/>
             <local:CategoryToNameConverter x:Key="CategoryToNameConverter"/>
             <local:ChampionToDescriptionConverter x:Key="ChampionToDescriptionConverter"/>
+            <local:DoubleGridLengthConverter x:Key="DoubleGridLengthConverter"/>
             <DataTemplate DataType="{x:Type vm:DialogRejectedChampionsViewModel}">
                 <local:RejectedChampionsControl />
             </DataTemplate>
