@@ -23,10 +23,7 @@ namespace GuessWho.ViewModel {
                     RejectedChampions.Clear();
                     MainViewModel.RejectedChampions.Clear();
                     CloseDialog();
-                },
-                Button1Text = "TAK",
-                Button2Text = "NIE",
-                Message = "Przywrócisz wszystkie odrzucone postacie.\nCzy na pewno?"
+                }
             };
         }
 
@@ -51,6 +48,9 @@ namespace GuessWho.ViewModel {
         }
 
         private void ExecuteRestoreAll() {
+            DialogYesNoViewModel.Button1Text = ResourceProvider.GetLocaleString("YesCapital");
+            DialogYesNoViewModel.Button2Text = ResourceProvider.GetLocaleString("NoCapital");
+            DialogYesNoViewModel.Message = ResourceProvider.GetLocaleString("RestoreAllPrompt");
             DialogYesNoViewModel.OpenIDialog(MainViewModel.DialogIdentifier2);
         }
 

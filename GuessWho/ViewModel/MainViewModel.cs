@@ -328,14 +328,9 @@ namespace GuessWho.ViewModel {
 
         private HashSet<string> Champions { get; } = new HashSet<string>();
 
-        private DialogOneButtonViewModel DialogOneButtonViewModel { get; } = new DialogOneButtonViewModel {
-            ButtonText = "OK"
-        };
+        private DialogOneButtonViewModel DialogInformationViewModel { get; } = new DialogOneButtonViewModel();
 
-        private DialogTwoButtonViewModel DialogTwoButtonViewModel { get; } = new DialogTwoButtonViewModel {
-            Button1Text = "TAK",
-            Button2Text = "NIE"
-        };
+        private DialogTwoButtonViewModel DialogYesNoViewModel { get; } = new DialogTwoButtonViewModel();
 
         private DialogRejectedChampionsViewModel DialogRejectedChampionsViewModel { get; }
 
@@ -368,7 +363,7 @@ namespace GuessWho.ViewModel {
         }
 
         private void ExecuteResetGame() {
-            ShowYesNoDialog("Zamierzasz zresetować grę. Ustawienia pozostaną nienaruszone.\nNa pewno?", () =>
+            ShowYesNoDialog(ResourceProvider.GetLocaleString("ResetGamePrompt"), () =>
             {
                 GuessWhoConfig config = GetCurrentConfig();
                 config.RejectedChampions.Clear();
@@ -378,20 +373,18 @@ namespace GuessWho.ViewModel {
                 try {
                     WriteConfiguration();
                 } catch (Exception e) {
-                    ShowInformationDialog($"Gra została zresetowana, lecz w trakcie zapisu wystąpił błąd!\n{e}");
+                    ShowInformationDialog(string.Format(ResourceProvider.GetLocaleString("ResetGameDoneWithExceptionFormat"), e));
                 }
             });
         }
 
         private void ExecuteLoadConfig() {
-            ShowYesNoDialog(
-                "Zamierzasz wczytać ponownie konfigurację. Wszelkie niezapisane zmiany zostaną utracone!\nNa pewno?",
-                () =>
+            ShowYesNoDialog(ResourceProvider.GetLocaleString("LoadConfigPrompt"), () =>
                 {
                     try {
                         LoadConfiguration();
                     } catch (Exception e) {
-                        ShowInformationDialog($"Nie udało się wczytać konfiguracji!\n{e}");
+                        ShowInformationDialog(string.Format(ResourceProvider.GetLocaleString("LoadConfigFailedFormat"), e));
                     }
                 });
         }
@@ -399,21 +392,20 @@ namespace GuessWho.ViewModel {
         private void ExecuteSaveConfig() {
             try {
                 WriteConfiguration();
-                ShowInformationDialog("Konfiguracja zapisana!");
+                ShowInformationDialog(ResourceProvider.GetLocaleString("SaveConfigSuccessful"));
             } catch (Exception e) {
-                ShowInformationDialog($"Nie udało się zapisać konfiguracji!\n{e}");
+                ShowInformationDialog(string.Format(ResourceProvider.GetLocaleString("SaveConfigFailedFormat"), e));
             }
         }
 
         private void ExecuteResetConfig() {
-            ShowYesNoDialog("Zamierzasz zresetować grę i wszystkie ustawienia.\nNa pewno?", () =>
+            ShowYesNoDialog(ResourceProvider.GetLocaleString("ResetConfigPrompt"), () =>
             {
                 ApplyConfiguration(GuessWhoConfig.GetDefaultConfig());
                 try {
                     WriteConfiguration();
                 } catch (Exception e) {
-                    ShowInformationDialog(
-                        $"Konfiguracja została zresetowana, lecz w trakcie zapisu wystąpił błąd!\n{e}");
+                    ShowInformationDialog(string.Format(ResourceProvider.GetLocaleString("ResetConfigDoneWithExceptionFormat"), e));
                 }
             });
         }
@@ -548,14 +540,17 @@ namespace GuessWho.ViewModel {
         }
 
         private void ShowYesNoDialog(string message, Action yesAction = null, Action noAction = null) {
-            DialogTwoButtonViewModel.Message = message;
-            DialogTwoButtonViewModel.Button1Action = yesAction;
-            DialogTwoButtonViewModel.Button2Action = noAction;
-            DialogTwoButtonViewModel.OpenIDialog(DialogIdentifier1);
+            DialogYesNoViewModel.Button1Text = ResourceProvider.GetLocaleString("YesCapital");
+            DialogYesNoViewModel.Button2Text = ResourceProvider.GetLocaleString("NoCapital");
+            DialogYesNoViewModel.Message = message;
+            DialogYesNoViewModel.Button1Action = yesAction;
+            DialogYesNoViewModel.Button2Action = noAction;
+            DialogYesNoViewModel.OpenIDialog(DialogIdentifier1);
         }
 
         private void ShowInformationDialog(string message) {
-            DialogOneButtonViewModel.OpenIDialog(DialogIdentifier2, message);
+            DialogInformationViewModel.ButtonText = ResourceProvider.GetLocaleString("OK");
+            DialogInformationViewModel.OpenIDialog(DialogIdentifier2, message);
         }
 
         #endregion
