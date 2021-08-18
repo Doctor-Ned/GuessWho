@@ -9,7 +9,7 @@ namespace GuessWho.Model {
         }
 
         public static T GetLocalizedValue<T>(string fullKey) {
-            return GetLocalizedValue(fullKey) is T ? (T)GetLocalizedValue(fullKey) : default;
+            return GetLocalizedValue(fullKey) is T t ? t : default;
         }
 
         public static string GetLocaleString(string key) {
