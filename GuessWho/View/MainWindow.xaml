@@ -232,7 +232,7 @@
                             </DockPanel>
                         </Grid>
                         <GridSplitter Grid.Column="0" Background="Black" Width="3" HorizontalAlignment="Right" VerticalAlignment="Stretch"/>
-                        <ListBox Grid.Column="0" ItemsSource="{Binding Champions}" VirtualizingPanel.IsVirtualizing="True" Margin="15"
+                        <ListBox Grid.Column="0" ItemsSource="{Binding VisibleChampions}" VirtualizingPanel.IsVirtualizing="True" Margin="15"
                      VirtualizingPanel.ScrollUnit="Item"
                      VirtualizingPanel.VirtualizationMode="Recycling" VerticalAlignment="Stretch"
                      HorizontalAlignment="Stretch"

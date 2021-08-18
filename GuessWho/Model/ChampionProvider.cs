@@ -4,6 +4,8 @@ using System.Linq;
 
 using GuessWhoResources;
 
+using WPFLocalizeExtension.Engine;
+
 namespace GuessWho.Model {
     public static class ChampionProvider {
         private static LeagueChampionConfig LeagueChampionConfig { get; }
@@ -53,6 +55,14 @@ namespace GuessWho.Model {
 
         public static string[] GetChampIds(CustomCategory customCategory) {
             return CustomCategoryChampions[customCategory];
+        }
+
+        public static string GetLocalizedChampionName(string champId) {
+            return LocalizeDictionary.Instance.GetLocalizedObject($"{ResourceType.League}_Champion_{champId}_Name", null, LocalizeDictionary.Instance.Culture) as string;
+        }
+
+        public static string GetLocalizedChampionTitle(string champId) {
+            return LocalizeDictionary.Instance.GetLocalizedObject($"{ResourceType.League}_Champion_{champId}_Title", null, LocalizeDictionary.Instance.Culture) as string;
         }
     }
 }

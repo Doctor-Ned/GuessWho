@@ -20,7 +20,7 @@
                     </Button.RenderTransform>
                 </Button>
             </StackPanel>
-            <ListView ItemsSource="{Binding MainViewModel.RejectedChampions}" HorizontalContentAlignment="Stretch"
+            <ListView ItemsSource="{Binding RejectedChampions}" HorizontalContentAlignment="Stretch"
                       HorizontalAlignment="Stretch"
                       Height="Auto" MaxHeight="350" MinHeight="100" MinWidth="350">
                 <ListView.ItemContainerStyle>

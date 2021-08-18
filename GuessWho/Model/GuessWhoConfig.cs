@@ -18,7 +18,6 @@ namespace GuessWho.Model {
         [JsonConverter(typeof(StringEnumConverter))]
         public Locale Locale { get; set; }
 
-        [JsonProperty(ItemConverterType = typeof(StringEnumConverter))]
         public List<string> RejectedChampions { get; set; }
 
         [JsonProperty(ItemConverterType = typeof(StringEnumConverter))]
@@ -36,7 +35,7 @@ namespace GuessWho.Model {
                 SidePanelWidth = 220.0,
                 IconSize = 80.0,
                 ShowTooltips = true,
-                Locale = CultureInfo.CurrentUICulture.GetClosestLocale(),
+                Locale = CultureInfo.InstalledUICulture.GetClosestLocale(),
                 RejectedChampions = new List<string>(),
                 RejectedBasicCategories = new List<BasicCategory>(),
                 RejectedCustomCategories = new List<CustomCategory>()

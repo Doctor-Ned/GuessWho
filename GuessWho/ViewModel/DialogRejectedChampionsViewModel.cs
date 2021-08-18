@@ -1,4 +1,9 @@
-﻿using System.Windows.Input;
+﻿using System;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Windows.Input;
+
+using GuessWho.Model;
 
 using NedMaterialMVVM;
 using NedMaterialMVVM.ViewModel;
@@ -15,6 +20,7 @@ namespace GuessWho.ViewModel {
             DialogYesNoViewModel = new DialogTwoButtonViewModel {
                 Button1Action = () =>
                 {
+                    RejectedChampions.Clear();
                     MainViewModel.RejectedChampions.Clear();
                     CloseDialog();
                 },
@@ -26,6 +32,8 @@ namespace GuessWho.ViewModel {
 
         public MainViewModel MainViewModel { get; }
 
+        public ObservableCollection<string> RejectedChampions { get; } = new ObservableCollection<string>();
+
         public ICommand Close { get; }
         public ICommand RestoreChampion { get; }
         public ICommand RestoreAll { get; }
@@ -35,6 +43,7 @@ namespace GuessWho.ViewModel {
         }
 
         private void ExecuteRestoreChampion(string champId) {
+            RejectedChampions.Remove(champId);
             MainViewModel.RejectedChampions.Remove(champId);
             if (!MainViewModel.AnyChampionsRejected) {
                 CloseDialog();
@@ -46,11 +55,21 @@ namespace GuessWho.ViewModel {
         }
 
         public new void OpenDialog() {
+            InitializeRejectedChampions();
             base.OpenDialog();
         }
 
         public new void OpenIDialog(object dialogIdentifier) {
+            InitializeRejectedChampions();
             base.OpenIDialog(dialogIdentifier);
+        }
+
+        private void InitializeRejectedChampions() {
+            RejectedChampions.Clear();
+            foreach (string champ in MainViewModel.RejectedChampions.OrderBy(
+                ChampionProvider.GetLocalizedChampionName, StringComparer.CurrentCultureIgnoreCase)) {
+                RejectedChampions.Add(champ);
+            }
         }
     }
 }
