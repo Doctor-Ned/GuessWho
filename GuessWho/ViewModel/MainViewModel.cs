@@ -12,6 +12,8 @@ using GuessWhoResources;
 using NedMaterialMVVM;
 using NedMaterialMVVM.ViewModel;
 
+using WPFLocalizeExtension.Engine;
+
 namespace GuessWho.ViewModel {
     public class MainViewModel : PropertyChangedWrapper {
 
@@ -25,6 +27,7 @@ namespace GuessWho.ViewModel {
         private double _SidePanelWidth = 220.0;
         private double _WindowHeight;
         private double _WindowWidth;
+        private Locale _Locale;
 
         #endregion
 
@@ -164,6 +167,17 @@ namespace GuessWho.ViewModel {
 
         public ObservableCollection<CategoryViewModel> Categories { get; } =
             new ObservableCollection<CategoryViewModel>();
+
+        public Locale Locale {
+            get { return _Locale; }
+            set {
+                _Locale = value;
+                LocalizeDictionary.Instance.Culture = _Locale.ToCultureInfo();
+                // ReSharper disable once ExplicitCallerInfoArgument
+                RaisePropertyChanged("");
+                RaisePropertyChanged();
+            }
+        }
 
         public double WindowWidth {
             get { return _WindowWidth; }
@@ -373,6 +387,7 @@ namespace GuessWho.ViewModel {
                 SidePanelWidth = SidePanelWidth,
                 IconSize = IconSize,
                 ShowTooltips = ShowTooltips,
+                Locale = Locale,
                 RejectedChampions = RejectedChampions.ToList(),
                 RejectedBasicCategories = RejectedBasicCategories.ToList(),
                 RejectedCustomCategories = RejectedCustomCategories.ToList()
@@ -380,6 +395,7 @@ namespace GuessWho.ViewModel {
         }
 
         private void ApplyConfiguration(GuessWhoConfig config) {
+            Locale = config.Locale;
             WindowWidth = config.WindowWidth;
             WindowHeight = config.WindowHeight;
             CategoryCheckBoxSize = config.CategoryCheckBoxSize;

@@ -126,6 +126,9 @@
   <data name="CloseCapital" xml:space="preserve">
     <value>CLOSE</value>
   </data>
+  <data name="GuessWho" xml:space="preserve">
+    <value>Guess Who?</value>
+  </data>
   <data name="HideSettingsToolTip" xml:space="preserve">
     <value>Hide the settings panel</value>
   </data>

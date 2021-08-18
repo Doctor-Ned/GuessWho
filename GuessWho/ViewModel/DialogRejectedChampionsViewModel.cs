@@ -24,7 +24,7 @@ namespace GuessWho.ViewModel {
             };
         }
 
-        private MainViewModel MainViewModel { get; }
+        public MainViewModel MainViewModel { get; }
 
         public ICommand Close { get; }
         public ICommand RestoreChampion { get; }

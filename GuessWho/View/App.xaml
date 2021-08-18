@@ -9,10 +9,10 @@
     <Application.Resources>
         <ResourceDictionary>
             <local:ChampionToImageConverter x:Key="ChampionToImageConverter" />
+            <local:ChampionToNameConverter x:Key="ChampionToNameConverter"/>
             <local:BoolToSettingsIconConverter x:Key="BoolToSettingsIconConverter" />
             <local:DoubleToSizeConverter x:Key="IntToSizeConverter" />
             <local:WidthHeightToRectConverter x:Key="WidthHeightToRectConverter"/>
-            <local:BoolToSettingsToolTipConverter x:Key="BoolToSettingsToolTipConverter"/>
             <DataTemplate DataType="{x:Type vm:DialogRejectedChampionsViewModel}">
                 <local:RejectedChampionsControl />
             </DataTemplate>

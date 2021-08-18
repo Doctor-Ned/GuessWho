@@ -4,6 +4,7 @@ using System.Linq;
 
 namespace GuessWhoResources {
     public static class ResourceManager {
+        public const Locale DEFAULT_LOCALE = Locale.en_US;
         public const string RESOURCE_FILENAME = "Resources";
         public const string RESOURCE_DIRECTORY = "Properties";
         public const string ICON_DIRECTORY = "Champions";
@@ -27,6 +28,22 @@ namespace GuessWhoResources {
         public static Locale[] GetLocalesWithSameLanguage(this Locale locale) {
             return Enum.GetValues(typeof(Locale)).Cast<Locale>()
                 .Where(l => l != locale && l.GetLanguageCode() == locale.GetLanguageCode()).ToArray();
+        }
+
+        public static Locale[] GetLocalesWithLanguage(string languageCode) {
+            if (languageCode.Length != 2) {
+                throw new ArgumentException(nameof(languageCode));
+            }
+            return Enum.GetValues(typeof(Locale)).Cast<Locale>()
+                .Where(l => l.GetLanguageCode() == languageCode).ToArray();
+        }
+
+        public static Locale GetClosestLocale(this CultureInfo cultureInfo) {
+            if (Enum.TryParse(cultureInfo.Name.Replace('-', '_'), out Locale locale)) {
+                return locale;
+            }
+            Locale[] localesWithSameLanguage = GetLocalesWithLanguage(cultureInfo.TwoLetterISOLanguageName);
+            return localesWithSameLanguage.Length != 0 ? localesWithSameLanguage[0] : DEFAULT_LOCALE;
         }
     }
 }

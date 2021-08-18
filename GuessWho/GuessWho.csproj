@@ -95,7 +95,8 @@
     <Compile Include="ViewModel\CategoryViewModel.cs" />
     <Compile Include="ViewModel\CustomCategoryViewModel.cs" />
     <Compile Include="ViewModel\DialogRejectedChampionsViewModel.cs" />
-    <Compile Include="View\BoolToSettingsToolTipConverter.cs" />
+    <Compile Include="View\BoolToMessageConverter.cs" />
+    <Compile Include="View\ChampionToNameConverter.cs" />
     <Compile Include="View\WidthHeightToRectConverter.cs" />
     <Compile Include="View\RejectedChampionsControl.xaml.cs">
       <DependentUpon>RejectedChampionsControl.xaml</DependentUpon>

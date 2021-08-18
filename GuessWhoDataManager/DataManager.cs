@@ -20,7 +20,6 @@ namespace GuessWhoDataManager {
         internal const string XML_RESOURCE_NODE = "Resource";
         internal const string XML_ITEMGROUP_NODE = "ItemGroup";
         internal const string XML_INCLUDE_ATTRIBUTE = "Include";
-        internal const Locale DEFAULT_LOCALE = Locale.en_US;
 
         internal static string DefaultSolutionPath {
             get { return Path.Combine(new FileInfo(Assembly.GetExecutingAssembly().Location).DirectoryName ?? throw new InvalidOperationException(), "../../.."); }
@@ -81,20 +80,20 @@ namespace GuessWhoDataManager {
 
             Logger.Info("Verifying resource data...");
 
-            if (localeDatas[DEFAULT_LOCALE].CustomCategoryLabels.Keys.Count !=
+            if (localeDatas[ResourceManager.DEFAULT_LOCALE].CustomCategoryLabels.Keys.Count !=
                 Enum.GetValues(typeof(CustomCategory)).Length) {
-                throw new InvalidDataException($"Default locale {DEFAULT_LOCALE} custom categories are incomplete: fill the appropriate resource file to proceed.");
+                throw new InvalidDataException($"Default locale {ResourceManager.DEFAULT_LOCALE} custom categories are incomplete: fill the appropriate resource file to proceed.");
             }
 
             foreach (Locale locale in Enum.GetValues(typeof(Locale))) {
-                if (locale != DEFAULT_LOCALE) {
-                    localeDatas[locale].RefillMissingFromSimilarLanguages(localeDatas, DEFAULT_LOCALE);
+                if (locale != ResourceManager.DEFAULT_LOCALE) {
+                    localeDatas[locale].RefillMissingFromSimilarLanguages(localeDatas, ResourceManager.DEFAULT_LOCALE);
                 }
             }
 
             foreach (Locale locale in Enum.GetValues(typeof(Locale))) {
-                if (locale != DEFAULT_LOCALE) {
-                    localeDatas[locale].RefillMissingFromDefaultLocale(localeDatas[DEFAULT_LOCALE]);
+                if (locale != ResourceManager.DEFAULT_LOCALE) {
+                    localeDatas[locale].RefillMissingFromDefaultLocale(localeDatas[ResourceManager.DEFAULT_LOCALE]);
                 }
             }
 
@@ -102,7 +101,7 @@ namespace GuessWhoDataManager {
 
             DataDragon dataDragon = new DataDragon(version);
             LeagueChampionConfig config = new LeagueChampionConfig();
-            foreach (KeyValuePair<string, LocaleLolChampionData> pair in dataDragon.Locales[DEFAULT_LOCALE].ChampionData) {
+            foreach (KeyValuePair<string, LocaleLolChampionData> pair in dataDragon.Locales[ResourceManager.DEFAULT_LOCALE].ChampionData) {
                 config.ChampionCategoryConfigs.Add(pair.Key, new ChampionCategoryConfig {
                     BasicCategories = pair.Value.BasicCategories,
                     CustomCategories = pair.Value.CustomCategories

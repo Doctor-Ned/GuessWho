@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Globalization;
 
 using GuessWhoResources;
 
@@ -14,6 +15,8 @@ namespace GuessWho.Model {
         public double SidePanelWidth { get; set; }
         public double IconSize { get; set; }
         public bool ShowTooltips { get; set; }
+        [JsonConverter(typeof(StringEnumConverter))]
+        public Locale Locale { get; set; }
 
         [JsonProperty(ItemConverterType = typeof(StringEnumConverter))]
         public List<string> RejectedChampions { get; set; }
@@ -33,6 +36,7 @@ namespace GuessWho.Model {
                 SidePanelWidth = 220.0,
                 IconSize = 80.0,
                 ShowTooltips = true,
+                Locale = CultureInfo.CurrentUICulture.GetClosestLocale(),
                 RejectedChampions = new List<string>(),
                 RejectedBasicCategories = new List<BasicCategory>(),
                 RejectedCustomCategories = new List<CustomCategory>()
