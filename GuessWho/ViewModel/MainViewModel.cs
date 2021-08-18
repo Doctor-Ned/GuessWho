@@ -51,134 +51,6 @@ namespace GuessWho.ViewModel {
             RejectedCustomCategories.CollectionChanged += RejectedCustomCategories_CollectionChanged;
         }
 
-        private void RejectedChampions_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e) {
-            switch (e.Action) {
-                case NotifyCollectionChangedAction.Remove: {
-                        bool changed = false;
-                        foreach (string champId in e.OldItems) {
-                            changed |= AddChampionIfValid(champId);
-                        }
-                        if (changed) {
-                            RefreshVisibleChampions();
-                        }
-                        break;
-                    }
-                case NotifyCollectionChangedAction.Add:
-                    foreach (string champId in e.NewItems) {
-                        RemoveChampion(champId);
-                    }
-                    break;
-                case NotifyCollectionChangedAction.Replace: {
-                        bool changed = false;
-                        foreach (string champId in e.OldItems) {
-                            changed |= AddChampionIfValid(champId);
-                        }
-                        if (changed) {
-                            RefreshVisibleChampions();
-                        }
-                        foreach (string champId in e.NewItems) {
-                            RemoveChampion(champId);
-                        }
-                        break;
-                    }
-                case NotifyCollectionChangedAction.Reset: {
-                        RevalidateChampions();
-                        break;
-                    }
-            }
-            RaisePropertyChanged(nameof(AnyChampionsRejected));
-        }
-
-        private void RejectedBasicCategories_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e) {
-            switch (e.Action) {
-                case NotifyCollectionChangedAction.Remove: {
-                        bool changed = false;
-                        foreach (BasicCategory cat in e.OldItems) {
-                            foreach (string champId in ChampionProvider.GetChampIds(cat)) {
-                                changed |= AddChampionIfValid(champId);
-                            }
-                        }
-                        if (changed) {
-                            RefreshVisibleChampions();
-                        }
-                        break;
-                    }
-                case NotifyCollectionChangedAction.Add:
-                    foreach (BasicCategory cat in e.NewItems) {
-                        foreach (string champId in ChampionProvider.GetChampIds(cat)) {
-                            RemoveChampion(champId);
-                        }
-                    }
-                    break;
-                case NotifyCollectionChangedAction.Replace: {
-                        bool changed = false;
-                        foreach (BasicCategory cat in e.OldItems) {
-                            foreach (string champId in ChampionProvider.GetChampIds(cat)) {
-                                changed |= AddChampionIfValid(champId);
-                            }
-                        }
-                        if (changed) {
-                            RefreshVisibleChampions();
-                        }
-                        foreach (BasicCategory cat in e.NewItems) {
-                            foreach (string champId in ChampionProvider.GetChampIds(cat)) {
-                                RemoveChampion(champId);
-                            }
-                        }
-                        break;
-                    }
-                case NotifyCollectionChangedAction.Reset: {
-                        RevalidateChampions();
-                        break;
-                    }
-            }
-        }
-
-        private void RejectedCustomCategories_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e) {
-            switch (e.Action) {
-                case NotifyCollectionChangedAction.Remove: {
-                        bool changed = false;
-                        foreach (CustomCategory cat in e.OldItems) {
-                            foreach (string champId in ChampionProvider.GetChampIds(cat)) {
-                                changed |= AddChampionIfValid(champId);
-                            }
-                        }
-                        if (changed) {
-                            RefreshVisibleChampions();
-                        }
-                        break;
-                    }
-                case NotifyCollectionChangedAction.Add:
-                    foreach (CustomCategory cat in e.NewItems) {
-                        foreach (string champId in ChampionProvider.GetChampIds(cat)) {
-                            RemoveChampion(champId);
-                        }
-                    }
-                    break;
-                case NotifyCollectionChangedAction.Replace: {
-                        bool changed = false;
-                        foreach (CustomCategory cat in e.OldItems) {
-                            foreach (string champId in ChampionProvider.GetChampIds(cat)) {
-                                changed |= AddChampionIfValid(champId);
-                            }
-                        }
-                        if (changed) {
-                            RefreshVisibleChampions();
-                        }
-                        foreach (CustomCategory cat in e.NewItems) {
-                            foreach (string champId in ChampionProvider.GetChampIds(cat)) {
-                                RemoveChampion(champId);
-                            }
-                        }
-                        break;
-                    }
-                case NotifyCollectionChangedAction.Reset: {
-                        RevalidateChampions();
-                        break;
-                    }
-            }
-        }
-
         #region Public properties
 
         public ObservableCollection<string> VisibleChampions { get; } = new ObservableCollection<string>();
@@ -388,6 +260,134 @@ namespace GuessWho.ViewModel {
         #endregion
 
         #region Private methods
+
+        private void RejectedChampions_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e) {
+            switch (e.Action) {
+                case NotifyCollectionChangedAction.Remove: {
+                        bool changed = false;
+                        foreach (string champId in e.OldItems) {
+                            changed |= AddChampionIfValid(champId);
+                        }
+                        if (changed) {
+                            RefreshVisibleChampions();
+                        }
+                        break;
+                    }
+                case NotifyCollectionChangedAction.Add:
+                    foreach (string champId in e.NewItems) {
+                        RemoveChampion(champId);
+                    }
+                    break;
+                case NotifyCollectionChangedAction.Replace: {
+                        bool changed = false;
+                        foreach (string champId in e.OldItems) {
+                            changed |= AddChampionIfValid(champId);
+                        }
+                        if (changed) {
+                            RefreshVisibleChampions();
+                        }
+                        foreach (string champId in e.NewItems) {
+                            RemoveChampion(champId);
+                        }
+                        break;
+                    }
+                case NotifyCollectionChangedAction.Reset: {
+                        RevalidateChampions();
+                        break;
+                    }
+            }
+            RaisePropertyChanged(nameof(AnyChampionsRejected));
+        }
+
+        private void RejectedBasicCategories_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e) {
+            switch (e.Action) {
+                case NotifyCollectionChangedAction.Remove: {
+                        bool changed = false;
+                        foreach (BasicCategory cat in e.OldItems) {
+                            foreach (string champId in ChampionProvider.GetChampIds(cat)) {
+                                changed |= AddChampionIfValid(champId);
+                            }
+                        }
+                        if (changed) {
+                            RefreshVisibleChampions();
+                        }
+                        break;
+                    }
+                case NotifyCollectionChangedAction.Add:
+                    foreach (BasicCategory cat in e.NewItems) {
+                        foreach (string champId in ChampionProvider.GetChampIds(cat)) {
+                            RemoveChampion(champId);
+                        }
+                    }
+                    break;
+                case NotifyCollectionChangedAction.Replace: {
+                        bool changed = false;
+                        foreach (BasicCategory cat in e.OldItems) {
+                            foreach (string champId in ChampionProvider.GetChampIds(cat)) {
+                                changed |= AddChampionIfValid(champId);
+                            }
+                        }
+                        if (changed) {
+                            RefreshVisibleChampions();
+                        }
+                        foreach (BasicCategory cat in e.NewItems) {
+                            foreach (string champId in ChampionProvider.GetChampIds(cat)) {
+                                RemoveChampion(champId);
+                            }
+                        }
+                        break;
+                    }
+                case NotifyCollectionChangedAction.Reset: {
+                        RevalidateChampions();
+                        break;
+                    }
+            }
+        }
+
+        private void RejectedCustomCategories_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e) {
+            switch (e.Action) {
+                case NotifyCollectionChangedAction.Remove: {
+                        bool changed = false;
+                        foreach (CustomCategory cat in e.OldItems) {
+                            foreach (string champId in ChampionProvider.GetChampIds(cat)) {
+                                changed |= AddChampionIfValid(champId);
+                            }
+                        }
+                        if (changed) {
+                            RefreshVisibleChampions();
+                        }
+                        break;
+                    }
+                case NotifyCollectionChangedAction.Add:
+                    foreach (CustomCategory cat in e.NewItems) {
+                        foreach (string champId in ChampionProvider.GetChampIds(cat)) {
+                            RemoveChampion(champId);
+                        }
+                    }
+                    break;
+                case NotifyCollectionChangedAction.Replace: {
+                        bool changed = false;
+                        foreach (CustomCategory cat in e.OldItems) {
+                            foreach (string champId in ChampionProvider.GetChampIds(cat)) {
+                                changed |= AddChampionIfValid(champId);
+                            }
+                        }
+                        if (changed) {
+                            RefreshVisibleChampions();
+                        }
+                        foreach (CustomCategory cat in e.NewItems) {
+                            foreach (string champId in ChampionProvider.GetChampIds(cat)) {
+                                RemoveChampion(champId);
+                            }
+                        }
+                        break;
+                    }
+                case NotifyCollectionChangedAction.Reset: {
+                        RevalidateChampions();
+                        break;
+                    }
+            }
+        }
 
         private void LoadConfiguration() {
             ApplyConfiguration(ConfigManager.ReadConfig());
