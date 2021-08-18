@@ -94,13 +94,23 @@
     </ApplicationDefinition>
     <Compile Include="ViewModel\CategoryViewModel.cs" />
     <Compile Include="ViewModel\CustomCategoryViewModel.cs" />
+    <Compile Include="ViewModel\DialogLanguageSelectionViewModel.cs" />
     <Compile Include="ViewModel\DialogRejectedChampionsViewModel.cs" />
     <Compile Include="View\BoolToMessageConverter.cs" />
+    <Compile Include="View\CategoryToNameConverter.cs" />
+    <Compile Include="View\LocaleToLanguageNameConverter.cs" />
     <Compile Include="View\ChampionToNameConverter.cs" />
+    <Compile Include="View\LanguageSelectionControl.xaml.cs">
+      <DependentUpon>LanguageSelectionControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\WidthHeightToRectConverter.cs" />
     <Compile Include="View\RejectedChampionsControl.xaml.cs">
       <DependentUpon>RejectedChampionsControl.xaml</DependentUpon>
     </Compile>
+    <Page Include="View\LanguageSelectionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="GuessWho.View.LanguageSelectionControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GuessWho.View"
+             xmlns:lex="http://wpflocalizeextension.codeplex.com"
+             xmlns:viewModel="clr-namespace:GuessWho.ViewModel"
+             mc:Ignorable="d" d:DataContext="{d:DesignInstance viewModel:DialogLanguageSelectionViewModel}"
+             d:DesignHeight="450" d:DesignWidth="500">
+    <Grid>
+        <DockPanel Margin="10">
+            <StackPanel Orientation="Vertical" DockPanel.Dock="Bottom" HorizontalAlignment="Center" Margin="0,10,0,0">
+                <Button Content="{lex:Loc Locale_CloseCapital}" Command="{Binding Close}" Margin="0,0,0,5"
+                        Style="{StaticResource MaterialDesignRaisedAccentButton}" />
+            </StackPanel>
+            <ListView ItemsSource="{Binding Locales}" HorizontalContentAlignment="Stretch"
+                      HorizontalAlignment="Stretch" SelectedItem="{Binding MainViewModel.Locale}" SelectionMode="Single"
+                      Height="Auto" MaxHeight="450" MinHeight="100" MinWidth="400">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderThickness="2" BorderBrush="Black">
+                            <StackPanel Orientation="Horizontal" Margin="2">
+                                <Label Content="{Binding}" ContentStringFormat=" {0} - "/>
+                                <Label Content="{Binding Converter={StaticResource LocaleToLanguageNameConverter}}"/>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </DockPanel>
+    </Grid>
+</UserControl>

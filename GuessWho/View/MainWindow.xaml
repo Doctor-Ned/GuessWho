@@ -119,7 +119,7 @@
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" MinWidth="220"/>
-                            <ColumnDefinition Width="{Binding SidePanelWidth}" MinWidth="220"/>
+                            <ColumnDefinition Width="{Binding SidePanelWidth}" MinWidth="220" MaxWidth="400"/>
                         </Grid.ColumnDefinitions>
                         <Grid Grid.Column="1">
                             <DockPanel>
@@ -169,7 +169,7 @@
                                                 <materialDesign:PackIcon Style="{StaticResource BigPackIcon}" Kind="ContentSaveOff" />
                                             </Button>
                                         </StackPanel>
-                                        <Button Style="{StaticResource MaterialDesignRaisedButton}"
+                                        <Button Style="{StaticResource MaterialDesignRaisedButton}" Margin="0,5,0,0"
                                                 HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding ChangeLanguage}">
                                             <StackPanel Orientation="Horizontal">
                                                 <materialDesign:PackIcon Kind="Language" Margin="0,5,5,5"
@@ -223,7 +223,7 @@
                                                 ScaleY="{Binding Path=DataContext.CategoryCheckBoxSize, ElementName=Window}" />
                                                     </CheckBox.RenderTransform>
                                                 </CheckBox>
-                                                <Label Content="{Binding Category}"
+                                                <Label Content="{Binding Category, Converter={StaticResource CategoryToNameConverter}}"
                                            FontSize="{Binding Path=DataContext.CategoryFontSize, ElementName=Window}" />
                                             </StackPanel>
                                         </DataTemplate>

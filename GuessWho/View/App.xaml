@@ -13,8 +13,13 @@
             <local:BoolToSettingsIconConverter x:Key="BoolToSettingsIconConverter" />
             <local:DoubleToSizeConverter x:Key="IntToSizeConverter" />
             <local:WidthHeightToRectConverter x:Key="WidthHeightToRectConverter"/>
+            <local:LocaleToLanguageNameConverter x:Key="LocaleToLanguageNameConverter"/>
+            <local:CategoryToNameConverter x:Key="CategoryToNameConverter"/>
             <DataTemplate DataType="{x:Type vm:DialogRejectedChampionsViewModel}">
                 <local:RejectedChampionsControl />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:DialogLanguageSelectionViewModel}">
+                <local:LanguageSelectionControl />
             </DataTemplate>
             <ResourceDictionary.MergedDictionaries>
                 <materialDesign:BundledTheme BaseTheme="Dark" PrimaryColor="DeepPurple" SecondaryColor="DeepPurple" />

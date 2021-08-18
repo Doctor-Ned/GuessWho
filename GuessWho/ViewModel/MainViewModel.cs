@@ -44,6 +44,7 @@ namespace GuessWho.ViewModel {
             ChangeLanguage = new RelayCommand(ExecuteChangeLanguage);
             ConfigManager = new GuessWhoConfigManager();
             DialogRejectedChampionsViewModel = new DialogRejectedChampionsViewModel(this);
+            DialogLanguageSelectionViewModel = new DialogLanguageSelectionViewModel(this);
             RejectedChampions.CollectionChanged += RejectedChampions_CollectionChanged;
             RejectedBasicCategories.CollectionChanged += RejectedBasicCategories_CollectionChanged;
             RejectedCustomCategories.CollectionChanged += RejectedCustomCategories_CollectionChanged;
@@ -176,6 +177,9 @@ namespace GuessWho.ViewModel {
                 LocalizeDictionary.Instance.Culture = _Locale.ToCultureInfo();
                 // ReSharper disable once ExplicitCallerInfoArgument
                 RaisePropertyChanged("");
+                foreach (CategoryViewModel cvm in Categories) {
+                    cvm.RefreshBindings();
+                }
                 RaisePropertyChanged();
             }
         }
@@ -289,6 +293,8 @@ namespace GuessWho.ViewModel {
 
         private DialogRejectedChampionsViewModel DialogRejectedChampionsViewModel { get; }
 
+        private DialogLanguageSelectionViewModel DialogLanguageSelectionViewModel { get; }
+
         private GuessWhoConfigManager ConfigManager { get; }
 
         #endregion
@@ -369,7 +375,7 @@ namespace GuessWho.ViewModel {
         }
 
         private void ExecuteChangeLanguage() {
-            Locale = Locale == Locale.en_US ? Locale.pl_PL : Locale.en_US;
+            DialogLanguageSelectionViewModel.OpenIDialog(DialogIdentifier1);
         }
 
         #endregion
@@ -441,6 +447,7 @@ namespace GuessWho.ViewModel {
                 vm.PropertyChanged += ChampionCategory_PropertyChanged;
                 Categories.Add(vm);
             }
+            RevalidateChampions();
         }
 
         private void ChampionCategory_PropertyChanged(object sender, PropertyChangedEventArgs e) {

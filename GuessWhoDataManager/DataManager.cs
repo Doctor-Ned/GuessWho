@@ -110,8 +110,9 @@ namespace GuessWhoDataManager {
 
             foreach (Locale locale in Enum.GetValues(typeof(Locale))) {
                 LocaleLolData lolData = dataDragon.Locales[locale];
-                using (ResXResourceWriter writer = new ResXResourceWriter(GetOutputResourcePath(locale))) {
-                    Logger.Debug($"Writing {locale} resource file '{writer.BasePath}'...");
+                string resourcePath = GetOutputResourcePath(locale);
+                using (ResXResourceWriter writer = new ResXResourceWriter(resourcePath)) {
+                    Logger.Debug($"Writing {locale} resource file '{resourcePath}'...");
                     foreach (KeyValuePair<string, string> pair in localeDatas[locale].LocaleLabels) {
                         writer.AddResource($"{ResourceType.Locale}_{pair.Key}", pair.Value);
                     }

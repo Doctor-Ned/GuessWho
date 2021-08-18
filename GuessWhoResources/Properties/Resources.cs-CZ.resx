@@ -219,10 +219,10 @@ Are you sure?</value>
     <value>YES</value>
   </data>
   <data name="CustomCategories_Man" xml:space="preserve">
-    <value>Muž</value>
+    <value>muž</value>
   </data>
   <data name="CustomCategories_Woman" xml:space="preserve">
-    <value>Žena</value>
+    <value>žena</value>
   </data>
   <data name="League_BasicCategory_Assassin" xml:space="preserve">
     <value>zabiják</value>

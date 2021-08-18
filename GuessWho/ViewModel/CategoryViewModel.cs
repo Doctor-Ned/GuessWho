@@ -12,5 +12,10 @@ namespace GuessWho.ViewModel {
         }
 
         public object Category { get; protected set; }
+
+        public void RefreshBindings() {
+            // ReSharper disable once ExplicitCallerInfoArgument
+            RaisePropertyChanged("");
+        }
     }
 }
