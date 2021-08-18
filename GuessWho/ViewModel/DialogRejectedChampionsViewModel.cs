@@ -67,7 +67,7 @@ namespace GuessWho.ViewModel {
         private void InitializeRejectedChampions() {
             RejectedChampions.Clear();
             foreach (string champ in MainViewModel.RejectedChampions.OrderBy(
-                ChampionProvider.GetLocalizedChampionName, StringComparer.CurrentCultureIgnoreCase)) {
+                ResourceProvider.GetLocalizedChampionName, StringComparer.CurrentCultureIgnoreCase)) {
                 RejectedChampions.Add(champ);
             }
         }

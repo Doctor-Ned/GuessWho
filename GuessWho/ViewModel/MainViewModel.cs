@@ -524,7 +524,7 @@ namespace GuessWho.ViewModel {
         private void RefreshVisibleChampions() {
             VisibleChampions.Clear();
             foreach (string champ in Champions.OrderBy(
-                ChampionProvider.GetLocalizedChampionName, StringComparer.CurrentCultureIgnoreCase)) {
+                ResourceProvider.GetLocalizedChampionName, StringComparer.CurrentCultureIgnoreCase)) {
                 VisibleChampions.Add(champ);
             }
         }

@@ -16,7 +16,7 @@ namespace GuessWho.View {
                     if (builder.Length != 0) {
                         builder.AppendLine();
                     }
-                    builder.Append(ChampionProvider.GetLocalizedCategoryName(category));
+                    builder.Append(ResourceProvider.GetLocalizedCategoryName(category));
                 }
 
                 foreach (BasicCategory category in ChampionProvider.GetBasicCategories(champId)) {
@@ -24,7 +24,7 @@ namespace GuessWho.View {
                         builder.AppendLine();
                     }
 
-                    builder.Append(ChampionProvider.GetLocalizedCategoryName(category));
+                    builder.Append(ResourceProvider.GetLocalizedCategoryName(category));
                 }
 
                 return builder.ToString();

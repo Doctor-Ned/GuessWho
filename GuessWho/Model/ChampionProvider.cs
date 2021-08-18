@@ -56,21 +56,5 @@ namespace GuessWho.Model {
         public static string[] GetChampIds(CustomCategory customCategory) {
             return CustomCategoryChampions[customCategory];
         }
-
-        public static string GetLocalizedChampionName(string champId) {
-            return LocalizeDictionary.Instance.GetLocalizedObject($"{ResourceType.League}_Champion_{champId}_Name", null, LocalizeDictionary.Instance.Culture) as string;
-        }
-
-        public static string GetLocalizedChampionTitle(string champId) {
-            return LocalizeDictionary.Instance.GetLocalizedObject($"{ResourceType.League}_Champion_{champId}_Title", null, LocalizeDictionary.Instance.Culture) as string;
-        }
-
-        public static string GetLocalizedCategoryName(BasicCategory basicCategory) {
-            return LocalizeDictionary.Instance.GetLocalizedObject($"{ResourceType.League}_{nameof(BasicCategory)}_{basicCategory}", null, LocalizeDictionary.Instance.Culture) as string;
-        }
-
-        public static string GetLocalizedCategoryName(CustomCategory customCategory) {
-            return LocalizeDictionary.Instance.GetLocalizedObject($"{ResourceType.CustomCategories}_{customCategory}", null, LocalizeDictionary.Instance.Culture) as string;
-        }
     }
 }

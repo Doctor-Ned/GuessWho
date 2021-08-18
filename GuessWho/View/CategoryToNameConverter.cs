@@ -6,17 +6,15 @@ using GuessWho.Model;
 
 using GuessWhoResources;
 
-using WPFLocalizeExtension.Engine;
-
 namespace GuessWho.View {
     public class CategoryToNameConverter : IValueConverter {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture) {
             if (value != null) {
                 if (value is BasicCategory basicCategory) {
-                    return ChampionProvider.GetLocalizedCategoryName(basicCategory);
+                    return ResourceProvider.GetLocalizedCategoryName(basicCategory);
                 }
                 if (value is CustomCategory customCategory) {
-                    return ChampionProvider.GetLocalizedCategoryName(customCategory);
+                    return ResourceProvider.GetLocalizedCategoryName(customCategory);
                 }
             }
 

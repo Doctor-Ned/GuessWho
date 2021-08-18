@@ -8,7 +8,7 @@ namespace GuessWho.View {
     public class ChampionToNameConverter : IValueConverter {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture) {
             if (value != null && value is string champId) {
-                return ChampionProvider.GetLocalizedChampionName(champId);
+                return ResourceProvider.GetLocalizedChampionName(champId);
             }
 
             return null;
