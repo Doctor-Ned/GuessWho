@@ -269,7 +269,7 @@
                                     <Grid Width="{Binding Path=DataContext.IconSize, ElementName=Window}"
                               Height="{Binding Path=Width, RelativeSource={RelativeSource Self}}">
                                         <Image Source="{Binding Converter={StaticResource ChampionToImageConverter}}"
-                                   ToolTipService.InitialShowDelay="750"
+                                   ToolTipService.InitialShowDelay="300"
                                    ToolTipService.Placement="Mouse"
                                    ToolTipService.IsEnabled="{Binding Path=DataContext.ShowTooltips, ElementName=Window}">
                                             <Image.ToolTip>
