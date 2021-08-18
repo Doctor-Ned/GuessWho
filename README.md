@@ -29,6 +29,7 @@ I'm open for new translations!
 
 - Maybe more configuration - that could include switching dark mode and changing color palletes
 - ToolTip for hovering over categories, which could show the amount of champions of that category shown
+- Add category icons
 
 ## Third-party tools
 
